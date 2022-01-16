@@ -9,4 +9,5 @@ Also, this repository is contains in the [group repository](https://github.com/l
 
 
 ![Twitter Follow](https://img.shields.io/twitter/follow/ruco0713?color=blue&logo=twitter&style=for-the-badge)<br>
-![Version](https://img.shields.io/github/v/tag/ruco13/phd-project?color=red&label=Thesis%20Version&logo=github&style=for-the-badge)
+![Version](https://img.shields.io/github/v/tag/ruco13/phd-project?color=red&label=Thesis%20version&logo=github&style=for-the-badge)
+

@@ -1,6 +1,5 @@
 %============================================= GENERAL PACKLAGES =============================================%
 \usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=1cm,includefoot,includehead,headheight=13.6pt]{geometry}
-%\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=1cm,includefoot,includehead,headheight=14.5pt]{geometry}
 \usepackage{miama}
 \usepackage{calligra}
 \usepackage[T1]{fontenc}
@@ -210,44 +209,21 @@
 
 
 %================================ NOMENCLATURE & INDEX PACKAGES ============================================%
-\usepackage{multicol}
-\usepackage[intoc]{nomencl}
-\makenomenclature
-\renewcommand{\nomname}{Nomenclature}
-%\renewcommand*{\nompreamble}{\begin{multicols}{2}}
-%\renewcommand*{\nompostamble}{\end{multicols}}
-\renewcommand{\nomlabel}[1]{#1\dotfill}
-\setlength{\nomitemsep}{-\parsep}
-\setlength{\nomlabelwidth}{3cm}
+% \usepackage{multicol}
+% \usepackage[intoc]{nomencl}
+% \makenomenclature
+% \renewcommand{\nomname}{Nomenclature}
+% %\renewcommand*{\nompreamble}{\begin{multicols}{2}}
+% %\renewcommand*{\nompostamble}{\end{multicols}}
+% \renewcommand{\nomlabel}[1]{#1\dotfill}
+% \setlength{\nomitemsep}{-\parsep}
+% \setlength{\nomlabelwidth}{3cm}
 
 %======================== glossaries packages ==========================================
 
-\usepackage[abbreviations,symbols,nogroupskip,nomain,automake]{glossaries-extra}
+\usepackage[abbreviations,symbols,nogroupskip,toc]{glossaries-extra}
 \newglossary*{nomenclature}{Abbreviations}
-
 \glssetcategoryattribute{general}{textformat}{bf}
-
-
-
 \makeglossaries
 
-%\setabbreviationstyle[acronym]{long-short}
 
-% \glsaddstoragekey{unit}{}{\glsentryunit}
-% \glsnoexpandfields
-% \newglossarystyle{symbunitlong}
-% {%
-%  \setglossarystyle{long3col}% base this style on the list style
-%  \renewenvironment{theglossary}{% Change the table type --> 3 columns
-%    \begin{longtable}{lp{\glsdescwidth}>{\centering\arraybackslash}p{2.5cm}}}%
-%    {\end{longtable}}%
-%  %
-%  \renewcommand*{\glossaryheader}{%  Change the table header
-%    \bfseries Symbol & \bfseries Description & \bfseries Unit\\\hline
-%    \endhead}%
-%  \renewcommand*{\glossentry}[2]{%  Change the displayed items
-%     \glstarget{##1}{\glossentryname{##1}} %
-%     & \glossentrydesc{##1}% Description
-%     & \glsentryunit{##1}  \tabularnewline
-%  }%
-% }

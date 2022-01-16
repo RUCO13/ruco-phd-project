@@ -1,0 +1,253 @@
+%============================================= GENERAL PACKLAGES =============================================%
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=1cm,includefoot,includehead,headheight=13.6pt]{geometry}
+%\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=1cm,includefoot,includehead,headheight=14.5pt]{geometry}
+\usepackage{miama}
+\usepackage{calligra}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{relsize}
+\renewcommand{\_}{\textscale{.7}{\textunderscore}}
+\usepackage{makeidx}
+\makeindex
+\usepackage{leftidx}
+\usepackage{xcolor}
+\usepackage{tikz,pgfplots}%,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usetikzlibrary{calc,decorations,decorations.pathmorphing,arrows,matrix,positioning,patterns}
+\usepackage{amsmath,amssymb,amsfonts,latexsym,stmaryrd,eucal,amsthm,textcomp,cancel,verbatim} 
+\usepackage{physics}        
+\usepackage{mathrsfs}
+\usepackage{xfrac}
+\usepackage{units} % nicefrac
+\usepackage[squaren]{SIunits} % provide \micro command 
+\usepackage{sistyle}
+%\usepackage[usenames, dvipsnames]{color}
+\usepackage{array}
+\usepackage[backref=page]{hyperref}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{cite}
+\usepackage{microtype}
+\usepackage{enumerate}
+\usepackage{blindtext}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{placeins}
+\usepackage{lettrine}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{pdfpages}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{graphicx}
+\usepackage{cleveref}
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+\usepackage[perpage]{footmisc}
+
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\let\oldsection=\section % gemmer den gamle definition
+\renewcommand\section{\FloatBarrier\oldsection}
+
+
+
+%============================================= TOC MINITOC =============================================%
+\usepackage{minitoc}
+\usepackage{setspace}
+\setstretch{1.1}
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+\mtcindent=15pt
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\setcounter{minitocdepth}{3}
+%\setlength{\heavyrulewidth}{5pt}
+%\usepackage{cm-super}
+\RequirePackage{fix-cm}
+\usepackage{type1cm}
+\usepackage{aecompl}
+\usepackage{xargs}
+
+
+% Chapter display options
+\titlespacing*{\chapter}{0cm}{-1.cm}{-40pt}%pbk
+\titleformat{\chapter}[display]{\Huge\filleft\scshape}{\tikz{\draw[fill=black] (0,0) circle [radius=3cm] node[scale=5,font=\bfseries,white] {\thechapter}; }
+}{20pt}{}[\titlerule\vspace{2ex}\filright\vspace{2ex}]
+%
+\titlespacing*{\part}{-10pt}{120pt}{-80pt}%pbk
+\titleformat{\part}[frame]{\Huge\filcenter\scshape}{ \normalfont\bf\fontsize{85pt}{0pt}\selectfont \raisebox{1.7cm}{ Part\fontfamily{put}\fontseries{b}\fontsize{105pt}{0pt}\selectfont \hspace{.2em}\thepart} }{30pt}{}[\filright]
+
+\newcommand\boxedSection[3]{{%
+%
+\begin{tikzpicture}[inner sep=#3,line width=1.0pt]
+\node[anchor=east,rectangle,rounded corners=7,draw,fill=black!70!white] at (0,0) (counter) {\color{white}\textbf{#2}};
+\draw (counter.south)  ++(.0pt,.5pt)-- ++($(\linewidth,0) - (25pt,0)$);
+\draw ([yshift=-0.4mm]counter.north)  ++(.0pt,.5pt)-- ++($(\linewidth,0) - (25pt,0)$);
+\node [right of=counter,anchor=west,yshift=-0.1mm]{#1};
+\end{tikzpicture}
+ }}
+ \newcommand\boxedSectionB[3]
+ {{%
+%
+\begin{tikzpicture}[inner sep=#3,line width=1pt]
+%\node[anchor=east,rectangle,rounded corners=0.9,draw,fill=black] at (0,0) (counter) {\color{white}\textbf{#2}};
+\node[anchor=east,circle,draw,fill=black] at (0,0) (counter) {\color{white}\textbf{#2}};
+\draw (counter.south)++(.0pt,.5pt) --++($(0.955\textwidth,0) - (0pt,0)$);
+\draw ([yshift=-0.4mm]counter.north)++(.0pt,.5pt) --++($(0.955\textwidth,0) - (0pt,0)$);
+%\draw (counter.north) ++(.0pt,.5pt)-- ++($(1.01\linewidth,0) - (2.9pt,0)$);
+\node [right of=counter,anchor=west]{#1};
+\end{tikzpicture}
+ }}
+\newcommand\boxedsection[1]{\boxedSectionB{#1}{\thesection}{2mm}}
+\newcommand\boxedsubsection[1]{\boxedSection{#1}{\thesubsection}{1.7mm}}
+\newcommand\boxedsubsubsection[1]{\boxedSection{#1}{\thesubsubsection}{1.5mm}}
+ \titleformat{\section}[hang]%
+     {\usekomafont{section}}%
+     {}%
+     {.0em}%\usepackage{relsize}
+     {\filright\boxedsection}%
+ \titleformat{\subsection}[hang]%
+     {\usekomafont{subsection}}%
+     {}%
+     {.0em}%
+     {\filright\boxedsubsection}%
+ \titleformat{\subsubsection}[hang]%
+     {\usekomafont{subsubsection}}%
+     {}%
+     {.0em}%
+     {\filright\boxedsubsubsection}%
+
+\usepackage{rotating}
+\usepackage{fancyhdr}                  
+
+%=========================================== Fancy Header Style Options ===========================================%
+\pagestyle{fancy}                       % Sets fancy header and footer
+\fancyfoot{}                            % Delete current footer settings
+%\renewcommand{\chaptermark}[1]{         % Lower Case Chapter marker style
+%  \markboth{\chaptername\ \thechapter.\ #1}}{}} %
+%\renewcommand{\sectionmark}[1]{         % Lower case Section marker style
+%  \markright{\thesection.\ #1}}         %
+\fancyhead[LE,RO]{\bfseries\thepage}    % Page number (boldface) in left on even
+% pages and right on odd pages
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\thechapter.\ #1}}{}}
+\fancyhead[RE]{\bfseries\nouppercase{\leftmark}}      % Chapter in the right on even pages
+\fancyhead[LO]{\bfseries\nouppercase{\rightmark}}     % Section in the left on odd pages
+
+\let\headruleORIG\headrule
+\renewcommand{\headrule}{\color{black} \headruleORIG}
+\renewcommand{\headrulewidth}{1.0pt}
+\usepackage{colortbl}
+\arrayrulecolor{black}
+
+\fancypagestyle{plain}{
+  \fancyhead{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+
+%==================================== Clear Header ===============================================================%
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else%
+  \hbox{}%
+  \thispagestyle{empty}%              % Empty header styles
+  \newpage%
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+\makeatother
+%============================================RENEWs COMMANDS=====================================================%
+\usepackage{multirow}
+\usepackage{slashbox}
+
+\renewcommand{\epsilon}{\varepsilon}
+% centered page environment
+\newenvironment{vcentrepage}
+{\newpage\vspace*{\fill}\thispagestyle{empty}\renewcommand{\headrulewidth}{0pt}}
+{\vspace*{\fill}}
+\renewcommand{\figurename}{Figure}
+%\usepackage[small,bf]{caption}
+%\addtokomafont{caption}{\small}
+%\setkomafont{captionlabel}{\small\bfseries}
+\setcapindent{0em}
+\usepackage{ifpdf}
+\renewcommand{\thefootnote}{\roman{footnote}}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+\def\subsubsectionautorefname{Section}
+\usepackage{pdflscape}
+\newenvironment{mysidewaystable}[1][htp]{\begin{sidewaystable}[#1]}{\end{sidewaystable}}
+\renewcommand{\topfraction}{0.7}	% max fraction of floats at top
+\renewcommand{\bottomfraction}{0.75}	% max fraction of floats at bottom
+
+%================================ Parametres for TEXT pages (not float pages)=====================================%
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{1}
+\setcounter{totalnumber}{3}     % 2 may work better
+\setcounter{dbltopnumber}{2}    % for 2-column pages
+\renewcommand{\textfraction}{0.05}	% allow minimal text w. figs
+%   Parametres for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.6}	% require fuller float pages
+% N.B.: floatpagefraction MUST be less than topfraction !!
+\usepackage[title,toc]{appendix}
+
+
+%================================ add page to refs ===============================================================
+\renewcommand*{\backref}[1]{}
+\renewcommand*{\backrefalt}[4]{%
+    \ifcase #1 (Not cited.)%
+    \or        (Cited on page~#2.)%
+    \else      (Cited on pages~#2.)%
+    \fi}
+
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+
+
+%================================ NOMENCLATURE & INDEX PACKAGES ============================================%
+\usepackage{multicol}
+\usepackage[intoc]{nomencl}
+\makenomenclature
+\renewcommand{\nomname}{Nomenclature}
+%\renewcommand*{\nompreamble}{\begin{multicols}{2}}
+%\renewcommand*{\nompostamble}{\end{multicols}}
+\renewcommand{\nomlabel}[1]{#1\dotfill}
+\setlength{\nomitemsep}{-\parsep}
+\setlength{\nomlabelwidth}{3cm}
+
+%======================== glossaries packages ==========================================
+
+\usepackage[abbreviations,symbols,nogroupskip,nomain,automake]{glossaries-extra}
+\newglossary*{nomenclature}{Abbreviations}
+
+\glssetcategoryattribute{general}{textformat}{bf}
+
+
+
+\makeglossaries
+
+%\setabbreviationstyle[acronym]{long-short}
+
+% \glsaddstoragekey{unit}{}{\glsentryunit}
+% \glsnoexpandfields
+% \newglossarystyle{symbunitlong}
+% {%
+%  \setglossarystyle{long3col}% base this style on the list style
+%  \renewenvironment{theglossary}{% Change the table type --> 3 columns
+%    \begin{longtable}{lp{\glsdescwidth}>{\centering\arraybackslash}p{2.5cm}}}%
+%    {\end{longtable}}%
+%  %
+%  \renewcommand*{\glossaryheader}{%  Change the table header
+%    \bfseries Symbol & \bfseries Description & \bfseries Unit\\\hline
+%    \endhead}%
+%  \renewcommand*{\glossentry}[2]{%  Change the displayed items
+%     \glstarget{##1}{\glossentryname{##1}} %
+%     & \glossentrydesc{##1}% Description
+%     & \glsentryunit{##1}  \tabularnewline
+%  }%
+% }

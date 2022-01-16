@@ -1,0 +1,115 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphics}
+\usepackage{tikz,filecontents, pgfplots}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+
+
+
+\newcommand{\rgb}[3]{rgb:red,#1;green,#2;blue,#3}
+
+
+\input{/media/labfiles/ruco/phd-ssp/phd-thesis/files/pgfplots-set.tex}
+
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-samples/m43523/data/PL-M4_3523.dat}\pl
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-samples/m43140/data/PL-M4_3140-2.dat}\pld
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-samples/m43521/data/PL-M4_3521.dat}\plt
+%%
+
+
+%
+\pgfdeclareplotmark{*)}{\shade[draw=red!70!black,ball color=red!70] (0pt, 0pt) circle [radius=1.7pt];}
+\pgfdeclareplotmark{**)}{\shade[draw=blue!70!black,ball color=blue!70] (0pt, 0pt) circle [radius=1.7pt];}
+\pgfdeclareplotmark{***)}{\shade[draw=\rgb{0.31}{0.78}{0.47},ball color=\rgb{0.31}{0.78}{0.1}] (0pt, 0pt) circle
+	[radius=1.7pt];}
+
+\pgfdeclareplotmark{p1}{\shade[draw=red!70!black,ball color=red!70] (0pt, 0pt) circle [radius=1.5pt];}
+\pgfdeclareplotmark{p2}{\shade[draw=blue!70!black,ball color=blue!70] (0pt, 0pt) circle [radius=1.5pt];}
+\pgfdeclareplotmark{p3}{\shade[draw=\rgb{0.31}{0.78}{0.47},ball color=\rgb{0.31}{0.78}{0.1}] (0pt, 0pt) circle
+	[radius=1.5pt];}
+
+
+\usepackage{relsize}
+\renewcommand{\_}{\textscale{0.5}{\textunderscore}}
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{axis}[scale only axis,
+			name=PL,
+			xmin = 1.515,xmax=1.545,
+			minor x tick num=1,
+			ytick=\empty,
+			xtick pos=left,
+			xlabel={Photon Energy (eV)},
+			xlabel style={scale=1.2},
+			ylabel={PL intensity (arb. units)},
+			ylabel style={scale=1.2},
+			every axis plot/.append style={smooth,mark=*,mark options={scale=1,fill=white,line width=0.5pt},},
+			xticklabel style={
+				/pgf/number format/precision=3,
+				/pgf/number format/fixed,
+				/pgf/number format/fixed zerofill,
+			},
+			]
+			\addplot[color=Set1-A] table [x index=0, y index=1]\pl;
+			\addlegendentry{M4\_3521};
+			
+			\addplot[color=Set1-B] table [x index=0, y index=2] \pld;
+			\addlegendentry{M4\_3140};
+			
+			\addplot[color=Set1-C] table [x index=0, y index=1] \plt;
+			\addlegendentry{M4\_3523};
+			
+			\node[scale=1,font=\bf,anchor=east] at(axis description cs:0.95,0.7){$\mathrm{T\!=\!14K}$};
+			\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){a)};
+			
+		\end{axis}
+		
+		%M4_3171	
+		
+		
+\begin{axis}[scale only axis,
+			anchor=north west,
+			at={(PL.north east)},
+			width=3cm,
+			height=5cm,
+			minor x tick num=1,
+			minor y tick num=1,
+			xmin=1.515,xmax=1.545,
+			ymin=-0.2,ymax=2.85,
+			ytick=\empty,
+			%axis x line*=top,
+			xtick pos=top,
+			xlabel={Photon Energy (eV)},
+			xlabel style={scale=1},
+			tick label style={scale=1},
+			legend style ={at={(1,1)},anchor=north east,}
+			every axis plot/.append style={mark=*,smooth,mark options={scale=0.5,fill=white,line width=0.5pt},}
+			]
+			\addplot[color=Set1-A] table [x index=0, y expr=\thisrowno{1}/2] \pl;
+			\addplot[color=Set1-B] table [x index=0, y expr=0.5+\thisrowno{2}/2] \pld;
+			\addplot[color=Set1-C] table [x index=0, y expr=1+\thisrowno{1}/2] \plt;
+			\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){b)};
+			
+			
+			\def\sc{0.7}%scale arrow head 
+			%M4_3521
+			\bandt{1.5205}{1.9}{1.5}{$\thh{1}{1}$}{2}{\sc}{Set1-A}
+			\bandt{1.5226}{-0.2}{0.22}{$\tlh{1}{1}$}{-3}{\sc}{Set1-A}
+			
+			%M4_3140
+			\bandt{1.5289}{2.35}{1.95}{$\thh{1}{1}$}{2}{\sc}{Set1-B}
+			\bandt{1.5330}{0.15}{0.55}{$\tlh{1}{1}$}{-2}{\sc}{Set1-B}
+			%M4_3523
+			\bandt{1.5318}{2.9}{2.5}{$\thh{1}{1}$}{-3}{\sc}{Set1-C}
+			\bandt{1.5365}{0.7}{1.1}{$\tlh{1}{1}$}{-2}{\sc}{Set1-C}
+\end{axis}
+		
+	\end{tikzpicture}
+\end{document}
+

@@ -1,0 +1,72 @@
+% !TeX document-id = {d69ee402-8146-4393-ad78-f4dd492ad4f6}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\documentclass[margin=0mm,tikz]{standalone}
+\usetikzlibrary{arrows,arrows.meta,shadows,shapes,shapes.arrows}
+\usepackage{graphicx}
+
+
+
+
+\pgfkeys{
+/pgf/arrow keys/.cd,
+pitch/.code={%
+\pgfmathsetmacro\pgfarrowpitch{#1}
+\pgfmathsetmacro\pgfarrowsinpitch{abs(sin(\pgfarrowpitch))}
+\pgfmathsetmacro\pgfarrowcospitch{abs(cos(\pgfarrowpitch))}
+},
+}
+
+\pgfdeclarearrow{
+name = Cone,
+defaults = {       % inherit from Kite
+length     = +3.6pt +5.4,
+width'     = +0pt +0.5,
+line width = +0pt 1 1,
+pitch      = +0, % lie on screen
+},
+cache = false,     % no need cache
+setup code = {},   % so no need setup
+drawing code = {   % but still need math
+% draw the base
+\pgfmathsetmacro\pgfarrowhalfwidth{.5\pgfarrowwidth}
+\pgfmathsetmacro\pgfarrowhalfwidthsin{\pgfarrowhalfwidth*\pgfarrowsinpitch}
+\pgfpathellipse{\pgfpointorigin}{\pgfqpoint{\pgfarrowhalfwidthsin pt}{0pt}}{\pgfqpoint{0pt}{\pgfarrowhalfwidth pt}}
+\pgfusepath{fill}
+% test if the cone part visible
+\pgfmathsetmacro\pgfarrowlengthcos{\pgfarrowlength*\pgfarrowcospitch}
+\pgfmathparse{\pgfarrowlengthcos>\pgfarrowhalfwidthsin}
+\ifnum\pgfmathresult=1
+% it is visible, so draw
+\pgfmathsetmacro\pgfarrowlengthtemp{\pgfarrowhalfwidthsin*\pgfarrowhalfwidthsin/\pgfarrowlengthcos}
+\pgfmathsetmacro\pgfarrowwidthtemp{\pgfarrowhalfwidth/\pgfarrowlengthcos*sqrt(\pgfarrowlengthcos*\pgfarrowlengthcos-\pgfarrowhalfwidthsin*\pgfarrowhalfwidthsin)}
+\pgfpathmoveto{\pgfqpoint{\pgfarrowlengthcos pt}{0pt}}
+\pgfpathlineto{\pgfqpoint{\pgfarrowlengthtemp pt}{ \pgfarrowwidthtemp pt}}
+\pgfpathlineto{\pgfqpoint{\pgfarrowlengthtemp pt}{-\pgfarrowwidthtemp pt}}
+\pgfpathclose
+\pgfusepath{fill}
+\fi
+\pgfpathmoveto{\pgfpointorigin}
+}
+}
+
+\begin{document}
+	\begin{tikzpicture}[remember picture]
+		\useasboundingbox (-80mm,7mm) rectangle (120mm,150mm);
+		\draw[left color=black!25, right color=black!25, middle color=white,fill opacity=1,line width=0.3mm] (-60mm,70mm)--(60mm,70mm)--(40mm,97mm)--(-40mm,97mm)--cycle;
+		%\draw (-50mm,70mm)--(-45mm,20mm);
+		%\draw (45mm,70mm)--(45mm,30mm);
+		\draw [black,-,left color=black!10, right color=black!10, middle color=white,line width=0.4mm] plot [smooth,tension=1] coordinates { 
+		(-60mm,20mm) (-15mm,10mm) (20mm,35mm) (60mm,30mm)}--(60mm,70mm)--(-60mm,70mm)--cycle;
+		
+		\draw[-{Cone      },line width=2mm](0,8.5,0)--(6.5,7,0);
+		\draw[-{Cone      },line width=2mm](0,8.5,0)--(-6.5,7,0);
+		\draw[-{Cone [pitch=0]     },line width=2mm](0,8.5,0)--(-2.7,8.5,-7);
+		
+		\node[scale=3] at (15mm,115mm){$\left[001\right]$};
+		\node[scale=3] at (-35mm,60mm){$\left[1\overline{1}0\right]$};
+		\node[scale=3] at (35mm,60mm){$\left[110\right]$};
+		\node[scale=4,font=\bf] at (-15mm,30mm){\textcolor{green!50!black}{Ga}\textcolor{gray!80!black}{As}};
+		
+		\node[anchor=center,yshift=0mm] at (80mm,115mm){\includegraphics[width=0.6\linewidth]{/media/labfiles/RUCO/PhD-PHOTONICS/PhD-CODES/STRUCTURES/GaAs0.png}};
+	\end{tikzpicture}
+\end{document}

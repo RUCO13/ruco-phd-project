@@ -1,0 +1,5 @@
+\newglossaryentry{BZ}
+{%
+name={BZ},
+description={\emph{Brillouin zone}}
+}

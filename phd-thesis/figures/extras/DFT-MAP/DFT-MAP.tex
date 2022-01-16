@@ -1,0 +1,23 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\tikzset{concept/.append style={fill={none}}}
+\begin{document}
+	\pagestyle{empty}
+	\begin{tikzpicture}
+		\path[mindmap,concept color=black,text=black]
+		node[concept] {Many body problem}
+		[clockwise from=0]
+		child[concept color=green!50!black] {
+			node[concept] {practical}
+			[clockwise from=90]
+		}  
+		child[concept color=blue] {
+			node[concept] {applied}
+			[clockwise from=-30]
+		}
+		child[concept color=red] { node[concept] {technical} }
+		child[concept color=orange] { node[concept] {Born-Oppenheimer} };
+	\end{tikzpicture}
+\end{document}

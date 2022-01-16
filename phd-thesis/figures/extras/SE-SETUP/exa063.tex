@@ -1,0 +1,104 @@
+\documentclass[12pt,fleqn,a4paper]{scrartcl} % Thomas Soell
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amsthm}
+\usepackage[dvipsnames]{pstricks}
+\usepackage{pst-slpe,pst-blur}
+\usepackage{pst-grad,pst-circ}
+\usepackage{pstricks-add}
+
+\begin{document}
+
+
+\newpsstyle{Elektron}{linecolor=black!30,slopebegin=BrickRed!30,sloperadius=0.07,linestyle=none,slopecenter=0.65 0.65}
+
+\psscalebox{1.0}{%
+\begin{pspicture}[showgrid=false](0,-3)(15,10)
+\pnode(2,4){P1}
+\pnode(2.5,3.5){P2}
+\pnode(2.5,0){P3}
+\pnode(2,0){P4}
+
+\pnode(2,6){Q1}
+\pnode(2.5,6.5){Q2}
+\pnode(2.5,10){Q3}
+\pnode(2,10){Q4}
+
+\pnode(0,6){L1}
+\pnode(12.8,6){L2}
+\pnode(0,4){L3}
+\pnode(12.8,4){L4}
+
+\pnode(12,4.3){E1}
+\pnode(11.4,5.5){E2}
+\pnode(11.2,5){E3}
+\pnode(10.6,5.7){E4}
+\pnode(10.3,4.4){E5}
+\pnode(9.7,5.3){E6}
+
+\pnode(7,3.5){R1}
+\pnode(7,-2){R2}
+\pnode(14,-2){R3}
+\pnode(14,5){R4}
+\pnode(13,5){R5}
+
+\pnode(12.5,6.5){S1}
+\pnode(13,8){S2}
+\pnode(7,6.5){S3}
+\pnode(6,8.5){S4}
+
+
+\pspolygon[fillstyle=gradient,linewidth=.2pt,gradbegin=black!80,gradend=BrickRed!90,gradmidpoint=0.5,gradangle=90](P1)(P2)(P3)(P4)
+\pspolygon[fillstyle=gradient,linewidth=.2pt,gradbegin=black!80,gradend=BrickRed!90,gradmidpoint=0.5,gradangle=90](Q1)(Q2)(Q3)(Q4)
+\pscircle[linecolor=black!50,linewidth=0.2pt,fillstyle=solid,fillcolor=cyan!30,opacity=0.2](9,5){4}%
+\psframe[fillstyle=gradient,linestyle=none,gradbegin=yellow!90,gradend=yellow!10,gradmidpoint=0.5,gradangle=0](L1)(L4)
+\pcline[linecolor=black!70,ArrowInside=->,ArrowInsidePos=0.1,arrowsize=0.2,arrowinset=0.03,arrowlength=1.5](L1)(L2)
+\pcline[linecolor=black!70,ArrowInside=->,ArrowInsidePos=0.1,arrowsize=0.2,arrowinset=0.03,arrowlength=1.5](L3)(L4)
+\psellipticarc[linewidth=1.5pt](7,5)(0.5,1.5){71}{289}
+\psellipticarc[linecolor=black!30,linewidth=1.2pt,linestyle=dashed,dash=3pt 3pt](7,5)(0.5,1.5){289}{71}
+
+\pscustom[fillstyle=solid,linecolor=black!40,fillcolor=brown!70!BrickRed!50,opacity=0.9]{%
+\psarc[liftpen=0](9,5){3.99}{-30}{30}
+\psarcn[liftpen=0](9,5){3.5}{30}{-30}%
+\closepath%
+}%
+
+\psline(R1)(R2)
+\psline(R4)(R5)
+\psLNode(R2)(R3){0.5}{RU}
+\rput(RU){\pnode(0.7;40){RE}}
+\circledipole[radius=0.5,labeloffset=0](R3)(R4){$I_{\text{Ph}}$}
+\battery(R3)(R2){$U_{\text{G}}$}
+\pcline[arrows=->,arrowsize=0.15,arrowinset=0,arrowlength=1.5,nodesepA=-0.7](RU)(RE)
+
+\pcline(S1)(S2)
+\uput{0.1cm}[70](S2){\Large\textbf{K}}
+\pcline(S3)(S4)
+\uput{0.1cm}[120](S4){\Large\textbf{A}}
+
+\rput(E1){\pcline[linewidth=0.6pt,arrows=->,arrowsize=0.1,arrowinset=0.02,arrowlength=1.5](0,0)(0.5;185)}
+\rput(E1){\psBall[style=Elektron](0,0){BrickRed!90}{.1}}
+\rput[c]{0}(E1){\tiny $-$}%
+\rput(E2){\pcline[linewidth=0.6pt,arrows=->,arrowsize=0.1,arrowinset=0.02,arrowlength=1.5](0,0)(0.5;170)}
+\rput(E2){\psBall[style=Elektron](0,0){BrickRed!90}{.1}}
+\rput[c]{0}(E2){\tiny $-$}%
+\rput(E3){\pcline[linewidth=0.6pt,arrows=->,arrowsize=0.1,arrowinset=0.02,arrowlength=1.5](0,0)(0.5;180)}
+\rput(E3){\psBall[style=Elektron](0,0){BrickRed!90}{.1}}
+\rput[c]{0}(E3){\tiny $-$}%
+\rput(E4){\pcline[linewidth=0.6pt,arrows=->,arrowsize=0.1,arrowinset=0.02,arrowlength=1.5](0,0)(0.5;190)}
+\rput(E4){\psBall[style=Elektron](0,0){BrickRed!90}{.1}}
+\rput[c]{0}(E4){\tiny $-$}%
+\rput(E5){\pcline[linewidth=0.6pt,arrows=->,arrowsize=0.1,arrowinset=0.02,arrowlength=1.5](0,0)(0.5;176)}
+\rput(E5){\psBall[style=Elektron](0,0){BrickRed!90}{.1}}
+\rput[c]{0}(E5){\tiny $-$}%
+\rput(E6){\pcline[linewidth=0.6pt,arrows=->,arrowsize=0.1,arrowinset=0.02,arrowlength=1.5](0,0)(0.5;180)}
+\rput(E6){\psBall[style=Elektron](0,0){BrickRed!90}{.1}}
+\rput[c]{0}(E6){\tiny $-$}%
+\pscircle[linecolor=black!50,linewidth=0.2pt,fillstyle=solid,fillcolor=cyan!30,opacity=0.2](9,5){4}%
+\end{pspicture}
+}
+
+\end{document}
+
+Fotoeffekt

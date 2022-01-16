@@ -1,0 +1,91 @@
+% !TeX document-id = {d69ee402-8146-4393-ad78-f4dd492ad4f6}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\documentclass[margin=0mm,tikz]{standalone}
+\usetikzlibrary{arrows,arrows.meta,shadows,shapes,shapes.arrows}
+\usepackage{graphicx}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\pgfkeys{
+/pgf/arrow keys/.cd,
+pitch/.code={%
+
+\pgfmathsetmacro\pgfarrowpitch{#1}
+\pgfmathsetmacro\pgfarrowsinpitch{abs(sin(\pgfarrowpitch))}
+\pgfmathsetmacro\pgfarrowcospitch{abs(cos(\pgfarrowpitch))}
+}
+}
+
+
+\pgfkeys{
+	/pgf/arrow keys/.cd,
+	pitch/.code={%
+		\pgfmathsetmacro\pgfarrowpitch{#1}
+		\pgfmathsetmacro\pgfarrowsinpitch{abs(sin(\pgfarrowpitch))}
+		\pgfmathsetmacro\pgfarrowcospitch{abs(cos(\pgfarrowpitch))}
+	},
+}
+
+\pgfdeclarearrow{
+	name = Cone,
+	defaults = {       % inherit from Kite
+		scale=1,
+		length     = +3.6pt +5.4,
+		width'     = +0pt +0.5,
+		line width = +0pt 1 1,
+		pitch      = +0, % lie on screen
+	},
+	cache = false,     % no need cache
+	setup code = {},   % so no need setup
+	drawing code = {   % but still need math
+		% draw the base
+		\pgfmathsetmacro\pgfarrowhalfwidth{.5\pgfarrowwidth}
+		\pgfmathsetmacro\pgfarrowhalfwidthsin{\pgfarrowhalfwidth*\pgfarrowsinpitch}
+		\pgfpathellipse{\pgfpointorigin}{\pgfqpoint{\pgfarrowhalfwidthsin pt}{0pt}}{\pgfqpoint{0pt}{\pgfarrowhalfwidth pt}}
+		\pgfusepath{fill}
+		% test if the cone part visible
+		\pgfmathsetmacro\pgfarrowlengthcos{\pgfarrowlength*\pgfarrowcospitch}
+		\pgfmathparse{\pgfarrowlengthcos>\pgfarrowhalfwidthsin}
+		\ifnum\pgfmathresult=1
+		% it is visible, so draw
+		\pgfmathsetmacro\pgfarrowlengthtemp{\pgfarrowhalfwidthsin*\pgfarrowhalfwidthsin/\pgfarrowlengthcos}
+		\pgfmathsetmacro\pgfarrowwidthtemp{\pgfarrowhalfwidth/\pgfarrowlengthcos*sqrt(\pgfarrowlengthcos*\pgfarrowlengthcos-\pgfarrowhalfwidthsin*\pgfarrowhalfwidthsin)}
+		\pgfpathmoveto{\pgfqpoint{\pgfarrowlengthcos pt}{0pt}}
+		\pgfpathlineto{\pgfqpoint{\pgfarrowlengthtemp pt}{ \pgfarrowwidthtemp pt}}
+		\pgfpathlineto{\pgfqpoint{\pgfarrowlengthtemp pt}{-\pgfarrowwidthtemp pt}}
+		\pgfpathclose
+		\pgfusepath{fill}
+		\fi
+		\pgfpathmoveto{\pgfpointorigin}
+	}
+}
+
+
+
+\begin{document}
+	\begin{tikzpicture}
+		\useasboundingbox (-18mm,-25mm) rectangle (125mm,30mm);
+		\node[anchor=south,] at (60mm,-12mm){\includegraphics[width=\linewidth]{/media/labfiles/RUCO/PhD-PHOTONICS/PhD-CODES/STRUCTURES/AlGaAs0.pdf}};
+		
+		
+		\begin{scope}[line width=3,yshift=-9mm,xshift=-5mm]
+			\draw[-{Cone          },blue](0,0,0)--(1,0,0);
+			\draw[-{Cone          }](0,0,0)--(0,1,0);
+			\draw[-{Cone[pitch=60]}](0,0,0)--(0,0,1);
+			\path(2,0,0)(0,2,0)(0,0,2);
+			\node[scale=1,blue] at (21mm,0mm){$[001]$};
+			\node[scale=1,rotate=90] at (0mm,21mm){$[1\overline{1}0]$};
+			\node[scale=1,rotate=45] at (-9mm,-9mm){$[110]$};
+		\end{scope}
+	\end{tikzpicture}
+\end{document}

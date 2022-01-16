@@ -1,0 +1,194 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{tikz,pgfplots}
+\usepackage[paperheight=5cm,paperwidth=9.1cm]{geometry}
+\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric}
+\usetikzlibrary{calc,fadings,decorations.pathreplacing}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer,}
+\usepackage{pgfplotstable}
+
+
+\begin{document}
+	\thispagestyle{empty}
+	\begin{tikzpicture}[remember picture,overlay]
+		% You can see the border of the page node with this:
+		%\draw[thick] (current page.south west) rectangle (current page.north east);
+		%\draw (0,0) node[anchor=south] {.};
+
+		\draw[rotate=0] (-1.5,2) parabola bend (0,-1) (1.5,2);
+		\draw[rotate=0] (-1.75,-3) parabola bend (0,-2) (1.75,-3);
+		\draw[rotate=0] (-1.75,-4) parabola bend (0,-2.2) (1.75,-4);
+		\draw[-Stealth,blue] (-1,-1.1)--(-1,-0.5);
+		\draw[-Stealth,blue] (1,-0.5)--(1,-1.1);
+			\draw[ line width=0.1pt,shade,ball color=yellow,opacity=0.3](0,-1.5cm) ellipse  (0.65cm and 1.1cm);
+			
+			\draw[ line width=0.1pt,shade,ball color=green,opacity=0.5,rotate around={-20:(0.15cm,-1.59cm)}] (0.15cm,-1.59cm) ellipse (0.25cm and 0.8cm);
+			
+			
+		\draw (0,-2) node[circle,shade,ball color=red,opacity=0.9]{}; 	
+		\shade[ball color=red,opacity=0.5] (0,-2) circle (0.2) node[yellow!70!,font=\bfseries,opacity=1] {h};	
+		
+		
+		
+		\draw (-0.3,-1.1) node[circle,shade,ball color=blue,opacity=0.9]{}; 	
+		\shade[ball color=blue,opacity=0.5] (-0.3,-1.1) circle (0.2) node[blue!20!yellow,font=\bfseries,opacity=1] {e};	
+		
+		
+		\draw (0.3,-1.1) node[circle,shade,ball color=blue,opacity=0.9]{}; 	
+		\shade[ball color=blue,opacity=0.5] (0.3,-1.1) circle (0.2) node[blue!20!yellow,font=\bfseries,opacity=1] {e};
+			
+		
+		
+		
+		
+		% \draw[densely dashed,magenta, line width=2pt] (0,-1.5) ellipse (0.75cm and 1.25cm);
+
+		 \node[font=\bfseries,scale=1.5] at (1.5,-1.5) {$\mathit{X^{-}}$};
+		\node[anchor=north west,blue,font=\bf] at (current page.north west){a)};
+		\node[anchor=north,blue,font=\bf] at (current page.north){b)};
+		
+		
+		%\draw (3,-1.5) node[anchor=south] {.};
+		%\fill[gray!80,opacity=0.2](3,-1)--(4.5,1)--(5,1)-- ; 
+		
+		
+		%=========================================== plot ==============================
+		\pgfplotsset{compat=newest,
+			every axis/.style = {
+				%scale only axis,
+				width=4cm,height=3cm,
+				line width = 0.4pt,
+				tick style = {line width=0.4pt,black},
+				ticklabel style={scale=0.4},
+				major tick length = 0.8mm,
+				minor tick length = 0.4mm,
+				xtick pos=left,
+				%ytick pos=left,
+				xlabel style={scale=0.6},
+				ylabel style={scale=0.6},
+				yticklabel style={
+					/pgf/number format/precision=3,
+					/pgf/number format/fixed,
+					/pgf/number format/fixed zerofill,
+				},
+			},
+			/pgfplots/legend image code/.code={%
+				\draw[mark repeat=1,mark phase=1,#1] 
+				plot coordinates {
+					(0cm,0cm) 
+					(0.0cm,0cm)
+					(0.0cm,0cm)
+					(0.0cm,0cm)
+					(0.3cm,0cm)%
+				};
+			},
+		}	
+		
+		
+		
+	\begin{scope}[transform canvas={xshift = -0.4cm,yshift=0.7cm},scale=1.3]
+	\begin{axis}[anchor=west,
+		at={(current page.center)},
+		xshift=-5,yshift=-5,
+		scale only axis,
+		xmin = 285,xmax=340.00,
+		ymax=0.3,
+		name=bottom axiss,
+		hide axis
+		]
+		%%%============================== Add Data =================================
+		\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/cqws-codes/cqws/data/potentials-m43140.txt}{\vp};
+		\addplot[black,no marks,forget plot] table[x index=0,y expr=\thisrow{1}-1.45]  {\vp};
+		\addplot[black,no marks,forget plot] table[x index=0,y index=2]{\vp};
+		
+		\def\cb{0.18359365}
+		\def\cero{0.06692115384615382}
+		
+		\shade[gray!80,opacity=0.7](axis cs:285,\cb)--(axis cs:317,0.3)--(axis cs:323,0.3)--(axis cs:300,\cb)--cycle; 
+		\shade[gray,opacity=0.7](axis cs:327.7,\cb)--(axis cs:335,0.3)--(axis cs:345,0.3)--(axis cs:345,\cb)--cycle; 
+		\shade[gray!90,opacity=0.8,draw](axis cs:311.87,\cb)--(axis cs:327.7,0.3)--(axis cs:329.7,0.3)--(axis cs:313.85,\cb); 
+		
+		\fill[gray!85,opacity=0.5](axis cs:323,0.3)--(axis cs:323,0.268)--(axis cs:311.87,\cb)--(axis cs:311.87,\cero)--(axis cs:300,\cero)--(axis cs:300,\cb);
+		
+	
+		%Barrier
+		\fill[gray!80,opacity=0.5](axis cs:329.7,0.3)--(axis cs:329.7,0.215)--(axis cs:327.7,\cb)--(axis cs:327.7,\cero)--(axis cs:313.85,\cero)--(axis cs:313.85,\cb); 
+		
+		
+		
+		%\fill[gray!80,opacity=0.2](axis cs:311.87,\cero)--(axis cs:313.85,\cb-0.1)--(axis cs:313.85,\cb)--(axis cs:311.87,\cb)--cycle; 
+		\draw[line width=0.1pt] (axis cs:300,\cero)--(axis cs:311.87,\cb-0.04);
+		\draw[line width=0.1pt] (axis cs:313.85,\cero)--(axis cs:327.7,\cb-0.02);
+		
+		
+		
+		\def\vb{-0.06282365384615383}
+		\fill[gray!80,opacity=0.2](axis cs:300,\vb)--(axis cs:311.87,0.0)--(axis cs:300,0.0)--cycle; 
+		\draw[line width=0.1pt] (axis cs:300,\vb)--(axis cs:311.87,0.0);
+		
+		\fill[gray!80,opacity=0.2,draw](axis cs:313.85,\vb)--(axis cs:327.7,0.0)--(axis cs:313.85,0.0)--cycle;
+		
+		\draw[line width=0.1pt] (axis cs:313.85,\vb)--(axis cs:327.7,0.0);
+		%(axis cs:300,0.07)--(axis cs:300,0.18)--(axis cs:312,0.4)
+		%\fill[gray!80,opacity=0.2](axis cs:311.87,0.18)--(axis cs:320,0.4)--(axis cs:322,0.4)--(axis cs:313.85,0.18); 
+		
+		
+		%\draw [gray!50,]  (axis cs:285,\vb) -- (axis cs:285.3,\vb+0.03) -- (axis cs:286,\vb+0.1) --(axis cs:286,\vb+0.13)-- (axis cs:285,\cb);
+		\fill [gray!70,opacity=0.2,draw=black] plot [smooth, tension=1] coordinates {  (axis cs:285,\vb)  (axis cs:285.3,\vb+0.05) (axis cs:287,\vb+0.1) (axis cs:286,\vb+0.17) (axis cs:285,\cb)}--
+		(axis cs:300,\cb)--
+		(axis cs:300,\cero)--
+		(axis cs:311.87,\cero)--
+		(axis cs:311.87,\cb)--
+		(axis cs:313.85,\cb)--
+		(axis cs:313.85,\cero)--
+		(axis cs:327.85,\cero)--
+		(axis cs:327.85,\cb)--
+		(axis cs:340.0,\cb)--
+		(axis cs:340.0,\vb)--
+		(axis cs:327.85,\vb)--
+		(axis cs:327.85,0.0)--
+		(axis cs:313.85,0.0)--
+		(axis cs:313.85,\vb)--
+		(axis cs:311.87,\vb)--
+		(axis cs:311.87,0.0)--
+		(axis cs:300,0.0)--
+		(axis cs:300,\vb)--
+		cycle;
+		
+\pgfplotsinvokeforeach{287,289,...,299}{
+	\draw (axis cs:#1,\cb) node[circle,anchor=south,shade,ball color=blue,opacity=0.9,scale=0.45]{}; 	
+}
+
+	\draw (axis cs:301,\cb-0.05) node[circle,anchor=south,shade,ball color=blue,opacity=0.9,scale=0.45]{}; 	
+%\draw (axis cs:295,\cb+0.02) node[circle,anchor=south,shade,ball color=blue,opacity=0.9,scale=0.4]{}; 
+%\draw (axis cs:297,\cb+0.02) node[circle,anchor=south,shade,ball color=blue,opacity=0.9,scale=0.4]{}; 
+%\draw (axis cs:299,\cb+0.02) node[circle,anchor=south,shade,ball color=blue,opacity=0.9,scale=0.4]{}; 
+
+\pgfplotsinvokeforeach{301,303,...,311}{
+\draw (axis cs:#1,\cero+0.0) node[circle,anchor=south,shade,ball color=blue,opacity=0.8,scale=0.45]{}; }
+
+
+\pgfplotsinvokeforeach{315,317,...,326}{
+\draw (axis cs:#1,\cero+0.0) node[circle,anchor=south,shade,ball color=blue,opacity=0.8,scale=0.45]{}; }
+
+
+\pgfplotsinvokeforeach{319,321,...,326}{
+\draw (axis cs:#1,\cero+0.018) node[circle,anchor=south,shade,ball color=blue,opacity=0.8,scale=0.45]{}; }
+
+
+\pgfplotsinvokeforeach{301,303,...,311}{
+\draw (axis cs:#1,\vb+0.062) node[circle,anchor=south,shade,ball color=red,opacity=0.8,scale=0.45]{}; }
+
+\draw [-Stealth,red] (axis cs:305,\cb) to [out=90,in=90] (axis cs:317,\cb);
+
+		 \draw[ line width=0.1pt,shade,ball color=green,opacity=0.5] (axis cs:311,\vb+0.1) ellipse (1.5 and 0.06);
+		 \draw[ line width=0.1pt,shade,ball color=yellow,opacity=0.3] (axis cs:313,\vb+0.1) ellipse (3.5 and 0.08);
+
+
+%\draw[->] (2,2) -- (polo) -- (2,4);
+	\end{axis}
+\end{scope}
+\node[anchor=south east, inner sep=0pt,draw] at (current page.south east){\includegraphics[scale=1]{/media/labfiles/ruco/analisis/by-groups/plots/cqws/build/cqws-2-v2}};
+	\end{tikzpicture}
+\end{document}

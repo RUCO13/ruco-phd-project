@@ -1,0 +1,108 @@
+% arara: pdflatex: { shell : yes, options: "--output-directory=build"}
+\documentclass[margin=0.5mm]{standalone}
+\usepackage[pdf]{pstricks}
+\usepackage[pspdf={-dDELAYSAFER}]{auto-pst-pdf}
+\usepackage{pst-optexp}
+\usepackage{pstricks,pst-slpe} 
+
+\begin{document}
+	
+	
+	
+	\begin{pspicture}(13.5,9.5)
+		
+		
+		%\psframe[fillstyle=solid, opacity=0.1, strokeopacity=0.7,fillcolor=gray,linewidth=0.05mm](0.5,0.5)(4.5,2.5)
+		%\rput[mon](4,-0.5){Monocromador}
+		
+		\pnode(2,8){LM}
+		\pnode(2,6){M1}
+		\pnode(5,9){M2}
+		\pnode(2,3){MONO}
+		\pnode(5,5){In}
+		\pnode(5,4){MM1}
+		\pnode(1,4){MM2}
+		\pnode(5,2.5){G1}
+		\pnode(1,1){MM3}
+		\pnode(4,1){Out}
+		\pnode(8,1){M3}
+		\pnode(7,1.5){M4}
+		\pnode(8,1.5){POL}
+		\pnode(9,1.5){PEM}
+		\pnode(13,1.5){SAMPLE}
+		\pnode(11,2){LENS}
+		\pnode(10,2.5){DETECTOR}
+		\pnode(10,3.5){LASER}
+		%\pnode(9.5,4){FILTER}
+		%LRB78XK
+		%
+		
+		\psframe[fillstyle=solid,fillcolor=black,opacity=0.1,linewidth=1pt](6.1,0)(14,6.5)
+		\optbox[position=start, optboxsize=1.2 1.2,labeloffset=0](LM)(M1){\color{blue}\fontsize{13labeloffset=pt}{6pt}\selectfont$\mathrm{W}$}
+		\mirror[mirrorwidth=0.85,
+		mirrortype=extended,
+		variable,
+		label=0.5](LM)(M1)(M2){\color{blue}\fontsize{15pt}{6pt}\selectfont$\mathrm{M_1}$}
+		\mirror[mirrorwidth=1,mirrortype=extended,variable](M1)(M2)(MM1){\color{blue}\fontsize{13pt}{6pt}\selectfont$\mathrm{M_2}$}
+		
+		
+		\pinhole[innerheight=0.03,phwidth=0.1,abspos=4](M2)(MM1)
+		\mirror[mirrorwidth=0.7,mirrortype=extended](M2)(MM1)(MM2)
+		\mirror[mirrortype=extended, mirrorradius=10, mirrorwidth=1](MM1)(MM2)(G1)
+		\optgrating[ variable](MM2)(G1)(MM3)
+		\mirror[mirrortype=extended, mirrorradius=10, mirrorwidth=1](G1)(MM3)(M3)
+		\pinhole[innerheight=0.03,phwidth=0.1,abspos=5](MM3)(M3)
+		\psframe[linewidth=0.1](0,0)(6,5)
+		
+		\mirror[mirrortype=extended,
+		mirrorwidth=0.5,
+		label=0.7,
+		labelangle=-90](MM3)(M3)(M4){\color{blue}\fontsize{13pt}{6pt}\selectfont$\mathrm{M_3}$}
+		\mirror[mirrortype=extended,
+		mirrorradius=1.5,
+		mirrorwidth=0.5,
+		label=0.7,
+		labelangle=-90](M3)(M4)(POL){\color{blue}\fontsize{13pt}{6pt}\selectfont$\mathrm{M_4}$}
+		
+		\polarization[poltype=misc,polsize=1, abspos=1.5,beam](POL)(PEM){\color{blue}\fontsize{13pt}{6pt}\selectfont$\mathrm{P}$}
+		\polarization[poltype=parallel,polsize=1, abspos=1.5,beam](PEM)(SAMPLE){\color{blue}\fontsize{13pt}{6pt}\selectfont$\mathrm{PEM}$}
+		%
+		\opttripole[label=0.7,compname=SAM](PEM)(SAMPLE)(DETECTOR){%
+			\psframe[fillstyle=solid,
+			fillcolor=gray!50](-0.3,0)(0.3,0.2)
+			\psline(-0.3,0.1)(-0.5,0.1)(-0.5,0.5)(0.5,0.5)(0.5,0.1)(0.3,0.1)}{}
+		
+		
+		
+		\lens[lens=1. 1. 0.7,abspos=1.75,n=1.5,
+		label=0.5,
+		labelangle=150](SAMPLE)(DETECTOR){\color{blue}\fontsize{13pt}{6pt}\selectfont$\mathrm{L}$}
+		
+%		\optplate[position=0.95,
+%		plateheight=0.75, 
+%		platelinewidth=5\pslinewidth,
+%		label=0.7,
+%		labelangle=175](SAMPLE)(DETECTOR){\color{blue}\fontsize{13pt}{6pt}\selectfont$\mathrm{F}$}
+		
+		\optdetector[dettype=diode,
+		compname=DET,
+		labelangle=120,
+		label=1](SAMPLE)(DETECTOR){\color{blue}\fontsize{13pt}{6pt}\selectfont$\mathrm{PM}$}
+		
+		
+		\drawwidebeam[fillstyle=solid, fillcolor=yellow!30, opacity=0.5, linecolor=yellow!90,beamwidth=0.3]{1-4}
+		\drawbeam[fillstyle=solid,opacity=0.2, linecolor=yellow!70,linewidth=0.09,beaminside=false]{4-7}
+		\definecolor[ps]{bl}{rgb}{%
+			tx@addDict begin Red Green Blue end}%
+		\addtopsstyle{Beam}{linecolor=bl, fillcolor=bl,linewidth=0.5\pslinewidth, beaminside=false}
+		\multido{\i=0+1}{30}{%
+			\pstVerb{%
+				\i\space 700 400 sub 29 div mul 430 add
+				tx@addDict begin wavelengthToRGB end }%
+			\drawwidebeam[beamwidth=0.03,beamangle=\i\space 0.5 mul 5 sub,fillstyle=solid]{7-16}%
+		}%
+		
+		
+		
+	\end{pspicture}
+\end{document}

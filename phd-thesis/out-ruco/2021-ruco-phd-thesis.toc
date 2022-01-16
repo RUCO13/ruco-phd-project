@@ -1,0 +1,22 @@
+\contentsline {chapter}{\nonumberline List of Figures}{II}{chapter*.2}%
+\contentsline {chapter}{\nonumberline List of Tables}{III}{chapter*.3}%
+\contentsline {chapter}{Abbreviations}{IV}{section*.4}%
+\contentsline {chapter}{List of codes and packages}{V}{section*.6}%
+\contentsline {chapter}{Symbols}{VI}{section*.8}%
+\contentsline {chapter}{\numberline {1}Physical Background}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Semiconductor Bandstructure}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Valence and Conduction Bands}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Excitons}{8}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Semiconductor Low-Dimensional Structures}{9}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Quantum wells}{10}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Preliminary approach of Quantum Confinement effect in QWs}{11}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Summary}{14}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Physical model}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The Symmetry Context }{16}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}The Brillouin Zone and the Band Structure}{19}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}General revision of numerical methods}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Finite Difference Method}{20}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Structural Parameters}{20}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Anisotropy model in CQWs }{20}{section.2.4}%
+\contentsline {chapter}{Bibliography}{21}{chapter*.20}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

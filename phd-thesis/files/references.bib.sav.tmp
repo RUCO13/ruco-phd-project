@@ -1,0 +1,1774 @@
+@article{sundram1991structures,
+	author = {SUNDARAM, MANI and CHALMERS, SCOTT A. and HOPKINS, PETER F. and GOSSARD, ARTHUR C.},
+	title = {New Quantum Structures},
+	volume = {254},
+	number = {5036},
+	pages = {1326--1335},
+	year = {1991},
+	doi = {10.1126/science.254.5036.1326},
+	publisher = {American Association for the Advancement of Science},
+	abstract = {Structures in which electrons are confined to move in two dimensions (quantum wells) have led to new physical discoveries and technological applications. Modification of these structures to confine the electrons to one dimension (quantum wires) or release them in the third dimension, are predicted to lead to new electrical and optical properties. This article discusses techniques to make quantum wires, and quantum wells of controlled size and shape, from compound semiconductor materials, and describes some of the properties of these structures.},
+	issn = {0036-8075},
+	URL = {https://science.sciencemag.org/content/254/5036/1326},
+	eprint = {https://science.sciencemag.org/content/254/5036/1326.full.pdf},
+	journal = {Science}
+}
+
+
+@unpublished{carlos2020thesis,
+	author       = {C. A. Bravo-Velazques}, 
+	title        = {Sistema De Fotoluminiscencia PAra Caracterizaci\'on De Pozos Cu\'anticos Acoplados},
+	note         = {Bachelor Thesis to obtain Engineering Physicist degree},
+	month        = 2,
+	year         = 2020
+}
+
+
+
+
+@article{yuan2018tunneling,
+	title = {Tunneling blockade and single-photon emission in GaAs double quantum wells},
+	author = {Yuan, M. and Hern\'andez-M\'{\i}nguez, A. and Biermann, K. and Santos, P. V.},
+	journal = {Phys. Rev. B},
+	volume = {98},
+	issue = {15},
+	pages = {155311},
+	numpages = {7},
+	year = {2018},
+	month = {Oct},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.98.155311},
+}
+
+@article{chen1987effect,
+	title = {Effect of electric fields on excitons in a coupled double-quantum-well structure},
+	author = {Chen, Y. J. and Koteles, Emil S. and Elman, B. S. and Armiento, C. A.},
+	journal = {Phys. Rev. B},
+	volume = {36},
+	issue = {8},
+	pages = {4562--4565},
+	numpages = {0},
+	year = {1987},
+	month = {Sep},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.36.4562},
+}
+
+
+@article{miller1984band-edge,
+	title = {Band-Edge Electroabsorption in Quantum Well Structures: The Quantum-Confined Stark Effect},
+	author = {Miller, D. A. B. and Chemla, D. S. and Damen, T. C. and Gossard, A. C. and Wiegmann, W. and Wood, T. H. and Burrus, C. A.},
+	journal = {Phys. Rev. Lett.},
+	volume = {53},
+	issue = {22},
+	pages = {2173--2176},
+	numpages = {0},
+	year = {1984},
+	month = {Nov},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevLett.53.2173},
+}
+
+
+
+
+
+@article{koopmans1998microscopic,
+	author = {Koopmans, B. and Koopmans, B. and Santos, P.V. and Santos, P.V. and Cardona, M.},
+	title = {Microscopic Reflection Difference Spectroscopy on Semiconductor Nanostructures},
+	journal = {physica status solidi (a)},
+	volume = {170},
+	number = {2},
+	pages = {307-315},
+	doi = {10.1002/(SICI)1521-396X(199812)170:2<307::AID-PSSA307>3.0.CO;2-Z},
+	year = {1998}
+}
+
+
+
+
+@article{krebs1996giant,
+	title = {Giant Optical Anisotropy of Semiconductor Heterostructures with No Common Atom and the Quantum-Confined Pockels Effect},
+	author = {Krebs, Olivier and Voisin, Paul},
+	journal = {Phys. Rev. Lett.},
+	volume = {77},
+	issue = {9},
+	pages = {1829--1832},
+	numpages = {0},
+	year = {1996},
+	month = {Aug},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevLett.77.1829},
+}
+
+
+
+@article{chen2002interface,
+	title = {Interface-related in-plane optical anisotropy in ${\mathrm{G}\mathrm{a}\mathrm{A}\mathrm{s}/\mathrm{A}\mathrm{l}}_{x}{\mathrm{Ga}}_{1\ensuremath{-}x}\mathrm{As}$ single-quantum-well structures studied by reflectance difference spectroscopy},
+	author = {Chen, Y. H. and Ye, X. L. and Wang, J. Z. and Wang, Z. G. and Yang, Z.},
+	journal = {Phys. Rev. B},
+	volume = {66},
+	issue = {19},
+	pages = {195321},
+	numpages = {5},
+	year = {2002},
+	month = {Nov},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.66.195321},
+}
+
+
+
+@article{braun1997nonuniform,
+	title = {Nonuniform segregation of Ga at AlAs/GaAs heterointerfaces},
+	author = {Braun, Wolfgang and Trampert, Achim and D\"aweritz, Lutz and Ploog, Klaus H.},
+	journal = {Phys. Rev. B},
+	volume = {55},
+	issue = {3},
+	pages = {1689--1695},
+	numpages = {0},
+	year = {1997},
+	month = {Jan},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.55.1689},
+}
+
+
+
+
+@Article{tang2009well-width,
+  author  = {Tang,C. G. and Chen,Y. H. and Xu,B. and Ye,X. L. and Wang,Z. G.},
+  journal = {Journal of Applied Physics},
+  title   = {Well-width dependence of in-plane optical anisotropy in (001) GaAs/AlGaAs quantum wells induced by in-plane uniaxial strain and interface asymmetry},
+  year    = {2009},
+  number  = {10},
+  pages   = {103108},
+  volume  = {105},
+  doi     = {10.1063/1.3132089},
+}
+
+
+
+
+@Article{li2019quantitative,
+  author  = {Li,Yuan and Liu,Fengqi and Ye,Xiaoling and Liu,Yu and Wang,Jiawei and Chen,Yonghai},
+  journal = {Journal of Applied Physics},
+  title   = {Quantitative investigation of intrinsic shear strain and asymmetric interface conditions in semiconductor superlattices},
+  year    = {2019},
+  number  = {6},
+  pages   = {065704},
+  volume  = {126},
+  doi     = {10.1063/1.5107478},
+}
+
+
+
+
+@Article{yu2015tuning,
+  author  = {Yu,J. L. and Cheng,S. Y. and Lai,Y. F. and Zheng,Q. and Chen,Y. H. and Tang,C. G.},
+  journal = {Journal of Applied Physics},
+  title   = {Tuning of in-plane optical anisotropy by inserting ultra-thin InAs layer at interfaces in (001)-grown GaAs/AlGaAs quantum wells},
+  year    = {2015},
+  number  = {1},
+  pages   = {015302},
+  volume  = {117},
+  doi     = {10.1063/1.4905020},
+}
+
+
+
+
+
+
+
+@inbook{harrison2016chap3,
+	publisher = {John Wiley \& Sons, Ltd},
+	isbn = {9781118923337},
+	title = {Numerical solutions},
+	booktitle = {Quantum Wells, Wires and Dots},
+	author={Harrison, Paul and Valavanis, Alex},
+	chapter = {3},
+	pages = {81-130},
+	year={2016},
+	doi = {10.1002/9781118923337.ch3},
+}
+
+
+
+
+@article{varshni1967temperature,
+title = {Temperature dependence of the energy gap in semiconductors},
+journal = {Physica},
+volume = {34},
+number = {1},
+pages = {149-154},
+year = {1967},
+issn = {0031-8914},
+doi = {https://doi.org/10.1016/0031-8914(67)90062-6},
+url = {https://www.sciencedirect.com/science/article/pii/0031891467900626},
+author = {Y.P. Varshni},
+abstract = {A relation for the variation of the energy gap (Eg) with temperature (T) in semiconductors is proposed. Eg ≐ E0 - αT2/(T+β) where α and β are constants. The equation satisfactorily represents the experimental data for diamond, Si, Ge, 6H-SiC, GaAs, InP and InAs.}
+}
+
+
+
+@article{donmez2012study,
+	author={Donmez, Omer
+	and Nutku, Ferhat
+	and Erol, Ayse
+	and Arikan, Cetin M.
+	and Ergun, Yuksel},
+	title={A study of photomodulated reflectance on staircase-like, n-doped GaAs/AlxGa1-xAs quantum well structures},
+	journal={Nanoscale Research Letters},
+	year={2012},
+	volume={7},
+	number={1},
+	pages={622},
+	issn={1556-276X},
+	doi={10.1186/1556-276X-7-622},
+}
+
+
+
+@book{adachi2009properties,
+	title={Properties of semiconductor alloys: group-IV, III-V and II-VI semiconductors},
+	author={Adachi, Sadao},
+	volume={28},
+	year={2009},
+	publisher={John Wiley \& Sons}
+}
+
+
+
+
+
+@article{molenk1988determination,
+	title = {Determination of valence-band effective-mass anisotropy in GaAs quantum wells by optical spectroscopy},
+	author = {Molenkamp, L. W. and Eppenga, R. and 't Hooft, G. W. and Dawson, P. and Foxon, C. T. and Moore, K. J.},
+	journal = {Phys. Rev. B},
+	volume = {38},
+	issue = {6},
+	pages = {4314--4317},
+	numpages = {0},
+	year = {1988},
+	month = {Aug},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.38.4314},
+	url = {https://link.aps.org/doi/10.1103/PhysRevB.38.4314}
+}
+
+
+
+
+
+@article{greene1984energylevels,
+	title = {Energy levels of Wannier excitons in $\mathrm{G}\mathrm{a}\mathrm{A}\mathrm{s}\ensuremath{-}{\mathrm{Ga}}_{1\ensuremath{-}x}{\mathrm{Al}}_{x}\mathrm{As}$ quantum-well structures},
+	author = {Greene, Ronald L. and Bajaj, Krishan K. and Phelps, Dwight E.},
+	journal = {Phys. Rev. B},
+	volume = {29},
+	issue = {4},
+	pages = {1807--1812},
+	numpages = {0},
+	year = {1984},
+	month = {Feb},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.29.1807},
+}
+
+
+@Article{lflm1993spectrometer,
+  author  = {Lastras‐Martínez,L. F. and Lastras‐Martínez,A. and Balderas‐Navarro,R. E.},
+  journal = {Review of Scientific Instruments},
+  title   = {A spectrometer for the measurement of reflectance‐difference spectra},
+  year    = {1993},
+  number  = {8},
+  pages   = {2147-2152},
+  volume  = {64},
+  doi     = {10.1063/1.1143952},
+}
+
+
+
+@Article{yutaka1994theeffect,
+  author  = {Takahashi,Yutaka and Kato,Yoshimine and Kano,Satoru S. and Fukatsu,Susumu and Shiraki,Yasuhiro and Ito,Ryoichi},
+  journal = {Journal of Applied Physics},
+  title   = {The effect of electric field on the excitonic states in coupled quantum well structures},
+  year    = {1994},
+  number  = {4},
+  pages   = {2299-2305},
+  volume  = {76},
+  doi     = {10.1063/1.357601},
+}
+
+@book{hamaguchi2017basicsemiconductorphysics,
+	doi = {10.1007/978-3-319-66860-4},
+	year = 2017,
+	publisher = {Springer International Publishing},
+	author = {Chihiro Hamaguchi},
+	title = {Basic Semiconductor Physics}
+}
+
+
+@Article{vurgaftman2001bandparameters,
+  author  = {Vurgaftman,I. and Meyer,J. R. and Ram-Mohan,L. R.},
+  journal = {Journal of Applied Physics},
+  title   = {Band parameters for III–V compound semiconductors and their alloys},
+  year    = {2001},
+  number  = {11},
+  pages   = {5815-5875},
+  volume  = {89},
+  doi     = {10.1063/1.1368156},
+}
+
+
+@article{luttinger1956quantumtheory,
+	title = {Quantum Theory of Cyclotron Resonance in Semiconductors: General Theory},
+	author = {Luttinger, J. M.},
+	journal = {Phys. Rev.},
+	volume = {102},
+	issue = {4},
+	pages = {1030--1041},
+	numpages = {0},
+	year = {1956},
+	month = {May},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRev.102.1030},
+}
+
+
+
+@inbook{lew2009heterostructuresbasicformalism,
+	author="Lew Yan Voon, Lok C.
+	and Willatzen, Morten",
+	title="Heterostructures: Basic Formalism",
+	bookTitle="The k p Method: Electronic Properties of Semiconductors",
+	year="2009",
+	publisher="Springer Berlin Heidelberg",
+	address="Berlin, Heidelberg",
+	pages="273--362",
+	isbn="978-3-540-92872-0",
+	doi="10.1007/978-3-540-92872-0_12",
+}
+
+
+
+@inbook{ivchenko2008spinphoto,
+	author="Ivchenko, E. L.
+	and Ganichev, S. D.",
+	title="Spin-Photogalvanics",
+	bookTitle="Spin Physics in Semiconductors",
+	year="2008",
+	publisher="Springer Berlin Heidelberg",
+	address="Berlin, Heidelberg",
+	pages="245--277",
+	isbn="978-3-540-78820-1",
+	doi="10.1007/978-3-540-78820-1_9"
+}
+
+
+
+@BOOK{glazov2018electron,
+	title={Electron \& Nuclear Spin Dynamics in Semiconductor Nanostructures},
+	author={Glazov, M.M.},
+	isbn={9780198807308},
+	series={Series on Semiconductor Scienc},
+	year={2018},
+	publisher={OXFORD University Press}
+}
+
+
+@article{benduke1966spacecharge,
+	title = {Space-Charge Effects on Electron Tunneling},
+	author = {BenDaniel, D. J. and Duke, C. B.},
+	journal = {Phys. Rev.},
+	volume = {152},
+	issue = {2},
+	pages = {683--692},
+	numpages = {0},
+	year = {1966},
+	month = {Dec},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRev.152.683},
+}
+
+
+@article{ivchenko1996heavylight,
+	title = {Heavy-light hole mixing at zinc-blende (001) interfaces under normal incidence},
+	author = {Ivchenko, E. L. and Kaminski, A. Yu. and R\"ossler, U.},
+	journal = {Phys. Rev. B},
+	volume = {54},
+	issue = {8},
+	pages = {5852--5859},
+	numpages = {0},
+	year = {1996},
+	month = {Aug},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.54.5852},
+}
+
+@book{singh2003electronic, 
+	place={Cambridge},
+	 title={Electronic and Optoelectronic Properties of Semiconductor Structures}, 
+	 DOI={10.1017/CBO9780511805745},
+	  publisher={Cambridge University Press}, 
+	  author={Singh, Jasprit}, 
+	  year={2003}}
+
+  
+  
+
+@book{chuang1995physics,
+	title={Physics of Optoelectronic Devices},
+	author={Chuang, S.L.},
+	isbn={9780471109396},
+	lccn={94024701},
+	series={Wiley Series in Pure and Applied Optics},
+	url={https://books.google.com.mx/books?id=ect6QgAACAAJ},
+	year={1995},
+	publisher={Wiley}
+}
+
+
+@book{orton2015molecular,
+	title={Molecular beam epitaxy: a short history},
+	author={Orton, John Wilfred and Foxon, Tom},
+	year={2015},
+	publisher={Oxford University Press, USA}
+}
+
+
+@book{grundmann2010physics,
+	title={Physics of semiconductors},
+	author={Grundmann, Marius},
+	volume={11},
+	year={2010},
+	publisher={Springer}
+}
+
+
+@article{ask2017ase,
+	author={Ask Hjorth Larsen and Jens Jørgen Mortensen and Jakob Blomqvist and Ivano E Castelli and Rune Christensen and Marcin
+	Dułak and Jesper Friis and Michael N Groves and Bjørk Hammer and Cory Hargus and Eric D Hermes and Paul C Jennings and Peter
+	Bjerre Jensen and James Kermode and John R Kitchin and Esben Leonhard Kolsbjerg and Joseph Kubal and Kristen
+	Kaasbjerg and Steen Lysgaard and Jón Bergmann Maronsson and Tristan Maxson and Thomas Olsen and Lars Pastewka and Andrew
+	Peterson and Carsten Rostgaard and Jakob Schiøtz and Ole Schütt and Mikkel Strange and Kristian S Thygesen and Tejs
+	Vegge and Lasse Vilhelmsen and Michael Walter and Zhenhua Zeng and Karsten W Jacobsen},
+	title={The atomic simulation environment—a Python library for working with atoms},
+	journal={Journal of Physics: Condensed Matter},
+	volume={29},
+	number={27},
+	pages={273002},
+	url={http://stacks.iop.org/0953-8984/29/i=27/a=273002},
+	year={2017},
+	abstract={The atomic simulation environment (ASE) is a software package written in the Python programming language with the aim of setting up, steering, and analyzing atomistic simulations. In ASE, tasks are fully scripted in Python. The powerful syntax of Python combined with the NumPy array library make it possible to perform very complex simulation tasks. For example, a sequence of calculations may be performed with the use of a simple ‘for-loop’ construction. Calculations of energy, forces, stresses and other quantities are performed through interfaces to many external electronic structure codes or force fields using a uniform interface. On top of this calculator interface, ASE provides modules for performing many standard simulation tasks such as structure optimization, molecular dynamics, handling of constraints and performing nudged elastic band calculations.}
+}
+
+
+
+
+@article{jain2013materialsproject,
+	author = {Jain, Anubhav and Ong, Shyue Ping and Hautier, Geoffroy and Chen, Wei and Richards, William Davidson and Dacek, Stephen and Cholia, Shreyas and Gunter, Dan and Skinner, David and Ceder, Gerbrand and Persson, Kristin a.},
+	doi = {10.1063/1.4812323},
+	issn = {2166532X},
+	journal = {APL Materials},
+	number = {1},
+	pages = {011002},
+	title = {{The Materials Project: A materials genome approach to accelerating materials innovation}},
+	url = {http://link.aip.orHg/link/AMPADS/v1/i1/p011002/s1\&Agg=doi},
+	volume = {1},
+	year = {2013}
+}
+
+
+
+
+@book{weiner2017light,
+	title={Light-matter interaction: physics and engineering at the nanoscale},
+	author={Weiner, John and Nunes, Frederico},
+	year={2017},
+	publisher={Oxford University Press}
+}
+
+@article{einstein1905uber,
+	author = {Einstein, A.},
+	title = {Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen},
+	journal = {Annalen der Physik},
+	volume = {322},
+	number = {8},
+	pages = {549-560},
+	doi = {https://doi.org/10.1002/andp.19053220806},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/andp.19053220806},
+	eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/andp.19053220806},
+	year = {1905}
+}
+
+
+@book{tkachenko2006opticalspectroscopy,
+	title={Optical spectroscopy: methods and instrumentations},
+	author={Tkachenko, Nikolai V},
+	year={2006},
+	publisher={Elsevier}
+}
+
+
+@book{ball2001basicsspectroscopy,
+	title={The basics of spectroscopy},
+	author={Ball, David Warren},
+	volume={49},
+	year={2001},
+	publisher={Spie Press}
+}
+
+@book{sole2005introductionspectroscopy,
+	title={An introduction to the optical spectroscopy of inorganic solids},
+	author={Sol{\'e}, Jose and Bausa, Luisa and Jaque, Daniel},
+	year={2005},
+	publisher={John Wiley \& Sons}
+}
+
+@inbook{lu2018photoluminescence,
+	author="Lu, Wei
+	and Fu, Ying",
+	title="Photoluminescence",
+	bookTitle="Spectroscopy of Semiconductors: Numerical Analysis Bridging Quantum Mechanics and Experiments",
+	year="2018",
+	publisher="Springer International Publishing",
+	address="Cham",
+	pages="107--158",
+	abstract="Quantum mechanics theory about photoluminescence is first introduced then applied to various case studies to understand the microscopic processes, namely photon excitation, energy relaxation and radiative recombination, involved in the photoluminescence spectroscopy in semiconductor structures ranging from bulk to nanoscale. The study is further deepened by analyzing the photoluminescence spectra of quantum dots under the multiphoton excitation.",
+	isbn="978-3-319-94953-6",
+	doi="10.1007/978-3-319-94953-6_4",
+	url="https://doi.org/10.1007/978-3-319-94953-6_4"
+}
+
+@book{lu2018spectroscopy,
+	doi = {10.1007/978-3-319-94953-6},
+	url = {https://doi.org/10.1007%2F978-3-319-94953-6},
+	year = 2018,
+	publisher = {Springer International Publishing},
+	author = {Wei Lu and Ying Fu},
+	title = {Spectroscopy of Semiconductors}
+}
+
+
+@article{alonso2018solcore,
+	title={Solcore: a multi-scale, Python-based library for modelling solar cells and semiconductor materials},
+	author={Alonso-{\'A}lvarez, D and Wilson, T and Pearce, P and F{\"u}hrer, M and Farrell, D and Ekins-Daukes, N},
+	journal={Journal of Computational Electronics},
+	volume={17},
+	number={3},
+	pages={1099--1123},
+	year={2018},
+	publisher={Springer}
+}
+
+
+
+
+@book{jimenez2016spectroscopic,
+	title={Spectroscopic Analysis of optoelectronic semiconductors},
+	author={Jimenez, Juan and Tomm, Jens W},
+	volume={202},
+	year={2016},
+	publisher={Springer}
+}
+
+@book{kalt2019semiconductor,
+	title={Semiconductor Optics 1: Linear Optical Properties of Semiconductors},
+	author={Kalt, Heinz and Klingshirn, Claus F},
+	year={2019},
+	publisher={Springer Nature}
+}
+
+@book{demtreder2019electrodynamics,
+	title={Electrodynamics and Optics},
+	author={Demtrˆder, Wolfgang},
+	year={2019},
+	publisher={Springer Nature}
+}
+
+
+
+@article{kundrotas2005excitonic,
+	title = {Excitonic and impurity-related optical transitions in Be $\ensuremath{\delta}$-doped $\mathrm{GaAs/AlAs}$ multiple quantum wells: Fractional-dimensional space approach},
+	author = {Kundrotas, J. and \ifmmode \check{Cb}\else \v{C}\fi{}er\ifmmode \check{s}\else \v{s}\fi{}kus, A. and A\ifmmode \check{s}\else \v{s}\fi{}montas, S. and Valu\ifmmode \check{s}\else \v{s}\fi{}is, G. and Sherliker, B. and Halsall, M. P. and Steer, M. J. and Johannessen, E. and Harrison, P.},
+	journal = {Phys. Rev. B},
+	volume = {72},
+	issue = {23},
+	pages = {235322},
+	numpages = {11},
+	year = {2005},
+	month = {Dec},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.72.235322},
+	url = {https://link.aps.org/doi/10.1103/PhysRevB.72.235322}
+}
+
+
+@Article{khmissi2010effectcarriers,
+  author  = {Khmissi,H. and Sfaxi,L. and Bouza\"iene,L. and Saidi,F. and Maaref,H. and Bru-Chevallier,C.},
+  journal = {Journal of Applied Physics},
+  title   = {Effect of carriers transfer behavior on the optical properties of InAs quantum dots embedded in AlGaAs/GaAs heterojunction},
+  year    = {2010},
+  number  = {7},
+  pages   = {074307},
+  volume  = {107},
+  doi     = {10.1063/1.3371356},
+  eprint  = {https://doi.org/10.1063/1.3371356},
+  url     = {https://doi.org/10.1063/1.3371356},
+}
+
+@Article{kawai1984photoluminiscence,
+  author  = {Kawai,H. and Kaneko,K. and Watanabe,N.},
+  journal = {Journal of Applied Physics},
+  title   = {Photoluminescence of AlGaAs/GaAs quantum wells grown by metalorganic chemical vapor deposition},
+  year    = {1984},
+  number  = {2},
+  pages   = {463-467},
+  volume  = {56},
+  doi     = {10.1063/1.333933},
+  eprint  = {https://doi.org/10.1063/1.333933},
+  url     = {https://doi.org/10.1063/1.333933},
+}
+
+@Article{maluenda1983abrupttransitions,
+  author  = {Maluenda,J. and Frijlink,P. M.},
+  journal = {Journal of Vacuum Science \& Technology B: Microelectronics Processing and Phenomena},
+  title   = {Abrupt transitions in composition and doping profile in $\mathrm{GaAs/Ga_{1-x}Al_{x}As}$ heterostructures by atmospheric pressure MOVPE},
+  year    = {1983},
+  number  = {2},
+  pages   = {334-337},
+  volume  = {1},
+  doi     = {10.1116/1.582552},
+  eprint  = {https://avs.scitation.org/doi/pdf/10.1116/1.582552},
+  url     = {https://avs.scitation.org/doi/abs/10.1116/1.582552},
+}
+
+@article{singh1984theory,
+	title={Theory of photoluminescence line shape due to interfacial quality in quantum well structures},
+	author={Singh, Jasprit and Bajaj, KK and Chaudhuri, S},
+	journal={Applied physics letters},
+	volume={44},
+	number={8},
+	pages={805--807},
+	year={1984},
+	publisher={American Institute of Physics},
+}
+
+@article{juang1986field,
+	title={Field-dependent linewidths and photoluminescence energies in GaAs/AlGaAs multiquantum well modulators},
+	author={Juang, F-Y and Singh, Jasprit and Bhattacharya,Pallab K and Bajema, K and Merlin, R},
+	journal={Applied physics letters},
+	volume={48},
+	number={19},
+	pages={1246-1248},
+	year={1986},
+	publisher={American Institute of Physics},
+}
+
+@article{cardona1969modulation,
+	title={Modulation spectroscopy},
+	author={Cardona, Manuel},
+	journal={Solid State Phys.},
+	volume={11},
+	year={1969},
+	publisher={Academic press}
+}
+
+
+@article{seraphin1966bandstructure,
+	title = {Band-Structure Analysis from Electro-Reflectance Studies},
+	author = {Seraphin, B. O. and Bottka, N.},
+	journal = {Phys. Rev.},
+	volume = {145},
+	issue = {2},
+	pages = {628--636},
+	numpages = {0},
+	year = {1966},
+	month = {May},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRev.145.628},
+	url = {https://link.aps.org/doi/10.1103/PhysRev.145.628}
+}
+
+
+@article{gontijo1994photoreflectance,
+	title={Photoreflectance and photoluminescence of partially intermixed GaAs/AlGaAs double quantum wells},
+	author={Gontijo, I and Tang, YS and De La Rue, RM and Sotomayor Torres, CM and Roberts, JS and Marsh, JH},
+	journal={Journal of applied physics},
+	volume={76},
+	number={9},
+	pages={5434--5438},
+	year={1994},
+	publisher={American Institute of Physics}
+}
+
+
+
+
+@article{theis1988excitonic,
+	title = {Excitonic transitions in GaAs/${\mathrm{Ga}}_{\mathrm{x}}$${\mathrm{Al}}_{1\mathrm{\ensuremath{-}}\mathrm{x}}$As quantum wells observed by photoreflectance spectroscopy: Comparison with a first-principles theory},
+	author = {Theis, W. M. and Sanders, G. D. and Leak, C. E. and Bajaj, K. K. and Morkoc, H.},
+	journal = {Phys. Rev. B},
+	volume = {37},
+	issue = {6},
+	pages = {3042--3051},
+	numpages = {0},
+	year = {1988},
+	month = {Feb},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.37.3042},
+	url = {https://link.aps.org/doi/10.1103/PhysRevB.37.3042}
+}
+
+@article{theis1989extrinsic,
+	title = {Extrinsic contributions to photoreflectance of ${\mathrm{Al}}_{\mathrm{x}}$${\mathrm{Ga}}_{1\mathrm{\ensuremath{-}}\mathrm{x}}$As/GaAs quantum wells: An investigation of the ``donor-related'' feature},
+	author = {Theis, W. M. and Sanders, G. D. and Evans, K. R. and Liou, L. L. and Leak, C. E. and Bajaj, K. K. and Stutz, C. E. and Jones, R. L. and Chang, Yia-Chung},
+	journal = {Phys. Rev. B},
+	volume = {39},
+	issue = {15},
+	pages = {11038--11043},
+	numpages = {0},
+	year = {1989},
+	month = {May},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.39.11038},
+	url = {https://link.aps.org/doi/10.1103/PhysRevB.39.11038}
+}
+
+@article{keyes2003quantum,
+	title={Is quantum computing with solid state devices possible?},
+	author={Keyes, RW},
+	journal={Applied Physics A},
+	volume={76},
+	number={5},
+	pages={737--741},
+	year={2003},
+	publisher={Springer}
+}
+
+@article{sydor1989photoreflectanceinterfaces,
+	title = {Photoreflectance from GaAs and GaAs/GaAs interfaces},
+	author = {Sydor, Michael and Angelo, James and Wilson, Jerome J. and Mitchel, W. C. and Yen, M. Y.},
+	journal = {Phys. Rev. B},
+	volume = {40},
+	issue = {12},
+	pages = {8473--8484},
+	numpages = {0},
+	year = {1989},
+	month = {Oct},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.40.8473},
+	url = {https://link.aps.org/doi/10.1103/PhysRevB.40.8473}
+}
+
+
+@article{kim2015optically,
+	title={Optically biased photoreflectance spectroscopy of a GaAs epitaxial layer and an AlGaAs/GaAs quantum well},
+	author={Kim, Geun-Hyeong and Jo, Hyun-Jun and Kim, Jong Su and Bae, In-Ho and Lee, Sang Jun and others},
+	journal={Current Applied Physics},
+	volume={15},
+	number={10},
+	pages={1226--1229},
+	year={2015},
+	publisher={Elsevier}
+}
+
+@article{misiewicz1999photoreflectance,
+	title={Photoreflectance spectroscopy applied to semiconductors and semiconductor heterostructures.},
+	author={Misiewicz, J and S{\k{e}}k, G and Sitarek, P},
+	journal={Optica Applicata},
+	volume={29},
+	number={3},
+	pages={327--363},
+	year={1999}
+}
+
+@article{shanabrook1987photoreflectance,
+	title = {Photoreflectance modulation mechanisms in GaAs-${\mathrm{Al}}_{\mathrm{x}}$${\mathrm{Ga}}_{1\mathrm{\ensuremath{-}}\mathrm{x}}$As multiple quantum wells},
+	author = {Shanabrook, B. V. and Glembocki, O. J. and Beard, W. T.},
+	journal = {Phys. Rev. B},
+	volume = {35},
+	issue = {5},
+	pages = {2540--2543},
+	numpages = {0},
+	year = {1987},
+	month = {Feb},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.35.2540},
+	url = {https://link.aps.org/doi/10.1103/PhysRevB.35.2540}
+}
+
+@article{seraphin1972electric,
+	title = {Electric Field Effects in Optical and First-Derivative Modulation Spectroscopy},
+	author = {Seraphin, B. O. and Aspnes, D. E.},
+	journal = {Phys. Rev. B},
+	volume = {6},
+	issue = {8},
+	pages = {3158--3160},
+	numpages = {0},
+	year = {1972},
+	month = {Oct},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.6.3158},
+	url = {https://link.aps.org/doi/10.1103/PhysRevB.6.3158}
+}
+
+
+@article{aspnes1985anisotropies,
+	title = {Anisotropies in the Above---Band-Gap Optical Spectra of Cubic Semiconductors},
+	author = {Aspnes, D. E. and Studna, A. A.},
+	journal = {Phys. Rev. Lett.},
+	volume = {54},
+	issue = {17},
+	pages = {1956--1959},
+	numpages = {0},
+	year = {1985},
+	month = {Apr},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevLett.54.1956},
+	url = {https://link.aps.org/doi/10.1103/PhysRevLett.54.1956}
+}
+
+@article{aspnes1973surface,
+	title={Surface field effects in reflectance and first-derivative modulation spectra},
+	author={Aspnes, DE and Sell, DD},
+	journal={Solid State Communications},
+	volume={13},
+	number={5},
+	pages={519--522},
+	year={1973}
+}
+
+@article{aspnes1973third,
+	title={Third-derivative modulation spectroscopy with low-field electroreflectance},
+	author={Aspnes, David E},
+	journal={Surface science},
+	volume={37},
+	pages={418--442},
+	year={1973},
+	publisher={Elsevier}
+}
+
+@article{pollak1994modulation,
+	title={Modulation spectroscopy of semiconductors and semiconductor microstructures},
+	author={Pollak, Fred H},
+	journal={Handbook on Semiconductors},
+	volume={2},
+	pages={527--635},
+	year={1994},
+	publisher={Elsevier Science Amsterdam}
+}
+
+@Article{kudrawiec2009photoreflectance,
+  author  = {Kudrawiec,R. and Misiewicz,J.},
+  journal = {Review of Scientific Instruments},
+  title   = {Photoreflectance and contactless electroreflectance measurements of semiconductor structures by using bright and dark configurations},
+  year    = {2009},
+  number  = {9},
+  pages   = {096103},
+  volume  = {80},
+  doi     = {10.1063/1.3213613},
+  eprint  = {https://doi.org/10.1063/1.3213613},
+  url     = {https://doi.org/10.1063/1.3213613},
+}
+
+@Article{shen1995franz,
+  author  = {Shen,H. and Dutta,M.},
+  journal = {Journal of Applied Physics},
+  title   = {Franz–Keldysh oscillations in modulation spectroscopy},
+  year    = {1995},
+  number  = {4},
+  pages   = {2151-2176},
+  volume  = {78},
+  doi     = {10.1063/1.360131},
+  eprint  = {https://doi.org/10.1063/1.360131},
+  url     = {https://doi.org/10.1063/1.360131},
+}
+
+@article{delsole1978effect,
+  title = {Effect of surface and nonuniform fields in electroreflectance: Application to Ge},
+  author = {Del Sole, R. and Aspnes, D. E.},
+  journal = {Phys. Rev. B},
+  volume = {17},
+  issue = {8},
+  pages = {3310--3317},
+  numpages = {0},
+  year = {1978},
+  month = {Apr},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.17.3310},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.17.3310}
+}
+
+@Article{kuhn1991enhanced,
+  author  = {Kuhn,Kelin J. and Juang,Cheng and Darling,Robert B.},
+  journal = {Journal of Applied Physics},
+  title   = {An enhanced and linear Stark shift in $n-i-n$ AlGaAs/GaAs symmetric and asymmetric coupled quantum wells},
+  year    = {1991},
+  number  = {5},
+  pages   = {3135-3141},
+  volume  = {69},
+  doi     = {10.1063/1.348581},
+  eprint  = {https://doi.org/10.1063/1.348581},
+  url     = {https://doi.org/10.1063/1.348581},
+}
+
+@article{fox1991excitonic,
+  title = {Excitonic effects in coupled quantum wells},
+  author = {Fox, A. M. and Miller, D. A. B. and Livescu, G. and Cunningham, J. E. and Jan, W. Y.},
+  journal = {Phys. Rev. B},
+  volume = {44},
+  issue = {12},
+  pages = {6231--6242},
+  numpages = {0},
+  year = {1991},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.44.6231},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.44.6231}
+}
+
+
+@article{zhu1995exciton,
+  title = {Exciton Condensate in Semiconductor Quantum Well Structures},
+  author = {Zhu, Xuejun and Littlewood, P. B. and Hybertsen, Mark S. and Rice, T. M.},
+  journal = {Phys. Rev. Lett.},
+  volume = {74},
+  issue = {9},
+  pages = {1633--1636},
+  numpages = {0},
+  year = {1995},
+  month = {Feb},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.74.1633},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.74.1633}
+}
+
+
+@article{stern2014exciton,
+  title={Exciton liquid in coupled quantum wells},
+  author={Stern, Michael and Umansky, Vladimir and Bar-Joseph, Israel},
+  journal={Science},
+  volume={343},
+  number={6166},
+  pages={55--57},
+  year={2014},
+  publisher={American Association for the Advancement of Science}
+}
+
+@article{shen1986observation,
+title = {Observation of symmetery forbidden transitions in the room temperature photoreflectance spectrum of a GaAs/GaAlAs multiple quantum well},
+journal = {Solid State Communications},
+volume = {59},
+number = {8},
+pages = {557-560},
+year = {1986},
+issn = {0038-1098},
+doi = {https://doi.org/10.1016/0038-1098(86)90058-X},
+url = {https://www.sciencedirect.com/science/article/pii/003810988690058X},
+author = {H. Shen and P. Parayanthal and F.H. Pollak and A.L. Smirl and J.N. Schulman and R.A. McFarlane and I. D'Haenens},
+abstract = {We have measured the room temperature photoreflectance spectrum from a 100A/150A GaAs/GaAlAs multiple quantum well (MQW) (x ≈ 0.17). The entire spectrum from the MQW has been fit by a third-derivative functional form lineshape expression. In addition to all the allowed quantum transitions we have clearly observed features from several symmetry forbidden transitions. There also appears to be evidence for unconfined transitions, i.e. energies above the band gap of the GaAlAs barrier layer. There is good agreement between the experimentally determined energies of the various features and a theoretical calculation.}
+}
+
+
+@article{shen1987photoreflectance,
+  title = {Photoreflectance and photoreflectance-excitation spectroscopy of a GaAs/${\mathrm{Ga}}_{0.67}$${\mathrm{Al}}_{0.33}$As multiple-quantum-well structure},
+  author = {Shen, H. and Shen, X. C. and Pollak, Fred H. and Sacks, R. N.},
+  journal = {Phys. Rev. B},
+  volume = {36},
+  issue = {6},
+  pages = {3487--3490},
+  numpages = {0},
+  year = {1987},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.36.3487},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.36.3487}
+}
+
+@article{fang1988allowed,
+  title = {Allowed 3h-1e transition in semiconductor quantum wells},
+  author = {Fang, Z. M. and Persson, A. and Cohen, R. M.},
+  journal = {Phys. Rev. B},
+  volume = {37},
+  issue = {8},
+  pages = {4071--4075},
+  numpages = {0},
+  year = {1988},
+  month = {Mar},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.37.4071},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.37.4071}
+}
+
+
+@article{sivalertporn2016effectofbarrier,
+title = {Effect of barrier width on the exciton states in coupled quantum wells in an applied electric field},
+journal = {Physics Letters A},
+volume = {380},
+number = {22},
+pages = {1990-1994},
+year = {2016},
+issn = {0375-9601},
+doi = {https://doi.org/10.1016/j.physleta.2016.04.002},
+url = {https://www.sciencedirect.com/science/article/pii/S0375960116300664},
+author = {Kanchana Sivalertporn},
+keywords = {Coupled quantum wells, Exciton state, Barrier width},
+abstract = {The effect of barrier width on the exciton states in coupled quantum wells has been theoretically studied using an efficient approach. By solving the Schrödinger equation in real space, the electron and hole energies and wave functions are calculated in the presence of an applied electric field. It is found that with zero electric field the energy splitting of the doublets is large in the case of thin barrier width. However for thicker barrier width, the Stark effect is stronger at large electric field. The exciton states, binding energies and oscillator strength are also calculated as a function of electric field. There is shown the direct-to-indirect crossover of the exciton ground state at approximately F=10 kV/cm and F=5 kV/cm for Lb=2 nm and Lb=4 nm respectively, corresponding to the dramatic decrease of its binding energy and oscillator strength. This direct-to-indirect crossover happens at lower electric field for thicker barrier width. We have also studied the light–matter coupling and calculated the DX, IX and CM components of the polariton states as a function of electric field.}
+}
+
+@article{lampert1958mobile,
+  title = {Mobile and Immobile Effective-Mass-Particle Complexes in Nonmetallic Solids},
+  author = {Lampert, Murray A.},
+  journal = {Phys. Rev. Lett.},
+  volume = {1},
+  issue = {12},
+  pages = {450--453},
+  numpages = {0},
+  year = {1958},
+  month = {Dec},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.1.450},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.1.450}
+}
+
+@article{shinozuka1983wannier,
+  title = {Wannier exciton in quantum wells},
+  author = {Shinozuka, Y. and Matsuura, M.},
+  journal = {Phys. Rev. B},
+  volume = {28},
+  issue = {8},
+  pages = {4878--4881},
+  numpages = {0},
+  year = {1983},
+  month = {Oct},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.28.4878},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.28.4878}
+}
+
+@article{bastard1982exciton,
+  title = {Exciton binding energy in quantum wells},
+  author = {Bastard, G. and Mendez, E. E. and Chang, L. L. and Esaki, L.},
+  journal = {Phys. Rev. B},
+  volume = {26},
+  issue = {4},
+  pages = {1974--1979},
+  numpages = {0},
+  year = {1982},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.26.1974},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.26.1974}
+}
+
+@article{feldmann1987linewidth,
+  title = {Linewidth dependence of radiative exciton lifetimes in quantum wells},
+  author = {Feldmann, J. and Peter, G. and G\"obel, E. O. and Dawson, P. and Moore, K. and Foxon, C. and Elliott, R. J.},
+  journal = {Phys. Rev. Lett.},
+  volume = {59},
+  issue = {20},
+  pages = {2337--2340},
+  numpages = {0},
+  year = {1987},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.59.2337},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.59.2337}
+}
+
+@article{kheng1993observation,
+  title = {Observation of negatively charged excitons ${\mathit{X}}^{\mathrm{\ensuremath{-}}}$ in semiconductor quantum wells},
+  author = {Kheng, K. and Cox, R. T. and d' Aubign\'e, Merle Y. and Bassani, Franck and Saminadayar, K. and Tatarenko, S.},
+  journal = {Phys. Rev. Lett.},
+  volume = {71},
+  issue = {11},
+  pages = {1752--1755},
+  numpages = {0},
+  year = {1993},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.71.1752},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.71.1752}
+}
+
+@article{stebe1989ground,
+title = {Ground state energy and optical absorption of excitonic trions in two dimensional semiconductors},
+journal = {Superlattices and Microstructures},
+volume = {5},
+number = {4},
+pages = {545-548},
+year = {1989},
+issn = {0749-6036},
+doi = {https://doi.org/10.1016/0749-6036(89)90382-0},
+url = {https://www.sciencedirect.com/science/article/pii/0749603689903820},
+author = {B. Stébé and A. Ainane},
+abstract = {The electronic and optical properties of the ground state of the excitonic trions corresponding to an exciton bound to an electron or a hole are studied theoretically for 2D semiconductors in the whole range of the electron-to-hole effective mass ratio. The energies are calculated variationally using a 22-terms Hylleraas-type trial wave function. It is confirmed that, as in the 3D case, the 2D trions are stable for any value of the effective mass ratio. The binding energies amount to about ten times those we obtain in the 3D case using the same wave function. Therefore, the experimental observation of the trions should be very more easy in 2D than in 3D semiconductors. We deduce the shape of the lines arising from transitions between free electrons or holes and 2D excitonic trions states and compare it to the 3D results.}
+}
+
+@article{israel2005trions,
+	doi = {10.1088/0268-1242/20/6/r01},
+	url = {https://doi.org/10.1088/0268-1242/20/6/r01},
+	year = 2005,
+	month = {may},
+	publisher = {{IOP} Publishing},
+	volume = {20},
+	number = {6},
+	pages = {R29--R39},
+	author = {Israel Bar-Joseph},
+	title = {Trions in {GaAs} quantum wells},
+	journal = {Semiconductor Science and Technology},
+	abstract = {The emission and absorption spectra of quantum wells containing electron or hole gas are reviewed. We show that trions, also known as charged excitons, play a dominant role in determining these spectra. We discuss issues related to their behaviour at zero and high magnetic fields, their far-field and near-field spectra, and their role as a probe for delicate correlations of the surrounding electron gas.}
+}
+
+
+@Article{aceituno2011therole,
+  author  = {Aceituno,P. and Hernández-Cabrera,A.},
+  journal = {Journal of Applied Physics},
+  title   = {The role of excitons and trions on electron spin polarization in quantum wells},
+  year    = {2011},
+  number  = {1},
+  pages   = {013724},
+  volume  = {110},
+  doi     = {10.1063/1.3603031},
+  eprint  = {https://doi.org/10.1063/1.3603031},
+  url     = {https://doi.org/10.1063/1.3603031},
+}
+
+
+
+@article{portella2004interactinb,
+	title = {Interacting many-body systems in quantum wells: Evidence for exciton-trion-electron correlations},
+	author = {Portella-Oberli, M. T. and Ciulin, V. and Berney, J. H. and Deveaud, B. and Kutrowski, M. and Wojtowicz, T.},
+	journal = {Phys. Rev. B},
+	volume = {69},
+	issue = {23},
+	pages = {235311},
+	numpages = {5},
+	year = {2004},
+	month = {Jun},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.69.235311},
+	url = {https://link.aps.org/doi/10.1103/PhysRevB.69.235311}
+}
+
+
+@article{manassen1996exciton,
+	title = {Exciton and trion spectral line shape in the presence of an electron gas in GaAs/AlAs quantum wells},
+	author = {Manassen, A. and Cohen, E. and Ron, Arza and Linder, E. and Pfeiffer, L. N.},
+	journal = {Phys. Rev. B},
+	volume = {54},
+	issue = {15},
+	pages = {10609--10613},
+	numpages = {0},
+	year = {1996},
+	month = {Oct},
+	publisher = {American Physical Society},
+	doi = {10.1103/PhysRevB.54.10609},
+	url = {https://link.aps.org/doi/10.1103/PhysRevB.54.10609}
+}
+
+@article{sibeldin2001formation,
+	doi = {10.1088/0957-4484/12/4/344},
+	url = {https://doi.org/10.1088/0957-4484/12/4/344},
+	year = 2001,
+	month = {nov},
+	publisher = {{IOP} Publishing},
+	volume = {12},
+	number = {4},
+	pages = {591--596},
+	author = {N N Sibeldin and M L Skorikov and V A Tsvetkov},
+	title = {Formation of charged excitonic complexes in shallow quantum wells of undoped $\mathrm{GaAs}/\mathrm{AlGaAs}$  structures under below-barrier and above-barrier photoexcitation},
+	journal = {Nanotechnology},
+	abstract = {Low-temperature (T≈2 K) photoluminescence (PL) and photoluminescence excitation (PLE) spectra of GaAs/AlGaAs (x = 0.05) structures with shallow quantum wells (QWs) were investigated. It was found that the PLE spectra exhibit a number of broad bands in the above-barrier energy region; these bands alternate `in opposite phases' in the spectra of free excitons and excitonic complexes (trions) (i.e. an increase in the exciton luminescence intensity is accompanied by a decrease in the luminescence intensity of the complexes). Effects originating from simultaneous irradiation of the sample by two laser beams of different wavelengths were studied. In the case where the photon energy of the Ti-sapphire laser is tuned to excite only the QW states, additional pumping by a He-Ne or Ar-ion laser results in the shift of the equilibrium in the exciton-trion system towards an increase in the concentration of the latter species. On the other hand, upon excitation into certain barrier states with energies both below and above the barrier bandgap, additional pump shifts the equilibrium in the opposite direction.}
+}
+
+@article{finkelstein1996negatively,
+  title = {Negatively and positively charged excitons in $\mathrm{GaAs}/{\mathrm{Al}}_{x}{\mathrm{Ga}}_{1\ensuremath{-}x}\mathrm{As}$ quantum wells},
+  author = {Finkelstein, Gleb and Shtrikman, Hadas and Bar-Joseph, Israel},
+  journal = {Phys. Rev. B},
+  volume = {53},
+  issue = {4},
+  pages = {R1709--R1712},
+  numpages = {0},
+  year = {1996},
+  month = {Jan},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.53.R1709},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.53.R1709}
+}
+
+@article{hebal2021general,
+title = {General-purpose open-source 1D self-consistent Schrödinger-Poisson Solver: Aestimo 1D},
+journal = {Computational Materials Science},
+volume = {186},
+pages = {110015},
+year = {2021},
+issn = {0927-0256},
+doi = {https://doi.org/10.1016/j.commatsci.2020.110015},
+url = {https://www.sciencedirect.com/science/article/pii/S0927025620305061},
+author = {H. Hebal and Z. Koziol and S.B. Lisesivdin and R. Steed},
+keywords = {Aestimo1D, Schrödinger-Poisson, 2DEG},
+abstract = {We present a general-purpose numerical quantum mechanical solver using Schrödinger-Poisson equations called Aestimo 1D. The solver provides self-consistent solutions to the Schrödinger and Poisson equations for a given semiconductor heterostructure built with materials including elementary, binary, ternary, and quaternary semiconductors and their doped structures. The software can be used to calculate electronic band structures of heterostructures either using a single-band or multi-band k.p envelope function approximation. The software is fully open-source and it is released under the GNU general public license version 3 for full freedom of usage for applications in the fields of nano-electronics, optoelectronics, and solid-state device simulations.}
+}
+
+@Article{ram2004theschrodinger,
+  author  = {Ram-Mohan,L. R. and Yoo,K. H. and Moussa,J.},
+  journal = {Journal of Applied Physics},
+  title   = {The Schrödinger–Poisson self-consistency in layered quantum semiconductor structures},
+  year    = {2004},
+  number  = {6},
+  pages   = {3081-3092},
+  volume  = {95},
+  doi     = {10.1063/1.1649458},
+  eprint  = {https://doi.org/10.1063/1.1649458},
+  url     = {https://doi.org/10.1063/1.1649458},
+}
+
+
+
+@Article{jirauschek2014modeling,
+  author  = {Jirauschek,Christian and Kubis,Tillmann},
+  journal = {Applied Physics Reviews},
+  title   = {Modeling techniques for quantum cascade lasers},
+  year    = {2014},
+  number  = {1},
+  pages   = {011307},
+  volume  = {1},
+  doi     = {10.1063/1.4863665},
+  eprint  = {https://doi.org/10.1063/1.4863665},
+  url     = {https://doi.org/10.1063/1.4863665},
+}
+
+
+@Article{cassan2000onthereduction,
+  author  = {Cassan,Eric},
+  journal = {Journal of Applied Physics},
+  title   = {On the reduction of direct tunneling leakage through ultrathin gate oxides by a one-dimensional Schrödinger–Poisson solver},
+  year    = {2000},
+  number  = {11},
+  pages   = {7931-7939},
+  volume  = {87},
+  doi     = {10.1063/1.373477},
+  eprint  = {https://doi.org/10.1063/1.373477},
+  url     = {https://doi.org/10.1063/1.373477},
+}
+
+@Article{ando1987calculation,
+  author  = {Ando,Yuji and Itoh,Tomohiro},
+  journal = {Journal of Applied Physics},
+  title   = {Calculation of transmission tunneling current across arbitrary potential barriers},
+  year    = {1987},
+  number  = {4},
+  pages   = {1497-1502},
+  volume  = {61},
+  doi     = {10.1063/1.338082},
+  eprint  = {https://doi.org/10.1063/1.338082},
+  url     = {https://doi.org/10.1063/1.338082},
+}
+
+@Article{jovanovic2005mechanisms,
+  author  = {Jovanović,V. D. and Indjin,D. and Vukmirović,N. and Ikonić,Z. and Harrison,P. and Linfield,E. H. and Page,H. and Marcadet,X. and Sirtori,C. and Worrall,C. and Beere,H. E. and Ritchie,D. A.},
+  journal = {Applied Physics Letters},
+  title   = {Mechanisms of dynamic range limitations in $\mathrm{GaAs}/\mathrm{AlGaAs}$ quantum-cascade lasers: Influence of injector doping},
+  year    = {2005},
+  number  = {21},
+  pages   = {211117},
+  volume  = {86},
+  doi     = {10.1063/1.1937993},
+  eprint  = {https://doi.org/10.1063/1.1937993},
+  url     = {https://doi.org/10.1063/1.1937993},
+}
+
+
+@article{sivalertporn2012direct,
+  title = {Direct and indirect excitons in semiconductor coupled quantum wells in an applied electric field},
+  author = {Sivalertporn, K. and Mouchliadis, L. and Ivanov, A. L. and Philp, R. and Muljarov, E. A.},
+  journal = {Phys. Rev. B},
+  volume = {85},
+  issue = {4},
+  pages = {045207},
+  numpages = {11},
+  year = {2012},
+  month = {Jan},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.85.045207},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.85.045207}
+}
+
+@Article{debbar1989coupled,
+  author  = {Debbar,Nacer and Hong,Songcheol and Singh,Jasprit and Bhattacharya,Pallab and Sahai,Rajeshwar},
+  journal = {Journal of Applied Physics},
+  title   = {Coupled GaAs/AlGaAs quantum‐well electroabsorption modulators for low‐electric‐field optical modulation},
+  year    = {1989},
+  number  = {1},
+  pages   = {383-385},
+  volume  = {65},
+  doi     = {10.1063/1.342554},
+  eprint  = {https://doi.org/10.1063/1.342554},
+  url     = {https://doi.org/10.1063/1.342554},
+}
+
+
+@Article{aspnes1985above,
+  author  = {Aspnes,D. E.},
+  journal = {Journal of Vacuum Science \& Technology B: Microelectronics Processing and Phenomena},
+  title   = {Above‐bandgap optical anisotropies in cubic semiconductors: A visible–near ultraviolet probe of surfaces},
+  year    = {1985},
+  number  = {5},
+  pages   = {1498-1506},
+  volume  = {3},
+  doi     = {10.1116/1.582974},
+  eprint  = {https://avs.scitation.org/doi/pdf/10.1116/1.582974},
+  url     = {https://avs.scitation.org/doi/abs/10.1116/1.582974},
+}
+
+
+@article{wei1995theory,
+  title = {Theory of reflectance-difference spectroscopy in ordered III-V semiconductor alloys},
+  author = {Wei, Su-Huai and Zunger, Alex},
+  journal = {Phys. Rev. B},
+  volume = {51},
+  issue = {20},
+  pages = {14110--14114},
+  numpages = {0},
+  year = {1995},
+  month = {May},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.51.14110},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.51.14110}
+}
+
+
+@article{lastras1999model,
+  title = {Model for the linear electro-optic reflectance-difference spectrum of GaAs(001) around ${E}_{1}$ and ${E}_{1}+{\ensuremath{\Delta}}_{1}$},
+  author = {Lastras-Mart\'{\i}nez, A. and Balderas-Navarro, R. E. and Lastras-Mart\'{\i}nez, L. F. and Vidal, M. A.},
+  journal = {Phys. Rev. B},
+  volume = {59},
+  issue = {15},
+  pages = {10234--10239},
+  numpages = {0},
+  year = {1999},
+  month = {Apr},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.59.10234},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.59.10234}
+}
+
+
+
+
+@article{chadi1975tight,
+author = {Chadi, D. J. and Cohen, M. L.},
+title = {Tight-binding calculations of the valence bands of diamond and zincblende crystals},
+journal = {physica status solidi (b)},
+volume = {68},
+number = {1},
+pages = {405-419},
+doi = {https://doi.org/10.1002/pssb.2220680140},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/pssb.2220680140},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/pssb.2220680140},
+abstract = {Abstract Using the tight-binding method, the valence band structures and densities of states for C, Si, Ge, GaAs, and ZnSe are calculated. Very good agreement is obtained with other calculations when all nearest- and one second-nearest-neighbor interactions are included. The effects of the various interactions on the density of states are discussed.},
+year = {1975}
+}
+
+@book{piprek2017handbook,
+  title={Handbook of Optoelectronic Device Modeling and Simulation: Fundamentals, Materials, Nanostructures, LEDs, and Amplifiers, Vol. 1},
+  author={Piprek, Joachim},
+  year={2017},
+  publisher={CRC Press}
+}
+
+@book{bastard1990wave,
+  title={Wave mechanics applied to semiconductor heterostructures},
+  author={Bastard, Gerald},
+  year={1990},
+  publisher={Wiley},
+}
+
+
+@book{boer2018semiconductor,
+  title={Semiconductor physics},
+  author={B{\"o}er, Karl W and Pohl, Udo W},
+  year={2018},
+  publisher={Springer},
+  doi={https://doi.org/10.1007/978-3-319-06540-3},
+  url={https://doi.org/10.1007/978-3-319-06540-3}
+}
+
+@book{alloul2010introduction,
+  title={Introduction to the Physics of Electrons in Solids},
+  author={Alloul, Henri},
+  year={2010},
+  publisher={Springer Science \& Business Media},
+  doi={https://doi.org/10.1007/978-3-642-13565-1},
+  url={https://doi.org/10.1007/978-3-642-13565-1}
+}
+
+@book{vurgaftman2020bands,
+  title={Bands and Photons in III-V Semiconductor Quantum Structures},
+  author={Vurgaftman, Igor and Lumb, Matthew P and Meyer, Jerry R},
+  volume={25},
+  year={2020},
+  publisher={Oxford University Press},
+  doi={DOI:10.1093/oso/9780198767275.001.0001},
+}
+
+
+@misc{osti2014materialsdata,
+    author = "Persson, Kristin",
+    title = "Materials Data on GaAs (SG:216) by Materials Project",
+    abstractNote = "Computed materials data using density functional theory calculations. These calculations determine the electronic structure of bulk materials by solving approximations to the Schrodinger equation. For more information, see https://materialsproject.org/docs/calculations",
+    doi = "10.17188/1200591",
+    place = "United States",
+    year = "2014",
+    month = "11",
+    note = "An optional note"
+}
+
+@article{vogl1983asemiempirical,
+title = {A Semi-empirical tight-binding theory of the electronic structure of semiconductors†},
+journal = {Journal of Physics and Chemistry of Solids},
+volume = {44},
+number = {5},
+pages = {365-378},
+year = {1983},
+issn = {0022-3697},
+doi = {https://doi.org/10.1016/0022-3697(83)90064-1},
+url = {https://www.sciencedirect.com/science/article/pii/0022369783900641},
+author = {P. Vogl and Harold P. Hjalmarson and John D. Dow},
+abstract = {A nearest-neighbor semi-empirical tight-binding theory of energy bands in zincblende and diamond structure materials is developed and applied to the following sp3-bonded semiconductors: C, Si, Ge, Sn, SiC, GaP, GaAs, GaSb, InP, InAs, InSb, AlP, AlAs, AlSb, ZnSe, and ZnTe. For each of these materials the theory uses only thirteen parameters to reproduce the major features of conduction and valence bands. The matrix elements exhibit chemical trends: the differences in diagonal matrix elements are proportional to differences in free-atom orbital energies and the off-diagonal matrix elements obey the d−2 rule of Harrison et al. The lowest energy conduction bands are well described as a result of the introduction of an excited s state, s∗. on each atom. Examination of the chemical trends in this sp3s∗ model yields a crude but “universal” sp3s∗ model whose parameters do not depend explicitly on band gaps, but rather are functions of atomic energies and bond lengths alone. The “universal” model, although cruder than the sp3s∗ model for any single semiconductor, can be employed to study relationships between the band structures of different semiconductors; we use it to predict band edge discontinuities of heterojunctions.}
+}
+
+
+@misc{rpmuller2017,
+  author = {Rick Muller},
+  title = {Tight Binding program to compute the band structure of simple semiconductors.},
+  year = {2017},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  url = {https://github.com/qftphys/Simple-SPS-tight-binding-code-based-on-parameters-from-Vogl-Hjalmarson-Dow},
+}
+
+@misc{fox2002optical,
+  title={Optical properties of solids},
+  author={Fox, Mark},
+  year={2002},
+  publisher={American Association of Physics Teachers}
+}
+
+@book{cardona2005fundamentals,
+  title={Fundamentals of semiconductors},
+  author={Cardona, Manuel and Peter, Y Yu},
+  volume={619},
+  year={2005},
+  publisher={Springer}
+}
+
+@book{leonard2017exciton,
+  title={Exciton Transport Phenomena in GaAs Coupled Quantum Wells},
+  author={Leonard, Jason},
+  year={2017},
+  publisher={Springer}
+}
+
+
+@book{cohen2012electronic,
+  title={Electronic structure and optical properties of semiconductors},
+  author={Cohen, Marvin L and Chelikowsky, James R},
+  volume={75},
+  year={2012},
+  publisher={Springer Science \& Business Media}
+}
+
+
+
+@book{harrison2016quantum,
+  title={Quantum wells, wires and dots: theoretical and computational physics of semiconductor nanostructures},
+  author={Harrison, Paul and Valavanis, Alex},
+  year={2016},
+  publisher={John Wiley \& Sons}
+}
+
+@article{ando1982electronic,
+  title = {Electronic properties of two-dimensional systems},
+  author = {Ando, Tsuneya and Fowler, Alan B. and Stern, Frank},
+  journal = {Rev. Mod. Phys.},
+  volume = {54},
+  issue = {2},
+  pages = {437--672},
+  numpages = {0},
+  year = {1982},
+  month = {Apr},
+  publisher = {American Physical Society},
+  doi = {10.1103/RevModPhys.54.437},
+  url = {https://link.aps.org/doi/10.1103/RevModPhys.54.437}
+}
+
+@article{pauli1925zusammenhang,
+  title={{\"U}ber den Zusammenhang des Abschlusses der Elektronengruppen im Atom mit der Komplexstruktur der Spektren},
+  author={Pauli, Wolfgang},
+  journal={Zeitschrift f{\"u}r Physik},
+  volume={31},
+  number={1},
+  pages={765--783},
+  year={1925},
+  publisher={Springer}
+}
+
+
+@book{griffiths2018introduction,
+  title={Introduction to quantum mechanics},
+  author={Griffiths, David J and Schroeter, Darrell F},
+  year={2018},
+  publisher={Cambridge University Press}
+}
+
+@misc{sakurai1995modern,
+  title={Modern quantum mechanics, revised edition},
+  author={Sakurai, Jun John and Commins, Eugene D},
+  year={1995},
+  publisher={American Association of Physics Teachers}
+}
+
+@book{cohen2019quantum,
+  title={Quantum Mechanics, Volume 1: Basic Concepts, Tools, and Applications},
+  author={Cohen-Tannoudji, Claude and Diu, Bernard and Lalo{\"e}, Franck},
+  year={2019},
+  publisher={John Wiley \& Sons}
+}
+
+@book{de2014introduccion,
+  title={Introducci{\'o}n a la mec{\'a}nica cu{\'a}ntica},
+  author={De La Pe{\~n}a, Luis},
+  year={2014},
+  publisher={Fondo de Cultura econ{\'o}mica}
+}
+
+@book{davies1998physics,
+  title={The physics of low-dimensional semiconductors: an introduction},
+  author={Davies, John H},
+  year={1998},
+  publisher={Cambridge university press}
+}
+
+@article{Burt_1992,
+	doi = {10.1088/0953-8984/4/32/003},
+	url = {https://doi.org/10.1088/0953-8984/4/32/003},
+	year = 1992,
+	month = {aug},
+	publisher = {{IOP} Publishing},
+	volume = {4},
+	number = {32},
+	pages = {6651--6690},
+	author = {M G Burt},
+	title = {The justification for applying the effective-mass approximation to microstructures},
+	journal = {Journal of Physics: Condensed Matter},
+	abstract = {The assumptions of conventional effective-mass theory, especially the one of continuity of the envelope function at an abrupt interface, are reviewed critically so that the need for a fresh approach becomes apparent. A new envelope-function method, developed by the author over the past few years, is reviewed. This new method is based on both a generalization and a novel application to microstructures of the Luttinger-Kohn envelope-function expansion. The differences between this new method and the conventional envelope-function method are emphasized. An alternative derivation of the new envelope-function equations, which are exact, to that already published is provided. A new and improved derivation of the author's effective-mass equation is given, in which the differences in the zone-centre eigenstates of the constituent crystals are taken into account. The cause of the kinks in the conventional effective-mass envelope function, at abrupt effective-mass changes, is identified.}
+}
+
+@article{rivera2020light,
+  title={Light--matter interactions with photonic quasiparticles},
+  author={Rivera, Nicholas and Kaminer, Ido},
+  journal={Nature Reviews Physics},
+  volume={2},
+  number={10},
+  pages={538--561},
+  year={2020},
+  publisher={Nature Publishing Group},
+  doi = {https://doi.org/10.1038/s42254-020-0224-2},
+}
+
+@book{muller2013symmetry,
+  title={Symmetry relationships between crystal structures: applications of crystallographic group theory in crystal chemistry},
+  author={M{\"u}ller, Ulrich},
+  volume={18},
+  year={2013},
+  publisher={OUP Oxford},
+  doi={DOI:10.1093/acprof:oso/9780199669950.001.0001},
+
+}
+
+@book{van1989laws,
+  title={Laws and symmetry},
+  author={Van Fraassen, Bas C},
+  year={1989},
+  publisher={Clarendon Press},
+  doi={DOI:10.1093/0198248601.001.0001},
+}
+
+@book{powell2010symmetry,
+  title={Symmetry, group theory, and the physical properties of crystals},
+  author={Powell, Richard C},
+  volume={824},
+  year={2010},
+  publisher={Springer},
+  doi={https://doi.org/10.1007/978-1-4419-7598-0},
+}
+
+@book{tapp2021symmetry,
+  title={Symmetry: A mathematical exploration},
+  author={Tapp, Kristopher},
+  year={2021},
+  publisher={Springer Nature},
+  doi={https://doi.org/10.1007/978-1-4614-0299-2},
+}
+
+@book{cornwell1997group,
+  title={Group theory in physics: An introduction},
+  author={Cornwell, John F},
+  year={1997},
+  publisher={Academic press},
+  doi={https://doi.org/10.1016/B978-0-12-189800-7.X5000-6}
+}
+
+
+@book{solyom2008fundamentals,
+  title={Fundamentals of the Physics of Solids: Volume II: Electronic Properties},
+  author={S{\'o}lyom, Jen{\"o}},
+  volume={2},
+  year={2008},
+  publisher={Springer Science \& Business Media},
+  doi={https://doi.org/10.1007/978-3-540-85316-9}
+
+}
+
+@book{solyom2007fundamentals,
+  title={Fundamentals of the Physics of Solids: Volume 1: Structure and Dynamics},
+  author={S{\'o}lyom, Jen{\"o}},
+  volume={1},
+  year={2007},
+  publisher={Springer Science \& Business Media},
+  doi={https://doi.org/10.1007/978-3-540-72600-5}
+}
+
+@book{solyom2010fundamentals,
+  title={Fundamentals of the Physics of Solids: Volume 3-Normal, Broken-Symmetry, and Correlated Systems},
+  author={S{\'o}lyom, Jen{\"o}},
+  volume={3},
+  year={2010},
+  publisher={Springer Science \& Business Media},
+  doi={https://doi.org/10.1007/978-3-642-04518-9}
+}
+
+@book{kittel2018kittel,
+  title={Kittel's Introduction to Solid State Physics},
+  author={Kittel, Charles and McEuen, Paul},
+  year={2018},
+  publisher={John Wiley \& Sons},
+  
+}
+
+@book{mckelvey1966solid,
+  title={Solid State and Semiconductor Physics},
+  author={McKelvey, J.P.},
+  lccn={66015674},
+  series={A Harper international edition},
+  url={https://books.google.com.mx/books?id=MQNRAAAAMAAJ},
+  year={1966},
+  publisher={Harper \& Row}
+}
+
+@book{chatterjee2008crystallography,
+  title={Crystallography and the World of Symmetry},
+  author={Chatterjee, Sanat K},
+  volume={113},
+  year={2008},
+  publisher={Springer Science \& Business Media},
+  doi={https://doi.org/10.1007/978-3-540-69899-9}
+}
+
+@book{dresselhaus2007group,
+  title={Group theory: application to the physics of condensed matter},
+  author={Dresselhaus, Mildred S and Dresselhaus, Gene and Jorio, Ado},
+  year={2007},
+  publisher={Springer Science \& Business Media},
+  doi={https://doi.org/10.1007/978-3-540-32899-5}
+}
+
+@article{momma2011vesta,
+author = "Momma, Koichi and Izumi, Fujio",
+title = "{{\\it VESTA3} for three-dimensional visualization of crystal, volumetric and morphology data}",
+journal = "Journal of Applied Crystallography",
+year = "2011",
+volume = "44",
+number = "6",
+pages = "1272--1276",
+month = "Dec",
+doi = {10.1107/S0021889811038970},
+url = {https://doi.org/10.1107/S0021889811038970},
+abstract = {{\it VESTA} is a three-dimensional visualization system for crystallographic studies and electronic state calculations. It has been upgraded to the latest version, {\it VESTA3}, implementing new features including drawing the external mor{\-}phology of crystals; superimposing multiple structural models, volumetric data and crystal faces; calculation of electron and nuclear densities from structure parameters; calculation of Patterson functions from structure parameters or volumetric data; integration of electron and nuclear densities by Voronoi tessellation; visualization of isosurfaces with multiple levels; determination of the best plane for selected atoms; an extended bond-search algorithm to enable more sophisticated searches in complex molecules and cage-like structures; undo and redo in graphical user interface operations; and significant performance improvements in rendering isosurfaces and calculating slices.},
+keywords = {VESTA 3, data visualization, electronic state calculations, Voronoi tessellation, computer programs},
+}
+
+@book{malgrange2014symmetry,
+  title={Symmetry and Physical Properties of Crystals},
+  author={Malgrange, C{\'e}cile and Ricolleau, Christian and Schlenker, Michel},
+  year={2014},
+  publisher={Springer},
+  doi={https://doi.org/10.1007/978-94-017-8993-6}
+}
+
+@book{ashcroft1976solid,
+  title={Solid State Physics},
+  author={Ashcroft, N.W. and W, A.N. and Mermin, N.D. and Ashcroft, W. and Mermin, D. and Mermin, N.D. and Brooks/Cole Publishing Company},
+  isbn={9780030839931},
+  lccn={lc74009772},
+  series={HRW international editions},
+  url={https://books.google.com.mx/books?id=1C9HAQAAIAAJ},
+  year={1976},
+  publisher={Holt, Rinehart and Winston}
+}
+
+@Inbook{powell2010chapter1,
+author="Powell, Richard C.",
+title="Symmetry in Solids",
+bookTitle="Symmetry, Group Theory, and the Physical Properties of Crystals",
+year="2010",
+publisher="Springer New York",
+address="New York, NY",
+pages="1--24",
+abstract="The intent of this book is to demonstrate the importance of symmetry in determining the properties of solids and the power of using group theory and tensor algebra to elucidate these properties. It is not meant to be a comprehensive text on solid state physics, so many important aspects of condensed matter physics not related to symmetry are not covered here. The book begins by discussing the concepts of symmetry relevant to crystal structures. This is followed by a summary of the basics of group theory and how it is applied to quantum mechanics. Next is a discussion of the description of the macroscopic properties of crystals by tensors and how symmetry determines the form of these tensors. The basic concepts covered in these early chapters are then applied to a series of different examples. There is a discussion of the use of point symmetry in the crystal field theory treatment of point defects in solids. Next is a discussion of crystal symmetry in determining the optical properties of solids, followed by a chapter on the nonlinear optical properties of solids. Then the role of symmetry in treating lattice vibrations is described. The last chapter discusses the effects of translational symmetry on electronic energy bands in solids.",
+isbn="978-1-4419-7598-0",
+doi="10.1007/978-1-4419-7598-0_1",
+url="https://doi.org/10.1007/978-1-4419-7598-0_1"
+}
+
+@article{parmenter1955symmetry,
+  title = {Symmetry Properties of the Energy Bands of the Zinc Blende Structure},
+  author = {Parmenter, R. H.},
+  journal = {Phys. Rev.},
+  volume = {100},
+  issue = {2},
+  pages = {573--579},
+  numpages = {0},
+  year = {1955},
+  month = {Oct},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRev.100.573},
+  url = {https://link.aps.org/doi/10.1103/PhysRev.100.573}
+}
+
+@PhdThesis{elder2012semi,
+  author = {Elder, Warren James},
+  school = {Imperial College London},
+  title  = {Semi-empirical modelling of SiGe hetero-structures},
+  year   = {2012},
+  type   = {{PhD} dissertation},
+  doi    = {https://doi.org/10.25560/9816},
+  url    = {http://hdl.handle.net/10044/1/9816},
+}
+
+@book{butcher2013crystalline,
+  title={Crystalline semiconducting materials and devices},
+  author={Butcher, Paul N and March, Norman H and Tosi, Mario P},
+  year={2013},
+  publisher={Springer Science \& Business Media},
+  doi={https://doi.org/10.1007/978-1-4757-9900-2}
+}
+
+@book{ehrhardt2014multi,
+  title={Multi-Band Effective Mass Approximations: Advanced Mathematical Models and Numerical Techniques},
+  author={Ehrhardt, Matthias and Koprucki, Thomas},
+  volume={94},

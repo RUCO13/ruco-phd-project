@@ -1,0 +1,127 @@
+% !TeX document-id = {724a8edb-9289-4488-a7ad-226d4b797a62}
+%!TeX program = lualatex -synctex=1 -interaction=nonstopmode -shell-escape -output-directory=build  %.tex
+\documentclass[margin=0mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots,pgfplotstable,}
+\usetikzlibrary{pgfplots.colorbrewer}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{patchplots}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{amsmath,amsfonts,amssymb,xfrac,cancel}
+\usepackage{xcolor}
+\usepackage{xkeyval}
+\usetikzlibrary{pgfplots.colormaps}
+\pgfplotsset{compat=newest,
+	width=10cm,height=9cm,
+	scale only axis,
+	every axis/.append style = {
+		line width = 1.25pt,
+		tick style = {line width=1.25pt,black},
+		ticklabel style={scale=1},
+		every tick label/.append style={scale=1},
+		major tick length = 2mm,
+		minor tick length = 1mm,
+		xlabel style={scale=1},
+		ylabel style={scale=1},
+		xtick align=outside,
+		ytick align=outside
+	},
+	%colorbar style/.code={},
+}
+\newcommand{\rgb}[3]{rgb:red,#1;green,#2;blue,#3}
+
+
+
+\pgfplotstableread[col sep=comma]{/media/labfiles/RUCO/PhD-PHOTONICS/PhD-CODES/DATA/M4_3140-mapabs001.csv}\map
+\pgfplotstableread[col sep=comma]{/media/labfiles/RUCO/PhD-PHOTONICS/PhD-CODES/DATA/M4_3521-mapabs001.csv}\mapd
+\pgfplotstableread[col sep=comma]{/media/labfiles/RUCO/PhD-PHOTONICS/PhD-CODES/DATA/M4_3523-mapabs001.csv}\mapt
+
+
+
+%
+%\pgfdeclareplotmark{*)}{\shade[draw=red!70!black,ball color=red!70] (0pt, 0pt) circle [radius=3pt];}
+\pgfdeclareplotmark{**)}{\shade[draw=blue!70!black,ball color=blue!70] (0pt, 0pt) circle [radius=3pt];}
+%\pgfdeclareplotmark{***)}{\shade[draw=\rgb{0.31}{0.78}{0.47},ball color=\rgb{0.31}{0.78}{0.1}] (0pt, 0pt) circle
+%	[radius=3pt];}
+%
+%\pgfdeclareplotmark{p1}{\shade[draw=red!70!black,ball color=red!70] (0pt, 0pt) circle [radius=1.5pt];}
+%\pgfdeclareplotmark{p2}{\shade[draw=blue!70!black,ball color=blue!70] (0pt, 0pt) circle [radius=1.5pt];}
+%\pgfdeclareplotmark{p3}{\shade[draw=\rgb{0.31}{0.78}{0.47},ball color=\rgb{0.31}{0.78}{0.1}] (0pt, 0pt) circle
+%	[radius=1.5pt];}
+
+
+\begin{document}
+	\begin{tikzpicture}
+		%		\pgfkeys{/pgf/number format/.cd,
+		%			sci,
+		%			sci zerofill,precision=1,
+		%			sci generic={mantissa sep=\times,exponent={10^{#1}}}}
+		%		
+		\begin{groupplot}[group style={group size=1 by 3,vertical sep=15mm},height=3cm,width=10cm,
+			name=absorption,view={0}{90},
+			colormap/jet,
+			xlabel = Position (nm),
+			ylabel = Wavelength (nm),
+			xtick pos=left,
+			ytick pos=left,
+			minor tick num=1,
+			]
+			\nextgroupplot[
+			colorbar,
+			every colorbar/.append style={ylabel=Absorption $\left(1/\mathrm{nm}\right)$,
+				%ymin=0.00025,ymax=0.0016,
+				scaled y ticks=false,
+				ytick align=inside,
+				ytick pos=right,
+				ylabel style={rotate=-180},
+				/pgf/number format/fixed,
+				/pgf/number format/fixed zerofill,
+				/pgf/number format/precision=4	
+			},
+			]
+			\addplot3[surf,shader=interp] table[x index=0,y index=1,z index=2] {\map};
+			
+			\draw[densely dashed,red]  (axis cs:300,600)--(axis cs:300,700);
+			\draw[densely dashed,red]  (axis cs:350,600)--(axis cs:350,700);
+				\node[anchor=east,white,font=\bf] at (axis cs: 580,695){a) M4\_3140};
+			\nextgroupplot[	
+			colorbar,
+			every colorbar/.append style={ylabel=Absorption $\left(1/\mathrm{nm}\right)$,
+				%ymin=0.00025,ymax=0.0016,
+				major tick length = 1.5mm,
+				scaled y ticks=false,
+				ytick align=inside,
+				ytick pos=right,
+				ylabel style={rotate=-180},
+				/pgf/number format/fixed,
+				/pgf/number format/fixed zerofill,
+				/pgf/number format/precision=4
+			},]
+			\addplot3[surf,shader=interp] table[x index=0,y index=1,z index=2] {\mapd};
+			\draw[densely dashed,red]  (axis cs:300,600)--(axis cs:300,700);
+			\draw[densely dashed,red]  (axis cs:350,600)--(axis cs:350,700);
+				\node[anchor=east,white,font=\bf] at (axis cs: 580,695){b) M4\_3521};
+			\nextgroupplot[
+			colorbar,
+			every colorbar/.append style={ylabel=Absorption $\left(1/\mathrm{nm}\right)$,
+				%ymin=0.0001,ymax=0.0025,
+				major tick length = 1.5mm,
+				scaled y ticks=false,
+				ytick align=inside,
+				ytick pos=right,
+				ylabel style={rotate=-180},
+				/pgf/number format/fixed,
+				/pgf/number format/fixed zerofill,
+				/pgf/number format/precision=4
+			},]
+			\addplot3[surf,shader=interp] table[x index=0,y index=1,z index=2] {\mapt};
+			\draw[densely dashed,red]  (axis cs:300,600)--(axis cs:300,700);
+			\draw[densely dashed,red]  (axis cs:350,600)--(axis cs:350,700);
+			
+			
+			\node[anchor=east,white,font=\bf] at (axis cs: 580,695){c) M4\_3523};
+ 		\end{groupplot}
+	\end{tikzpicture}
+\end{document}
+
+consistents

@@ -1,0 +1,103 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{auto-pst-pdf}
+\usepackage{pstricks-add}
+\usepackage{multido}
+\usepackage{pst-all}
+\usepackage{pst-optexp}
+\usepackage{pst-node}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\begin{document}
+	\def\criost{%
+		\psframe*[opacity=0.2,linecolor=blue](0.1,0.3)(1.25,1)}
+	
+	\begin{pspicture}(-0.8,0)(15,8)
+		\defineTColor{TGray}{gray}
+		\begin{optexp}
+			\pnode(6,6){Lampara}
+			\pnode(7,6){Espejo1}
+			\pnode(6,7){Espejo2}
+			\pnode(8,7){Mono}
+			\pnode(15,7){Espejo1Mono}
+			\pnode(10.5,5.5){Rejilla}
+			\pnode(15,3.5){Espejo2Mono}
+			\pnode(8,3.5){Mono2}
+			\pnode(7.5,3.5){Espejo3}
+			\pnode(9,4.5){Espejo4}
+			\pnode(4,4.5){Polarizador}
+			\pnode(1,3){Analizador}
+			\pnode(2.5,4.5){Sample}
+			\pnode(1,2){Fototubo}
+			
+			%Lampara de Xenon
+			\optbox[position=start, innerlabel, optboxwidth=1,compname=xenon](Lampara)(Espejo1){Xe}
+			%Primer espejo (arreglo interno de la lampara)
+			\mirror[mirrorwidth=0.5,mirrortype=extended,compname=E1,variable](Lampara)(Espejo1)(Espejo2){$\mathrm{M1_{L}}$}
+			%Segundo espejo (arreglo interno de la lampara)
+			\mirror[mirrorwidth=0.5,mirrortype=extended,compname=E2,variable](Espejo1)(Espejo2)(Mono){$\mathrm{M2_{L}}$}
+			
+			
+			%Monoocromador
+			% Entrada al monocromador (slit 1)
+			\pinhole[phwidth=0.05, abspos=2,conmpname=EntradaMono](Mono)(Espejo1Mono){}
+			% Primer Espejo del arreglo interno del monocromador
+			\mirror[mirrorradius=1,mirrorwidth=0.7,mirrortype=extended, compname=E3](Mono)(Espejo1Mono)(Rejilla){}
+			%Rejilla del monocromador
+			\optgrating[reverse,compname=Rej](Espejo1Mono)(Rejilla)(Espejo2Mono)
+			% Segundo Espejo del arreglo interno del monocromador
+			\mirror[mirrorwidth=0.7,mirrortype=extended,compname=E4](Rejilla)(Espejo2Mono)(Mono2){}
+			% Salida del monocromador (slit 2)
+			\pinhole[phwidth=0.05, abspos=4.95, labelangle=180,conmpname=SalidaMono](Espejo2Mono)(Mono2){}
+			
+			% RD 
+			% Primero espejo que compone el arreglo de RD
+			\mirror[mirrorwidth=0.5,mirrortype=extended,compname=E5,labeloffset=-1,labelangle=-80,variable](Mono2)(Espejo3)(Espejo4){$\mathrm{M1}$}
+			% Segundo espejo del arreglo
+			\mirror[mirrorwidth=0.5,mirrortype=extended,compname=E6,labeloffset=0.75, labelangle=70,variable](Espejo3)(Espejo4)(Sample){$\mathrm{M2}$}%
+			%Polarizador
+			\polarization[poltype=parallel,polsize=1,pollinewidth=2\pslinewidth,abspos=4,labeloffset=-0.75](Espejo4)(Polarizador){Pol}
+			%Muestra
+			\opttripole[labelangle=180, labeloffset=-1.15](Polarizador)(Sample)(Fototubo){%
+				\psframe[fillstyle=solid,fillcolor=gray!50](-0.3,0)(0.3,0.2)
+				\psline(-0.3,0.1)(-0.5,0.1)(-0.5,0.5)(0.5,0.5)(0.5,0.1)(0.3,0.1)}{}
+			%Analizador
+			
+			\polarization[poltype=misc,polsize=1,pollinewidth=2\pslinewidth,abspos=2,labeloffset=-1.5](Sample)(Fototubo){Rot. An.}
+			
+			\optdetector[labelangle=180, labeloffset=1.15,compname=Det2](Sample)(Fototubo){PM}
+			
+			\drawwidebeam[fillstyle=solid, fillcolor=yellow!20!white, opacity=0.3, linecolor=yellow,beamwidth=0.25,stopinside](Lampara){2}{3}{4}
+			
+			
+			\drawbeam[fillstyle=solid, fillcolor=yellow, opacity=0.5, linecolor=yellow,]{4}{5}{6}
+			%\drawwidebeam[fillstyle=solid, fillcolor=yellow, opacity=0.5, linecolor=yellow,beamwidth=0.25]{4-5}
+			%\drawwidebeam[fillstyle=solid, fillcolor=yellow, opacity=0.5, linecolor=yellow,beamwidth=0.25]{5-6}
+			\definecolor[ps]{bl}{rgb}{%
+				tx@addDict begin Red Green Blue end}%
+			\addtopsstyle{Beam}{linecolor=bl,fillcolor=bl,linewidth=0.3\pslinewidth, beaminside=false}
+			\multido{\i=0+1}{30}{%
+				\pstVerb{%
+					\i\space 700 400 sub 29 div mul 420 add
+					tx@addDict begin wavelengthToRGB end }%
+				\drawwidebeam[beamwidth=0.01,beamangle=\i\space 0.4 mul 5 sub,fillstyle=solid]{6-}%
+			}%
+		\end{optexp}
+		
+		
+		\psframe[opacity=0.1,linewidth=0.05mm](9.75,2.95)(15,7.5)
+		
+
+        %\pscircle[linewidth=2pt](2,4.5){2}
+ %       \psline (-1,7.5)(0.5,6)
+%        \psarc(1,5.2){1}{122}{200}
+
+	\end{pspicture}
+
+%\begin{tikzpicture}
+%	\path
+%	(5,0) arc (180:360:1 and 1) -- (2,1) arc (360:180:1 and 0.05) --cycle;
+%\end{tikzpicture}
+	
+\end{document}

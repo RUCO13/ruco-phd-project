@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{math,calc, chains, positioning}
+\usepackage[paperheight=5cm,paperwidth=5cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{xkcd-Regular}
+%\setmathrm{Humor-Sans.ttf}[Extension = .ttf ]
+%\setmathsf{Humor-Sans.ttf}[Extension = .ttf ]
+
+
+
+
+\begin{document}
+	\thispagestyle{empty}
+	\begin{tikzpicture}[remember picture,overlay,decoration={random steps,segment length=2mm,amplitude=0.2pt}]
+		% You can see the border of the page node with this:
+		%\draw[thin] (current page.south west) rectangle (current page.north east);
+		
+		\node[anchor=west,yshift=0.2cm,scale=0.7](p1) at (current page.west) {$\Psi\mathrm{(hv)}$};
+		\node[anchor=north,scale=0.7](p2) at (p1.south) {$\Delta\mathrm{(hv)}$};
+		
+		\draw[-stealth,line width=2pt,decorate] ([xshift=0.75cm]current page.west) to[out=0,in=180] (current page.center);
+		
+		\node[text width=2cm, align=center,scale=0.5,anchor=center,yshift=-5cm,xshift=-0.5cm] (current page.center){Construction of optical models};
+		
+		
+		
+		
+		\node[anchor=north east,
+			draw,
+			text width=4cm, 
+			scale=0.5,inner sep=1mm](ops) at (current page.north east){ Optical constants
+		\begin{itemize}
+			\item $\mathrm{n,k}$
+			\item $\mathrm{\epsilon = \epsilon_{1}-i\epsilon_{3}}$
+			\item $\mathrm{\alpha=4\pi k/\lambda}$
+		\end{itemize}	
+		};
+	
+	\node[anchor=east,
+	draw,
+	text width=4cm,minimum height=2cm,minimum width=3cm, 
+	scale=0.5,](ops2) at (current page.east){ \begin{itemize}\vspace*{-5mm}
+			\item Reflectance
+			\item Transmitance
+		\end{itemize}	
+	};
+
+
+
+\node[anchor=south east,
+draw,
+text width=4cm,minimum height=2cm,minimum width=3cm, 
+scale=0.5,](ops3) at (current page.south east){ \begin{itemize}
+		\item Surface roughness layer
+		\item Bulk layer
+		\item Multilayer
+	\end{itemize}	
+};
+		
+\draw[-stealth,line width=2pt,decorate] ([xshift=0.75cm]current page.west) to[out=0,in=180,distance=2cm] (ops3.west);	
+\draw[-stealth,line width=2pt,decorate] ([xshift=0.75cm]current page.west) to[out=0,in=180,distance=2cm] (ops.west);			
+	\end{tikzpicture}
+\end{document}

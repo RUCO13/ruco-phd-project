@@ -1,0 +1,143 @@
+% !TeX document-id = {24dd2535-5b1d-4966-8c33-6df612b0c89d}
+%!TeX program = lualatex -synctex=1 -interaction=nonstopmode -shell-escape -output-directory=build %.tex
+\documentclass[margin=0mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots,pgfplotstable,}
+\usetikzlibrary{pgfplots.colorbrewer}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{patchplots}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{amsmath,amsfonts,amssymb,xfrac,cancel}
+\usepackage{xcolor}
+\usepackage{xkeyval}
+\usetikzlibrary{pgfplots.colormaps}
+\pgfplotsset{compat=newest,
+	%width=10cm,
+	height=7.5cm,
+	scale only axis,
+	every axis/.append style = {
+		line width = 1.25pt,
+		tick style = {line width=1.25pt,black},
+		ticklabel style={scale=1},
+		every tick label/.append style={scale=0.9},
+		major tick length = 2mm,
+		minor tick length = 1mm,
+		xlabel style={scale=1},
+		ylabel style={scale=1},
+		xtick align=outside,
+		ytick align=outside
+	},
+	%colorbar style/.code={},
+}
+\newcommand{\rgb}[3]{rgb:red,#1;green,#2;blue,#3}
+
+\usepackage{relsize}
+\renewcommand{\_}{\textscale{.5}{\textunderscore}}
+
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/data/M4_3140-mapabs001.csv}\map
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/data/M4_3521-mapabs001.csv}\mapd
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/data/M4_3523-mapabs001.csv}\mapt
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/data/M4_3171-mapabs001.csv}\mu
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/data/M4_3172-mapabs001.csv}\md
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/data/M4_3226-mapabs001.csv}\mt
+
+
+
+
+
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{groupplot}[
+		group style={	
+				group name=abs,
+				group size=2 by 3,
+				xlabels at=edge bottom,
+				ylabels at=edge left,
+				x descriptions at=edge bottom,
+				yticklabels at=edge left,
+				horizontal sep=0.5cm,
+				vertical sep=0.5cm,				
+			},
+			height=2cm,
+			width=8cm,
+			view={0}{90},
+			colormap/jet,
+			xlabel = Position (nm),
+			%ylabel = Wavelength (nm),
+			xlabel style={scale=1.2},
+			ylabel style={scale=1},
+			xtick pos=left,
+			ytick pos=left,
+			minor tick num=1,
+			]
+\nextgroupplot
+			\addplot3[contour filled={number=70},shader=interp] table[x index=0,y index=1,z index=2] {\mu};
+			\draw[densely dashed,red]  (axis cs:400,600)--(axis cs:400,900);
+			\draw[densely dashed,red]  (axis cs:440,600)--(axis cs:440,900);
+			\node[anchor=north east,white,font=\bf] at (axis description cs:0.7,1){a) M4\_3171};
+			\draw [-{Stealth[length=7mm,width=7mm] . Stealth[length=6mm,width=6mm] Stealth[length=5mm,width=5mm]},line width=2mm,red,opacity=0.2] (axis cs:0,680)--(axis cs:200,680);
+\nextgroupplot
+	\addplot3[contour filled={number=70},shader=interp] table[x index=0,y index=1,z index=2] {\map};
+	\draw[densely dashed,red]  (axis cs:300,600)--(axis cs:300,900);
+	\draw[densely dashed,red]  (axis cs:350,600)--(axis cs:350,900);
+			\node[anchor=north east,white,font=\bf] at (axis description cs:1,1){d) M4\_3140};
+			\draw [-{Stealth[length=7mm,width=7mm] . Stealth[length=6mm,width=6mm] Stealth[length=5mm,width=5mm]},line width=2mm,red,opacity=0.2] (axis cs:0,680)--(axis cs:200,680);
+			
+\nextgroupplot[ylabel= Wavelength (nm),
+				ylabel style={scale=1.5}]
+			\addplot3[contour filled={number=70},shader=interp] table[x index=0,y index=1,z index=2] {\md};
+			\draw[densely dashed,red]  (axis cs:400,600)--(axis cs:400,900);
+			\draw[densely dashed,red]  (axis cs:440,600)--(axis cs:440,900);
+			\node[anchor=north east,white,font=\bf] at (axis description cs:0.7,1){b) M4\_3172};
+			\draw [-{Stealth[length=7mm,width=7mm] . Stealth[length=6mm,width=6mm] Stealth[length=5mm,width=5mm]},line width=2mm,red,opacity=0.2] (axis cs:0,680)--(axis cs:200,680);
+			
+\nextgroupplot
+	\addplot3[contour filled={number=70},shader=interp] table[x index=0,y index=1,z index=2] {\mapd};
+	\draw[densely dashed,red]  (axis cs:300,600)--(axis cs:300,900);
+	\draw[densely dashed,red]  (axis cs:350,600)--(axis cs:350,900);
+			\node[anchor=north east,white,font=\bf] at (axis description cs:1,1){e) M4\_3521};
+			\draw [-{Stealth[length=7mm,width=7mm] . Stealth[length=6mm,width=6mm] Stealth[length=5mm,width=5mm]},line width=2mm,red,opacity=0.2] (axis cs:0,680)--(axis cs:200,680);
+\nextgroupplot
+			\addplot3[contour filled={number=70},shader=interp] table[x index=0,y index=1,z index=2] {\mt};
+			\draw[densely dashed,red]  (axis cs:400,600)--(axis cs:400,900);
+			\draw[densely dashed,red]  (axis cs:440,600)--(axis cs:440,900);
+			\node[anchor=north east,white,font=\bf] at (axis description cs:0.7,1){c) M4\_3226};					
+			\draw [-{Stealth[length=7mm,width=7mm] . Stealth[length=6mm,width=6mm] Stealth[length=5mm,width=5mm]},line width=2mm,red,opacity=0.2] (axis cs:0,680)--(axis cs:200,680);
+\nextgroupplot
+			\addplot3[contour filled={number=70},shader=interp] table[x index=0,y index=1,z index=2] {\mapt};
+			\draw[densely dashed,red]  (axis cs:300,600)--(axis cs:300,900);
+			\draw[densely dashed,red]  (axis cs:350,600)--(axis cs:350,900);
+			\node[anchor=north east,white,font=\bf] at (axis description cs:1,1){f) M4\_3523};
+			\draw [-{Stealth[length=7mm,width=7mm] . Stealth[length=6mm,width=6mm] Stealth[length=5mm,width=5mm]},line width=2mm,red,opacity=0.2] (axis cs:0,680)--(axis cs:200,680);
+\end{groupplot}
+\begin{axis}[
+		hide axis,
+		scale only axis,
+		colormap/jet,
+		colorbar horizontal,
+		point meta min=0,
+		point meta max=0.0025,
+		colorbar style={
+			xlabel=Absorption $\left(1/\mathrm{nm}\right)$,               
+			scaled y ticks=true,
+			xtick align=inside,
+			xtick pos=right,
+			width=16.5cm,
+			xticklabel pos=upper,
+			at={(0,0.3)},
+			anchor=south west,
+			xlabel style={at={(ticklabel cs:0.5)},anchor=base,scale=1.2,alias=xb,yshift=2mm},
+			every x tick scale label/.style={at={(xticklabel cs:0.64)},anchor= base,scale=1.2,yshift=2mm},
+			tick scale binop=\times,	
+			tick style = {line width=1.25pt,black},
+		}
+		]
+	\addplot[draw=none] coordinates {(0,0)};
+\end{axis}
+	
+	
+	\end{tikzpicture}
+\end{document}
+
+

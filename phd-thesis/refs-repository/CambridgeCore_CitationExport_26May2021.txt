@@ -1,0 +1,1 @@
+@book{singh_2003, place={Cambridge}, title={Electronic and Optoelectronic Properties of Semiconductor Structures}, DOI={10.1017/CBO9780511805745}, publisher={Cambridge University Press}, author={Singh, Jasprit}, year={2003}}

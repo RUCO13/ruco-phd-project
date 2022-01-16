@@ -1,0 +1,129 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphics}
+\usepackage{tikz,filecontents, pgfplots}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer,}
+
+
+
+
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-1500um-50mW.txt}\pruno
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-1000um-50mW.txt}\prdos
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-750um-50mW.txt}\prtres
+
+
+\pgfplotsset{compat=newest,
+	every axis/.style = {
+		%scale only axis,
+		width=10cm,height=5cm,
+		line width = 0.7pt,
+		tick style = {line width=0.7pt,black},
+		ticklabel style={scale=0.7},
+		major tick length = 1.8mm,
+		minor tick length = 0.9mm,
+		%xtick pos=left,
+		%ytick pos=left,
+		xlabel style={scale=0.6},
+		zlabel style={scale=0.6},
+		%xlabel={Photon energy (eV)}, 
+	},
+	every axis plot/.style={smooth,mark=*,mark options={scale=0.5,fill=white,line width=0.5pt},line width=0.5pt},
+	/pgfplots/legend image code/.code={%
+		\draw[mark repeat=1,mark phase=1,#1] 
+		plot coordinates {
+			(0cm,0cm) 
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.3cm,0cm)%
+		};
+	},
+}
+\pgfplotsset{every axis legend/.style={
+		cells={anchor=center},
+		inner xsep=1pt,
+		inner ysep=1pt,
+		nodes={scale=0.65,inner sep=2pt, transform shape},
+		draw=none,
+		at={(1,1)},
+		anchor=north east,
+	}
+}
+
+\pgfplotsset{
+	cycle from colormap manual style/.style={
+		every axis plot/.style={smooth,mark=*,mark options={scale=0.5,fill=white,line width=0.5pt},line width=0.5pt},
+	},
+}
+
+
+
+\begin{document}
+	\begin{tikzpicture}
+		
+		
+		\begin{axis}[%
+			name=3d,
+				width=7cm,height=5.5cm,
+				scale only axis,
+				view/h=45,
+				view/el=40,
+			    zmin = -0.4e-2,zmax=1.2e-2,
+			    plot box ratio=1 1 2,
+			    grid=major,
+			    %3d box=complete,
+			    minor x tick num=1,
+			    ymin = 0,ymax=6,
+			    xmin=1.49,xmax=1.56,
+				ytick={1,3,5},
+				xtick={1.50,1.525,1.55},
+				ytick pos=top,
+				yticklabels=\empty,
+				yticklabels={1500$\mu$m,1000$\mu$m,750$\mu$m},
+				ztick=\empty,
+				xtick pos=top,
+				xlabel={Photon Energy (eV)},
+				x label style={sloped,scale=0.8},
+			cycle list/Set1,
+			cycle from colormap manual style,
+		       ]
+				\addplot3 table [x index={0}, y expr={1},z index={1}]\pruno;
+				\addplot3 table [x index={0}, y expr={3},z index={1}]\prdos;
+				\addplot3 table [x index={0}, y expr={5},z index={1}]\prtres;
+				
+					\addplot3[red,-{stealth},mark options={solid,scale=0.5}] coordinates {
+					(1.490000,1.000000,0.003600)
+					(1.490000,3.000000,0.006751)
+					(1.490000,5.000000,0.009122)
+					
+				};
+			
+		\end{axis}
+	\begin{axis}[width=6cm,height=5cm,
+		anchor=west, 
+		at={(3d.east)},
+		%yshift=-5mm,
+		ytick=\empty,
+		xtick pos=left,
+		minor x tick num=1,
+		xlabel={Photon Energy (eV)},
+		x label style={sloped,scale=0.8},
+		cycle list/Set1,
+		cycle from colormap manual style,
+		]
+		\addplot table [x index={0},y index={1}]\pruno;
+		\addlegendentry{1500$\mu$m};
+		\addplot table [x index={0},y index={1}]\prdos;
+		\addlegendentry{1000$\mu$m};
+		\addplot table [x index={0},y index={1}]\prtres;
+		\addlegendentry{750$\mu$m};
+	\end{axis}
+	\end{tikzpicture}
+\end{document}

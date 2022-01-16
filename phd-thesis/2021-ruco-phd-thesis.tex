@@ -1,0 +1,49 @@
+\documentclass[12pt,
+a4paper,
+oneside,
+parskip=half,
+numbers=noenddot,
+toc=bibliographynumbered,
+toc=listofnumbered]{scrbook}
+
+\input{files/packages}
+\input{files/commands}
+\begin{document}
+\input{files/title-page-ruco}
+\author
+\let\cleardoublepage\clearpage %
+%\input{./files/dedication.tex} % Include the glossary definitions
+\let\cleardoublepage\clearpage %
+\frontmatter
+\pagenumbering{Roman}
+%\input{FILES/ABSTRACT}
+\dominitoc
+\dominilof
+\dominilot
+\adjustmtc
+\tableofcontents
+\listoffigures
+\listoftables
+%\input{files/nomenclature} % Include the glossary definitions
+\input{files/symbols} % Include the glossary definitions
+
+\mainmatter
+
+\input{files/chapter-1-introduction}
+\input{files/chapter-2-physical-model}
+%\input{files/chapter-3-results}
+%\input{files/chapter-4-conclusions}
+   
+
+%%
+%\appendix%
+%\footnotesize
+%\nocite{*}
+\bibliographystyle{unsrt}
+%\bibliographystyle{plainurl}
+\bibliography{files/references.bib} % Reference bib-library file
+
+
+\end{document}
+
+

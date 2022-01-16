@@ -1,0 +1,105 @@
+\documentclass[margin=-1mm]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphics}
+\usepackage{tikz,filecontents, pgfplots}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer,}
+
+\input{/media/labfiles/ruco/phd-ssp/phd-thesis/files/pgfplots-set.tex}
+
+
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-02-m43171-pr-5mW.txt}\pruno
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-02-m43172-pr-5mW.txt}\prdos
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-02-m43226-PR-5mW.txt}\prtres
+
+
+\pgfplotsset{every axis legend/.style={
+		cells={anchor=center},
+		inner xsep=1pt,
+		inner ysep=1pt,
+		nodes={scale=0.55,inner sep=2pt, transform shape},
+		draw=none,
+		at={(0,1)},
+		anchor=north west,
+	}
+}
+
+\begin{document}
+	
+	\begin{tikzpicture}
+		\begin{groupplot}[scale only axis,
+			group style={group name=PRSET1,
+				group size=1 by 3,
+				vertical sep=0pt,
+				xticklabels at=edge bottom},
+			height=1.5cm,width=8cm,
+			minor x tick num=1,
+			ytick=\empty,
+			xmin = \xminimo,xmax=\xmaximo,
+			cycle from colormap manual style,
+			]
+			
+			
+			\nextgroupplot[axis x line*=top,xtick=\empty]
+			\addplot[color=Dark2-A] table[x index=0,y expr=\thisrowno{1}]\pruno;
+			\addlegendentry{M4\_3171};
+			\draw (axis cs:0,0)--(axis cs:1.5025,0);
+			%	
+			%	\dimline[label style = {rotate=-90,midway,xshift=1mm,scale=0.6},
+			%	line style = {line width=0.5pt,arrows=stealth-stealth},
+			%	extension end length=-0.5,
+			%	extension start length=-0.5,
+			%	] {(axis cs:1.527,-3e-3)}{(axis cs: 1.527,0e-3)}{$\mathrm{3\!\times\!10^{-3}}$};
+			
+			% TRANSIITIONS	
+			\def\sc{0.7}
+			\bandt{1.5295}{3e-3}{0e-3}{$\thh{1}{1}$}{0}{\sc}{Dark2-A}
+			\bandt{1.5351}{3e-3}{0e-3}{$\tlh{1}{1}$}{0}{\sc}{Dark2-A}
+			
+			\nextgroupplot[axis x line=none, ylabel={Photoreflectance}]
+			\addplot[color=Dark2-B] table[x index=0,y expr=\thisrowno{1}]\prdos;
+			\addlegendentry{M4\_3172};
+			
+			\draw (axis cs:0,0)--(axis cs:1.5025,0);
+			%	\dimline[label style = {rotate=-90,midway,xshift=1mm,scale=0.6},
+			%						line style = {line width=0.5pt,arrows=stealth-stealth},
+			%						extension end length=0.5,
+			%						extension start length=0.5,
+			%						] {(axis cs:1.525,-3e-3)}{(axis cs: 1.525,0e-3)}{$\mathrm{3\!\times\!10^{-3}}$};
+			%	
+			%TRANSITIONS
+			\def\sc{0.7}
+			\bandt{1.5343}{3e-3}{0e-3}{$\thh{1}{1}$}{0}{\sc}{Dark2-B}
+			\bandt{1.5425}{3e-3}{0e-3}{$\tlh{1}{1}$}{0}{\sc}{Dark2-B}
+			
+			\nextgroupplot[axis x line*=bottom,
+			ymax=8e-3,
+			xlabel={Photon energy (eV)}]
+			\addplot[color=Dark2-C] table[x index=0,y expr=\thisrowno{1}]\prtres;
+			\addlegendentry{M4\_3226};
+			
+			\draw (axis cs:0,0)--(axis cs:1.5025,0);
+			%	\dimline[label style = {rotate=-90,midway,xshift=1mm,scale=0.6},
+			%	line style = {line width=0.5pt,arrows=stealth-stealth},
+			%	extension end length=0.5,
+			%	extension start length=0.5,
+			%	] {(axis cs:1.52,0e-3)}{(axis cs: 1.52,5e-3)}{$\mathrm{5\!\times\!10^{-4}}$};
+			
+			%TRANSITIONS
+			\def\sc{0.7}
+			\bandt{1.5340}{5e-3}{1e-3}{$\thh{1}{1}$}{2}{\sc}{Dark2-C}
+			\bandt{1.5417}{5e-3}{0e-3}{$\tlh{1}{1}$}{0}{\sc}{Dark2-C}	
+			
+			
+		\end{groupplot}
+		
+		
+		
+	\end{tikzpicture}
+\end{document}

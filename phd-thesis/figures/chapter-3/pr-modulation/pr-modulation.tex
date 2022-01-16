@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{math,calc, chains, positioning}
+\usepackage[paperheight=4.25cm,paperwidth=11cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{xkcd-Regular}
+
+
+
+
+
+\begin{document}
+	\thispagestyle{empty}
+	\begin{tikzpicture}[remember picture,overlay]
+		% You can see the border of the page node with this:
+		%\draw[thick] (current page.south west) rectangle (current page.north east);
+		
+		
+		\coordinate (A0) at (-1.75cm,-0.5cm);
+		\coordinate (A1) at (2.2cm,0.5cm);
+		\coordinate (A2) at (-1.75cm,-3cm);
+		\coordinate (A3) at (2.2cm,-2cm);
+		\draw [thick] (A0) to[out=0,in=230,distance=1.5cm ] (A1);
+		\draw [thick] (A2) to[out=0,in=230,distance=1.5cm ] (A3);
+		
+		\draw[thick] (2.2cm,1cm)--(2.2cm,-3cm);
+%	    \shade[ball color=red] (-1.5,-0.7) circle (0.15cm); 
+%	    \shade[ball color=red] (-1.0,-0.7) circle (0.15cm); 
+%	    \shade[ball color=red] (-0.5,-0.7) circle (0.15cm); 
+%		\shade[ball color=red] (-0.0,-0.68) circle (0.15cm); 
+%		\shade[ball color=red] (0.5,-0.63) circle (0.15cm);
+%		\shade[ball color=red] (1.0,-0.53) circle (0.15cm);
+%		\shade[ball color=red] (1.5,-0.35) circle (0.15cm);
+%		\shade[ball color=red] (2,0.) circle (0.15cm);
+		\draw[dashed] (-1.5,-0.7)--(7.45,-0.7);
+		\draw (-1.5,-0.8) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+}; 		
+		\draw (-1.0,-0.8) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+}; 
+		\draw (-0.5,-0.8) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+}; 
+		\draw (0.0,-0.75) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+};		
+		\draw (0.5,-0.7) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+};
+		\draw (1.0,-0.6)  node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+};	
+		\draw (1.5,-0.40)  node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+};	
+		\draw (2,-0.1)  node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+};	
+		
+		\draw (-1.5,-0.2)  node[circle,shade,ball color=blue,minimum size=1mm,scale=0.5,font=\huge] {-};
+		\draw (-1.0,-0.2)  node[circle,shade,ball color=blue,minimum size=1mm,scale=0.5,font=\huge] {-};
+		
+		
+		\foreach \j in {-1.8,-1.4,...,0.4}{
+	\draw (2.4,\j)  node[circle,shade,ball color=blue,minimum size=1mm,scale=0.5,font=\huge] {-};	
+	}
+		
+		
+		\coordinate (B0) at (3.5cm,-0.5cm);
+		\coordinate (B1) at (7.45cm,0cm);
+		\coordinate (B2) at (3.5cm,-3cm);
+		\coordinate (B3) at (7.45cm,-2.5cm);
+		\draw [thick] (B0) to[out=0,in=230,distance=1cm ] (B1);
+		\draw [thick] (B2) to[out=0,in=230,distance=1cm ] (B3);
+		\draw[thick] (7.45cm,1cm)--(7.45cm,-3cm);
+		
+		\draw (3.75,-0.8) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+}; 		
+		\draw (4.25,-0.8) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+}; 	
+		\draw (4.75,-0.8) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+};
+		\draw (5.25,-0.8) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+}; 	
+		\draw (5.75,-0.8) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+}; 	
+		\draw (6.25,-0.75) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+}; 
+		\draw (7.25,-0.5) node[circle,shade,ball color=red,minimum size=1mm,scale=0.4,font=\huge] {+}; 	
+		\newdimen \j
+		\foreach \j in {-2.2,-1.8,-1.0,...,0.0}{
+				\draw (7.75,\j)  node[circle,shade,ball color=blue,minimum size=1mm,scale=0.5,font=\huge] {-};	
+		}
+	
+			\draw (7.75,-1.4)  node[circle,shade,ball color=white,minimum size=1mm,scale=1,font=\huge,opacity=0.5] { };
+			\draw (7.75,-0.6)  node[circle,shade,ball color=white,minimum size=1mm,scale=1,font=\huge,opacity=0.5] { };
+		    \draw (6.75,-3.2)  node[circle,shade,ball color=blue,minimum size=1mm,scale=0.5,font=\huge] {-};	
+		    \draw (3.75,-0.2)  node[circle,shade,ball color=blue,minimum size=1mm,scale=0.5,font=\huge] {-};
+		    \draw (4.25,-0.2)  node[circle,shade,ball color=blue,minimum size=1mm,scale=0.5,font=\huge] {-};
+		    \draw (4.75,-0.2)  node[circle,shade,ball color=blue,minimum size=1mm,scale=0.5,font=\huge] {-};
+		    \draw (5.25,-0.2)  node[circle,shade,ball color=blue,minimum size=1mm,scale=0.5,font=\huge] {-};
+		    
+		    \draw (6.75,0)  node[circle,shade,ball color=blue,minimum size=1mm,scale=0.5,font=\huge] {-};
+		    
+		    \draw [-{stealth},line width=1pt] (7,-3.2) to[out=0,in=270 ] (7.75,-2.4);
+		    
+		    \draw [-{stealth},line width=1pt] (6.75,-2.75) to[out=90,in=270 ] (6.75,-.8);
+		    
+		    \node at (6.3,-3.2) {h$^+$};
+		    
+		    \node at (6.85,0.4) {e$^-$};
+		    
+		    \node[xshift=-2mm,yshift=2mm,scale=0.7] at (A0) {CB};
+		    \node[xshift=-2mm,yshift=2mm,scale=0.7] at (A2) {VB};
+		    \node[xshift=-2mm,yshift=2mm,scale=0.7] at (B0) {CB};
+		    \node[xshift=-2mm,yshift=2mm,scale=0.7] at (B2) {VB};
+		    
+		    \node[text width=1.1cm, align=center,scale=0.7] at (3.2,0.5) {Surfaces states};
+		     \node[text width=1.1cm, align=center,scale=0.7] at (8.2,0.5) {Surfaces states};
+		     
+		     \node[red] at (0,0.7) {Laser off};
+		     \node[red] at (5.5,0.7) {Laser on};
+		     
+		     \node[text width=1.1cm, align=center,scale=0.7] at (-0.25,-1.5) {Ionized donors};
+	\end{tikzpicture}
+\end{document}

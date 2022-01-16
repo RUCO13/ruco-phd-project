@@ -1,0 +1,145 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphics}
+\usepackage{tikz,filecontents, pgfplots}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer,colormaps}
+
+
+
+
+
+
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat}\bands
+
+
+
+\input{/media/labfiles/ruco/phd-ssp/phd-thesis/files/pgfplots-set.tex}
+
+\pgfplotsset{every axis legend/.style={
+		cells={anchor=center},
+		inner xsep=1pt,
+		inner ysep=1pt,
+		nodes={scale=0.65,inner sep=2pt, transform shape},
+		draw=none,
+		at={(1,1)},
+		anchor=north east,
+	}
+}
+
+
+\tikzset{
+	% define shorthand key/style to give spy-on node names
+	Name/.style={
+		every spy on node/.append style={
+			name=#1,
+		},
+	},
+}
+%\pgfplotsset{
+	%cycle from colormap manual style/.style={
+		%every axis plot/.style={smooth,mark=*,mark options={scale=0.5,fill=none,line width=0.5pt},only marks,line width=0.5pt},
+		%},
+	%}
+
+
+\newcommand{\errorband}[6]{
+	\pgfplotstableread[col sep=comma]{#1}\datatable
+	\addplot [name path=pluserror,draw=none,no markers,forget plot]
+	table [x={#2},y expr=\thisrowno{#3}+0.07] {\datatable};
+	
+	\addplot [name path=minuserror,draw=none,no markers,forget plot]
+	table [x={#2},y expr=\thisrowno{#3}-0.12] {\datatable};
+	
+	\addplot [forget plot,fill=#5,fill opacity=0.7]
+	fill between[on layer={},of=pluserror and minuserror];
+	
+	%%	\addplot [#5,thick,no markers]
+	%%	table [x={#2},y={#3}] {\datatable};
+}
+
+
+\begin{document}
+	
+	\begin{tikzpicture}
+		\begin{axis}[scale only axis,
+			%enlargelimits=false,
+			name=gamma,
+			width=4cm,height=5cm,
+			axis lines={center},
+		    axis x line=middle,
+		    axis y line shift={-100},
+			xtick=\empty,
+			ytick=\empty,
+			ylabel={E},
+			xlabel={ $\boldsymbol{k}$},
+			minor x tick num=0,
+			xmin=0,xmax=200,
+			ymin=-3,ymax=3,
+			%hide axis,
+			colormap/cold,
+			axis line  style={line width=0.5pt,magenta,densely dotted},
+			]
+			
+%			\addplot+[no marks,mesh,point meta=y,line width=1pt] table[x index=0,y expr=\thisrowno{2}]\bands;
+%			\addplot+[no marks,mesh,point meta=y,line width=1pt] table[x index=0,y expr=\thisrowno{3}]\bands;
+%			\addplot+[no marks,mesh,point meta=y,line width=1pt] table[x index=0,y expr=\thisrowno{5}]\bands;
+
+
+\errorband{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat}{0}{2}{3}{black}{0.3}
+\errorband{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat}{0}{3}{4}{black}{0.3}
+\errorband{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat}{0}{5}{4}{black}{0.4}
+
+\addplot[no marks,
+mesh,
+point meta=\thisrowno{4},
+%no marks,
+every mark/.append style={line width=1pt,mark size=4pt,fill=blue!80!black},
+shader=flat corner,
+line width=0.5pt+0.5pt*\pgfplotspointmetatransformed/1000,
+] table[x index=0,y index=2,col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat};
+
+\addplot[no marks,
+mesh,
+point meta=\thisrowno{4},
+%no marks,
+every mark/.append style={line width=1pt,mark size=4pt,fill=blue!80!black},
+shader=flat corner,
+line width=0.5pt+0.5pt*\pgfplotspointmetatransformed/1000,
+] table[x index=0,y index=3,col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat};
+
+\addplot+[no marks,
+mesh,
+point meta=\thisrowno{4},
+%no marks,
+every mark/.append style={line width=1pt,mark size=4pt,fill=blue!80!black},
+shader=flat corner,
+line width=0.5pt+0.5pt*\pgfplotspointmetatransformed/1000,
+] table[x index=0,y index=5,col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat};
+
+			
+			%\draw[{Stealth[scale=1]}-{Stealth[scale=1]},line width=0.5mm,blue]  (25,0.0)--(25,1.51);
+			
+			\node at (axis cs:140,2.3){$e$};
+			\node at (axis cs:140,-0.38){$hh$};
+			\node at (axis cs:110,-1.25){$lh$};
+			
+			\draw[-{Stealth},red,line width=0.8pt] (axis cs:92.5,-0.0)--(axis cs:92.5,1.63) ;
+			\draw[-{Stealth},red,line width=0.8pt] (axis cs:108,-0.35)--(axis cs:108,1.64) ;
+			\node[draw, circle,minimum size=3mm,inner sep=0.1mm] at (axis cs:80,0.7){1};
+			\node[draw, circle,minimum size=3mm,inner sep=0.1mm] at (axis cs:120,0.7){2};
+			
+			%\node[scale=1,blue] at (24,0.7) {$E_{}$};
+			
+		\end{axis}
+		
+		
+		
+		
+	\end{tikzpicture}
+\end{document}

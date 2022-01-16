@@ -1,0 +1,55 @@
+% !TeX document-id = {728d9729-36a9-4ed2-95ba-fec77fb7fdfb}
+% !TeX TXS-program:pdflatex = pdflatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+
+
+\documentclass[tikz,margin=0mm]{standalone}
+\usepackage{pgfplots}
+\usepackage{pgffor}
+\usetikzlibrary{arrows}
+%\begin{filecontents}{da.txt}
+%x,y 
+%0.000000,10.000000
+%10.000000,10.000000
+%10.000000,0.000000
+%23.850000,0.000000
+%23.850000,10.000000
+%27.810000,10.000000
+%\end{filecontents}
+
+\def\lb{16.869}
+
+
+
+\begin{document}
+	\begin{tikzpicture}
+	\begin{axis}[scale only axis,
+		height=10cm,
+		width=5cm,
+		xmin=-5,xmax=52,
+		ymin=-2,ymax=87,
+		axis y line*=middle,
+		axis y line shift=-\lb,
+		y axis line style={densely dashed,line width=0.55mm},
+		x axis line style={line width=0.55mm},
+		axis x line*=bottom,
+		xlabel={$z$},
+		xticklabels={0},
+		xtick ={\lb},
+		x tick label style={/pgf/number format/.cd,fixed,precision=5},
+		every axis x label/.style= {at={(axis cs:\lb,-9)},scale=1.5},
+		%ytick=\empty,
+		]
+		\foreach \i in {0,...,6}{
+			\addplot[mark=none,line width=0.5mm,blue] table[x expr=\thisrowno{0},y expr=\thisrowno{1},col sep=comma]  {M\i.txt};
+		}
+	\pgfplotsinvokeforeach {7,20,33, 46,59,72,85} {
+		\draw[line width=0.5mm, red,<-] (axis cs:-5, #1) -- (axis cs:0, #1);}
+	
+	\pgfplotsforeachungrouped \x/\y in {35/7,47/20,36/33, 38/46,35/59,35/72,38/85}{
+		 \edef\temp{\noexpand\draw[line width=0.5mm, red,->] (axis cs:\x, \y) -- (axis cs:\x+5, \y);	}\temp
+	 	}
+
+	\end{axis}
+
+\end{tikzpicture}
+\end{document}

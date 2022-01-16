@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{tikz,pgfplots}
+\usepackage[paperheight=5cm,paperwidth=10cm]{geometry}
+\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric}
+
+
+\begin{document}
+	\thispagestyle{empty}
+	\begin{tikzpicture}[remember picture,overlay]
+		% You can see the border of the page node with this:
+		\draw[thick] (current page.south west) rectangle (current page.north east);
+	\end{tikzpicture}
+\end{document}

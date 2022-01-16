@@ -1,0 +1,116 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphics}
+\usepackage{tikz,filecontents, pgfplots}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer,}
+
+
+
+
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-1mW.txt}\pruno
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-3mW.txt}\prdos
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-8mW.txt}\prtres
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-30mW.txt}\prcuatro
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-50mW.txt}\prcinco
+
+%\pgfplotsset{compat=newest,
+%	every axis/.style = {
+%		%scale only axis,
+%		width=7cm,height=5cm,
+%		line width = 0.7pt,
+%		tick style = {line width=0.7pt,black},
+%		ticklabel style={scale=0.6},
+%		major tick length = 1.0mm,
+%		minor tick length = 0.5mm,
+%		%xtick pos=left,
+%		%ytick pos=left,
+%		xlabel style={scale=0.6},
+%		zlabel style={scale=0.6},
+%		%xlabel={Photon energy (eV)}, 
+%	},
+%	every axis plot/.style={smooth,mark=*,mark options={scale=0.5,fill=white,line width=0.5pt},line width=0.5pt},
+%	/pgfplots/legend image code/.code={%
+%		\draw[mark repeat=1,mark phase=1,#1] 
+%		plot coordinates {
+%			(0cm,0cm) 
+%			(0.0cm,0cm)
+%			(0.0cm,0cm)
+%			(0.0cm,0cm)
+%			(0.35cm,0cm)%
+%		};
+%	},
+%}
+
+\pgfplotsset{
+	cycle from colormap manual style/.style={
+		every axis plot/.style={smooth,mark=*,mark options={scale=0.4,fill=white,line width=0.35pt},line width=0.35pt},
+	},
+}
+\pgfplotsset{
+	compat=1.3,
+}
+\input{/media/labfiles/ruco/phd-ssp/phd-thesis/files/pgfplots-set2.tex}
+
+
+\begin{document}
+	\begin{tikzpicture}
+		
+		
+		\begin{axis}[%,
+			%anchor=north east,
+			%at={(PRSET c1r1.north west)},
+			width=7cm,height=5cm,
+			scale only axis,
+			view/h=50,
+			view/el=10,
+			%view={-45}{-45},
+			%domain=1.50:1.55,
+			%zmax=10e-3,
+			%xmin=1.50,xmax=1.55,
+			plot box ratio=1 2 1,
+			grid=major,
+			%3d box=complete,
+			minor x tick num=1,
+			ymin = 0,ymax=10,
+			%xmin=1.50,xmax=1.55,
+			zmin =-2.5e-3,
+			ytick={1,3,5,7,9},
+			ytick pos=upper,
+			xtick pos=bottom,
+			major tick length=1mm,
+			%yticklabels=\empty,
+			yticklabels={1mW,3mW,8mW,30mW,50mw},
+			ztick=\empty,
+			xlabel={Photon Energy},
+			ylabel={Laser power (mW)},
+			zlabel = {Peak height},
+			x label style={sloped,scale=0.9},
+			z label style={sloped,scale=0.9},
+			y label style={sloped,scale=0.9},
+			cycle from colormap manual style,
+			]
+			\addplot3[Spectral-K,] table [x index={0}, y expr={1},z index={1}]\pruno;
+			\addplot3[Spectral-L,] table [x index={0}, y expr={3},z index={1}]\prdos;
+			\addplot3[Spectral-M,] table [x index={0}, y expr={5},z index={1}]\prtres;
+			\addplot3[Spectral-N,] table [x index={0}, y expr={7},z index={1}]\prcuatro;
+			\addplot3[Spectral-O,] table [x index={0}, y expr={9},z index={1}]\prcinco;
+			
+			\addplot3[red,dashed,mark=*,mark options={scale=0.7}] coordinates {(1.500000,1.000000,0.000298)
+				(1.500000,3.000000,0.000606)
+				(1.500000,5.000000,0.001998)
+				(1.500000,7.000000,0.003080)
+				(1.500000,9.000000,0.006751)
+			};
+			
+		\end{axis}
+	
+	
+	\end{tikzpicture}
+\end{document}

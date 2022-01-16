@@ -1,0 +1,180 @@
+\ifglsentryexists{ase}{}%
+{%
+\gls@defglossaryentry{ase}%
+{%
+name={ASE},%
+sort={ASE},%
+type={abbreviations},%
+first={ASE},%
+firstplural={ASEs},%
+text={ASE},%
+plural={ASEs},%
+description={The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. \cite {ask2017ase}},%
+descriptionplural={The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. \cite {ask2017ase}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{solcore}{}%
+{%
+\gls@defglossaryentry{solcore}%
+{%
+name={SOLCORE},%
+sort={SOLCORE},%
+type={abbreviations},%
+first={SOLCORE},%
+firstplural={SOLCOREs},%
+text={SOLCORE},%
+plural={SOLCOREs},%
+description={A multi-scale, Python-based library for modelling solar cells and semiconductor materials \cite {alonso2018solcore}},%
+descriptionplural={A multi-scale, Python-based library for modelling solar cells and semiconductor materials \cite {alonso2018solcore}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{aestimo}{}%
+{%
+\gls@defglossaryentry{aestimo}%
+{%
+name={Aestimo},%
+sort={Aestimo},%
+type={abbreviations},%
+first={Aestimo},%
+firstplural={Aestimos},%
+text={Aestimo},%
+plural={Aestimos},%
+description={One-dimensional (1D) self-consistent Schrödinger-Poisson solver for semiconductor heterostructures \cite {hebal2021general}},%
+descriptionplural={One-dimensional (1D) self-consistent Schrödinger-Poisson solver for semiconductor heterostructures \cite {hebal2021general}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{vesta}{}%
+{%
+\gls@defglossaryentry{vesta}%
+{%
+name={VESTA},%
+sort={VESTA},%
+type={abbreviations},%
+first={VESTA},%
+firstplural={VESTAs},%
+text={VESTA},%
+plural={VESTAs},%
+description={3D visualization program for structural models, volumetric data such as electron/nuclear densities, and crystal morphologies. \cite {momma2011vesta}},%
+descriptionplural={3D visualization program for structural models, volumetric data such as electron/nuclear densities, and crystal morphologies. \cite {momma2011vesta}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{pgftikz}{}%
+{%
+\gls@defglossaryentry{pgftikz}%
+{%
+name={PGF/TikZ},%
+sort={PGF/TikZ},%
+type={abbreviations},%
+first={PGF/TikZ},%
+firstplural={PGF/TikZs},%
+text={PGF/TikZ},%
+plural={PGF/TikZs},%
+description={PGF is a macro package for creating graphics. It is platform- and format-independent and works together with the most important \TeX backend drivers, including pdf\TeX and dvips. It comes with a user-friendly syntax layer called TikZ. \cite {pgftikz}},%
+descriptionplural={PGF is a macro package for creating graphics. It is platform- and format-independent and works together with the most important \TeX backend drivers, including pdf\TeX and dvips. It comes with a user-friendly syntax layer called TikZ. \cite {pgftikz}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{BZ}{}%
+{%
+\gls@defglossaryentry{BZ}%
+{%
+name={BZ},%
+sort={BZ},%
+type={type1},%
+first={BZ},%
+firstplural={BZs},%
+text={BZ},%
+plural={BZs},%
+description={Brillouin zone},%
+descriptionplural={Brillouin zone},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

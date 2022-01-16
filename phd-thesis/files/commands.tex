@@ -1,0 +1,121 @@
+\newcommand{\Aref}[1]{Appendix  \ref{#1}} %\thechapter
+\def\chapterautorefname{Chapter}
+\usepackage{xspace}
+\definecolor{NatGreen}{RGB}{50,93,61}
+\newcolumntype{x}[1]{%
+>{\raggedleft\hspace{0pt}}m{#1}}%
+
+
+
+
+\hypersetup
+{pdftitle={PhD RUCO Thesis},
+pdfauthor={Oscar Ruiz},
+pdfsubject={ PhD Thesis}, %subject of the document
+%pdftoolbar=false, % toolbar hidden
+pdfmenubar=true, %menubar shown
+pdfhighlight=/O, %effect of clicking on a link
+colorlinks=true, %couleurs sur les liens hypertextes
+pdfpagemode=UseOutlines,%UseNone, %aucun mode de page
+pdfpagelayout=SinglePage,%SinglePage,TwoPageRight, %ouverture en simple page
+pdffitwindow=true, %pages ouvertes entierement dans toute la fenetre
+linkcolor=blue, %couleur des liens hypertextes internes
+citecolor=blue, %couleur des liens pour les citations
+urlcolor=cyan,  %couleur des liens pour les url
+bookmarksopenlevel=2
+}
+
+
+
+
+%=================================== footnotes options ==============================================================%
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand\blfootnote[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+%---------------------------------------------------------%
+%\DeclareFieldFormat{volcitevolume}{\bibstring{volume}\ppspace\RN{#1}}
+%\AtEveryCitekey{\clearfield{institude}}
+%\renewcommand{\cite}{\supercite}
+%\renewcommand{\citep}{\supercite}
+%\renewcommand{\citet}[2][]{\citeauthor{#2}\supercite{#2}\ifstrempty{#1}{}{, #1}}
+% \DeclareFieldFormat{bibentrysetcount}{\newline(\mknumalph{#1})\addhighpenspace}
+
+
+% \renewcommand{\ptcfont}{\normal\rm}
+% \renewcommand{\ptcCfont}{\normal\bm}
+% \renewcommand{\ptcSfont}{\normal\rm}
+% \renewcommand{\ptcSSfont}{\footnotesize\rm}
+% \renewcommand{\ptcSSSfont}{\footnotesize\rm}
+
+
+
+
+
+% Some useful commands and shortcut for maths:  partial derivative and stuff
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\def\abs{\operatorname{abs}}
+\def\argmax{\operatornamewithlimits{arg\,max}}
+\def\argmin{\operatornamewithlimits{arg\,min}}
+\def\diag{\operatorname{Diag}}
+\newcommand{\eqRef}[1]{(\ref{#1})}
+
+
+
+%Paths
+%\graphicspath{{../FIGURES/CHAPTER-3}{../FIGURES/CHAPTER-2}}
+\graphicspath{{./FIGURES/}}
+% My commands
+\newcommand{\sch}{Scr\"odinger }
+\newcommand{\senergy}{\displaystyle\mathrm{\bf E}}
+\newcommand{\rv}{\displaystyle\mathrm{\bf r}}
+\newcommand{\GaAs}[1]{\displaystyle\text{#1GaAs}}
+\newcommand{\AlAs}[1]{\displaystyle\text{#1AlAs}}
+%\newcommand{\bf}[1]{\mathrm{\bfseries #1}}
+%\newcommand{\AlGaAs}[1]{\displaystyle\text{#1 Al_{x}Ga_{1-x}As}}
+\newcommand{\AlGaAsd}[2]{\displaystyle\text{Al_{#1}Ga_{#2}As}}
+\def\algaas{Al$_{x}$Ga$_{1-x}$As }
+\def\xp{${\mathbf{X}}^{\mathrm{\ensuremath{+}}}$ }
+\def\xm{${\mathbf{X}}^{\mathrm{\ensuremath{-}}}$ }
+\def\xhh{${\mathit{X}}_{\mathrm{\ensuremath{hh}}}$ }
+\def\xlh{${\mathit{X}}_{\mathrm{\ensuremath{lh}}}$ }
+
+
+% defining sample names
+\def\tusu{M4\_3171 }
+\def\tusd{M4\_3171 }
+\def\tdvs{M4\_3226 }
+\def\tuc{M4\_3140 }   
+\def\tucu{M4\_3141 }
+\def\tcvu{M4\_3521 }
+\def\tcvd{M4\_3522 }
+\def\tcvt{M4\_3523 }
+
+\newcommand\bff[1]{\mathrm{\bf #1}}
+\newcommand{\bs}[1]{\boldsymbol #1}
+% As a command
+\newcommand{\m}[3]{M4\_3#1#2#3 }
+\newcommand{\sm}[1]{M4\_#1}
+\DeclareMathSymbol{\mh}{\mathord}{operators}{`\-}
+\newcommand\thh[2]{e_#1 \mh hh_#2}
+\newcommand\tlh[2]{e_#1 \mh lh_#2}
+% RGB COLOR COMMAND
+\newcommand{\rgb}[3]{rgb:red,#1;green,#2;blue,#3}
+
+% defined bold and emph nomenclature
+% nomenclature commands and definitions
+\def\sym{\emph{symmetry }}
+\def\cry{\emph{crystal }}
+\def\brill{\emph{Brillouin }}
+\def\bz{\textbf{BZ }}
+\def\ks{$\boldsymbol{k}$ }
+\def\ksm{\boldsymbol{k} }
+
+\newcommand{\bdlo}[2]{$\boldsymbol{#1}(#2)$}
+\newcommand{\bdli}[2]{$#1(\boldsymbol{#2})$}
+\newcommand{\boldlm}[1]{$\boldsymbol{#1}$}
+\newcommand{\boldl}[1]{\boldsymbol{#1}}
+

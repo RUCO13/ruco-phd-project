@@ -1,0 +1,229 @@
+\begin{thebibliography}{10}
+
+\bibitem{fox2002optical}
+Mark Fox.
+\newblock Optical properties of solids, 2002.
+
+\bibitem{ask2017ase}
+Ask~Hjorth Larsen, Jens~Jørgen Mortensen, Jakob Blomqvist, Ivano~E Castelli,
+  Rune Christensen, Marcin Dułak, Jesper Friis, Michael~N Groves, Bjørk
+  Hammer, Cory Hargus, Eric~D Hermes, Paul~C Jennings, Peter~Bjerre Jensen,
+  James Kermode, John~R Kitchin, Esben~Leonhard Kolsbjerg, Joseph Kubal,
+  Kristen Kaasbjerg, Steen Lysgaard, Jón~Bergmann Maronsson, Tristan Maxson,
+  Thomas Olsen, Lars Pastewka, Andrew Peterson, Carsten Rostgaard, Jakob
+  Schiøtz, Ole Schütt, Mikkel Strange, Kristian~S Thygesen, Tejs Vegge, Lasse
+  Vilhelmsen, Michael Walter, Zhenhua Zeng, and Karsten~W Jacobsen.
+\newblock The atomic simulation environment—a python library for working with
+  atoms.
+\newblock {\em Journal of Physics: Condensed Matter}, 29(27):273002, 2017.
+
+\bibitem{alonso2018solcore}
+D~Alonso-{\'A}lvarez, T~Wilson, P~Pearce, M~F{\"u}hrer, D~Farrell, and
+  N~Ekins-Daukes.
+\newblock Solcore: a multi-scale, python-based library for modelling solar
+  cells and semiconductor materials.
+\newblock {\em Journal of Computational Electronics}, 17(3):1099--1123, 2018.
+
+\bibitem{hebal2021general}
+H.~Hebal, Z.~Koziol, S.B. Lisesivdin, and R.~Steed.
+\newblock General-purpose open-source 1d self-consistent schrödinger-poisson
+  solver: Aestimo 1d.
+\newblock {\em Computational Materials Science}, 186:110015, 2021.
+
+\bibitem{momma2011vesta}
+Koichi Momma and Fujio Izumi.
+\newblock {{\\it VESTA3} for three-dimensional visualization of crystal,
+  volumetric and morphology data}.
+\newblock {\em Journal of Applied Crystallography}, 44(6):1272--1276, Dec 2011.
+
+\bibitem{pgftikz}
+Till Tantau.
+\newblock Pgf/tikz, 2007.
+
+\bibitem{sundram1991structures}
+MANI SUNDARAM, SCOTT~A. CHALMERS, PETER~F. HOPKINS, and ARTHUR~C. GOSSARD.
+\newblock New quantum structures.
+\newblock {\em Science}, 254(5036):1326--1335, 1991.
+
+\bibitem{piprek2017handbook}
+Joachim Piprek.
+\newblock {\em Handbook of Optoelectronic Device Modeling and Simulation:
+  Fundamentals, Materials, Nanostructures, LEDs, and Amplifiers, Vol. 1}.
+\newblock CRC Press, 2017.
+
+\bibitem{alloul2010introduction}
+Henri Alloul.
+\newblock {\em Introduction to the Physics of Electrons in Solids}.
+\newblock Springer Science \& Business Media, 2010.
+
+\bibitem{cardona2005fundamentals}
+Manuel Cardona and Y~Yu Peter.
+\newblock {\em Fundamentals of semiconductors}, volume 619.
+\newblock Springer, 2005.
+
+\bibitem{boer2018semiconductor}
+Karl~W B{\"o}er and Udo~W Pohl.
+\newblock {\em Semiconductor physics}.
+\newblock Springer, 2018.
+
+\bibitem{vurgaftman2020bands}
+Igor Vurgaftman, Matthew~P Lumb, and Jerry~R Meyer.
+\newblock {\em Bands and Photons in III-V Semiconductor Quantum Structures},
+  volume~25.
+\newblock Oxford University Press, 2020.
+
+\bibitem{vogl1983asemiempirical}
+P.~Vogl, Harold~P. Hjalmarson, and John~D. Dow.
+\newblock A semi-empirical tight-binding theory of the electronic structure of
+  semiconductors†.
+\newblock {\em Journal of Physics and Chemistry of Solids}, 44(5):365--378,
+  1983.
+
+\bibitem{rpmuller2017}
+Rick Muller.
+\newblock Tight binding program to compute the band structure of simple
+  semiconductors., 2017.
+
+\bibitem{leonard2017exciton}
+Jason Leonard.
+\newblock {\em Exciton Transport Phenomena in GaAs Coupled Quantum Wells}.
+\newblock Springer, 2017.
+
+\bibitem{harrison2016quantum}
+Paul Harrison and Alex Valavanis.
+\newblock {\em Quantum wells, wires and dots: theoretical and computational
+  physics of semiconductor nanostructures}.
+\newblock John Wiley \& Sons, 2016.
+
+\bibitem{pauli1925zusammenhang}
+Wolfgang Pauli.
+\newblock {\"U}ber den zusammenhang des abschlusses der elektronengruppen im
+  atom mit der komplexstruktur der spektren.
+\newblock {\em Zeitschrift f{\"u}r Physik}, 31(1):765--783, 1925.
+
+\bibitem{chuang1995physics}
+S.L. Chuang.
+\newblock {\em Physics of Optoelectronic Devices}.
+\newblock Wiley Series in Pure and Applied Optics. Wiley, 1995.
+
+\bibitem{singh2003electronic}
+Jasprit Singh.
+\newblock {\em Electronic and Optoelectronic Properties of Semiconductor
+  Structures}.
+\newblock Cambridge University Press, 2003.
+
+\bibitem{bastard1990wave}
+Gerald Bastard.
+\newblock {\em Wave mechanics applied to semiconductor heterostructures}.
+\newblock Wiley, 1990.
+
+\bibitem{davies1998physics}
+John~H Davies.
+\newblock {\em The physics of low-dimensional semiconductors: an introduction}.
+\newblock Cambridge university press, 1998.
+
+\bibitem{de2014introduccion}
+Luis De~La~Pe{\~n}a.
+\newblock {\em Introducci{\'o}n a la mec{\'a}nica cu{\'a}ntica}.
+\newblock Fondo de Cultura econ{\'o}mica, 2014.
+
+\bibitem{griffiths2018introduction}
+David~J Griffiths and Darrell~F Schroeter.
+\newblock {\em Introduction to quantum mechanics}.
+\newblock Cambridge University Press, 2018.
+
+\bibitem{sakurai1995modern}
+Jun~John Sakurai and Eugene~D Commins.
+\newblock Modern quantum mechanics, revised edition, 1995.
+
+\bibitem{cohen2019quantum}
+Claude Cohen-Tannoudji, Bernard Diu, and Franck Lalo{\"e}.
+\newblock {\em Quantum Mechanics, Volume 1: Basic Concepts, Tools, and
+  Applications}.
+\newblock John Wiley \& Sons, 2019.
+
+\bibitem{rivera2020light}
+Nicholas Rivera and Ido Kaminer.
+\newblock Light--matter interactions with photonic quasiparticles.
+\newblock {\em Nature Reviews Physics}, 2(10):538--561, 2020.
+
+\bibitem{van1989laws}
+Bas~C Van~Fraassen.
+\newblock {\em Laws and symmetry}.
+\newblock Clarendon Press, 1989.
+
+\bibitem{powell2010symmetry}
+Richard~C Powell.
+\newblock {\em Symmetry, group theory, and the physical properties of
+  crystals}, volume 824.
+\newblock Springer, 2010.
+
+\bibitem{tapp2021symmetry}
+Kristopher Tapp.
+\newblock {\em Symmetry: A mathematical exploration}.
+\newblock Springer Nature, 2021.
+
+\bibitem{cornwell1997group}
+John~F Cornwell.
+\newblock {\em Group theory in physics: An introduction}.
+\newblock Academic press, 1997.
+
+\bibitem{muller2013symmetry}
+Ulrich M{\"u}ller.
+\newblock {\em Symmetry relationships between crystal structures: applications
+  of crystallographic group theory in crystal chemistry}, volume~18.
+\newblock OUP Oxford, 2013.
+
+\bibitem{kittel2018kittel}
+Charles Kittel and Paul McEuen.
+\newblock {\em Kittel's Introduction to Solid State Physics}.
+\newblock John Wiley \& Sons, 2018.
+
+\bibitem{solyom2007fundamentals}
+Jen{\"o} S{\'o}lyom.
+\newblock {\em Fundamentals of the Physics of Solids: Volume 1: Structure and
+  Dynamics}, volume~1.
+\newblock Springer Science \& Business Media, 2007.
+
+\bibitem{chatterjee2008crystallography}
+Sanat~K Chatterjee.
+\newblock {\em Crystallography and the World of Symmetry}, volume 113.
+\newblock Springer Science \& Business Media, 2008.
+
+\bibitem{mckelvey1966solid}
+J.P. McKelvey.
+\newblock {\em Solid State and Semiconductor Physics}.
+\newblock A Harper international edition. Harper \& Row, 1966.
+
+\bibitem{malgrange2014symmetry}
+C{\'e}cile Malgrange, Christian Ricolleau, and Michel Schlenker.
+\newblock {\em Symmetry and Physical Properties of Crystals}.
+\newblock Springer, 2014.
+
+\bibitem{ashcroft1976solid}
+N.W. Ashcroft, A.N. W, N.D. Mermin, W.~Ashcroft, D.~Mermin, N.D. Mermin, and
+  Brooks/Cole~Publishing Company.
+\newblock {\em Solid State Physics}.
+\newblock HRW international editions. Holt, Rinehart and Winston, 1976.
+
+\bibitem{powell2010chapter1}
+Richard~C. Powell.
+\newblock {\em Symmetry in Solids}, pages 1--24.
+\newblock Springer New York, New York, NY, 2010.
+
+\bibitem{dresselhaus2007group}
+Mildred~S Dresselhaus, Gene Dresselhaus, and Ado Jorio.
+\newblock {\em Group theory: application to the physics of condensed matter}.
+\newblock Springer Science \& Business Media, 2007.
+
+\bibitem{parmenter1955symmetry}
+R.~H. Parmenter.
+\newblock Symmetry properties of the energy bands of the zinc blende structure.
+\newblock {\em Phys. Rev.}, 100:573--579, Oct 1955.
+
+\bibitem{butcher2013crystalline}
+Paul~N Butcher, Norman~H March, and Mario~P Tosi.
+\newblock {\em Crystalline semiconducting materials and devices}.
+\newblock Springer Science \& Business Media, 2013.
+
+\end{thebibliography}

@@ -1,0 +1,64 @@
+\usepackage{relsize}
+\renewcommand{\_}{\textscale{.7}{\textunderscore}}
+\def\xminimo{1.50}
+\def\xmaximo{1.55}
+\usepackage{tikz-dimline}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+
+\pgfplotsset{compat=newest,
+	every axis/.style = {
+		%scale only axis,
+		width=8cm,height=5cm,
+		line width = 0.7pt,
+		tick style = {line width=0.7pt,black},
+		ticklabel style={scale=0.7},
+		major tick length = 1.8mm,
+		minor tick length = 0.9mm,
+		xtick pos=left,
+		ytick pos=left,
+		xlabel style={scale=0.8},
+		ylabel style={scale=0.8},
+	   	xticklabel style={
+	   	/pgf/number format/precision=2,
+	   	/pgf/number format/fixed,
+	   	/pgf/number format/fixed zerofill,
+	   },
+	},
+	every axis plot/.style={smooth,mark=*,mark options={scale=0.7,fill=white,line width=0.3pt},line width=0.7pt},
+	/pgfplots/legend image code/.code={%
+		\draw[mark repeat=1,mark phase=1,#1] 
+		plot coordinates {
+			(0cm,0cm) 
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.35cm,0cm)%
+		};
+	},
+}
+\pgfplotsset{every axis legend/.style={
+		cells={anchor=center},
+		inner xsep=1pt,
+		inner ysep=1pt,
+		nodes={scale=0.65,inner sep=2pt, transform shape},
+		draw=none,
+		at={(0,1)},
+		anchor=north west,
+	}
+}
+
+\pgfplotsset{
+	cycle from colormap manual style/.style={
+	every axis plot/.style={smooth,mark=*,mark options={scale=0.5,fill=white,line width=0.5pt},line width=0.5pt},
+	},
+}
+
+\pgfdeclareplotmark{*)}{\shade[draw=red!70!black,ball color=red!70] (0pt, 0pt) circle [radius=3pt];}
+\pgfdeclareplotmark{**)}{\shade[draw=blue!70!black,ball color=blue!70] (0pt, 0pt) circle [radius=3pt];}
+\pgfdeclareplotmark{***)}{\shade[draw=\rgb{0.31}{0.78}{0.47},ball color=\rgb{0.31}{0.78}{0.1}] (0pt, 0pt) circle
+	[radius=3pt];}
+
+
+
+

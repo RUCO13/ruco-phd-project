@@ -1,0 +1,101 @@
+% !TeX document-id = {92f099c7-634b-4927-987d-5d06ed570943}
+%!TeX program = lualatex -synctex=1 -interaction=nonstopmode -shell-escape -output-directory=build  %.tex
+\documentclass[margin=0mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots,pgfplotstable,}
+\usetikzlibrary{pgfplots.colorbrewer}
+\usepgfplotslibrary{patchplots}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{amsmath,amsfonts,amssymb,xfrac,cancel}
+\usepackage{xcolor}
+\usepackage{xkeyval}
+\usetikzlibrary{pgfplots.colormaps}
+\pgfplotsset{compat=newest,
+width=8cm,height=8cm,
+	scale only axis,
+	every axis/.append style = {
+		line width = 1.25pt,
+		tick style = {line width=1.25pt,black},
+		ticklabel style={scale=1},
+		every tick label/.append style={scale=1},
+		major tick length = 2mm,
+		minor tick length = 1mm,
+		xlabel style={scale=1.1},
+		ylabel style={scale=1.1},
+		xtick align=outside,
+		ytick align=outside
+	},
+%colorbar style/.code={},
+}
+\newcommand{\rgb}[3]{rgb:red,#1;green,#2;blue,#3}
+
+
+
+\pgfplotstableread[col sep=comma]{/media/labfiles/RUCO/PhD-PHOTONICS/PhD-CODES/DATA/M4_3171-mapabs001.csv}\map
+\pgfplotstableread[col sep=comma]{/media/labfiles/RUCO/PhD-PHOTONICS/PhD-CODES/DATA/M4_3171-abs001.csv}\data
+ 
+
+%
+%\pgfdeclareplotmark{*)}{\shade[draw=red!70!black,ball color=red!70] (0pt, 0pt) circle [radius=3pt];}
+\pgfdeclareplotmark{**)}{\shade[draw=blue!70!black,ball color=blue!70] (0pt, 0pt) circle [radius=3pt];}
+%\pgfdeclareplotmark{***)}{\shade[draw=\rgb{0.31}{0.78}{0.47},ball color=\rgb{0.31}{0.78}{0.1}] (0pt, 0pt) circle
+%	[radius=3pt];}
+%
+%\pgfdeclareplotmark{p1}{\shade[draw=red!70!black,ball color=red!70] (0pt, 0pt) circle [radius=1.5pt];}
+%\pgfdeclareplotmark{p2}{\shade[draw=blue!70!black,ball color=blue!70] (0pt, 0pt) circle [radius=1.5pt];}
+%\pgfdeclareplotmark{p3}{\shade[draw=\rgb{0.31}{0.78}{0.47},ball color=\rgb{0.31}{0.78}{0.1}] (0pt, 0pt) circle
+%	[radius=1.5pt];}
+
+
+\begin{document}
+	\begin{tikzpicture}
+		\pgfkeys{/pgf/number format/.cd,
+			sci,
+			sci generic={mantissa sep=\times,exponent={10^{#1}}}}
+		
+		\begin{axis}[name=absorption,view={0}{90},
+			colormap/temp,
+		    colorbar,
+			xlabel = Position (nm),
+			%ylabel = Wavelength (nm),
+			xtick pos=left,
+			ytick pos=left,
+			minor tick num=1,
+			every colorbar/.append style={ylabel=Absorption $\left(1/\mathrm{nm}\right)$,
+			major tick length = 1.5mm,
+			scaled y ticks=false,
+			ytick align=inside,
+			ytick pos=right,
+			},
+			xticklabel style={/pgf/number format/.cd,fixed},
+			yticklabel style={/pgf/number format/.cd,fixed},
+			ytick=\empty,
+			]
+        \addplot3[surf,shader=interp] table[x index=0,y index=1,z index=2] {\map};
+        
+        \draw[densely dashed,red]  (axis cs:400,600)--(axis cs:400,900);
+        \draw[densely dashed,red]  (axis cs:440,600)--(axis cs:440,900);
+
+		\end{axis}
+		\begin{axis}[name=abs,
+			anchor=south east,
+			at={(absorption.south west)},
+			width=3cm,
+			height=8cm,
+			minor tick num=1,
+			xmin=-0.1,xmax=0.65,
+			ymin=600,ymax=800,
+			ylabel = Wavelength (nm),
+			xlabel =Absorption $\left(\mathrm{nm}\right)$,
+			xticklabel style={/pgf/number format/.cd,fixed},each nth point={10}
+			yticklabel style={/pgf/number format/.cd,fixed},
+			ytick align=inside,
+			xtick align=inside,
+			ytick pos=left,
+			xtick pos=top,
+			]
+		\addplot[mark=*, mark options={fill=white,line width=0.5pt,scale=1.1},blue] table[x index=1,y index =0] \data;
+		\end{axis}
+	\end{tikzpicture}
+\end{document}
+

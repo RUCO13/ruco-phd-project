@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: out-ruco/2021-ruco-phd-thesis.aux
+The style file: unsrt.bst
+Database file #1: files/references.bib
+You've used 41 entries,
+            1791 wiz_defined-function locations,
+            659 strings with 9718 characters,
+and the built_in function-call counts, 7806 in all, are:
+= -- 621
+> -- 393
+< -- 7
++ -- 152
+- -- 111
+* -- 423
+:= -- 1268
+add.period$ -- 122
+call.type$ -- 41
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 41
+duplicate$ -- 387
+empty$ -- 834
+format.name$ -- 111
+if$ -- 1762
+int.to.chr$ -- 0
+int.to.str$ -- 41
+missing$ -- 65
+newline$ -- 204
+num.names$ -- 41
+pop$ -- 220
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 119
+stack$ -- 0
+substring$ -- 244
+swap$ -- 52
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 59
+width$ -- 43
+write$ -- 424

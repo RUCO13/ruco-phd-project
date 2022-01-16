@@ -2,3 +2,4 @@ This repository ✨ holds Oscar's PhD thesis :mexico:, also contains all scripts
 * [Aestimo ✨](https://github.com/aestimosolver/aestimo.git) 
 * [SOLCORE ✨](https://github.com/qpv-research-group/solcore5.git)
 * [ASE ✨](https://gitlab.com/ase/ase.git) 
+* [PGF/TikZ](https://github.com/pgf-tikz/pgf.git)

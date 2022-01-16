@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.19)  16 JAN 2022 01:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.19)  16 JAN 2022 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2332,7 +2332,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [3]
-<../figures/chapter-1/solid-sort/build/solid-sort.pdf, id=240, 312.87793pt x 14
+<../figures/chapter-1/solid-sort/build/solid-sort.pdf, id=246, 312.87793pt x 14
 3.11768pt>
 File: ../figures/chapter-1/solid-sort/build/solid-sort.pdf Graphic file (type p
 df)
@@ -2340,7 +2340,7 @@ df)
 Package pdftex.def Info: ../figures/chapter-1/solid-sort/build/solid-sort.pdf  
 used on input line 51.
 (pdftex.def)             Requested size: 455.24411pt x 208.24033pt.
-<../figures/chapter-1/bulk-1/build/bulk-1.pdf, id=244, 335.15211pt x 222.10678p
+<../figures/chapter-1/bulk-1/build/bulk-1.pdf, id=250, 335.15211pt x 222.10678p
 t>
 File: ../figures/chapter-1/bulk-1/build/bulk-1.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/bulk-1/build/bulk-1.pdf>
@@ -2370,14 +2370,14 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [5 <out-ruco/../figures/chapter-1/bulk-1/build/bulk-1.pdf>]
-<../figures/chapter-1/bands/build/bands01.pdf, id=277, 390.29312pt x 167.43353p
+<../figures/chapter-1/bands/build/bands01.pdf, id=283, 390.29312pt x 167.43353p
 t>
 File: ../figures/chapter-1/bands/build/bands01.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/bands/build/bands01.pdf>
 Package pdftex.def Info: ../figures/chapter-1/bands/build/bands01.pdf  used on 
 input line 78.
 (pdftex.def)             Requested size: 455.24411pt x 195.30115pt.
-<../figures/chapter-1/bands/build/bands02.pdf, id=293, 114.30907pt x 142.76335p
+<../figures/chapter-1/bands/build/bands02.pdf, id=299, 114.30907pt x 142.76335p
 t>
 File: ../figures/chapter-1/bands/build/bands02.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/bands/build/bands02.pdf>
@@ -2407,7 +2407,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 LaTeX Warning: Reference `subsec:chapter-3-pl' on page 1 undefined on input lin
 e 105.
 
-<../figures/chapter-1/exciton-1/build/x-1.pdf, id=361, 142.26349pt x 142.26349p
+<../figures/chapter-1/exciton-1/build/x-1.pdf, id=367, 142.26349pt x 142.26349p
 t>
 File: ../figures/chapter-1/exciton-1/build/x-1.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/exciton-1/build/x-1.pdf>
@@ -2427,7 +2427,7 @@ Overfull \hbox (1.78218pt too wide) in paragraph at lines 114--114
 |[][] 
  []
 
-<../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf, id=385, 392.07379pt 
+<../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf, id=391, 392.07379pt 
 x 447.15858pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf Graphic file (ty
 pe pdf)
@@ -2444,7 +2444,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [9 <out-ruco/../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf>]
-<../figures/chapter-1/heterostructures/out-ruco/lds-00.pdf, id=427, 125.9104pt 
+<../figures/chapter-1/heterostructures/out-ruco/lds-00.pdf, id=433, 125.9104pt 
 x 126.93422pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/lds-00.pdf Graphic file (t
 ype pdf)
@@ -2452,7 +2452,7 @@ ype pdf)
 Package pdftex.def Info: ../figures/chapter-1/heterostructures/out-ruco/lds-00.
 pdf  used on input line 138.
 (pdftex.def)             Requested size: 273.14923pt x 275.37852pt.
-<../figures/chapter-1/heterostructures/out-ruco/qw1.pdf, id=432, 391.35109pt x 
+<../figures/chapter-1/heterostructures/out-ruco/qw1.pdf, id=438, 391.35109pt x 
 409.19275pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/qw1.pdf Graphic file (type
  pdf)
@@ -2488,7 +2488,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [12 <out-ruco/../figures/chapter-1/heterostructures/out-ruco/qw1.pdf>]
-<../figures/chapter-1/heterostructures/out-ruco/qw2.pdf, id=576, 348.99684pt x 
+<../figures/chapter-1/heterostructures/out-ruco/qw2.pdf, id=582, 348.99684pt x 
 323.19948pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/qw2.pdf Graphic file (type
  pdf)
@@ -2552,7 +2552,7 @@ Overfull \hbox (1.78218pt too wide) in paragraph at lines 14--14
 |[][] 
  []
 
-<../figures/chapter-2/symmetry/out-ruco/sym-0.pdf, id=650, 284.52798pt x 133.72
+<../figures/chapter-2/symmetry/out-ruco/sym-0.pdf, id=656, 284.52798pt x 133.72
 76pt>
 File: ../figures/chapter-2/symmetry/out-ruco/sym-0.pdf Graphic file (type pdf)
 <use ../figures/chapter-2/symmetry/out-ruco/sym-0.pdf>
@@ -2689,19 +2689,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `2021-ruco-phd-thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `2021-ruco-phd-thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 27154342197BE02C3DAD768971D671D9;3183.
  ) 
 Here is how much of TeX's memory you used:
- 54395 strings out of 479014
- 1160146 string characters out of 5859133
- 1855318 words of memory out of 5000000
- 70033 multiletter control sequences out of 15000+600000
+ 54605 strings out of 479014
+ 1163121 string characters out of 5859133
+ 1857624 words of memory out of 5000000
+ 70237 multiletter control sequences out of 15000+600000
  580440 words of font info for 359 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,17n,120p,10615b,788s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2768,11 +2765,11 @@ texlive/2020/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/20
 s/type1/public/lm/lmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1
 /public/newtx/ztmr.pfb>
-Output written on out-ruco/2021-ruco-phd-thesis.pdf (31 pages, 15776444 bytes).
+Output written on out-ruco/2021-ruco-phd-thesis.pdf (31 pages, 15776845 bytes).
 
 PDF statistics:
- 1026 PDF objects out of 1200 (max. 8388607)
- 854 compressed objects within 9 object streams
- 154 named destinations out of 1000 (max. 500000)
+ 1033 PDF objects out of 1200 (max. 8388607)
+ 861 compressed objects within 9 object streams
+ 160 named destinations out of 1000 (max. 500000)
  102129 words of extra memory for PDF output out of 106986 (max. 10000000)
 

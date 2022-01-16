@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.19)  15 JAN 2022 19:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.19)  16 JAN 2022 01:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2689,6 +2689,9 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `2021-ruco-phd-thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `2021-ruco-phd-thesis.brf' has not changed.
@@ -2697,7 +2700,7 @@ Package rerunfilecheck Info: File `2021-ruco-phd-thesis.brf' has not changed.
 Here is how much of TeX's memory you used:
  54395 strings out of 479014
  1160146 string characters out of 5859133
- 1856340 words of memory out of 5000000
+ 1855318 words of memory out of 5000000
  70033 multiletter control sequences out of 15000+600000
  580440 words of font info for 359 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2765,7 +2768,7 @@ texlive/2020/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/20
 s/type1/public/lm/lmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1
 /public/newtx/ztmr.pfb>
-Output written on out-ruco/2021-ruco-phd-thesis.pdf (31 pages, 15776440 bytes).
+Output written on out-ruco/2021-ruco-phd-thesis.pdf (31 pages, 15776444 bytes).
 
 PDF statistics:
  1026 PDF objects out of 1200 (max. 8388607)

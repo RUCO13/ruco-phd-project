@@ -10,7 +10,7 @@ Also, this repository is contains in the [group repository](https://github.com/l
 
 
 <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=RUCO13&theme=radical"/>
+    <img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=ruco13&theme=radical"/>
 </a>
 <br>
 <br>

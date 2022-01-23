@@ -8,6 +8,13 @@ This repository ✨ holds Oscar's PhD thesis, also contains all scripts which we
 Also, this repository is contains in the [group repository](https://github.com/lflm-spectra-labs-iico).
 
 
+
+<a href="https://github.com/anuraghazra/github-readme-stats">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=RUCO13&theme=radical"/>
+</a>
+<br>
+<br>
+
 ![Twitter Follow](https://img.shields.io/twitter/follow/ruco0713?color=blue&logo=twitter&style=for-the-badge)<br>
 ![Version](https://img.shields.io/github/v/tag/ruco13/phd-project?color=red&label=Thesis%20version&logo=github&style=for-the-badge)
 

@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: out-ruco/2021-ruco-phd-thesis.aux
 The style file: unsrt.bst
 Database file #1: files/references.bib
-You've used 42 entries,
+You've used 44 entries,
             1791 wiz_defined-function locations,
-            664 strings with 9835 characters,
-and the built_in function-call counts, 7982 in all, are:
-= -- 638
-> -- 401
+            679 strings with 10100 characters,
+and the built_in function-call counts, 8474 in all, are:
+= -- 689
+> -- 413
 < -- 7
-+ -- 155
-- -- 113
-* -- 429
-:= -- 1297
-add.period$ -- 126
-call.type$ -- 42
-change.case$ -- 13
++ -- 160
+- -- 116
+* -- 467
+:= -- 1372
+add.period$ -- 132
+call.type$ -- 44
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 397
-empty$ -- 853
-format.name$ -- 113
-if$ -- 1805
+cite$ -- 44
+duplicate$ -- 415
+empty$ -- 903
+format.name$ -- 116
+if$ -- 1911
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 67
-newline$ -- 209
-num.names$ -- 42
-pop$ -- 225
+int.to.str$ -- 44
+missing$ -- 69
+newline$ -- 219
+num.names$ -- 44
+pop$ -- 227
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 122
+skip$ -- 129
 stack$ -- 0
-substring$ -- 244
-swap$ -- 53
+substring$ -- 306
+swap$ -- 55
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 60
-width$ -- 44
-write$ -- 435
+while$ -- 66
+width$ -- 46
+write$ -- 457

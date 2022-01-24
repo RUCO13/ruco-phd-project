@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.19)  22 JAN 2022 16:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.19)  23 JAN 2022 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2093,7 +2093,7 @@ o/../figures/title-page/uaslplogo2.png> <out-ruco/../figures/title-page/fclogo.
 png>])
 Package minitoc Info: I0024
 (minitoc)             PREPARING MINITOCS FROM 2021-ruco-phd-thesis.toc on input
- line 22.
+ line 23.
 Package minitoc Info: I0033
 (minitoc)             Writing 2021-ruco-phd-thesis.mtc1.
 \openout5 = `2021-ruco-phd-thesis.mtc1'.
@@ -2128,7 +2128,7 @@ Package minitoc Info: I0033
 
 Package minitoc Info: I0034
 (minitoc)             PREPARING MINILOFS FROM 2021-ruco-phd-thesis.lof on input
- line 23.
+ line 24.
 Package minitoc Info: I0033
 (minitoc)             Writing 2021-ruco-phd-thesis.mlf1.
 \openout5 = `2021-ruco-phd-thesis.mlf1'.
@@ -2147,7 +2147,7 @@ Package minitoc Info: I0033
 
 Package minitoc Info: I0037
 (minitoc)             PREPARING MINILOTS FROM 2021-ruco-phd-thesis.lot on input
- line 24.
+ line 25.
 Package minitoc Info: I0033
 (minitoc)             Writing 2021-ruco-phd-thesis.mlt1.
 \openout5 = `2021-ruco-phd-thesis.mlt1'.
@@ -2167,7 +2167,7 @@ Package minitoc Info: I0033
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
-Package tocbasic Info: character protrusion at toc deactivated on input line 25
+Package tocbasic Info: character protrusion at toc deactivated on input line 26
 .
  (out-ruco/2021-ruco-phd-thesis.toc
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
@@ -2206,7 +2206,7 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface.
 
-Package tocbasic Info: character protrusion at lof deactivated on input line 26
+Package tocbasic Info: character protrusion at lof deactivated on input line 27
 .
 (out-ruco/2021-ruco-phd-thesis.lof
 (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -2244,7 +2244,7 @@ Overfull \hbox (3.68495pt too wide) in paragraph at lines 15--15
 
 ]
 chapter without number
-Package tocbasic Info: character protrusion at lot deactivated on input line 27
+Package tocbasic Info: character protrusion at lot deactivated on input line 28
 .
 (out-ruco/2021-ruco-phd-thesis.lot)
 \tf@lot=\write14
@@ -2332,7 +2332,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [3]
-<../figures/chapter-1/solid-sort/build/solid-sort.pdf, id=248, 312.87793pt x 14
+<../figures/chapter-1/solid-sort/build/solid-sort.pdf, id=249, 312.87793pt x 14
 3.11768pt>
 File: ../figures/chapter-1/solid-sort/build/solid-sort.pdf Graphic file (type p
 df)
@@ -2340,7 +2340,7 @@ df)
 Package pdftex.def Info: ../figures/chapter-1/solid-sort/build/solid-sort.pdf  
 used on input line 51.
 (pdftex.def)             Requested size: 455.24411pt x 208.24033pt.
-<../figures/chapter-1/bulk-1/build/bulk-1.pdf, id=252, 335.15211pt x 222.10678p
+<../figures/chapter-1/bulk-1/build/bulk-1.pdf, id=253, 335.15211pt x 222.10678p
 t>
 File: ../figures/chapter-1/bulk-1/build/bulk-1.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/bulk-1/build/bulk-1.pdf>
@@ -2370,14 +2370,14 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [5 <out-ruco/../figures/chapter-1/bulk-1/build/bulk-1.pdf>]
-<../figures/chapter-1/bands/build/bands01.pdf, id=285, 390.29312pt x 167.43353p
+<../figures/chapter-1/bands/build/bands01.pdf, id=286, 390.29312pt x 167.43353p
 t>
 File: ../figures/chapter-1/bands/build/bands01.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/bands/build/bands01.pdf>
 Package pdftex.def Info: ../figures/chapter-1/bands/build/bands01.pdf  used on 
 input line 78.
 (pdftex.def)             Requested size: 455.24411pt x 195.30115pt.
-<../figures/chapter-1/bands/build/bands02.pdf, id=301, 114.30907pt x 142.76335p
+<../figures/chapter-1/bands/build/bands02.pdf, id=302, 114.30907pt x 142.76335p
 t>
 File: ../figures/chapter-1/bands/build/bands02.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/bands/build/bands02.pdf>
@@ -2407,7 +2407,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 LaTeX Warning: Reference `subsec:chapter-3-pl' on page 1 undefined on input lin
 e 105.
 
-<../figures/chapter-1/exciton-1/build/x-1.pdf, id=369, 142.26349pt x 142.26349p
+<../figures/chapter-1/exciton-1/build/x-1.pdf, id=370, 142.26349pt x 142.26349p
 t>
 File: ../figures/chapter-1/exciton-1/build/x-1.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/exciton-1/build/x-1.pdf>
@@ -2427,7 +2427,7 @@ Overfull \hbox (1.78218pt too wide) in paragraph at lines 114--114
 |[][] 
  []
 
-<../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf, id=393, 392.07379pt 
+<../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf, id=394, 392.07379pt 
 x 447.15858pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf Graphic file (ty
 pe pdf)
@@ -2444,7 +2444,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [9 <out-ruco/../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf>]
-<../figures/chapter-1/heterostructures/out-ruco/lds-00.pdf, id=435, 125.9104pt 
+<../figures/chapter-1/heterostructures/out-ruco/lds-00.pdf, id=436, 125.9104pt 
 x 126.93422pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/lds-00.pdf Graphic file (t
 ype pdf)
@@ -2452,7 +2452,7 @@ ype pdf)
 Package pdftex.def Info: ../figures/chapter-1/heterostructures/out-ruco/lds-00.
 pdf  used on input line 138.
 (pdftex.def)             Requested size: 273.14923pt x 275.37852pt.
-<../figures/chapter-1/heterostructures/out-ruco/qw1.pdf, id=440, 391.35109pt x 
+<../figures/chapter-1/heterostructures/out-ruco/qw1.pdf, id=441, 391.35109pt x 
 409.19275pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/qw1.pdf Graphic file (type
  pdf)
@@ -2488,7 +2488,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [12 <out-ruco/../figures/chapter-1/heterostructures/out-ruco/qw1.pdf>]
-<../figures/chapter-1/heterostructures/out-ruco/qw2.pdf, id=584, 348.99684pt x 
+<../figures/chapter-1/heterostructures/out-ruco/qw2.pdf, id=585, 348.99684pt x 
 323.19948pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/qw2.pdf Graphic file (type
  pdf)
@@ -2552,7 +2552,7 @@ Overfull \hbox (1.78218pt too wide) in paragraph at lines 14--14
 |[][] 
  []
 
-<../figures/chapter-2/symmetry/out-ruco/sym-0.pdf, id=658, 284.52798pt x 133.72
+<../figures/chapter-2/symmetry/out-ruco/sym-0.pdf, id=659, 284.52798pt x 133.72
 76pt>
 File: ../figures/chapter-2/symmetry/out-ruco/sym-0.pdf Graphic file (type pdf)
 <use ../figures/chapter-2/symmetry/out-ruco/sym-0.pdf>
@@ -2586,6 +2586,10 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [18]
+Underfull \hbox (badness 10000) in paragraph at lines 51--56
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (13.6pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2595,6 +2599,15 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [19]
+! Undefined control sequence.
+l.57 ...} the \gls{TB}-method is the correct\citye
+                                                  {dresselhaus2007group,bir1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 Package fancyhdr Warning: \headheight is too small (13.6pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2702,14 +2715,14 @@ LaTeX Warning: There were undefined references.
 Package rerunfilecheck Info: File `2021-ruco-phd-thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `2021-ruco-phd-thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 77B0E0252BF7615F60417CC291C06A46;3453.
+(rerunfilecheck)             Checksum: 36DE25ACF1BFC245E0971F649B841868;3562.
  ) 
 Here is how much of TeX's memory you used:
- 54693 strings out of 479014
- 1164279 string characters out of 5859133
- 1859628 words of memory out of 5000000
- 70311 multiletter control sequences out of 15000+600000
- 580891 words of font info for 364 fonts, out of 8000000 for 9000
+ 54746 strings out of 479014
+ 1165090 string characters out of 5859133
+ 1860929 words of memory out of 5000000
+ 70357 multiletter control sequences out of 15000+600000
+ 581079 words of font info for 366 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,17n,120p,10615b,788s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
@@ -2776,11 +2789,11 @@ s/type1/public/lm/lmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1
 /public/rsfs/rsfs10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
 newtx/ztmr.pfb>
-Output written on out-ruco/2021-ruco-phd-thesis.pdf (32 pages, 15783253 bytes).
+Output written on out-ruco/2021-ruco-phd-thesis.pdf (32 pages, 15785792 bytes).
 
 PDF statistics:
- 1052 PDF objects out of 1200 (max. 8388607)
- 878 compressed objects within 9 object streams
- 164 named destinations out of 1000 (max. 500000)
+ 1070 PDF objects out of 1200 (max. 8388607)
+ 896 compressed objects within 9 object streams
+ 167 named destinations out of 1000 (max. 500000)
  102129 words of extra memory for PDF output out of 106986 (max. 10000000)
 

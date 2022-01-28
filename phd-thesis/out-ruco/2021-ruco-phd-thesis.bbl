@@ -1,8 +1,26 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{fox2002optical}
 Mark Fox.
 \newblock Optical properties of solids, 2002.
+
+\bibitem{sivalertporn2016effectofbarrier}
+Kanchana Sivalertporn.
+\newblock Effect of barrier width on the exciton states in coupled quantum
+  wells in an applied electric field.
+\newblock {\em Physics Letters A}, 380(22):1990--1994, 2016.
+
+\bibitem{debbar1989coupled}
+Nacer Debbar, Songcheol Hong, Jasprit Singh, Pallab Bhattacharya, and Rajeshwar
+  Sahai.
+\newblock Coupled gaas/algaas quantum‐well electroabsorption modulators for
+  low‐electric‐field optical modulation.
+\newblock {\em Journal of Applied Physics}, 65(1):383--385, 1989.
+
+\bibitem{tkachenko2006opticalspectroscopy}
+Nikolai~V Tkachenko.
+\newblock {\em Optical spectroscopy: methods and instrumentations}.
+\newblock Elsevier, 2006.
 
 \bibitem{ask2017ase}
 Ask~Hjorth Larsen, Jens~Jørgen Mortensen, Jakob Blomqvist, Ivano~E Castelli,
@@ -248,5 +266,610 @@ Katherine Brading, Elena Castellani, and Nicholas Teh.
 \newblock In Edward~N. Zalta, editor, {\em The {Stanford} Encyclopedia of
   Philosophy}. Metaphysics Research Lab, Stanford University, {F}all 2021
   edition, 2021.
+
+\bibitem{orton2015molecular}
+John~Wilfred Orton and Tom Foxon.
+\newblock {\em Molecular beam epitaxy: a short history}.
+\newblock Oxford University Press, USA, 2015.
+
+\bibitem{grundmann2010physics}
+Marius Grundmann.
+\newblock {\em Physics of semiconductors}, volume~11.
+\newblock Springer, 2010.
+
+\bibitem{yuan2018tunneling}
+M.~Yuan, A.~Hern\'andez-M\'{\i}nguez, K.~Biermann, and P.~V. Santos.
+\newblock Tunneling blockade and single-photon emission in gaas double quantum
+  wells.
+\newblock {\em Phys. Rev. B}, 98:155311, Oct 2018.
+
+\bibitem{weiner2017light}
+John Weiner and Frederico Nunes.
+\newblock {\em Light-matter interaction: physics and engineering at the
+  nanoscale}.
+\newblock Oxford University Press, 2017.
+
+\bibitem{einstein1905uber}
+A.~Einstein.
+\newblock Über die von der molekularkinetischen theorie der wärme geforderte
+  bewegung von in ruhenden flüssigkeiten suspendierten teilchen.
+\newblock {\em Annalen der Physik}, 322(8):549--560, 1905.
+
+\bibitem{carlos2020thesis}
+C.~A. Bravo-Velazques.
+\newblock Sistema de fotoluminiscencia para caracterizaci\'on de pozos
+  cu\'anticos acoplados.
+\newblock Bachelor Thesis to obtain Engineering Physicist degree, 2 2020.
+
+\bibitem{jimenez2016spectroscopic}
+Juan Jimenez and Jens~W Tomm.
+\newblock {\em Spectroscopic Analysis of optoelectronic semiconductors}, volume
+  202.
+\newblock Springer, 2016.
+
+\bibitem{lu2018spectroscopy}
+Wei Lu and Ying Fu.
+\newblock {\em Spectroscopy of Semiconductors}.
+\newblock Springer International Publishing, 2018.
+
+\bibitem{ball2001basicsspectroscopy}
+David~Warren Ball.
+\newblock {\em The basics of spectroscopy}, volume~49.
+\newblock Spie Press, 2001.
+
+\bibitem{demtreder2019electrodynamics}
+Wolfgang Demtrˆder.
+\newblock {\em Electrodynamics and Optics}.
+\newblock Springer Nature, 2019.
+
+\bibitem{sole2005introductionspectroscopy}
+Jose Sol{\'e}, Luisa Bausa, and Daniel Jaque.
+\newblock {\em An introduction to the optical spectroscopy of inorganic
+  solids}.
+\newblock John Wiley \& Sons, 2005.
+
+\bibitem{khmissi2010effectcarriers}
+H.~Khmissi, L.~Sfaxi, L.~Bouza\"iene, F.~Saidi, H.~Maaref, and
+  C.~Bru-Chevallier.
+\newblock Effect of carriers transfer behavior on the optical properties of
+  inas quantum dots embedded in algaas/gaas heterojunction.
+\newblock {\em Journal of Applied Physics}, 107(7):074307, 2010.
+
+\bibitem{kundrotas2005excitonic}
+J.~Kundrotas, A.~\ifmmode \check{Cb}\else \v{C}\fi{}er\ifmmode~\check{s}\else
+  \v{s}\fi{}kus, S.~A\ifmmode~\check{s}\else \v{s}\fi{}montas,
+  G.~Valu\ifmmode~\check{s}\else \v{s}\fi{}is, B.~Sherliker, M.~P. Halsall,
+  M.~J. Steer, E.~Johannessen, and P.~Harrison.
+\newblock Excitonic and impurity-related optical transitions in be
+  $\ensuremath{\delta}$-doped $\mathrm{GaAs/AlAs}$ multiple quantum wells:
+  Fractional-dimensional space approach.
+\newblock {\em Phys. Rev. B}, 72:235322, Dec 2005.
+
+\bibitem{singh1984theory}
+Jasprit Singh, KK~Bajaj, and S~Chaudhuri.
+\newblock Theory of photoluminescence line shape due to interfacial quality in
+  quantum well structures.
+\newblock {\em Applied physics letters}, 44(8):805--807, 1984.
+
+\bibitem{juang1986field}
+F-Y Juang, Jasprit Singh, Pallab~K Bhattacharya, K~Bajema, and R~Merlin.
+\newblock Field-dependent linewidths and photoluminescence energies in
+  gaas/algaas multiquantum well modulators.
+\newblock {\em Applied physics letters}, 48(19):1246--1248, 1986.
+
+\bibitem{maluenda1983abrupttransitions}
+J.~Maluenda and P.~M. Frijlink.
+\newblock Abrupt transitions in composition and doping profile in
+  $\mathrm{GaAs/Ga_{1-x}Al_{x}As}$ heterostructures by atmospheric pressure
+  movpe.
+\newblock {\em Journal of Vacuum Science \& Technology B: Microelectronics
+  Processing and Phenomena}, 1(2):334--337, 1983.
+
+\bibitem{shanabrook1987photoreflectance}
+B.~V. Shanabrook, O.~J. Glembocki, and W.~T. Beard.
+\newblock Photoreflectance modulation mechanisms in
+  gaas-${\mathrm{al}}_{\mathrm{x}}$${\mathrm{ga}}_{1\mathrm{\ensuremath{-}}\mathrm{x}}$as
+  multiple quantum wells.
+\newblock {\em Phys. Rev. B}, 35:2540--2543, Feb 1987.
+
+\bibitem{seraphin1972electric}
+B.~O. Seraphin and D.~E. Aspnes.
+\newblock Electric field effects in optical and first-derivative modulation
+  spectroscopy.
+\newblock {\em Phys. Rev. B}, 6:3158--3160, Oct 1972.
+
+\bibitem{aspnes1973surface}
+DE~Aspnes and DD~Sell.
+\newblock Surface field effects in reflectance and first-derivative modulation
+  spectra.
+\newblock {\em Solid State Communications}, 13(5):519--522, 1973.
+
+\bibitem{misiewicz1999photoreflectance}
+J~Misiewicz, G~S{\k{e}}k, and P~Sitarek.
+\newblock Photoreflectance spectroscopy applied to semiconductors and
+  semiconductor heterostructures.
+\newblock {\em Optica Applicata}, 29(3):327--363, 1999.
+
+\bibitem{sydor1989photoreflectanceinterfaces}
+Michael Sydor, James Angelo, Jerome~J. Wilson, W.~C. Mitchel, and M.~Y. Yen.
+\newblock Photoreflectance from gaas and gaas/gaas interfaces.
+\newblock {\em Phys. Rev. B}, 40:8473--8484, Oct 1989.
+
+\bibitem{theis1988excitonic}
+W.~M. Theis, G.~D. Sanders, C.~E. Leak, K.~K. Bajaj, and H.~Morkoc.
+\newblock Excitonic transitions in
+  gaas/${\mathrm{ga}}_{\mathrm{x}}$${\mathrm{al}}_{1\mathrm{\ensuremath{-}}\mathrm{x}}$as
+  quantum wells observed by photoreflectance spectroscopy: Comparison with a
+  first-principles theory.
+\newblock {\em Phys. Rev. B}, 37:3042--3051, Feb 1988.
+
+\bibitem{theis1989extrinsic}
+W.~M. Theis, G.~D. Sanders, K.~R. Evans, L.~L. Liou, C.~E. Leak, K.~K. Bajaj,
+  C.~E. Stutz, R.~L. Jones, and Yia-Chung Chang.
+\newblock Extrinsic contributions to photoreflectance of
+  ${\mathrm{al}}_{\mathrm{x}}$${\mathrm{ga}}_{1\mathrm{\ensuremath{-}}\mathrm{x}}$as/gaas
+  quantum wells: An investigation of the ``donor-related'' feature.
+\newblock {\em Phys. Rev. B}, 39:11038--11043, May 1989.
+
+\bibitem{gontijo1994photoreflectance}
+I~Gontijo, YS~Tang, RM~De~La~Rue, CM~Sotomayor~Torres, JS~Roberts, and
+  JH~Marsh.
+\newblock Photoreflectance and photoluminescence of partially intermixed
+  gaas/algaas double quantum wells.
+\newblock {\em Journal of applied physics}, 76(9):5434--5438, 1994.
+
+\bibitem{shen1995franz}
+H.~Shen and M.~Dutta.
+\newblock Franz–keldysh oscillations in modulation spectroscopy.
+\newblock {\em Journal of Applied Physics}, 78(4):2151--2176, 1995.
+
+\bibitem{delsole1978effect}
+R.~Del~Sole and D.~E. Aspnes.
+\newblock Effect of surface and nonuniform fields in electroreflectance:
+  Application to ge.
+\newblock {\em Phys. Rev. B}, 17:3310--3317, Apr 1978.
+
+\bibitem{cardona1969modulation}
+Manuel Cardona.
+\newblock Modulation spectroscopy.
+\newblock {\em Solid State Phys.}, 11, 1969.
+
+\bibitem{seraphin1966bandstructure}
+B.~O. Seraphin and N.~Bottka.
+\newblock Band-structure analysis from electro-reflectance studies.
+\newblock {\em Phys. Rev.}, 145:628--636, May 1966.
+
+\bibitem{fox1991excitonic}
+A.~M. Fox, D.~A.~B. Miller, G.~Livescu, J.~E. Cunningham, and W.~Y. Jan.
+\newblock Excitonic effects in coupled quantum wells.
+\newblock {\em Phys. Rev. B}, 44:6231--6242, Sep 1991.
+
+\bibitem{shen1986observation}
+H.~Shen, P.~Parayanthal, F.H. Pollak, A.L. Smirl, J.N. Schulman, R.A.
+  McFarlane, and I.~D'Haenens.
+\newblock Observation of symmetery forbidden transitions in the room
+  temperature photoreflectance spectrum of a gaas/gaalas multiple quantum well.
+\newblock {\em Solid State Communications}, 59(8):557--560, 1986.
+
+\bibitem{shen1987photoreflectance}
+H.~Shen, X.~C. Shen, Fred~H. Pollak, and R.~N. Sacks.
+\newblock Photoreflectance and photoreflectance-excitation spectroscopy of a
+  gaas/${\mathrm{ga}}_{0.67}$${\mathrm{al}}_{0.33}$as multiple-quantum-well
+  structure.
+\newblock {\em Phys. Rev. B}, 36:3487--3490, Aug 1987.
+
+\bibitem{fang1988allowed}
+Z.~M. Fang, A.~Persson, and R.~M. Cohen.
+\newblock Allowed 3h-1e transition in semiconductor quantum wells.
+\newblock {\em Phys. Rev. B}, 37:4071--4075, Mar 1988.
+
+\bibitem{bastard1982exciton}
+G.~Bastard, E.~E. Mendez, L.~L. Chang, and L.~Esaki.
+\newblock Exciton binding energy in quantum wells.
+\newblock {\em Phys. Rev. B}, 26:1974--1979, Aug 1982.
+
+\bibitem{shinozuka1983wannier}
+Y.~Shinozuka and M.~Matsuura.
+\newblock Wannier exciton in quantum wells.
+\newblock {\em Phys. Rev. B}, 28:4878--4881, Oct 1983.
+
+\bibitem{kheng1993observation}
+K.~Kheng, R.~T. Cox, Merle~Y. d'~Aubign\'e, Franck Bassani, K.~Saminadayar, and
+  S.~Tatarenko.
+\newblock Observation of negatively charged excitons
+  ${\mathit{x}}^{\mathrm{\ensuremath{-}}}$ in semiconductor quantum wells.
+\newblock {\em Phys. Rev. Lett.}, 71:1752--1755, Sep 1993.
+
+\bibitem{lampert1958mobile}
+Murray~A. Lampert.
+\newblock Mobile and immobile effective-mass-particle complexes in nonmetallic
+  solids.
+\newblock {\em Phys. Rev. Lett.}, 1:450--453, Dec 1958.
+
+\bibitem{stebe1989ground}
+B.~Stébé and A.~Ainane.
+\newblock Ground state energy and optical absorption of excitonic trions in two
+  dimensional semiconductors.
+\newblock {\em Superlattices and Microstructures}, 5(4):545--548, 1989.
+
+\bibitem{aceituno2011therole}
+P.~Aceituno and A.~Hernández-Cabrera.
+\newblock The role of excitons and trions on electron spin polarization in
+  quantum wells.
+\newblock {\em Journal of Applied Physics}, 110(1):013724, 2011.
+
+\bibitem{manassen1996exciton}
+A.~Manassen, E.~Cohen, Arza Ron, E.~Linder, and L.~N. Pfeiffer.
+\newblock Exciton and trion spectral line shape in the presence of an electron
+  gas in gaas/alas quantum wells.
+\newblock {\em Phys. Rev. B}, 54:10609--10613, Oct 1996.
+
+\bibitem{finkelstein1996negatively}
+Gleb Finkelstein, Hadas Shtrikman, and Israel Bar-Joseph.
+\newblock Negatively and positively charged excitons in
+  $\mathrm{GaAs}/{\mathrm{al}}_{x}{\mathrm{ga}}_{1\ensuremath{-}x}\mathrm{As}$
+  quantum wells.
+\newblock {\em Phys. Rev. B}, 53:R1709--R1712, Jan 1996.
+
+\bibitem{sibeldin2001formation}
+N~N Sibeldin, M~L Skorikov, and V~A Tsvetkov.
+\newblock Formation of charged excitonic complexes in shallow quantum wells of
+  undoped $\mathrm{GaAs}/\mathrm{AlGaAs}$ structures under below-barrier and
+  above-barrier photoexcitation.
+\newblock {\em Nanotechnology}, 12(4):591--596, nov 2001.
+
+\bibitem{israel2005trions}
+Israel Bar-Joseph.
+\newblock Trions in {GaAs} quantum wells.
+\newblock {\em Semiconductor Science and Technology}, 20(6):R29--R39, may 2005.
+
+\bibitem{jirauschek2014modeling}
+Christian Jirauschek and Tillmann Kubis.
+\newblock Modeling techniques for quantum cascade lasers.
+\newblock {\em Applied Physics Reviews}, 1(1):011307, 2014.
+
+\bibitem{harrison2016chap3}
+Paul Harrison and Alex Valavanis.
+\newblock {\em Numerical solutions}, chapter~3, pages 81--130.
+\newblock John Wiley \& Sons, Ltd, 2016.
+
+\bibitem{ram2004theschrodinger}
+L.~R. Ram-Mohan, K.~H. Yoo, and J.~Moussa.
+\newblock The schrödinger–poisson self-consistency in layered quantum
+  semiconductor structures.
+\newblock {\em Journal of Applied Physics}, 95(6):3081--3092, 2004.
+
+\bibitem{cassan2000onthereduction}
+Eric Cassan.
+\newblock On the reduction of direct tunneling leakage through ultrathin gate
+  oxides by a one-dimensional schrödinger–poisson solver.
+\newblock {\em Journal of Applied Physics}, 87(11):7931--7939, 2000.
+
+\bibitem{ando1987calculation}
+Yuji Ando and Tomohiro Itoh.
+\newblock Calculation of transmission tunneling current across arbitrary
+  potential barriers.
+\newblock {\em Journal of Applied Physics}, 61(4):1497--1502, 1987.
+
+\bibitem{jovanovic2005mechanisms}
+V.~D. Jovanović, D.~Indjin, N.~Vukmirović, Z.~Ikonić, P.~Harrison, E.~H.
+  Linfield, H.~Page, X.~Marcadet, C.~Sirtori, C.~Worrall, H.~E. Beere, and
+  D.~A. Ritchie.
+\newblock Mechanisms of dynamic range limitations in
+  $\mathrm{GaAs}/\mathrm{AlGaAs}$ quantum-cascade lasers: Influence of injector
+  doping.
+\newblock {\em Applied Physics Letters}, 86(21):211117, 2005.
+
+\bibitem{lastras1999model}
+A.~Lastras-Mart\'{\i}nez, R.~E. Balderas-Navarro, L.~F. Lastras-Mart\'{\i}nez,
+  and M.~A. Vidal.
+\newblock Model for the linear electro-optic reflectance-difference spectrum of
+  gaas(001) around ${E}_{1}$ and ${E}_{1}+{\ensuremath{\Delta}}_{1}$.
+\newblock {\em Phys. Rev. B}, 59:10234--10239, Apr 1999.
+
+\bibitem{aspnes1985anisotropies}
+D.~E. Aspnes and A.~A. Studna.
+\newblock Anisotropies in the above---band-gap optical spectra of cubic
+  semiconductors.
+\newblock {\em Phys. Rev. Lett.}, 54:1956--1959, Apr 1985.
+
+\bibitem{aspnes1985above}
+D.~E. Aspnes.
+\newblock Above‐bandgap optical anisotropies in cubic semiconductors: A
+  visible–near ultraviolet probe of surfaces.
+\newblock {\em Journal of Vacuum Science \& Technology B: Microelectronics
+  Processing and Phenomena}, 3(5):1498--1506, 1985.
+
+\bibitem{wei1995theory}
+Su-Huai Wei and Alex Zunger.
+\newblock Theory of reflectance-difference spectroscopy in ordered iii-v
+  semiconductor alloys.
+\newblock {\em Phys. Rev. B}, 51:14110--14114, May 1995.
+
+\bibitem{chen1987effect}
+Y.~J. Chen, Emil~S. Koteles, B.~S. Elman, and C.~A. Armiento.
+\newblock Effect of electric fields on excitons in a coupled
+  double-quantum-well structure.
+\newblock {\em Phys. Rev. B}, 36:4562--4565, Sep 1987.
+
+\bibitem{miller1984band-edge}
+D.~A.~B. Miller, D.~S. Chemla, T.~C. Damen, A.~C. Gossard, W.~Wiegmann, T.~H.
+  Wood, and C.~A. Burrus.
+\newblock Band-edge electroabsorption in quantum well structures: The
+  quantum-confined stark effect.
+\newblock {\em Phys. Rev. Lett.}, 53:2173--2176, Nov 1984.
+
+\bibitem{koopmans1998microscopic}
+B.~Koopmans, B.~Koopmans, P.V. Santos, P.V. Santos, and M.~Cardona.
+\newblock Microscopic reflection difference spectroscopy on semiconductor
+  nanostructures.
+\newblock {\em physica status solidi (a)}, 170(2):307--315, 1998.
+
+\bibitem{krebs1996giant}
+Olivier Krebs and Paul Voisin.
+\newblock Giant optical anisotropy of semiconductor heterostructures with no
+  common atom and the quantum-confined pockels effect.
+\newblock {\em Phys. Rev. Lett.}, 77:1829--1832, Aug 1996.
+
+\bibitem{chen2002interface}
+Y.~H. Chen, X.~L. Ye, J.~Z. Wang, Z.~G. Wang, and Z.~Yang.
+\newblock Interface-related in-plane optical anisotropy in
+  ${\mathrm{g}\mathrm{a}\mathrm{a}\mathrm{s}/\mathrm{a}\mathrm{l}}_{x}{\mathrm{ga}}_{1\ensuremath{-}x}\mathrm{As}$
+  single-quantum-well structures studied by reflectance difference
+  spectroscopy.
+\newblock {\em Phys. Rev. B}, 66:195321, Nov 2002.
+
+\bibitem{braun1997nonuniform}
+Wolfgang Braun, Achim Trampert, Lutz D\"aweritz, and Klaus~H. Ploog.
+\newblock Nonuniform segregation of ga at alas/gaas heterointerfaces.
+\newblock {\em Phys. Rev. B}, 55:1689--1695, Jan 1997.
+
+\bibitem{tang2009well-width}
+C.~G. Tang, Y.~H. Chen, B.~Xu, X.~L. Ye, and Z.~G. Wang.
+\newblock Well-width dependence of in-plane optical anisotropy in (001)
+  gaas/algaas quantum wells induced by in-plane uniaxial strain and interface
+  asymmetry.
+\newblock {\em Journal of Applied Physics}, 105(10):103108, 2009.
+
+\bibitem{li2019quantitative}
+Yuan Li, Fengqi Liu, Xiaoling Ye, Yu~Liu, Jiawei Wang, and Yonghai Chen.
+\newblock Quantitative investigation of intrinsic shear strain and asymmetric
+  interface conditions in semiconductor superlattices.
+\newblock {\em Journal of Applied Physics}, 126(6):065704, 2019.
+
+\bibitem{yu2015tuning}
+J.~L. Yu, S.~Y. Cheng, Y.~F. Lai, Q.~Zheng, Y.~H. Chen, and C.~G. Tang.
+\newblock Tuning of in-plane optical anisotropy by inserting ultra-thin inas
+  layer at interfaces in (001)-grown gaas/algaas quantum wells.
+\newblock {\em Journal of Applied Physics}, 117(1):015302, 2015.
+
+\bibitem{varshni1967temperature}
+Y.P. Varshni.
+\newblock Temperature dependence of the energy gap in semiconductors.
+\newblock {\em Physica}, 34(1):149--154, 1967.
+
+\bibitem{donmez2012study}
+Omer Donmez, Ferhat Nutku, Ayse Erol, Cetin~M. Arikan, and Yuksel Ergun.
+\newblock A study of photomodulated reflectance on staircase-like, n-doped
+  gaas/alxga1-xas quantum well structures.
+\newblock {\em Nanoscale Research Letters}, 7(1):622, 2012.
+
+\bibitem{adachi2009properties}
+Sadao Adachi.
+\newblock {\em Properties of semiconductor alloys: group-IV, III-V and II-VI
+  semiconductors}, volume~28.
+\newblock John Wiley \& Sons, 2009.
+
+\bibitem{molenk1988determination}
+L.~W. Molenkamp, R.~Eppenga, G.~W. 't~Hooft, P.~Dawson, C.~T. Foxon, and K.~J.
+  Moore.
+\newblock Determination of valence-band effective-mass anisotropy in gaas
+  quantum wells by optical spectroscopy.
+\newblock {\em Phys. Rev. B}, 38:4314--4317, Aug 1988.
+
+\bibitem{greene1984energylevels}
+Ronald~L. Greene, Krishan~K. Bajaj, and Dwight~E. Phelps.
+\newblock Energy levels of wannier excitons in
+  $\mathrm{G}\mathrm{a}\mathrm{A}\mathrm{s}\ensuremath{-}{\mathrm{ga}}_{1\ensuremath{-}x}{\mathrm{al}}_{x}\mathrm{As}$
+  quantum-well structures.
+\newblock {\em Phys. Rev. B}, 29:1807--1812, Feb 1984.
+
+\bibitem{lflm1993spectrometer}
+L.~F. Lastras‐Martínez, A.~Lastras‐Martínez, and R.~E.
+  Balderas‐Navarro.
+\newblock A spectrometer for the measurement of reflectance‐difference
+  spectra.
+\newblock {\em Review of Scientific Instruments}, 64(8):2147--2152, 1993.
+
+\bibitem{yutaka1994theeffect}
+Yutaka Takahashi, Yoshimine Kato, Satoru~S. Kano, Susumu Fukatsu, Yasuhiro
+  Shiraki, and Ryoichi Ito.
+\newblock The effect of electric field on the excitonic states in coupled
+  quantum well structures.
+\newblock {\em Journal of Applied Physics}, 76(4):2299--2305, 1994.
+
+\bibitem{hamaguchi2017basicsemiconductorphysics}
+Chihiro Hamaguchi.
+\newblock {\em Basic Semiconductor Physics}.
+\newblock Springer International Publishing, 2017.
+
+\bibitem{vurgaftman2001bandparameters}
+I.~Vurgaftman, J.~R. Meyer, and L.~R. Ram-Mohan.
+\newblock Band parameters for iii–v compound semiconductors and their alloys.
+\newblock {\em Journal of Applied Physics}, 89(11):5815--5875, 2001.
+
+\bibitem{luttinger1956quantumtheory}
+J.~M. Luttinger.
+\newblock Quantum theory of cyclotron resonance in semiconductors: General
+  theory.
+\newblock {\em Phys. Rev.}, 102:1030--1041, May 1956.
+
+\bibitem{lew2009heterostructuresbasicformalism}
+Lok~C. Lew Yan~Voon and Morten Willatzen.
+\newblock {\em Heterostructures: Basic Formalism}, pages 273--362.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2009.
+
+\bibitem{ivchenko2008spinphoto}
+E.~L. Ivchenko and S.~D. Ganichev.
+\newblock {\em Spin-Photogalvanics}, pages 245--277.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2008.
+
+\bibitem{glazov2018electron}
+M.M. Glazov.
+\newblock {\em Electron \& Nuclear Spin Dynamics in Semiconductor
+  Nanostructures}.
+\newblock Series on Semiconductor Scienc. OXFORD University Press, 2018.
+
+\bibitem{benduke1966spacecharge}
+D.~J. BenDaniel and C.~B. Duke.
+\newblock Space-charge effects on electron tunneling.
+\newblock {\em Phys. Rev.}, 152:683--692, Dec 1966.
+
+\bibitem{ivchenko1996heavylight}
+E.~L. Ivchenko, A.~Yu. Kaminski, and U.~R\"ossler.
+\newblock Heavy-light hole mixing at zinc-blende (001) interfaces under normal
+  incidence.
+\newblock {\em Phys. Rev. B}, 54:5852--5859, Aug 1996.
+
+\bibitem{jain2013materialsproject}
+Anubhav Jain, Shyue~Ping Ong, Geoffroy Hautier, Wei Chen, William~Davidson
+  Richards, Stephen Dacek, Shreyas Cholia, Dan Gunter, David Skinner, Gerbrand
+  Ceder, and Kristin~a. Persson.
+\newblock {The Materials Project: A materials genome approach to accelerating
+  materials innovation}.
+\newblock {\em APL Materials}, 1(1):011002, 2013.
+
+\bibitem{lu2018photoluminescence}
+Wei Lu and Ying Fu.
+\newblock {\em Photoluminescence}, pages 107--158.
+\newblock Springer International Publishing, Cham, 2018.
+
+\bibitem{kalt2019semiconductor}
+Heinz Kalt and Claus~F Klingshirn.
+\newblock {\em Semiconductor Optics 1: Linear Optical Properties of
+  Semiconductors}.
+\newblock Springer Nature, 2019.
+
+\bibitem{kawai1984photoluminiscence}
+H.~Kawai, K.~Kaneko, and N.~Watanabe.
+\newblock Photoluminescence of algaas/gaas quantum wells grown by metalorganic
+  chemical vapor deposition.
+\newblock {\em Journal of Applied Physics}, 56(2):463--467, 1984.
+
+\bibitem{keyes2003quantum}
+RW~Keyes.
+\newblock Is quantum computing with solid state devices possible?
+\newblock {\em Applied Physics A}, 76(5):737--741, 2003.
+
+\bibitem{kim2015optically}
+Geun-Hyeong Kim, Hyun-Jun Jo, Jong~Su Kim, In-Ho Bae, Sang~Jun Lee, et~al.
+\newblock Optically biased photoreflectance spectroscopy of a gaas epitaxial
+  layer and an algaas/gaas quantum well.
+\newblock {\em Current Applied Physics}, 15(10):1226--1229, 2015.
+
+\bibitem{aspnes1973third}
+David~E Aspnes.
+\newblock Third-derivative modulation spectroscopy with low-field
+  electroreflectance.
+\newblock {\em Surface science}, 37:418--442, 1973.
+
+\bibitem{pollak1994modulation}
+Fred~H Pollak.
+\newblock Modulation spectroscopy of semiconductors and semiconductor
+  microstructures.
+\newblock {\em Handbook on Semiconductors}, 2:527--635, 1994.
+
+\bibitem{kudrawiec2009photoreflectance}
+R.~Kudrawiec and J.~Misiewicz.
+\newblock Photoreflectance and contactless electroreflectance measurements of
+  semiconductor structures by using bright and dark configurations.
+\newblock {\em Review of Scientific Instruments}, 80(9):096103, 2009.
+
+\bibitem{kuhn1991enhanced}
+Kelin~J. Kuhn, Cheng Juang, and Robert~B. Darling.
+\newblock An enhanced and linear stark shift in $n-i-n$ algaas/gaas symmetric
+  and asymmetric coupled quantum wells.
+\newblock {\em Journal of Applied Physics}, 69(5):3135--3141, 1991.
+
+\bibitem{zhu1995exciton}
+Xuejun Zhu, P.~B. Littlewood, Mark~S. Hybertsen, and T.~M. Rice.
+\newblock Exciton condensate in semiconductor quantum well structures.
+\newblock {\em Phys. Rev. Lett.}, 74:1633--1636, Feb 1995.
+
+\bibitem{stern2014exciton}
+Michael Stern, Vladimir Umansky, and Israel Bar-Joseph.
+\newblock Exciton liquid in coupled quantum wells.
+\newblock {\em Science}, 343(6166):55--57, 2014.
+
+\bibitem{feldmann1987linewidth}
+J.~Feldmann, G.~Peter, E.~O. G\"obel, P.~Dawson, K.~Moore, C.~Foxon, and R.~J.
+  Elliott.
+\newblock Linewidth dependence of radiative exciton lifetimes in quantum wells.
+\newblock {\em Phys. Rev. Lett.}, 59:2337--2340, Nov 1987.
+
+\bibitem{portella2004interactinb}
+M.~T. Portella-Oberli, V.~Ciulin, J.~H. Berney, B.~Deveaud, M.~Kutrowski, and
+  T.~Wojtowicz.
+\newblock Interacting many-body systems in quantum wells: Evidence for
+  exciton-trion-electron correlations.
+\newblock {\em Phys. Rev. B}, 69:235311, Jun 2004.
+
+\bibitem{sivalertporn2012direct}
+K.~Sivalertporn, L.~Mouchliadis, A.~L. Ivanov, R.~Philp, and E.~A. Muljarov.
+\newblock Direct and indirect excitons in semiconductor coupled quantum wells
+  in an applied electric field.
+\newblock {\em Phys. Rev. B}, 85:045207, Jan 2012.
+
+\bibitem{chadi1975tight}
+D.~J. Chadi and M.~L. Cohen.
+\newblock Tight-binding calculations of the valence bands of diamond and
+  zincblende crystals.
+\newblock {\em physica status solidi (b)}, 68(1):405--419, 1975.
+
+\bibitem{osti2014materialsdata}
+Kristin Persson.
+\newblock Materials data on gaas (sg:216) by materials project, 11 2014.
+\newblock An optional note.
+
+\bibitem{cohen2012electronic}
+Marvin~L Cohen and James~R Chelikowsky.
+\newblock {\em Electronic structure and optical properties of semiconductors},
+  volume~75.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{ando1982electronic}
+Tsuneya Ando, Alan~B. Fowler, and Frank Stern.
+\newblock Electronic properties of two-dimensional systems.
+\newblock {\em Rev. Mod. Phys.}, 54:437--672, Apr 1982.
+
+\bibitem{Burt_1992}
+M~G Burt.
+\newblock The justification for applying the effective-mass approximation to
+  microstructures.
+\newblock {\em Journal of Physics: Condensed Matter}, 4(32):6651--6690, aug
+  1992.
+
+\bibitem{solyom2008fundamentals}
+Jen{\"o} S{\'o}lyom.
+\newblock {\em Fundamentals of the Physics of Solids: Volume II: Electronic
+  Properties}, volume~2.
+\newblock Springer Science \& Business Media, 2008.
+
+\bibitem{solyom2010fundamentals}
+Jen{\"o} S{\'o}lyom.
+\newblock {\em Fundamentals of the Physics of Solids: Volume 3-Normal,
+  Broken-Symmetry, and Correlated Systems}, volume~3.
+\newblock Springer Science \& Business Media, 2010.
+
+\bibitem{elder2012semi}
+Warren~James Elder.
+\newblock {\em Semi-empirical modelling of SiGe hetero-structures}.
+\newblock {PhD} dissertation, Imperial College London, 2012.
+
+\bibitem{ehrhardt2014multi}
+Matthias Ehrhardt and Thomas Koprucki.
+\newblock {\em Multi-Band Effective Mass Approximations: Advanced Mathematical
+  Models and Numerical Techniques}, volume~94.
+\newblock Springer, 2014.
 
 \end{thebibliography}

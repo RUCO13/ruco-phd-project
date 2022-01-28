@@ -47,4 +47,6 @@
 \backcite {bir1974symmetry}{{20}{2.1.1}{subsection.2.1.1}}
 \backcite {harrison1973bond,vogl1983asemiempirical,slater1954simplified}{{20}{2.1.1}{subsection.2.1.1}}
 \backcite {dresselhaus2007group}{{20}{2.1.1}{subsection.2.1.1}}
+\backcite {dresselhaus2007group,bir1974symmetry}{{20}{2.1.1}{subsection.2.1.1}}
+\backcite {sep-symmetry-breaking}{{20}{2.1.1}{subsection.2.1.1}}
 \backcite {bir1974symmetry}{{20}{\TextOrMath {\textasteriskcentered }{*}}{subsection.2.1.1}}

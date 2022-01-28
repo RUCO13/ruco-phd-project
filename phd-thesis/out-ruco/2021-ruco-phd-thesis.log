@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.19)  23 JAN 2022 17:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.19)  27 JAN 2022 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2332,7 +2332,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [3]
-<../figures/chapter-1/solid-sort/build/solid-sort.pdf, id=249, 312.87793pt x 14
+<../figures/chapter-1/solid-sort/build/solid-sort.pdf, id=251, 312.87793pt x 14
 3.11768pt>
 File: ../figures/chapter-1/solid-sort/build/solid-sort.pdf Graphic file (type p
 df)
@@ -2340,7 +2340,7 @@ df)
 Package pdftex.def Info: ../figures/chapter-1/solid-sort/build/solid-sort.pdf  
 used on input line 51.
 (pdftex.def)             Requested size: 455.24411pt x 208.24033pt.
-<../figures/chapter-1/bulk-1/build/bulk-1.pdf, id=253, 335.15211pt x 222.10678p
+<../figures/chapter-1/bulk-1/build/bulk-1.pdf, id=255, 335.15211pt x 222.10678p
 t>
 File: ../figures/chapter-1/bulk-1/build/bulk-1.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/bulk-1/build/bulk-1.pdf>
@@ -2370,14 +2370,14 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [5 <out-ruco/../figures/chapter-1/bulk-1/build/bulk-1.pdf>]
-<../figures/chapter-1/bands/build/bands01.pdf, id=286, 390.29312pt x 167.43353p
+<../figures/chapter-1/bands/build/bands01.pdf, id=288, 390.29312pt x 167.43353p
 t>
 File: ../figures/chapter-1/bands/build/bands01.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/bands/build/bands01.pdf>
 Package pdftex.def Info: ../figures/chapter-1/bands/build/bands01.pdf  used on 
 input line 78.
 (pdftex.def)             Requested size: 455.24411pt x 195.30115pt.
-<../figures/chapter-1/bands/build/bands02.pdf, id=302, 114.30907pt x 142.76335p
+<../figures/chapter-1/bands/build/bands02.pdf, id=304, 114.30907pt x 142.76335p
 t>
 File: ../figures/chapter-1/bands/build/bands02.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/bands/build/bands02.pdf>
@@ -2407,7 +2407,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 LaTeX Warning: Reference `subsec:chapter-3-pl' on page 1 undefined on input lin
 e 105.
 
-<../figures/chapter-1/exciton-1/build/x-1.pdf, id=370, 142.26349pt x 142.26349p
+<../figures/chapter-1/exciton-1/build/x-1.pdf, id=372, 142.26349pt x 142.26349p
 t>
 File: ../figures/chapter-1/exciton-1/build/x-1.pdf Graphic file (type pdf)
 <use ../figures/chapter-1/exciton-1/build/x-1.pdf>
@@ -2427,7 +2427,7 @@ Overfull \hbox (1.78218pt too wide) in paragraph at lines 114--114
 |[][] 
  []
 
-<../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf, id=394, 392.07379pt 
+<../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf, id=396, 392.07379pt 
 x 447.15858pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf Graphic file (ty
 pe pdf)
@@ -2444,7 +2444,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [9 <out-ruco/../figures/chapter-1/heterostructures/out-ruco/hs-01.pdf>]
-<../figures/chapter-1/heterostructures/out-ruco/lds-00.pdf, id=436, 125.9104pt 
+<../figures/chapter-1/heterostructures/out-ruco/lds-00.pdf, id=438, 125.9104pt 
 x 126.93422pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/lds-00.pdf Graphic file (t
 ype pdf)
@@ -2452,7 +2452,7 @@ ype pdf)
 Package pdftex.def Info: ../figures/chapter-1/heterostructures/out-ruco/lds-00.
 pdf  used on input line 138.
 (pdftex.def)             Requested size: 273.14923pt x 275.37852pt.
-<../figures/chapter-1/heterostructures/out-ruco/qw1.pdf, id=441, 391.35109pt x 
+<../figures/chapter-1/heterostructures/out-ruco/qw1.pdf, id=443, 391.35109pt x 
 409.19275pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/qw1.pdf Graphic file (type
  pdf)
@@ -2488,7 +2488,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [12 <out-ruco/../figures/chapter-1/heterostructures/out-ruco/qw1.pdf>]
-<../figures/chapter-1/heterostructures/out-ruco/qw2.pdf, id=585, 348.99684pt x 
+<../figures/chapter-1/heterostructures/out-ruco/qw2.pdf, id=587, 348.99684pt x 
 323.19948pt>
 File: ../figures/chapter-1/heterostructures/out-ruco/qw2.pdf Graphic file (type
  pdf)
@@ -2552,7 +2552,7 @@ Overfull \hbox (1.78218pt too wide) in paragraph at lines 14--14
 |[][] 
  []
 
-<../figures/chapter-2/symmetry/out-ruco/sym-0.pdf, id=659, 284.52798pt x 133.72
+<../figures/chapter-2/symmetry/out-ruco/sym-0.pdf, id=662, 284.52798pt x 133.72
 76pt>
 File: ../figures/chapter-2/symmetry/out-ruco/sym-0.pdf Graphic file (type pdf)
 <use ../figures/chapter-2/symmetry/out-ruco/sym-0.pdf>
@@ -2586,10 +2586,6 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (13.6pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2599,14 +2595,9 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [19]
-! Undefined control sequence.
-l.57 ...} the \gls{TB}-method is the correct\citye
-                                                  {dresselhaus2007group,bir1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (1.78218pt too wide) in paragraph at lines 65--65
+|[][] 
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (13.6pt): 
@@ -2617,21 +2608,39 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
 [20]
-Overfull \hbox (1.78218pt too wide) in paragraph at lines 80--80
+
+Package fancyhdr Warning: \headheight is too small (13.6pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
+
+[21]
+Overfull \hbox (1.78218pt too wide) in paragraph at lines 76--76
 |[][] 
  []
 
 
-Overfull \hbox (1.78218pt too wide) in paragraph at lines 103--103
+Overfull \hbox (1.78218pt too wide) in paragraph at lines 99--99
 |[][] 
  []
 
 
-Overfull \hbox (1.78218pt too wide) in paragraph at lines 116--116
+Overfull \hbox (1.78218pt too wide) in paragraph at lines 112--112
 |[][] 
  []
 
-) (out-ruco/2021-ruco-phd-thesis.bbl (out-ruco/2021-ruco-phd-thesis.brf)
+)
+
+Package fancyhdr Warning: \headheight is too small (13.6pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
+
+[22] (out-ruco/2021-ruco-phd-thesis.bbl (out-ruco/2021-ruco-phd-thesis.brf)
 \tf@brf=\write15
 \openout15 = `2021-ruco-phd-thesis.brf'.
 
@@ -2644,13 +2653,13 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
-[21]
+[23]
 Underfull \hbox (badness 1033) in paragraph at lines 47--47
 []\T1/lmr/m/n/12 (+20) MANI SUN-DARAM, SCOTT A. CHALMERS, PE-TER F. HOP-KINS, a
 nd
  []
 
-[22
+[24
 
 ]
 
@@ -2661,7 +2670,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
-[23]
+[25]
 
 Package fancyhdr Warning: \headheight is too small (13.6pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2670,7 +2679,7 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
-[24])
+[26])
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the 2021-ruco-phd-thesis.maf file.
@@ -2705,24 +2714,27 @@ Package fancyhdr Warning: \headheight is too small (13.6pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.89998pt}.
 
-[25] (out-ruco/2021-ruco-phd-thesis.aux)
+[27] (out-ruco/2021-ruco-phd-thesis.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `2021-ruco-phd-thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `2021-ruco-phd-thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 36DE25ACF1BFC245E0971F649B841868;3562.
+(rerunfilecheck)             Checksum: F2E4E17BF456AF9C54DDB2D702875C52;3707.
  ) 
 Here is how much of TeX's memory you used:
- 54746 strings out of 479014
- 1165090 string characters out of 5859133
- 1860929 words of memory out of 5000000
- 70357 multiletter control sequences out of 15000+600000
- 581079 words of font info for 366 fonts, out of 8000000 for 9000
+ 54755 strings out of 479014
+ 1165323 string characters out of 5859133
+ 1860973 words of memory out of 5000000
+ 70366 multiletter control sequences out of 15000+600000
+ 580901 words of font info for 364 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,17n,120p,10615b,788s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
@@ -2789,11 +2801,11 @@ s/type1/public/lm/lmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1
 /public/rsfs/rsfs10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
 newtx/ztmr.pfb>
-Output written on out-ruco/2021-ruco-phd-thesis.pdf (32 pages, 15785792 bytes).
+Output written on out-ruco/2021-ruco-phd-thesis.pdf (34 pages, 15791292 bytes).
 
 PDF statistics:
- 1070 PDF objects out of 1200 (max. 8388607)
- 896 compressed objects within 9 object streams
- 167 named destinations out of 1000 (max. 500000)
- 102129 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 1091 PDF objects out of 1200 (max. 8388607)
+ 914 compressed objects within 10 object streams
+ 171 named destinations out of 1000 (max. 500000)
+ 102137 words of extra memory for PDF output out of 106986 (max. 10000000)
 

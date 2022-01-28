@@ -5,7 +5,7 @@ This repository ✨ holds Oscar's PhD thesis, also contains all scripts which we
 * [Aestimo ✨](https://github.com/aestimosolver/aestimo.git) 
 * [PGF/TikZ](https://github.com/pgf-tikz/pgf.git)
 
-Also, this repository is it's found in [Dr. L.F. Lastras-Martinez](https://github.com/lflm-spectra-labs-iico) respository group.
+Also, this repository it's found in [Dr. L.F. Lastras-Martinez](https://github.com/lflm-spectra-labs-iico) respository group.
 
 
 

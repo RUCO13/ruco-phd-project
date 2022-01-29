@@ -19,14 +19,14 @@
 \contentsline {subsection}{\numberline {2.3.1}Finite Difference Method}{22}{subsection.2.3.1}%
 \contentsline {section}{\numberline {2.4}Structural Parameters}{22}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Anisotropy model in CQWs }{22}{section.2.5}%
-\contentsline {chapter}{\numberline {3}EXPERIMENTAL DETAILS AND RESULTS}{24}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Samples Description}{25}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Spectroscopy: Experimental setups and experimental results}{28}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Photoluminiscence Spectroscopy (PL)}{29}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Photorreflectance spectroscopy (PR)}{37}{subsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.1}Excitonic effects}{43}{subsubsection.3.2.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2.2}The PR summary}{52}{subsubsection.3.2.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Reflectance Anisotropy Spectroscopy (RAS)}{52}{subsection.3.2.3}%
-\contentsline {chapter}{\numberline {4}CONCLUSIONS}{54}{chapter.4}%
-\contentsline {chapter}{Bibliography}{55}{chapter*.43}%
+\contentsline {chapter}{\numberline {3}EXPERIMENTAL DETAILS AND RESULTS}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Samples Description}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Spectroscopy: Experimental setups and experimental results}{27}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Photoluminiscence Spectroscopy (PL)}{28}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Photorreflectance spectroscopy (PR)}{36}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Excitonic effects}{42}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}The PR summary}{51}{subsubsection.3.2.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Reflectance Anisotropy Spectroscopy (RAS)}{51}{subsection.3.2.3}%
+\contentsline {chapter}{\numberline {4}CONCLUSIONS}{53}{chapter.4}%
+\contentsline {chapter}{Bibliography}{54}{chapter*.43}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

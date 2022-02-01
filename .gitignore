@@ -274,3 +274,15 @@ _minted*
 # ipynb checkpoints
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+
+# more tex extensions
+*.glo-abr
+*.ist
+*.mlf1
+*.mlf2
+*.mlf3
+*.mlt1
+*.mlt2
+*.mlt3
+*.mtc
+*.nomenclature-glo

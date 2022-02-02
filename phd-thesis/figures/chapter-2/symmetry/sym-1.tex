@@ -44,7 +44,7 @@ margin=0mm]{geometry}
 
 \node[anchor=south,inner sep=0mm](s1) at (current page.south)
 	{
-	\includegraphics[width=\textwidth,trim={0cm 1cm 0 0},clip]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/symmetry5-algaas}
+	\includegraphics[width=\textwidth,trim={0cm 5cm 0 0},clip]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/symmetry5-algaas}
 	};
 
 \foreach \i[count=\xi from 0] in {0,1,...,4}
@@ -72,22 +72,30 @@ margin=0mm]{geometry}
 	node [anchor=west,right,midway,white,xshift=0.5cm] {\(\left(1\overline{1}0\right)\)};
 
 
-\shade [ball color=Ga,white] ([xshift=5mm,yshift=4cm]s1.west) circle (0.2) node[label=right:{\Large\, Ga}] { } ;
-\shade [ball color=Al,white] ([xshift=5mm,yshift=3.5cm]s1.west) circle (0.2) node[label=right:{\Large\, Al}] { } ;
-\shade [ball color=As,white] ([xshift=5mm,yshift=3.0cm]s1.west) circle (0.2) node[label=right:{\Large\, As}] { };
+\shade [ball color=Ga,white] ([xshift=-15mm,yshift=4cm]s1.east) circle (0.2) node[anchor=east,label=right:{\Large\, Ga}] { } ;
+\shade [anchor=east,ball color=Al,white] ([xshift=-15mm,yshift=3.5cm]s1.east) circle (0.2) node[label=right:{\Large\, Al}] { } ;
+\shade [anchor=east,ball color=As,white] ([xshift=-15mm,yshift=3.0cm]s1.east) circle (0.2) node[label=right:{\Large\, As}] { };
 
 
-\node[anchor=west,white,xshift=1cm,yshift=1.90cm,scale=1.5]  at (current page.west){$\displaystyle\text{Al$_{x}$Ga$_{1-x}$As}$};
-\node[anchor=center,white,xshift=-0.2cm,yshift=1.90cm,scale=1.5]  at (current page.center){$\displaystyle\text{GaAs}$};
-\node[anchor=east,white,xshift=-1cm,yshift=1.90cm,scale=1.5]  at (current page.east){$\displaystyle\text{Al$_{x}$Ga$_{1-x}$As}$};
+% \node[anchor=west,white,xshift=1cm,yshift=1.90cm,scale=1.5]  at (current page.west){$\displaystyle\text{Al$_{x}$Ga$_{1-x}$As}$};
+% \node[anchor=center,white,xshift=-0.2cm,yshift=1.90cm,scale=1.5]  at (current page.center){$\displaystyle\text{GaAs}$};
+% \node[anchor=east,white,xshift=-1cm,yshift=1.90cm,scale=1.5]  at (current page.east){$\displaystyle\text{Al$_{x}$Ga$_{1-x}$As}$};
 
-\begin{scope}[xshift=2cm,yshift=-5.25cm,rotate around z=0]
-	\draw[very thick,-{Stealth},blue] (0,0,0) -- (1,0,0) 
-			node[anchor=west,white]{$z$};
-	\draw[very thick,-{Stealth},red] (0,0,0) -- (0,1,0) 
-			node[anchor=south,white]{$y$};
-	\draw[very thick,-{Stealth},green] (0,0,0) -- (0,0,1) 
-			node[anchor=north,white]{$x$};
+\begin{scope}[xshift=0.9cm,yshift=-6cm,rotate around z=0,scale=1.5]
+	\draw[very thick,-{Stealth},green] (0,0,0) -- (0,0,1.9) node[anchor=south,white,yshift=2mm,scale=1.5]{$x$};
+	\draw[very thick,-{Stealth},red]   (0,0,0) -- (0,1.9,0) node[anchor=west,white,yshift=-2mm,scale=1.5]{$y$};
+	\draw[very thick,-{Stealth},blue]  (0,0,0) -- (1.9,0,0) node[anchor=west,white,scale=1.5]{$z$};
+	
+	\draw[fill=white,fill opacity=0.1,draw=white,line width=0.05mm] (0,0,0)--(1.5,0,0)--(1.5,1.5,0)--(0,1.5,0)--cycle;
+	\draw[fill=white,fill opacity=0.1,draw=white,line width=0.05mm] (0,0,0)--(0,1.5,0)--(0,1.5,1.5)--(0,0,1.5)--cycle;
+	\draw[fill=white,fill opacity=0.1,draw=white,line width=0.05mm] (0,0,0)--(0,0,1.5)--(1.5,0,1.5)--(1.5,0,0)--cycle;
+
+	\node[canvas is yz plane at x = 0,rotate=270,scale=1.35,font=\boldmath,white] at (0,0.75,0.7) 
+	 {$z_{_{\parallel}}(001)$};
+	\node[canvas is zx plane at y = 0,rotate=90,scale=1.35,font=\boldmath,white] at (0.75,0,0.75) 
+	 {$x_{_{\parallel}}(100)$};
+	 \node[canvas is xy plane at z = 0,rotate=0,scale=1.35,font=\boldmath,white] at (0.75,0.75,0) 
+	 {$y_{_{\parallel}}(010)$};
 \end{scope}
 \end{tikzpicture}
 	

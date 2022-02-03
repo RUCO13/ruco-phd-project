@@ -286,3 +286,7 @@ _minted*
 *.mlt3
 *.mtc
 *.nomenclature-glo
+*.mlf*
+*.mlt*
+
+# foir this repo

@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[
+paperwidth = 14cm, 
+textwidth = 14cm,
+paperheight=7cm, 
+textheight =7cm,
+nohead,
+nofoot,
+nomarginpar,
+margin=0mm]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric}
+\usetikzlibrary{calc,fadings,decorations.pathreplacing}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer,}
+\usepackage{pgfplotstable}
+\usetikzlibrary{3d,spy}
+\usepgfmodule{plot}
+\usepackage{scalerel}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=out-ruco/,suffix=-generated}
+\newcommand*{\xMin}{-3}%
+\newcommand*{\xMax}{10}%
+\newcommand*{\yMin}{-5}%
+\newcommand*{\yMax}{5}%
+\definecolor{As}{RGB}{255,255,0}
+\definecolor{Al}{RGB}{173,216,230}
+\definecolor{Ga}{RGB}{0,128,150}
+
+\definecolor{background}{RGB}{77,77,77}
+
+\definecolor{plane100}{RGB}{0,178,69}
+\definecolor{plane010}{RGB}{0,255,208}
+
+
+\begin{document}
+	\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+
+\draw[fill=background] (current page.north west)--
+					(current page.south west)--
+					(current page.south east)-- 
+					(current page.north east) --cycle;
+
+\node[anchor=north,inner sep=0mm](s1) at (current page.north)
+	{
+	\includegraphics[width=\textwidth,trim={0cm 0cm 0 9cm},clip]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/symmetry7-algaas}
+	};
+
+
+\end{tikzpicture}
+	
+	
+
+\end{document}

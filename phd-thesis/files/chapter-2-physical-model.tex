@@ -23,7 +23,7 @@ It is important to remark which the heterostructure to will study is composed by
 \begin{figure}[h!]
 	\centering
 	\begin{subfigure}{\textwidth}
-		\includegraphics[width=\linewidth]{../figures/chapter-2/symmetry/out-ruco/sym-0}
+		\includegraphics[width=\linewidth]{../figures/chapter-2/symmetry/out/sym-0}
 		\phantomsubcaption\label{subfig:subsubsection-2.1-crystal-rspace-a)}
 		\phantomsubcaption\label{subfig:subsubsection-2.1-crystal-kspace-b)}
 	\end{subfigure}
@@ -80,11 +80,45 @@ Although that is well-known and described at \cite{tronc2000bound,ivchenko1996he
 In therms of band structure the symmetry breaking, or symmetry reducing, generate changes, above all over the VB of QWs. This was expected, the reason is the due to the \gls{BZ} zone is reduce to $\Gamma$ point. From here starts the relevance of $\Gamma$ and the events which ocurrs are the next: the first one event which occurs is over VB, due to the \gls{BZ} is reduces to  $\Gamma$ the \gls{VB} it splits for heavy- and light-holes. This is, from bulk as show the band structure in \Cref{fig:subsubsection-1.1.1-GaAsbands-1} the \gls{VB} is four-fould degenerate, then in QWs the heavy- and light- holes bands splits, so,  it gets two-fold degeneracy as shows in \Cref{fig:subsection-1.2-single-quantum-well-scheme2}. In fact, when refer to $\Gamma$ in really it's refer to near band extrema, in case of GaAs and \algaas  being direct band gap semiconductors this really clearly. The consequences of bands split it's the reazon which the effective mass approximation (\gls{efa}) can works, thanks to that the  \sch's equation can solve as one dimensional equation over both \gls{CB} and \gls{VB} band  under structure material parameters. 
 Then, the facility of solve \sch's equation it's limited to only getting information about transitions, it is important to remember which this solution is over real-space, for this reason, it says that the potential profile is called a band edge profile and can't confuse with the band structure. So, this is the principle of symmetry reduction in QWs structures, in the next section will be addressed the symmetry in CQWs structures and the mechanisms to reduce it. 
 
+
+
+
+
+
+
+\subsection{Coupled Quantum Wells}
+\label{subsubsec:chapter-2-coupled-quantum-wells}
+\vspace{-10mm}
+The symmetry breaking doesn't only wight in mathematical aspect, for physics this concept with leads to discover many important and exotic phenomena. When a system reduces its symmetry, their physical properties changes. It's the change in physical properties which reason to study it, in semiconductors as QWs the symmetry breaking starts with modify their band structure (fingerprint) splitting the valence band and reducing the degeneracy, although it  can be the first one to appear  their consequences get more relevance. \\*
+In therms to study changes in physical properties in this work it's focus on optical properties, the light matter interaction gets information about the symmetry breaking through transitions.  The GaAs QWs as a direct band gap semiconductor are excellent platform to study light-matter interaction and the effects on symmetry. It's important to remark  that from here the excitons  played it  an important role, in fact, over them falls  the physical interpretation of optical properties.  
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}{\textwidth}
+		\includegraphics[width=\linewidth]{../figures/chapter-2/symmetry/out/sym-2}
+		\phantomsubcaption\label{subfig:subsubsec:chapter-2-coupled-quantum-wells-a)}
+		\phantomsubcaption\label{subfig:subsubsec:chapter-2-coupled-quantum-wells-b)}
+	\end{subfigure}
+	\caption[CB,VB]
+	{
+		General scheme to describe a SCQWs structure. In this case, the barriers are it composed by \algaas and the wells are of GaAs with the same width, while the coupling barrier also composed by \algaas. In top \subref{subfig:subsection-1.2-single-quantum-well-scheme2-a)} denotes both  \gls{CB} and   \gls{VB}  edges profiles over $z$-axis (Real-space) direction. Then in bottom \subref{subfig:subsection-1.2-single-quantum-well-scheme2-b)}, it represents the atoms structure to CQWs. 
+	}\label{fig:subsubsec:chapter-2-coupled-quantum-wells}
+\end{figure}
+
+Then, in the case, of Coupled Quantum Wells (\gls{CQWs}) through excitons get optical properties really it's interesting, although, to get that properties the CQWs should get a double reduce symmetry from $T_{d}$ , even if that's not obtained it's important to anisotropy spectroscopy get it as a basis. 
+Then, firstly, it's start with the symmetric coupled quantum wells (\gls{SCQWs}), these are QWs with same width and coupled with a thin barrier, this barrier must be enough thinner so that electron wave function can be overlapping along potential of the two wells. 
+For these structures the symmetry is also $D_{2d}$ as in single QW, it's important to say which, if they aren't  consider the  interface defects as roughness it's possible to consider  ideal interfaces, then the same symmetry operations works in both single QW like a SCQWs. 
+
+From \Cref{fig:subsubsec:chapter-2-coupled-quantum-wells} it's possible to compare which in contrast with the SQW (\Cref{fig:subsection-1.2-single-quantum-well-scheme}) is the same case with exception to the two QWs, although it's true that the technology of growth it's really accurate, the interfaces aren't be exempt  free of them. Even, the rough by possible of Al impurity can cause the possible segregation of this, then it's important the Al concentration $x$ \cite{chand1990origin,tillmann2002direct}. 
+
+
+
+
+
+
 \subsection{Special symmetry reduction from $D_{2d}\to C_{2v}$}
 \label{subsubsec:chapter-2-symmetry-from-2d2-to-c2v}
 \vspace{-10mm}
-In order to 
-
 
 
 
@@ -99,8 +133,6 @@ In order to
 \section{General revision of numerical methods}
 Some physical systems can be explained through models that can solved analytically assume nearby experimental parameters but in realistic cases analytical models doesn't enough to obtain approximation of the experimental results. In past computational time and technology limitations they did not allow solving numerically large system of equations.  Nowadays, numerical solutions do not represent a problem because computational systems  allows solving large system of equations in  
 a few time. In this work was implemented  a numerical solution of one-dimensional \sch using finite-difference method the principal reason to use this is that, basically represent the solution of an eigen-value problem. 
-
-The solution of typical problem in quantum mechanics is the single  well with infinite  barriers, this is a one  electron trapping inside a well like a see in the  next figure 
 
 
 
@@ -119,19 +151,6 @@ The electron has zero potential energy in the region $0<x<a$ where $a$ is the wi
 \subsection{Finite Difference Method}
 
 
-
-
-
-
-\section{Structural Parameters}
-
-
-%\begin{figure}
-%	\centering
-%	\includegraphics[width=0.3\textwidth]{./CHAPTER-3/SAMPLE-DESCRIPTION/SAMPLE-DESCRIPTION}
-%	\caption{Scheme to samples }
-%	\label{fig:CH2-sample-description}
-%\end{figure}
 
 
 

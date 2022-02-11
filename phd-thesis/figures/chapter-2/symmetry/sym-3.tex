@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage[
+paperwidth = 14cm, 
+textwidth = 14cm,
+paperheight=8cm, 
+textheight =8cm,
+nohead,
+nofoot,
+nomarginpar,
+margin=0mm]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric}
+\usetikzlibrary{calc,fadings,decorations.pathreplacing}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer,}
+\usepackage{pgfplotstable}
+\usetikzlibrary{3d,spy}
+\usepgfmodule{plot}
+\usepackage{scalerel}
+\usepackage{graphicx}
+\usepackage{tikz-dimline}
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=out/,suffix=-generated}
+\definecolor{As}{RGB}{255,255,0}
+\definecolor{Al}{RGB}{173,216,230}
+\definecolor{Ga}{RGB}{0,128,150}
+
+\definecolor{background}{RGB}{77,77,77}
+
+\definecolor{plane100}{RGB}{0,178,69}
+\definecolor{plane010}{RGB}{0,255,208}
+
+\newcommand*{\xMin}{0}%
+\newcommand*{\xMax}{14}%
+\newcommand*{\yMin}{-7}%
+\newcommand*{\yMax}{0}%
+
+\begin{document}
+	\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\draw[fill=background] (current page.north west)--
+	(current page.south west)--
+	(current page.south east)-- 
+	(current page.north east) --cycle;
+
+% \foreach \i in {\xMin,...,\xMax} {
+% 	\draw [very thin,gray] (\i,\yMin) -- (\i,\yMax)  node [below] at (\i,\yMin) {$\i$};
+% }
+% \foreach \i in {\yMin,...,\yMax} {
+% 	\draw [very thin,gray] (\xMin,\i) -- (\xMax,\i) node [left] at (\xMin,\i) {$\i$};
+% }
+
+	
+\node[anchor=south,inner sep=0mm,yshift=0mm,xscale=-1](s1) at (current page.south)
+	{
+	\includegraphics[width=\textwidth,trim={0cm 0cm 0 0cm},clip]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/acqws-symmetry0-out.pdf}
+	};
+
+\begin{scope}[yshift=-24mm]
+
+\def\amp{0.5mm}
+\def\len{7mm}
+
+\draw[fill=Al,fill opacity=0.2,draw=Al](-0.3,-5)--(3.6,-5) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(3.6,-2)} --(0,-2) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(0,-5)};
+
+
+\draw[fill=Ga,fill opacity=0.2,draw=Ga](4.0,-5)--(4.8,-5) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(4.8,-2)} --(4.0,-2) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(4.0,-5)};
+
+
+\draw[fill=Al,fill opacity=0.2,draw=Al](5.2,-5)--(6.0,-5) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(6.0,-2)} --(5.2,-2) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(5.2,-5)};
+
+
+\draw[fill=Ga,fill opacity=0.2,draw=Ga](6.3,-5)--(9,-5) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(9,-2)} --(6.3,-2) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(6.3,-5)};
+
+\draw[fill=Al,fill opacity=0.2,draw=Al](9.3,-5)--(13,-5) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(13,-2)} --(9.3,-2) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(9.3,-5)};
+\end{scope}
+
+
+\begin{scope}[yshift=0cm,rotate around y=180,xshift=12.8cm]
+	\draw[white,densely dashed](0,0)--++(3.8,0)--++(0,-2)--++
+	(3,0)--++(0,2)--++(1.0,0)--++(0,-2)--++(1.2,0)--++(0,2)--++(4,0);
+	
+	\draw[white, densely dashed] (0,-4)--++(3.8,0)--++(0,1)--++
+	(3,0)--++(0,-1)--++(1.0,0)--++(0,1)--++(1.2,0)--++(0,-1)--++(4,0);
+
+\node[xshift=0mm,yshift=0mm](a1) at (3.8,-1){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-1-out.pdf}};
+
+\node[anchor = center,xshift=0mm,yshift=0mm](a2) at (3.8+3,-1){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-0-out.pdf}};
+
+\node[anchor=center,xshift=0mm,yshift=0mm](a3) at (3.8+3+1,-1){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-1-out.pdf}};
+
+\node[anchor = center,xshift=0mm,yshift=0mm](a4) at (3.8+3+1+1.2,-1){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-0-out.pdf}};
+\end{scope}
+
+
+\begin{scope}[xshift=0.9cm,yshift=-2.7cm,rotate around y=-6,scale=1.2]
+	\draw[very thick,-{Stealth},green] (0,0,0) -- (0,0,1.9) node[anchor=south,white,yshift=2mm,scale=1.5]{$x$};
+	\draw[very thick,-{Stealth},red]   (0,0,0) -- (0,1.9,0) node[anchor=west,white,yshift=-2mm,scale=1.5]{$y$};
+	\draw[very thick,-{Stealth},blue]  (0,0,0) -- (1.9,0,0) node[anchor=west,white,scale=1.5]{$z$};
+	
+	\draw[fill=white,fill opacity=0.1,draw=white,line width=0.05mm] (0,0,0)--(1.5,0,0)--(1.5,1.5,0)--(0,1.5,0)--cycle;
+	\draw[fill=white,fill opacity=0.1,draw=white,line width=0.05mm] (0,0,0)--(0,1.5,0)--(0,1.5,1.5)--(0,0,1.5)--cycle;
+	\draw[fill=white,fill opacity=0.1,draw=white,line width=0.05mm] (0,0,0)--(0,0,1.5)--(1.5,0,1.5)--(1.5,0,0)--cycle;
+
+	\node[canvas is yz plane at x = 0,rotate=270,scale=1.35,font=\boldmath,white] at (0,0.75,0.7) 
+	 {$z_{_{\parallel}}(001)$};
+	\node[canvas is zx plane at y = 0,rotate=90,scale=1.35,font=\boldmath,white] at (0.75,0,0.75) 
+	 {$x_{_{\parallel}}(100)$};
+	 \node[canvas is xy plane at z = 0,rotate=0,scale=1.35,font=\boldmath,white] at (0.75,0.75,0) 
+	 {$y_{_{\parallel}}(010)$};
+\end{scope}
+
+
+
+\node[anchor=north east,fill=blue,text=white,inner sep=0mm,scale=1.5] (l1) at (current page.north east){(a)};
+
+\node[anchor=east, fill=blue,text=white,inner sep=0mm,scale=1.5] (l1) at (current page.east){(b)};
+
+
+
+\dimline[color=white,
+	label style={fill=background,scale=1.2},
+	line style={arrows=Stealth-Stealth,line width=0.2mm},
+	extension start length=-0.2,
+	extension end length=-0.2] {(3.8,-2.4)}{(3.8+1.2,-2.4)}{$d_{1}$};
+
+\dimline[color=white,
+	label style={fill=background,scale=1.2},
+	line style={arrows=Stealth-Stealth,line width=0.2mm},
+	extension start length=-0.2,
+	extension end length=-0.2] {(3.8+1.2+1,-2.4)}{(3.8+3+1+1.2,-2.4)}{$d_{2}$};
+
+
+\end{tikzpicture}
+	
+	
+
+
+\end{document}

@@ -20,6 +20,7 @@ margin=0mm]{geometry}
 \usepackage{scalerel}
 \usepackage{graphicx}
 \usepackage{epstopdf}
+\usepackage{tikz-dimline}
 \epstopdfsetup{outdir=out/,suffix=-generated}
 \definecolor{As}{RGB}{255,255,0}
 \definecolor{Al}{RGB}{173,216,230}
@@ -58,19 +59,22 @@ margin=0mm]{geometry}
 	};
 
 \begin{scope}[yshift=-24mm]
+\def\amp{0.5mm}
+\def\len{7mm}
+	
 
-\draw[fill=Al,fill opacity=0.2,draw=Al](0,-5)--(3.75,-5) decorate [decoration={zigzag,segment length=6mm,amplitude=1mm}]{--(3.75,-2)} --(0,-2) decorate [decoration={zigzag,segment length=6mm,amplitude=1mm}]{--(0,-5)};
-
-
-\draw[fill=Ga,fill opacity=0.2,draw=Ga](4.0,-5)--(5.4,-5) decorate [decoration={zigzag,segment length=6mm,amplitude=1mm}]{--(5.4,-2)} --(4.0,-2) decorate [decoration={zigzag,segment length=6mm,amplitude=1mm}]{--(4.0,-5)};
-
-
-\draw[fill=Al,fill opacity=0.2,draw=Al](5.8,-5)--(6.6,-5) decorate [decoration={zigzag,segment length=6mm,amplitude=1mm}]{--(6.6,-2)} --(5.8,-2) decorate [decoration={zigzag,segment length=6mm,amplitude=1mm}]{--(5.8,-5)};
+\draw[fill=Al,fill opacity=0.2,draw=Al](0,-5)--(3.75,-5) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(3.75,-2)} --(0,-2) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(0,-5)};
 
 
-\draw[fill=Ga,fill opacity=0.2,draw=Ga](6.9,-5)--(8.3,-5) decorate [decoration={zigzag,segment length=6mm,amplitude=1mm}]{--(8.3,-2)} --(6.9,-2) decorate [decoration={zigzag,segment length=6mm,amplitude=1mm}]{--(6.9,-5)};
+\draw[fill=Ga,fill opacity=0.2,draw=Ga](4.0,-5)--(5.4,-5) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(5.4,-2)} --(4.0,-2) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(4.0,-5)};
 
-\draw[fill=Al,fill opacity=0.2,draw=Al](8.7,-5)--(12.8,-5) decorate [decoration={zigzag,segment length=6mm,amplitude=1mm}]{--(12.8,-2)} --(8.7,-2) decorate [decoration={zigzag,segment length=6mm,amplitude=1mm}]{--(8.7,-5)};
+
+\draw[fill=Al,fill opacity=0.2,draw=Al](5.8,-5)--(6.6,-5) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(6.6,-2)} --(5.8,-2) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(5.8,-5)};
+
+
+\draw[fill=Ga,fill opacity=0.2,draw=Ga](6.9,-5)--(8.3,-5) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(8.3,-2)} --(6.9,-2) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(6.9,-5)};
+
+\draw[fill=Al,fill opacity=0.2,draw=Al](8.7,-5)--(12.8,-5) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(12.8,-2)} --(8.7,-2) decorate [decoration={snake,segment length=\len,amplitude=\amp}]{--(8.7,-5)};
 \end{scope}
 
 
@@ -81,13 +85,13 @@ margin=0mm]{geometry}
 	\draw[white, densely dashed] (0,-4)--++(3.8,0)--++(0,1)--++
 	(1.8,0)--++(0,-1)--++(1.2,0)--++(0,1)--++(1.7,0)--++(0,-1)--++(4,0);
 
-\node[xshift=0mm,yshift=0mm](a1) at (3.8,-1){\includegraphics[width=0.1\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-0-out.pdf}};
+\node[xshift=0mm,yshift=0mm](a1) at (3.8,-1){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-0-out.pdf}};
 
-\node[anchor = west,xshift=1.5mm,yshift=0.0cm](a2) at (a1.east){\includegraphics[width=0.1\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-1-out.pdf}};
+\node[anchor = west,xshift=1.5mm,yshift=0.0cm](a2) at (a1.east){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-1-out.pdf}};
 
-\node[xshift=0mm,yshift=0mm](a3) at (3.8+1.2+1.8,-1){\includegraphics[width=0.1\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-0-out.pdf}};
+\node[xshift=0mm,yshift=0mm](a3) at (3.8+1.2+1.8,-1){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-0-out.pdf}};
 
-\node[anchor = west,xshift=1mm,yshift=0.0cm](a4) at (a3.east){\includegraphics[width=0.1\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-1-out.pdf}};
+\node[anchor = west,xshift=1mm,yshift=0.0cm](a4) at (a3.east){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-1-out.pdf}};
 \end{scope}
 
 
@@ -113,6 +117,19 @@ margin=0mm]{geometry}
 \node[anchor=north east,fill=blue,text=white,inner sep=0mm,scale=1.5] (l1) at (current page.north east){(a)};
 
 \node[anchor=east, fill=blue,text=white,inner sep=0mm,scale=1.5] (l1) at (current page.east){(b)};
+
+
+\dimline[color=white,
+	label style={fill=background,scale=1.2},
+	line style={arrows=Stealth-Stealth,line width=0.3mm},
+	extension start length=-0.2,
+	extension end length=-0.2] {(3.8,-2.4)}{(5.6,-2.4)}{$d_{1}$};
+
+\dimline[color=white,
+	label style={fill=background,scale=1.2},
+	line style={arrows=Stealth-Stealth,line width=0.2mm},
+	extension start length=-0.2,
+	extension end length=-0.2] {(3.8+1.2+1.8,-2.4)}{(3.8+1.2+1.8+1.7,-2.4)}{$d_{2}$};
 
 \end{tikzpicture}
 	

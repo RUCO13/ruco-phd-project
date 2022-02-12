@@ -84,8 +84,6 @@ Then, the facility of solve \sch's equation it's limited to only getting informa
 
 
 
-
-
 \subsection{Coupled Quantum Wells}
 \label{subsubsec:chapter-2-coupled-quantum-wells}
 \vspace{-10mm}
@@ -95,14 +93,14 @@ In therms to study changes in physical properties in this work it's focus on opt
 \begin{figure}[h!]
 	\centering
 	\begin{subfigure}{\textwidth}
-		\includegraphics[width=\linewidth]{../figures/chapter-2/symmetry/out/sym-2}
-		\phantomsubcaption\label{subfig:subsubsec:chapter-2-coupled-quantum-wells-a)}
-		\phantomsubcaption\label{subfig:subsubsec:chapter-2-coupled-quantum-wells-b)}
+		\includegraphics[width=\linewidth]{../figures/chapter-2/symmetry/out/sym-2-wob}
+		\phantomsubcaption\label{subfig:subsubsec:chapter-2-scoupled-quantum-wells-a}
+		\phantomsubcaption\label{subfig:subsubsec:chapter-2-scoupled-quantum-wells-b}
 	\end{subfigure}
 	\caption[CB,VB]
 	{
-		General scheme to describe a SCQWs structure. In this case, the barriers are it composed by \algaas and the wells are of GaAs with the same width, while the coupling barrier also composed by \algaas. In top \subref{subfig:subsection-1.2-single-quantum-well-scheme2-a)} denotes both  \gls{CB} and   \gls{VB}  edges profiles over $z$-axis (Real-space) direction. Then in bottom \subref{subfig:subsection-1.2-single-quantum-well-scheme2-b)}, it represents the atoms structure to CQWs. 
-	}\label{fig:subsubsec:chapter-2-coupled-quantum-wells}
+		General scheme to describe a \gls{SCQWs} structure. In this case, the barriers are it composed by \algaas and the wells are of GaAs with the same width ($d_{1}=d_{2}$), while the coupling barrier also composed by \algaas. In top \subref{subfig:subsubsec:chapter-2-scoupled-quantum-wells-a} denotes both  \gls{CB} and   \gls{VB}  edges profiles over $z$-axis (Real-space) direction. Then in bottom \subref{subfig:subsubsec:chapter-2-scoupled-quantum-wells-b}, it represents the atoms structure to CQWs. 
+	}\label{fig:subsubsec:chapter-2-scoupled-quantum-wells}
 \end{figure}
 
 Then, in the case, of Coupled Quantum Wells (\gls{CQWs}) through excitons get optical properties really it's interesting, although, to get that properties the CQWs should get a double reduce symmetry from $T_{d}$ , even if that's not obtained it's important to anisotropy spectroscopy get it as a basis. 
@@ -114,23 +112,26 @@ From \Cref{fig:subsubsec:chapter-2-coupled-quantum-wells} it's possible to compa
 \begin{figure}[h!]
 	\centering
 	\begin{subfigure}{\textwidth}
-		\includegraphics[width=\linewidth]{../figures/chapter-2/symmetry/out/sym-3}
-		\phantomsubcaption\label{subfig:subsubsec:chapter-2-acoupled-quantum-wells-a)}
-		\phantomsubcaption\label{subfig:subsubsec:chapter-2-acoupled-quantum-wells-b)}
+	\includegraphics[width=\linewidth]{../figures/chapter-2/symmetry/out/sym-3-wob}
+	\phantomsubcaption\label{subfig:subsubsec:chapter-2-acoupled-quantum-wells-a}
+	\phantomsubcaption\label{subfig:subsubsec:chapter-2-acoupled-quantum-wells-b}
 	\end{subfigure}
 	\caption[CB,VB]
-	{
+	{General scheme corresponds to \gls{ACQWs} structure.
+	As in \Cref{subfig:subsubsec:chapter-2-coupled-quantum-wells-b}, the structure is basically same both in barriers composition and dimensions as well as the coupling barrier, only changes the relative position of this. Then, result that one of \gls{QW} is wider than other ($d_{1}<d_{2}$), so, this reason causes the asymmetry in structure. Also, here in top 
+	\subref{subfig:subsubsec:chapter-2-acoupled-quantum-wells-a} draws the potential profile along $z$, and bottom 
+	\subref{subfig:subsubsec:chapter-2-acoupled-quantum-wells-b} scheme the atoms structure where is clear that only changes coupling barrier relative position with respect to \Cref{subfig:subsubsec:chapter-2-scoupled-quantum-wells-b}
 	}\label{fig:subsubsec:chapter-2-acoupled-quantum-wells}
 \end{figure}
 
 Remember that as Courie mentioned\cite{curie1894symetrie,sep-symmetry-breaking,shubnikov1988works}:  a system under perturbation reduces their symmetry to a subgroup of  original symmetry group, then, if now starts with $D_{2}$ symmetry this subgroup can only reduce to a subgroup of six possibles, into them is $C_{2v}$ subgroup. Previously it mentioned which, exist several mechanisms can reduce the symmetry, these are usually called  perturbations. These perturbations can be nature by different sources, \emph{in this work  has been it found a novel source which reduces the symmetry,  in other words,  broken symmetry  without needed external source as applied electric or magnetic fields}.  \\*
 In the next section, it details the reason which it's called  a novel source of reduce symmetry, therefore, before continue it's important to mentioned that the simple reason of modify the one well width in CQWs structures makes the system loses fourfold rotations over $z_{_{\parallel}}(001)$  then, the symmetry it reduces. 
 
-If compares \Cref{fig:subsubsec:chapter-2-coupled-quantum-wells,fig:subsubsec:chapter-2-acoupled-quantum-wells} it's clearly that the representative part of the coupling barrier only shift over $z$, this allows to simulate a \gls{ACQWs} heterostructure, this mean which QW is wider than the other, so, it gets an asymmetric structure which along $z$ losses the rotation symmetry. Also, if it's uses symmetry code packages as \gls{ase} or \gls{Spglib} which applies consecutively symmetry operations to both CQWs structures, it results in a $D_{2d}$ and $C_{2v}$ for \gls{SCQWs} and \gls{ACQWs} respectively.  
-
+If compares \Cref{fig:subsubsec:chapter-2-scoupled-quantum-wells,fig:subsubsec:chapter-2-acoupled-quantum-wells} it's clearly that the representative part of the coupling barrier only shift over $z$, this allows to simulate a \gls{ACQWs} heterostructure, this mean which QW is wider than the other, so, it gets an asymmetric structure which along $z$ losses the rotation symmetry. Also, if it's uses symmetry code packages as \gls{ase} or \gls{Spglib} which applies consecutively symmetry operations to both CQWs structures, it results in a $D_{2d}$ and $C_{2v}$ for \gls{SCQWs} and \gls{ACQWs} respectively.  
+ 
 \subsection{Special symmetry reduction from $D_{2d}\to C_{2v}$}
 \label{subsubsec:chapter-2-symmetry-from-2d2-to-c2v}
-\vspace{-10mm}
+\vspace{-10mm} 
 
 
 

@@ -26,7 +26,8 @@ margin=0mm]{geometry}
 \definecolor{Al}{RGB}{173,216,230}
 \definecolor{Ga}{RGB}{0,128,150}
 
-\definecolor{background}{RGB}{77,77,77}
+%\definecolor{background}{RGB}{77,77,77}
+\definecolor{background}{RGB}{255,255,255}
 
 \definecolor{plane100}{RGB}{0,178,69}
 \definecolor{plane010}{RGB}{0,255,208}
@@ -113,9 +114,10 @@ margin=0mm]{geometry}
 
 
 
-\node[anchor=north east,fill=blue,text=white,inner sep=0mm,scale=1.5] (l1) at (current page.north east){(a)};
+\node[anchor=north east,fill=blue,text=white,inner sep=0mm,scale=1.5,font=\bfseries] (l1) at (current page.north east){(a)};
 
-\node[anchor=east, fill=blue,text=white,inner sep=0mm,scale=1.5] (l1) at (current page.east){(b)};
+\node[anchor=south east, fill=blue,text=white,inner sep=0mm,scale=1.5,font=\bfseries] (l1) at (current page.south east){(b)};
+
 
 
 

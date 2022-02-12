@@ -289,4 +289,5 @@ _minted*
 *.mlf*
 *.mlt*
 
-# foir this repo
+# foir this repo doesn't consider eps files
+*.eps

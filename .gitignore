@@ -1,4 +1,6 @@
 ## Core latex/pdflatex auxiliary files:
+# for this repo doesn't consider eps files
+*.eps
 *.aux
 *.lof
 *.log
@@ -289,5 +291,3 @@ _minted*
 *.mlf*
 *.mlt*
 
-# foir this repo doesn't consider eps files
-*.eps

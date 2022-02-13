@@ -67,7 +67,7 @@ But, what is  the importance to focussing on that?. The importance of symmetry b
 \vspace{-10mm}
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=\linewidth]{../figures/chapter-2/symmetry/out/sym-1}
+		\includegraphics[width=\linewidth]{../figures/chapter-2/symmetry/out/sym-1-wob}
 	\caption{In this figure, it's schematized the atom arrangement of \algaas/GaAs/\algaas single QW. At bottom can see the atom structure assuming the Al concentration to barriers, then, in middle of figure draws the conduction band edge as a potential profile, at interfaces between the change from barrier to well and vice versa,  are located the matched atoms, here it can observe that at these positions (interface) the symmetry of changed.  At top, it's added the atoms' basis where it has taken the Arsenic as central atom, and scheme the continues rotation over the $y$-axis. }
 	\label{fig:subsubsection-2.2-qws-symmetry}
 \end{figure}
@@ -97,9 +97,9 @@ In therms to study changes in physical properties in this work it's focus on opt
 		\phantomsubcaption\label{subfig:subsubsec:chapter-2-scoupled-quantum-wells-a}
 		\phantomsubcaption\label{subfig:subsubsec:chapter-2-scoupled-quantum-wells-b}
 	\end{subfigure}
-	\caption[CB,VB]
+	\caption
 	{
-		General scheme to describe a \gls{SCQWs} structure. In this case, the barriers are it composed by \algaas and the wells are of GaAs with the same width ($d_{1}=d_{2}$), while the coupling barrier also composed by \algaas. In top \subref{subfig:subsubsec:chapter-2-scoupled-quantum-wells-a} denotes both  \gls{CB} and   \gls{VB}  edges profiles over $z$-axis (Real-space) direction. Then in bottom \subref{subfig:subsubsec:chapter-2-scoupled-quantum-wells-b}, it represents the atoms structure to CQWs. 
+		General scheme to describe a SCQWs structure. In this case, the barriers are it composed by \algaas and the wells are of GaAs with the same width ($d_{1}=d_{2}$), while the coupling barrier also composed by \algaas. In top \subref{subfig:subsubsec:chapter-2-scoupled-quantum-wells-a} denotes both  CB and VB  edges profiles over $z$-axis (Real-space) direction. Then in bottom \subref{subfig:subsubsec:chapter-2-scoupled-quantum-wells-b}, it represents the atoms structure to CQWs. 
 	}\label{fig:subsubsec:chapter-2-scoupled-quantum-wells}
 \end{figure}
 
@@ -116,9 +116,9 @@ From \Cref{fig:subsubsec:chapter-2-coupled-quantum-wells} it's possible to compa
 	\phantomsubcaption\label{subfig:subsubsec:chapter-2-acoupled-quantum-wells-a}
 	\phantomsubcaption\label{subfig:subsubsec:chapter-2-acoupled-quantum-wells-b}
 	\end{subfigure}
-	\caption[CB,VB]
-	{General scheme corresponds to \gls{ACQWs} structure.
-	As in \Cref{subfig:subsubsec:chapter-2-coupled-quantum-wells-b}, the structure is basically same both in barriers composition and dimensions as well as the coupling barrier, only changes the relative position of this. Then, result that one of \gls{QW} is wider than other ($d_{1}<d_{2}$), so, this reason causes the asymmetry in structure. Also, here in top 
+	\caption
+	{General scheme corresponds to ACQWs structure.
+	As in \Cref{subfig:subsubsec:chapter-2-scoupled-quantum-wells-b}, the structure is basically same both in barriers composition and dimensions as well as the coupling barrier, only changes the relative position of this. Then, result that one of QW is wider than other ($d_{1}<d_{2}$), so, this reason causes the asymmetry in structure. Also, here in top 
 	\subref{subfig:subsubsec:chapter-2-acoupled-quantum-wells-a} draws the potential profile along $z$, and bottom 
 	\subref{subfig:subsubsec:chapter-2-acoupled-quantum-wells-b} scheme the atoms structure where is clear that only changes coupling barrier relative position with respect to \Cref{subfig:subsubsec:chapter-2-scoupled-quantum-wells-b}
 	}\label{fig:subsubsec:chapter-2-acoupled-quantum-wells}
@@ -130,16 +130,20 @@ In the next section, it details the reason which it's called  a novel source of 
 If compares \Cref{fig:subsubsec:chapter-2-scoupled-quantum-wells,fig:subsubsec:chapter-2-acoupled-quantum-wells} it's clearly that the representative part of the coupling barrier only shift over $z$, this allows to simulate a \gls{ACQWs} heterostructure, this mean which QW is wider than the other, so, it gets an asymmetric structure which along $z$ losses the rotation symmetry. Also, if it's uses symmetry code packages as \gls{ase} or \gls{Spglib} which applies consecutively symmetry operations to both CQWs structures, it results in a $D_{2d}$ and $C_{2v}$ for \gls{SCQWs} and \gls{ACQWs} respectively.  
  
 \subsection{Special symmetry reduction from $D_{2d}\to C_{2v}$}
-\label{subsubsec:chapter-2-symmetry-from-2d2-to-c2v}
+\label{subsubsec:chapter-2-special-symmetry}
 \vspace{-10mm} 
 
+In this section it's important discuss the importance of $C_{2v}$ symmetry, which is the basis of this work. As previously commented, in \gls{ACQWs} posses $C_{2v}$ symmetry point group, and it's this the \emph{holy grail} in solid state semiconductor physics 
 
 
 
 
-
-
-
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{../figures/chapter-2/symmetry/out/roadmap}
+	\caption{}
+	\label{fig:subsubsec:chapter-2-special-symmetry--roadmap}
+\end{figure}
 
 
 \newpage

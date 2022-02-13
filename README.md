@@ -1,5 +1,5 @@
 # Oscar's PhD Thesis :mexico: 
-This repository ✨ holds Oscar's PhD thesis, also contains all scripts which were used in it. Here, it's added a copy of the PDF thesis file, this is held at phd-thesis/out-ruco folder. The phd-codes folder, holds codes that were employed to generate both images and calculations, our scripts were developed and improved thanks to repositories such as:
+This repository ✨ holds Oscar's PhD thesis, also contains all scripts which were used in it. Here, it's added a copy of the PDF thesis file, this is held at phd-thesis/out folder. The scripts folder, holds codes that were employed to generate both images and calculations, our scripts were developed and improved thanks to repositories such as:
 * [ASE ✨](https://gitlab.com/ase/ase.git) 
 * [SOLCORE ✨](https://github.com/qpv-research-group/solcore5.git)
 * [Aestimo ✨](https://github.com/aestimosolver/aestimo.git) 

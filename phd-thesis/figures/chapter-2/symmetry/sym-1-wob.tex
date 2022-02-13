@@ -41,39 +41,39 @@ margin=0mm]{geometry}
 \begin{tikzpicture}[remember picture,overlay]
 
     \def\textplanecolor{black}
-\draw[fill=background] (current page.north west)--
-					(current page.south west)--
-					(current page.south east)-- 
-					(current page.north east) --cycle;
+% \draw[fill=background] (current page.north west)--
+% 					(current page.south west)--
+% 					(current page.south east)-- 
+% 					(current page.north east) --cycle;
 
 \node[anchor=south,inner sep=0mm](s1) at (current page.south)
 	{
-	\includegraphics[width=\textwidth,trim={0cm 0cm 0 0},clip]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/sqw-symmetry0-out}
+	\includegraphics[width=\textwidth,trim={0cm 0cm 0 0},clip]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/sqw-symmetry0-out}
 	};
 
 \foreach \i[count=\xi from 0] in {0,1,...,4}
 	{
-	\node[anchor=north west,inner sep=0mm] at ([xshift=\xi*2.9 cm]current page.north west){\includegraphics[width=0.23\textwidth,trim={5cm 0 0.1cm 0},clip]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-rot-\i-out}};
+	\node[anchor=north west,inner sep=0mm] at ([xshift=\xi*2.9 cm]current page.north west){\includegraphics[width=0.23\textwidth,trim={5cm 0 0.1cm 0},clip]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/algaas-rot-\i}};
 
 	};
 
-\node[xshift=-1.95cm,yshift=-0.5cm](a1) at (current page.center){\includegraphics[width=0.2\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-0-out.pdf}};
+\node[xshift=-1.95cm,yshift=-0.5cm](a1) at (current page.center){\includegraphics[width=0.2\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/algaas-interface-0-out.pdf}};
 
-\node[anchor = west,xshift=0.5cm,yshift=0.0cm](a2) at (a1.east){\includegraphics[width=0.2\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-1-out.pdf}};
+\node[anchor = west,xshift=0.5cm,yshift=0.0cm](a2) at (a1.east){\includegraphics[width=0.2\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/algaas-interface-1-out.pdf}};
 
 \draw[densely dashed,\textplanecolor,line width=0.5mm] 
-	([yshift=2.25cm]current page.west)--
-	([yshift=2.75cm]a1.center)--
+	([yshift=1.9cm]current page.west)--
+	([yshift=2.4cm]a1.center)--
 	([yshift=-3cm]a1.center)--
 	([yshift=-3cm,xshift=3.8cm]a1.center)--
-	([yshift=2.75cm]a2.center)--
-	([yshift=2.25cm]current page.east);
+	([yshift=2.4cm]a2.center)--
+	([yshift=1.9cm]current page.east);
 
 
 \draw[fill = Al] ([yshift=2.75cm]current page.west) rectangle ++(1,0.3) 
-	node [anchor=west,right,midway,white,xshift=0.5cm] {\(\left(100\right)\)};
+	node [anchor=west,right,midway,xshift=0.5cm] {\(\left(100\right)\)};
 \draw[fill = Ga] ([yshift=2.4cm]current page.west) rectangle ++(1,0.3) 
-	node [anchor=west,right,midway,white,xshift=0.5cm] {\(\left(010\right)\)};
+	node [anchor=west,right,midway,xshift=0.5cm] {\(\left(010\right)\)};
 
 
 \shade [ball color=Ga,] ([xshift=-15mm,yshift=4cm]s1.east) circle (0.2) node[anchor=east,label=right:{\Large\, Ga}] { } ;

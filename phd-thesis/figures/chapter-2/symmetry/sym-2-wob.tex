@@ -57,7 +57,7 @@ margin=0mm]{geometry}
 
 \node[anchor=south,inner sep=0mm,yshift=0mm](s1) at (current page.south)
 	{
-	\includegraphics[width=\textwidth,trim={0cm 0cm 0 0cm},clip]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/scqws-symmetry0-out.pdf}
+	\includegraphics[width=\textwidth,trim={0cm 0cm 0 0cm},clip]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/scqws-symmetry0-out.pdf}
 	};
 
 \begin{scope}[yshift=-24mm]
@@ -87,13 +87,13 @@ margin=0mm]{geometry}
 	\draw[densely dashed] (0,-4)--++(3.8,0)--++(0,1)--++
 	(1.8,0)--++(0,-1)--++(1.2,0)--++(0,1)--++(1.7,0)--++(0,-1)--++(4,0);
 
-\node[xshift=0mm,yshift=0mm](a1) at (3.8,-1){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-0-out.pdf}};
+\node[xshift=0mm,yshift=0mm](a1) at (3.8,-1){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/algaas-interface-0-out.pdf}};
 
-\node[anchor = west,xshift=1.5mm,yshift=0.0cm](a2) at (a1.east){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-1-out.pdf}};
+\node[anchor = west,xshift=1.5mm,yshift=0.0cm](a2) at (a1.east){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/algaas-interface-1-out.pdf}};
 
-\node[xshift=0mm,yshift=0mm](a3) at (3.8+1.2+1.8,-1){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-0-out.pdf}};
+\node[xshift=0mm,yshift=0mm](a3) at (3.8+1.2+1.8,-1){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/algaas-interface-0-out.pdf}};
 
-\node[anchor = west,xshift=1mm,yshift=0.0cm](a4) at (a3.east){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/phd-codes/symmetry/algaas-interface-1-out.pdf}};
+\node[anchor = west,xshift=1mm,yshift=0.0cm](a4) at (a3.east){\includegraphics[width=0.09\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/algaas-interface-1-out.pdf}};
 \end{scope}
 
 
@@ -133,6 +133,11 @@ margin=0mm]{geometry}
 	line style={arrows=Stealth-Stealth,line width=0.2mm},
 	extension start length=-0.2,
 	extension end length=-0.2] {(3.8+1.2+1.8,-2.4)}{(3.8+1.2+1.8+1.7,-2.4)}{$d_{2}$};
+
+
+	\shade [ball color=Ga,] ([xshift=-15mm,yshift=4cm]s1.east) circle (0.2) node[anchor=east,label=right:{\Large\, Ga}] { } ;
+	\shade [anchor=east,ball color=Al,] ([xshift=-15mm,yshift=3.5cm]s1.east) circle (0.2) node[label=right:{\Large\, Al}] { } ;
+	\shade [anchor=east,ball color=As,] ([xshift=-15mm,yshift=3.0cm]s1.east) circle (0.2) node[label=right:{\Large\, As}] { };
 
 \end{tikzpicture}
 	

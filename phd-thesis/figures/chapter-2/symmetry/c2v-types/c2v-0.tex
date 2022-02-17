@@ -40,12 +40,12 @@ margin=0mm]{geometry}
 	\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
 
-    \foreach \i in {\xMin,...,\xMax} {
-        \draw [very thin,gray,opacity=0.1] (\i,\yMin) -- (\i,\yMax)  node [below] at (\i,\yMin) {$\i$};
-    }
-    \foreach \i in {\yMin,...,\yMax} {
-        \draw [very thin,gray,opacity=0.1] (\xMin,\i) -- (\xMax,\i) node [left] at (\xMin,\i) {$\i$};
-    }
+    % \foreach \i in {\xMin,...,\xMax} {
+    %     \draw [very thin,gray,opacity=0.1] (\i,\yMin) -- (\i,\yMax)  node [below] at (\i,\yMin) {$\i$};
+    % }
+    % \foreach \i in {\yMin,...,\yMax} {
+    %     \draw [very thin,gray,opacity=0.1] (\xMin,\i) -- (\xMax,\i) node [left] at (\xMin,\i) {$\i$};
+    % }
 
     \draw[line width=0.3mm] (0,-2)--++(1,0)--++(0,-2)--++(2,0)--++(0,4)--++(2,0);
 

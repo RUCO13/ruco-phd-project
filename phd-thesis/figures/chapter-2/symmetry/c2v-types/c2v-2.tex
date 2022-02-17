@@ -47,12 +47,13 @@ margin=0mm]{geometry}
     %     \draw [very thin,gray,opacity=0.1] (\xMin,\i) -- (\xMax,\i) node [left] at (\xMin,\i) {$\i$};
     % }
 
-    \begin{scope}[rotate around y=30]
-        \draw[transform shape,line width=0.5mm] (0,-1)--++(1,0)--++(0,-3)--++(1.1,0)--++(0,3)--++(0.2,0)--++(0,-3)--++(1.1,0)--++(0,3)--++(1,0);
+    \begin{scope}[rotate around y=30,xshift=-2mm]
+        \draw[transform shape,line width=0.5mm] (0,-1)--++(2,0)--++(0,-3)--++(1,0)--++(0,3)--++(2,0);
 
-        \draw[-{[scale=1.5]Stealth},line width=0.3mm,red] (0.8,-4.3)--++(3,0);
+        
     \end{scope}
-\node[scale=1.2,red] at (4.2,-3.8) {$\vec{E}$};
+    \draw[-{[scale=1.5]Stealth},line width=0.3mm,red] (0.8,-4.3)--++(3,0);
+\node[scale=1.5,red] at (4.2,-4) {$\vec{E}$};
 \end{tikzpicture}
 	
 	

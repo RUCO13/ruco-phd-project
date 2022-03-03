@@ -1,0 +1,221 @@
+
+\documentclass[margin=0]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots,pgfplotstable}
+\usepackage{amsmath,amsfonts,amssymb,xfrac,cancel}
+\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric,spy}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer,colormaps}
+\pgfplotsset
+{compat=newest,
+	axis line style={line width=0.8pt},
+	every axis/.style = 
+    {
+		scale only axis,
+		width=8cm,height=5cm,
+		tick style = {line width=0.8pt,black},
+		ticklabel style={scale=0.7},
+		major tick length = 1.5mm,
+		minor tick length = 0.75mm,
+		minor x tick num=1,
+		minor y tick num=1,
+		xlabel style={scale=0.9},
+		ylabel style={scale=0.9},
+		zlabel style={scale=0.9},
+		%xlabel={Photon energy (eV)}, 
+		%    	xticklabel style={
+			%    	/pgf/number format/precision=2,
+			%    	/pgf/number format/fixed,
+			%    	/pgf/number format/fixed zerofill,
+			%    },
+		yticklabel style={
+			/pgf/number format/precision=0,
+			/pgf/number format/fixed,
+			/pgf/number format/fixed zerofill,
+		},
+	},
+	every axis plot/.style={smooth,line width=0.5pt},
+	/pgfplots/legend image code/.code={%
+		\draw[mark repeat=1,mark phase=1,#1] 
+		plot coordinates {
+			(0cm,0cm) 
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.3cm,0cm)%
+		};
+	},
+}
+\pgfplotsset{every axis legend/.style={
+		cells={anchor=center},
+		inner xsep=1pt,
+		inner ysep=1pt,
+		nodes={scale=0.7,inner sep=2pt, transform shape},
+		draw=none,
+		at={(1,1)},
+		anchor=north east,
+	}
+}
+
+% \pgfplotstableread[col sep=comma]{ruco/repos/kp-lflm-group/data/BandStructure_GaAs_1.dat}\bands
+
+%\pgfplotsset{every axis legend/.style={
+%cells={anchor=center},
+%inner xsep=1pt,
+%inner ysep=1pt,
+%nodes={scale=0.65,inner sep=2pt, transform shape},
+%draw=none,
+%at={(1,1)},
+%anchor=north east,
+%}
+%}
+%\tikzset{
+%	% define shorthand key/style to give spy-on node names
+%	Name/.style={
+%		every spy on node/.append style={
+%			name=#1,
+%		},
+%	},
+%}
+%\pgfplotsset{
+%cycle from colormap manual style/.style={
+%every axis plot/.style={smooth,mark=*,mark options={scale=0.5,fill=none,line width=0.5pt},only marks,line width=0.5pt},
+%},
+%}
+
+\newcommand{\errorband}[6]{
+	\pgfplotstableread[col sep=comma]{#1}\datatable
+	\addplot [name path=pluserror,draw=none,no markers,forget plot]
+	table [x={#2},y expr=\thisrowno{#3}] {\datatable};
+	
+	\addplot [name path=minuserror,draw=none,no markers,forget plot]
+	table [x={#2},y expr=\thisrowno{#4}] {\datatable};
+	
+	\addplot [forget plot,fill=#5,fill opacity=#6]
+	fill between[on layer={},of=pluserror and minuserror];
+	
+}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[%
+name=bands001,
+minor x tick num=0,
+%xmin=0,xmax=200,
+ymin=-7,ymax=7,
+%ytick=\empty,
+xtick pos=left,
+ytick pos=left,
+%xtick={0,100,200},
+%xticklabels={L,$\Gamma$,X},
+ylabel={Energy (eV)},
+xlabel={Wave vector ($\boldsymbol{k}$)},
+colormap/cold,
+smooth,
+]
+
+\addplot[
+mesh,
+no markers,
+shader=faceted interp,
+%point meta=\thisrowno{1},
+every mark/.append style={line width=1pt,mark size=4pt,fill=blue!80!black},
+%line width=1pt+0.5pt*\pgfplotspointmetatransformed/1000,
+] table[x index=0,y index=2,col sep=comma]
+{
+/media/labfiles/ruco/repos/kp-lflm-group/data/Ex.dat
+};
+
+% \foreach \x in {1}{
+% \addplot+[
+% mesh,
+% no markers,
+% shader=faceted interp,
+% %point meta=\thisrowno{1},
+% every mark/.append style={line width=1pt,mark size=4pt,fill=blue!80!black},
+% line width=1pt+0.5pt*\pgfplotspointmetatransformed/1000,
+% ] table[x index=0,y index=\x,col sep=tab]{/media/labfiles/ruco/repos/kp-lflm-group/data/BandStructure_GaAs_1.dat};
+%\errorband{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat}{0}{\x}{3}{black}{0.3}
+
+% \addplot [name path=pluserror,draw=none,no markers,forget plot]
+% table [x index=0,y expr=\thisrowno{\x}+0.3,col sep=comma] {/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat};
+
+% \addplot [name path=minuserror,draw=none,no markers,forget plot]
+% table [x index=0,y expr=\thisrowno{\x}-0.32,col sep=comma] {/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat};
+% \addplot [forget plot,fill=black,fill opacity=0.9] fill between[on layer={},of=pluserror and minuserror];
+
+%}
+
+%\addplot[red,no marks] coordinates {(0,0.5) (50,0.5)};
+% \errorband{/media/labfiles/ruco/repos/kp-lflm-group/data/BandStructure_GaAs_1.dat}{0.4}
+
+%
+%\draw[-{Stealth[scale=0.5]},line width=0.4mm,red]  (110,0.3)--(27,1.32);
+%\node[scale=0.5,red] at (28,0.7) {$\hbar \omega$};
+%\filldraw[color=blue!50!white,opacity=0.1] (0,0)--(200,0)--(200,-7)--(0,-7)--cycle;
+%\filldraw[color=red!80!white,opacity=0.1] (0,1.47)--(200,1.47)--(200,5)--(0,5)--cycle;
+\node at (axis cs:40,3){CB};
+\node at (axis cs:40,-2){VB};
+\draw[{Stealth[scale=1]}-{Stealth[scale=1]},line width=0.1mm,blue]  (100,0.1)--(100,1.4);
+\node[scale=0.7,blue] at (95.5,0.7) {$E_{g}$};
+	
+\coordinate (zoom) at (axis cs:100,0.7);
+\coordinate (n1) at (axis cs:110,2);
+\coordinate (n2) at (axis cs:110,-0.5);
+
+\draw[magenta,line width=0.8pt] (axis cs:90,-0.5)--(axis cs:110,-0.5)--(axis cs:110,2)--(axis cs:90,2)--cycle;
+%\spy[black,size=2.7cm,name=s1] on (zoom) in node [fill=white,name=a] ;
+\end{axis}
+   
+%     \begin{axis}[scale only axis,
+%     	name=gamma,
+%     	anchor=north west,
+%     	at={(bands001.north east)},
+%     	width=4cm,height=3.8cm,
+%     	xtick pos=bottom,
+%     	ytick pos=right,
+%     	xtick={75,100,125},
+%     	xticklabels={L,$\Gamma$,X},
+%     	%ylabel={Energy (eV)},
+%     	xlabel={Wave vector ($\boldsymbol{k}$)},
+%     	xmin=70,xmax=130,
+%     	ymin=-1.4,ymax=2.4,
+%     	colormap/cold,
+%     	xticklabel style={name=tickLabel \ticknum},
+%     	axis line style={line width=0.8pt,magenta,},
+%     	tick style={line width=0.8pt,magenta},]
+    	
+%     	\foreach \x in {2,3,5,6}{
+%     		\addplot[
+%     		mesh,
+%     		point meta=\thisrowno{4},
+%     		every mark/.append style={line width=1pt,mark size=4pt,fill=blue!80!black},
+%     		shader=flat corner,
+% line width=1pt+0.5pt*\pgfplotspointmetatransformed/1000,
+%     		] table[x index=0,y index=\x,col sep=comma]{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat};
+%     		%\errorband{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat}{0}{\x}{3}{black}{0.3}
+%     		\addplot [name path=pluserror,draw=none,no markers,forget plot]
+%     		table [x index=0,y expr=\thisrowno{\x}+.12,col sep=comma] {/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat};
+    		
+%     		\addplot [name path=minuserror,draw=none,no markers,forget plot]
+%     		table [x index=0,y expr=\thisrowno{\x}-.12,col sep=comma] {/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat};
+%     		\addplot [forget plot,fill=black,fill opacity=0.9] fill between[on layer={},of=pluserror and minuserror];
+    		
+%     	}
+%     \errorband{/media/labfiles/ruco/phd-ssp/phd-codes/TightBinding/gaas-bands.dat}{0}{3}{5}{gray!80!black}{0.4}
+%     \draw[{Stealth[scale=1]}-{Stealth[scale=1]},line width=0.5mm,blue]  (100,0.0)--(100,1.51);
+%     \node[scale=1,blue] at (96,0.7) {$E_{g}$};
+    
+%     \end{axis}
+
+
+% \draw[densely dashed,magenta,line width=0.8pt](n1)--(gamma.north west);
+% \draw[densely dashed,magenta,line width=0.8pt](n2)--(gamma.south west);
+% \node[anchor=north west,font=\bf,red,scale=1.5,yshift=-5] at (bands001.north west){a)};
+% \node[anchor=north west,font=\bf,red,scale=1.5,yshift=-5] at (gamma.north west){b)};
+
+% \draw[blue, line width=0.1mm, {Stealth}-] (tickLabel 0) -- (tickLabel 1);
+% \draw[blue, line width=0.1mm, -{Stealth}] (tickLabel 1) -- (tickLabel 2);
+
+\end{tikzpicture}
+\end{document}

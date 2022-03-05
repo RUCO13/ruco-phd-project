@@ -179,10 +179,26 @@ All the above cool properties mentioned, could not have been predicted or observ
 \end{figure}
 
 
-The \Cref{fig:chapter2-sec-numerical-calculations-kp-bands} it's the result of apply \gls{kp} method, specifically taken into account  8-band model Hamiltonian which is  a extension of four band model\cite{galeriu2005k}
+The \Cref{fig:chapter2-sec-numerical-calculations-kp-bands} it's the result of apply \gls{kp} method, specifically taken into account 8-band model Hamiltonian\cite{kane1957bandstructure,galeriu2005k,vurgaftman2020bands} which is an extension of four band model\cite{galeriu2005k} and even, this model is raised to bulk semiconductors, but in \Cref{subfig:chapter2-sec-numerical-calculations-kp-bands-sqw-b} shows the results applied in a GaAs SQW heterostructure. To give support to these calculations is important to invoke \gls{ema}, this method is an efficient method to computational calculations\cite{yeo2020first,harrison2016quantum} and their basis allows developed electron solutions. In general,  exist a variety of Hamiltonian intending to calculate the bandstructure of heterostructures. From conventional Luttinger-Kohn model, \cite{Luttinger1955motion} to relatively recent models by Burt and Foreman \cite{burt1988aneweffective,foreman1993effective,burt1992justification}, which they consider the basis functions depends on symmetry, this is the reason which  Hamiltonian is associated to the bulk structure as in this case is Zinc-Blende type. 
 
+Although it has been discussed applying this method over heterostructures as the QWs, this work considers it as an ``exploratory'' tool. The reason for taking him into account in that way is basically their difficult and tedious way to get a correct Hamiltonian that describes our structures, in fact, \gls{kp} isn't the unique difficult method, also \gls{tb} and others, have laboriousness way to build their Hamiltonians. So, take the technic and equations from Vurgaftman \cite{vurgaftman2020bands} and solve numerically gets the GaAs bulk as shown in \Cref{subfig:chapter2-sec-numerical-calculations-kp-bands-bulk-a} and the same direction take the Hamiltonian from Marchewka 
 
-\subsection{Finite Difference Method}
+\begin{equation}\label{eqn:chapter2:section-numerical-calculations-8x8-hamiltonian}
+  H_{0}={\footnotesize\begin{bmatrix}
+T & 0  &-\dfrac{1}{\sqrt{2}}Pk_{+}& \sqrt{\dfrac{2}{3}} Pk_{z}   & \dfrac{1}{\sqrt{6}}Pk_{-} & 0 & \dfrac{-1}{\sqrt{3}}Pk_{z} & -\dfrac{1}{\sqrt{3}}Pk_{-}\\
+
+0 & T & 0& -\dfrac{1}{\sqrt{6}}Pk_{+}& \sqrt{\dfrac{2}{3}} Pk_{z}& \dfrac{1}{\sqrt{2}}Pk_{-}  &-\dfrac{1}{\sqrt{3}}Pk_{+}& \dfrac{1}{\sqrt{3}}Pk_{z}\\
+
+-\dfrac{1}{\sqrt{2}}k_{-}P & 0 & U+V & -\bar{S}_{-} & R & 0 & \dfrac{1}{\sqrt{2}}\bar{S}_{-} & -\sqrt{2}R\\
+
+\sqrt{\dfrac{2}{3}} k_{z}P&-\dfrac{1}{\sqrt{6}}k_{-}P& -\bar{S}^{\dagger}_{-}&U-V&C&R&\sqrt{2}V&-\sqrt{\dfrac{3}{2}}\tilde{S}_{-}\\
+\dfrac{1}{\sqrt{6}}k_{+}P & \sqrt{\dfrac{2}{3}}k_{z}P&R^{\dagger}&C^{\dagger}&U-V&\bar{S}^{\dagger}_{+}&-\sqrt{\dfrac{3}{2}}\bar{S}_{+}&-\sqrt{2}V\\
+0&\dfrac{1}{\sqrt{2}}k_{+}P&0&R^{\dagger}&\bar{S}_{+}&U+V&\sqrt{2}R^{\dagger}&\dfrac{1}{\sqrt{2}}\bar{S}_{+}\\
+-\dfrac{1}{\sqrt{3}}k_{z}P&-\dfrac{1}{\sqrt{3}}k_{-}P&\dfrac{1}{\sqrt{2}}\bar{S}^{\dagger_{-}}&\sqrt{2}V&-\sqrt{\dfrac{3}{2}}\bar{S}^{\dagger}_{+}&\sqrt{2}R&U-\Delta&C\\
+-\dfrac{1}{\sqrt{3}}k_{+}P&\dfrac{1}{\sqrt{3}}k_{z}P&-\sqrt{2}R^{\dagger}&-\sqrt{\dfrac{3}{2}}\bar{S}^{\dagger}_{-}&-\sqrt{2}V&\dfrac{1}{\sqrt{2}}\bar{S}^{\dagger}_{+}&C^{\dagger}&U-\Delta\\
+\end{bmatrix}}
+\end{equation}
+\subsection{The Envolope Function and Mass Effective Approximations}
 
 
 

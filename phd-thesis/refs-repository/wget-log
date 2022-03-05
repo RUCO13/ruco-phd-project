@@ -1,0 +1,12 @@
+--2022-03-05 11:04:07--  https://iopscience.iop.org/export?articleId=2515-7639/3/3/034012
+Resolving iopscience.iop.org (iopscience.iop.org)... 141.226.253.39
+Connecting to iopscience.iop.org (iopscience.iop.org)|141.226.253.39|:443... connected.
+HTTP request sent, awaiting response... 200 
+Syntax error in Set-Cookie: JSESSIONID=5B94709B393FF307535AE9B2005278B0; Max-Age=-1; Path=; Secure; HttpOnly at position 56.
+Length: unspecified [application/IOPEXPORT_TXT]
+Saving to: ‘export?articleId=2515-7639%2F3%2F3%2F034012’
+
+          export?ar     [<=>              ]       0  --.-KB/s               export?articleId=25     [ <=>             ]  17.18K  --.-KB/s    in 0s      
+
+2022-03-05 11:04:08 (115 MB/s) - ‘export?articleId=2515-7639%2F3%2F3%2F034012’ saved [17597]
+

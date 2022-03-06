@@ -181,7 +181,7 @@ All the above cool properties mentioned, could not have been predicted or observ
 
 The \Cref{fig:chapter2-sec-numerical-calculations-kp-bands} it's the result of apply \gls{kp} method, specifically taken into account 8-band model Hamiltonian\cite{kane1957bandstructure,galeriu2005k,vurgaftman2020bands} which is an extension of four band model\cite{galeriu2005k} and even, this model is raised to bulk semiconductors, but in \Cref{subfig:chapter2-sec-numerical-calculations-kp-bands-sqw-b} shows the results applied in a GaAs SQW heterostructure. To give support to these calculations is important to invoke \gls{ema}, this method is an efficient method to computational calculations\cite{yeo2020first,harrison2016quantum} and their basis allows developed electron solutions. In general,  exist a variety of Hamiltonian intending to calculate the bandstructure of heterostructures. From conventional Luttinger-Kohn model, \cite{Luttinger1955motion} to relatively recent models by Burt and Foreman \cite{burt1988aneweffective,foreman1993effective,burt1992justification}, which they consider the basis functions depends on symmetry, this is the reason which  Hamiltonian is associated to the bulk structure as in this case is Zinc-Blende type. 
 
-Although it has been discussed applying this method over heterostructures as the QWs, this work considers it as an ``exploratory'' tool. The reason for taking him into account in that way is basically their difficult and tedious way to get a correct Hamiltonian that describes our structures, in fact, \gls{kp} isn't the unique difficult method, also \gls{tb} and others, have laboriousness way to build their Hamiltonians. So, take the technic and equations from Vurgaftman \cite{vurgaftman2020bands} and solve numerically gets the GaAs bulk as shown in \Cref{subfig:chapter2-sec-numerical-calculations-kp-bands-bulk-a} and the same direction take the Hamiltonian from Marchewka 
+Although it has been discussed applying this method over heterostructures as the QWs, this work considers it as an ``exploratory'' tool. The reason for taking him into account in that way is basically their difficult and tedious way to get a correct Hamiltonian that describes our structures, in fact, \gls{kp} isn't the unique difficult method, also \gls{tb} and others, have laboriousness way to build their Hamiltonians. So, we take the technic and equations from Vurgaftman \cite{vurgaftman2020bands} and solve it numerically to gets the GaAs bulk as shown in \Cref{subfig:chapter2-sec-numerical-calculations-kp-bands-bulk-a} and in the same route, we take the Hamiltonian from Marchewka\cite{marchewka2017finite,novik2005bandstructure} and solve under \gls{FDM}, without major preamble the idea is to denote the split between heavy- and light-hole bands which is the justification to our numerical calculations proposed. In \Cref{eqn:chapter2:section-numerical-calculations-8x8-hamiltonian} it's presents the $8\times 8$ Hamiltonian solved to get bandstrcuture to GaAs SQW.
 
 \begin{equation}\label{eqn:chapter2:section-numerical-calculations-8x8-hamiltonian}
   H_{0}={\footnotesize\begin{bmatrix}
@@ -198,11 +198,26 @@ T & 0  &-\dfrac{1}{\sqrt{2}}Pk_{+}& \sqrt{\dfrac{2}{3}} Pk_{z}   & \dfrac{1}{\sq
 -\dfrac{1}{\sqrt{3}}k_{+}P&\dfrac{1}{\sqrt{3}}k_{z}P&-\sqrt{2}R^{\dagger}&-\sqrt{\dfrac{3}{2}}\bar{S}^{\dagger}_{-}&-\sqrt{2}V&\dfrac{1}{\sqrt{2}}\bar{S}^{\dagger}_{+}&C^{\dagger}&U-\Delta\\
 \end{bmatrix}}
 \end{equation}
-\subsection{The Envolope Function and Mass Effective Approximations}
+where 
+\begin{align*}
+	k^{2}_{\parallel}&=k_{x}^{2}+k^{2}_{y},  k_{\pm}=k_{x}\pm ik_{y},  k_{z}=i\partial/\partial z,\\
+	T&=E_{c}(z)+\dfrac{\hbar^{2}}{2m_{0}}\left[(2F+1)k^{2}_{\parallel}+k_{z}(2F+1)k_{z}\right], \\
+	U&=E_{v}(z)-\dfrac{\hbar^{2}}{2m_{0}}\left(\gamma_{1}k^{2}_{\parallel}+k_{z}\gamma_{1}k_{z} \right),\\ 
+	V&=-\dfrac{\hbar^{2}}{2m_{0}}\left(\gamma_{2}k^{2}_{\parallel}-2k_{z}\gamma_{2}k_{z}\right),\\ 
+	R&=-\dfrac{\hbar^{2}}{2m_{0}}\sqrt{3}\left(\mu k^{2}_{+}-\bar{\gamma}k^{2}_{-},\right),\\
+	\bar{S}_{\pm}&=-\dfrac{\hbar^{2}}{2m_{0}}\sqrt{3}k_{\pm}\left(\left\lbrace\gamma_{3},k_{z}\right\rbrace+\left[\kappa,k_{z}\right]\right),\\
+	\tilde{S}_{\pm}&=-\dfrac{\hbar^{2}}{2m_{0}}\sqrt{3}k_{\pm}\left(\left\lbrace\gamma_{3},k_{z}\right\rbrace,\dfrac{1}{3}\left[\kappa,k_{z}\right]\right),\\
+	C&=\dfrac{\hbar^{2}}{2m_{0}}k_{-}\left[\kappa,k_{z}\right]
+\end{align*}
+
+and each of these parameters taken from \cite{vurgaftman2020bands}. The Hamiltonian $H_{0}$ is defined for $\left[001\right]$, and the principal idea is evaluating it in a ``discrete'' SQW structure, the ''discrete`` term refers to a numerical technique for solving it. The results it shows in \cref{subfig:chapter2-sec-numerical-calculations-kp-bands-sqw-b}, this approximation is enough to evince the \gls{VB} split, even, the results also gls{CB} information the importance falls on  \gls{VB}, this is due that difficult to solve there.  Then, the VB split allows applying ``simple'' numerical methods without needing to define complex Hamiltonian and many parameters. 
 
 
 
 
+
+
+\subsection{Envelope Function and Effective Mass Apriximation Methods}
 
 
 \section{Anisotropy model in CQWs \label{sub:chap2-anisotropy-model}}

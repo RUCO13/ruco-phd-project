@@ -6,8 +6,9 @@
 \usepackage{xifthen}
 \usepackage{ifthen}
 \usepackage{xfp}
+\usepackage{tikz-dimline}
 
-\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric,spy,patterns}
+\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric,spy,patterns,backgrounds}
 \usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer,colormaps}
 \pgfplotsset{compat=newest,
 	axis line style={line width=0.8pt},
@@ -93,6 +94,8 @@
 %}
 
 
+
+
 \pgfplotsset{rellenoa/.style={pattern=north west lines,pattern color=gray}}
 
 \newcommand{\errorband}[5]{
@@ -165,25 +168,18 @@ table [x index=0,y expr=\thisrowno{\x}-0.07,col sep=comma] {/media/labfiles/ruco
 
 
 \end{axis}
-
-     
     \begin{axis}[scale only axis,
     	name=gamma,
     	anchor=east,
-		%title={SQW},
 		yshift=0.5cm,
     	at={(bands001.east)},
     	width=2cm,height=2cm,
         ytick=\empty,
         xtick=\empty,
-    	%xtick pos=bottom,
-    	%xtick={-4e-2,0,4e-2},
-    	%xticklabels={L,$\Gamma$,X},
-    	%ylabel={Energy (eV)},
-    	%xlabel={Wave vector ($\boldsymbol{k}$)},
     	xmin=-5e-2,xmax=5e-2,
     	ymin=-0.801,ymax=-0.80015,
     	colormap/cold,
+        axis background/.style={fill=white},
 		]
     	
     	\foreach \x in {15,...,20}{
@@ -230,19 +226,6 @@ line width=1pt+0.1pt*\pgfplotspointmetatransformed/1000,
 	}
 
     \end{axis}
-% %	
-% 	\node[circle, minimum width=5mm, draw,red] (C) at ([yshift=-1.1cm]bands001.center) {};
-% 	\draw[red] (C.north)--([xshift=1cm]gamma.north west);
-% 	\draw[red] (C.south)--([xshift=1cm]gamma.south west);
-
-	%\node[anchor=south west,blue,font=\bf] at ([xshift=1cm]gamma.north west){b)};
-
-	% \node at (bands001.north){Bulk};
-	% \node at (gamma.north){SQW};
-
-
-
-
 
     \begin{axis}[scale only axis,
     	name=edge,
@@ -266,6 +249,20 @@ line width=1pt+0.1pt*\pgfplotspointmetatransformed/1000,
     \addplot[no markers,smooth,tension=0,red] coordinates {(1,1) (7,1) (7,0) (7+5,0) (7+5,1) (7+5+7,1)};
     
     \addplot[no markers,smooth,tension=0,blue] coordinates {(1,-1.2) (7,-1.2) (7,-0.5) (7+5,-0.5) (7+5,-1.2) (7+5+7,-1.2)};
+    \node[red] at (axis cs:9.5,0.5){CB};
+    \node[blue] at (axis cs:9.5,-0.75){VB};
+
+
+\dimline[label style={fill=white,scale=1,rotate=-90},
+line style={arrows=Stealth-Stealth,line width=0.1mm},
+extension start length=0,
+extension end length=0] {(axis cs:3,-1.2)}{(axis cs:3,1)}{$Eg_{\mathrm{A}}$};
+
+\dimline[label style={fill=white,scale=1,rotate=-90},
+line style={arrows=Stealth-Stealth,line width=0.1mm},
+extension start length=0,
+extension end length=0] {(axis cs:9.5,-0.5)}{(axis cs:9.5,0)}{$Eg_{\mathrm{B}}$};
+
 
     \end{axis}
 
@@ -276,7 +273,6 @@ line width=1pt+0.1pt*\pgfplotspointmetatransformed/1000,
 \node[anchor=south west,blue,font=\bf] at (bands001.north west){a)};
 \node[anchor=south west,blue,font=\bf] at ([xshift=0cm]edge.north west){b)};
 
-\node at (axis cs:8,0.5){CB};
 
 
 \end{tikzpicture}

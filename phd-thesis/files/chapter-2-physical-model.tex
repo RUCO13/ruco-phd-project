@@ -217,11 +217,9 @@ and each of these parameters taken from \cite{vurgaftman2020bands}. The Hamilton
 \label{subsec:chapter-2-efa-and-ema}
 \vspace{-10mm} 
 Furthermore, to get a numerical method and solution robustness without any complex formalism but based on the essence of this work which is the effect of asymmetric width potential in CQWs which causes the symmetry breaking and this physical property involve important optical phenomena, as increase Anisotropy depending on relative width in these.
-The \gls{efa} is the mathematical justification to model electron behavior under periodic potential as a crystal, while the \gls{ema} is the physical model and the considerations to study the electron behavior inside a periodic potential from a crystal\cite{harrison2016quantum}.
+The \gls{efa} is the mathematical justification to model electron behavior under periodic potential as a crystal, while the \gls{ema} is the physical model and the considerations to study the electron behavior inside a periodic potential from a crystal\cite{harrison2016quantum}\footnotetext{Frequently the \gls{efa} and \gls{ema} approximations are considered as the same term,  although maybe being correct, given that one depends on the another, is important to remark that the \gls{ema} depends on the formalism of \gls{efa}.}.
 Under that assumptions, it's possible to review several considerations, that considerations reduce the complexity of solutions and allow simplifying the calculations. Then, in all of this work  it develops around of  $\Gamma=0$, this means that will use a one-band model. To resume this last context, it's importantly to taken into account the next considerations. Firstly, from here we can study the electron and holes behavior by separately, from basic assumption which $\Gamma=0$ this enables to pass from electronic band to band edge (see \Cref{fig:chapter2-sec-numerical-calculations-band-edge}). So, it's important to define that tools previosuly mentioned. The \gls{ema} is a valid approximation in bulk materials, in fact this is an elemental model which  due to the good results and simplicity it's can be applied over heterostructures.  About of this last, the heterostructures are complex, the dissimilar matched semiconductors which conformed that it, posses doesn't only difference in band-gap energy but also the effective mass.  
-If join all of that parameters involved it, the model to solve should being proportional to the considers in it, by this reason models as \gls{TB} are cmplex due the difficult to define all that parameters, while in \gls{kp} are well-defined, but contrary, the method frequently is  submitted to discussion due to the assumptions as the doesn't ``see'' the correct point-group symmetries, in fact, frequently assumes which the system already owns it.  We can introduce ourselves in a severe discussion about of bandstructure calculations methods, but the reality is can't define a standard method, so that, doing reference to Harrisson et al\cite{harrison2016quantum}, we can apply the simplicity method.
 
-Then assuming the simplicity methid which practically mentioned that consider the simple way to get a result while this works. In \Cref{fig:chapter2-sec-numerical-calculations-band-edge} it shows the justification of our numerical calculations wihchare simple but powerful to developed our physical anisotropy model. So,
 \begin{figure}
 	\centering
 	\begin{subfigure}{\textwidth}
@@ -233,7 +231,26 @@ Then assuming the simplicity methid which practically mentioned that consider th
 	\label{fig:chapter2-sec-numerical-calculations-band-edge}
 \end{figure}
 
+If join all of that parameters involved it, the model to solve should being proportional to the considers in it, by this reason models as \gls{TB} are complex due to the difficult to define all that parameters, while in \gls{kp} are well-defined, but contrary, the method frequently is  submitted to discussion due to the assumptions as the doesn't ``see'' the correct point-group symmetries, in fact, frequently assumes which the system already owns it.  We can introduce ourselves in a severe discussion about of bandstructure calculations methods, but the reality is can't define a standard method, so that, doing reference to Harrison et al.\cite{harrison2016quantum}, we can apply the simplicity method.
+Then, assuming the simplicity term, in which practically mentioned that, it's important to consider the simple way to get a result as a long as this works. So, in this work, will discuss the increase of the  \gls{oa}  due to the relative width in the wells of the coupled system, then here only considers the potential profile as a really significant parameter, of course, the effective mass and   the band-gap are also essential, but these are considers as a part of the model. Being this the basis of the model, this work will employ the formalism of \gls{efa} where in a general explain, this it  gives the envelope functions to calculate the single electron behavior under periodic potential as a heterostructure, therefore, this can allow describing it  through position-depend material properties\cite{foreman1996envelope,benduke1966spacecharge,bastard1990wave}, then it's also indispensable to declare the boundary conditions owned by the \gls{efa}. Therefore with a mathematical formalism, then it's employed the \gls{ema} which parts of the fundamental  parameter which is the effective-mass, then it can works with the 1D-\sch's equation as a function of effective-mass, as traditional egen-value equation:
+
+\begin{equation}\label{eqn:chapter2-sec-numerical-calculations-eigen-value-equation}
+	H\psi(z)=E\psi(z)
+\end{equation}
+
+Then, the Hamiltonian of \gls{ema} it's developed mainly by the effective-mass, this has the advantage of evaluated along of heterostructure,  allowing  the change of semiconductors which composed that, so, this makes it a great method. Therefore the Hamiltonian for a particle is given by\cite{kamizato1989excitons,bastard1990wave,foreman1996envelope}:
+
+\begin{equation}\label{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian}
+	H_{z} = \dfrac{p_{z}^{2}}{2m^{*}(z)}+V(z).
+\end{equation}
+
+
+In \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian} it's taken $z$-axis as a direction perpendicular to interface of QWs, or simply as the growth direction, consequently the potential $V(z)$ it's depend on, and the effective-mass $m^{*}(z)$ also depends on position $z$. In \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian} it's taken $z$-axis as a direction perpendicular to interface of QWs, or simply as the growth direction, consequently the potential $V(z)$ it's depend on, and the effective-mass $m^{*}(z)$ also depends on position $z$. As can see in \Cref{subfig:chapter2-sec-numerical-calculations-band-edge-b}, it's showing the band-edge profile as a potential profile which depends on semiconductor band-gap along of heterostructure.  Also in \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian}, it considers the momentum as $p_{z}^{2}$ as a 1D, due to the before discussed. 
+
+
+\subsection{Finite Difference Method}
 \section{Anisotropy model in CQWs \label{sub:chap2-anisotropy-model}}
 
-
 Electronic States in Semiconductor Heterostructures 
+
+

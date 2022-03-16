@@ -245,12 +245,34 @@ Then, the Hamiltonian of \gls{ema} it's developed mainly by the effective-mass, 
 \end{equation}
 
 
-In \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian} it's taken $z$-axis as a direction perpendicular to interface of QWs, or simply as the growth direction, consequently the potential $V(z)$ it's depend on, and the effective-mass $m^{*}(z)$ also depends on position $z$. In \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian} it's taken $z$-axis as a direction perpendicular to interface of QWs, or simply as the growth direction, consequently the potential $V(z)$ it's depend on, and the effective-mass $m^{*}(z)$ also depends on position $z$. As can see in \Cref{subfig:chapter2-sec-numerical-calculations-band-edge-b}, it's showing the band-edge profile as a potential profile which depends on semiconductor band-gap along of heterostructure.  Also in \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian}, it considers the momentum as $p_{z}^{2}$ as a \gls{1d}, due to the before discussed. 
+In \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian} it's taken $z$-axis as a direction perpendicular to interface of QWs, or simply as the growth direction, consequently the potential $V(z)$ it's depend on, and the effective-mass $m^{*}(z)$ also depends on position $z$. In \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian} it's taken $z$-axis as a direction perpendicular to interface of QWs, or simply as the growth direction, consequently the potential $V(z)$ it's depend on, and the effective-mass $m^{*}(z)$ also depends on position $z$. As can see in \Cref{subfig:chapter2-sec-numerical-calculations-band-edge-b}, it's showing the band-edge profile as a potential profile which depends on semiconductor band-gap along of heterostructure.  Also in \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian}, it considers the momentum as $p_{z}^{2}$ as a \gls{1d}, due to the before discussed. Then it's allow to developed a method to solution which depends of position $z$. Finally, it can denote a \gls{1d} \sch quation under \gls{ema} to electron also heavy- and light-holes : 
+
+\begin{equation}\label{eqn:chapter2-sec-numerical-calculations-ema-schrodinger}
+	\begin{split}
+	\left[-\dfrac{\hbar^2}{2m_{jz}^{*}}\dfrac{d^2}{dz^2}+V(z) \right]\psi_{nj}(z)&= E_{nj}\psi_{nj}(z),\\
+	                                                               j&=e,\hh,\lh.
+	\end{split}
+\end{equation}
+
+The \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} it's then the effective-mass equation implemented in this work. The solution of that, it's detailed in next section where explains the numerical method to solve it. Before to continue, it's important to discuss the \gls{1d} equation. This equation will be applied over each particle ($j=e,\hh,\lh$), this means, over electron, heavy- and light-holes, where only considers the effective-mass ($m_{jz}^{*}$) trough each semiconductor in heterostructure studied and the most important in this work, the potential profile $V(z)$ which depends on relative widths of coupled wells. 
 
 
 \subsection{Finite Difference Method}
+\label{subsec:chapter-2-finite-difference-method}
+\vspace{-10mm} 
+In this section it will discuss the numerical method to solve the \gls{1d} \sch's equation, even tough this is a large discussed theme, here focus on a simple but powerful numerical method. Started from the fact that the \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} can it solve along of heterostructure and taken into account each semiconductor with compose it, this means that can discretize that and solved it for electron and holes. Although this, being a \gls{1d} equation, doesn't remove importance in the solution, that is to say, it's needing a robust method. It's important to remark which the spacial discretization depends on $\Delta z$, 
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{../figures/chapter-2/numerical-calculations/out/fdm-potential}
+	\caption{}
+	\label{fig:chapter2-sec-numerical-calculations-fdm-potential}
+\end{figure}
+
+
 \section{Anisotropy model in CQWs \label{sub:chap2-anisotropy-model}}
 
-Electronic States in Semiconductor Heterostructures 
 
 

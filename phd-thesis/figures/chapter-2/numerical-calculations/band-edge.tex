@@ -192,8 +192,7 @@ table [x index=0,y expr=\thisrowno{\x}-0.07,col sep=comma] {/media/labfiles/ruco
         axis background/.style={fill=white},
 		]
     	
-\foreach \x in {15,...,20}
-{
+\foreach \x in {15,...,20}{
     \addplot[
     		mesh,
     		point meta=\thisrowno{2},
@@ -218,10 +217,11 @@ line width=1pt+0.1pt*\pgfplotspointmetatransformed/1000,
 				table [x index=0,y expr=\thisrowno{\x}-0.3e-4,col sep=comma] {/media/labfiles/ruco/repos/kp-lflm-group/data/vbsqw100.csv};
 			
 
-	\addplot [name path=C,draw=none,no markers,forget plot]
+					
+\addplot [name path=C,draw=none,no markers,forget plot]
 				table [x index=0,y expr=\thisrowno{\x}+0.3e-4,col sep=comma]{/media/labfiles/ruco/repos/kp-lflm-group/data/vbsqw110.csv};
 				
-	\addplot [name path=D,draw=none,no markers,forget plot]
+			\addplot [name path=D,draw=none,no markers,forget plot]
 				table [x index=0,y expr=\thisrowno{\x}-0.3e-4,col sep=comma] {/media/labfiles/ruco/repos/kp-lflm-group/data/vbsqw110.csv};
 	
 	

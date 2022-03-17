@@ -9,7 +9,7 @@
 \usepackage{xfp}
 \usepackage{tikz-dimline}
 
-\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric,spy,patterns,backgrounds}
+\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric,spy,patterns,backgrounds,decorations.pathreplacing}
 \usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer,colormaps}
 \pgfplotsset{compat=newest,
 	axis line style={line width=0.8pt},
@@ -140,7 +140,7 @@
     	%ylabel={Energy (eV)},
     	xlabel={Growth Direction ($z$)},
     	%xmin=-5e-2,xmax=5e-2,
-    	ymin=-0.6,ymax=1.12,
+    	ymin=-0.6,ymax=1.3,
         axis line style={line width=1pt,red,opacity=0},
 		]
 	
@@ -152,6 +152,45 @@
     \def\cb{0.6}
     \def\vb{0.4}
     \def\gap{0.5}
+\def\deltax{3}
+	\pgfplotsinvokeforeach{0,\deltax,...,\wbar}{		
+		%\draw (axis cs:#1,\gap+\cb) circle (0.1);
+		\shade[draw=red!70!black,ball color=red!70] (axis cs:#1,\gap+\cb) circle [radius=2pt];
+		\shade[draw=blue!70!black,ball color=blue!70] (axis cs:#1,-\vb) circle [radius=2pt];
+		\ifthenelse{#1<6}{
+			\draw[densely dashed] (axis cs:#1,\gap+\cb)--(axis cs:#1,-\vb);}{};
+	}
+
+	\pgfplotsinvokeforeach{\wbar,\wbar+\deltax,...,\wbar+\wwell}{		
+		\shade[draw=red!70!black,ball color=red!70] (axis cs:#1,\gap) circle [radius=2pt];
+		\shade[draw=blue!70!black,ball color=blue!70] (axis cs:#1,0) circle [radius=2pt];
+	}
+	\pgfplotsinvokeforeach{\wbar+\wwell,\wbar+\wwell+\deltax,...,\wbar+\wwell+\cbar}{		
+		\shade[draw=red!70!black,ball color=red!70] (axis cs:#1,\gap+\cb) circle [radius=2pt];
+		\shade[draw=blue!70!black,ball color=blue!70] (axis cs:#1,-\vb) circle [radius=2pt];
+
+	}
+
+	\pgfplotsinvokeforeach{\wbar+\wwell+\cbar,\wbar+\wwell+\cbar+\deltax,...,\wbar+\wwell+\cbar+\wwell}{		
+		\shade[draw=red!70!black,ball color=red!70] (axis cs:#1,\gap) circle [radius=2pt];
+		\shade[draw=blue!70!black,ball color=blue!70] (axis cs:#1,0) circle [radius=2pt];
+	}
+
+	\pgfplotsinvokeforeach{\wbar+\wwell+\cbar+\wwell,\wbar+\wwell+\cbar+\wwell+\deltax,...,\wbar+\wwell+\cbar+\wwell+\wbar}{		
+		\shade[draw=red!70!black,ball color=red!70] (axis cs:#1,\gap+\cb) circle [radius=2pt];
+
+		\shade[draw=blue!70!black,ball color=blue!70] (axis cs:#1,-\vb) circle [radius=2pt];
+	}
+
+
+
+
+
+
+
+
+
+
 	\addplot+[no markers,smooth,tension=0,red,name path=plot1] coordinates 
     {(0,\gap+\cb) 
     (\wbar,\gap+\cb) 
@@ -176,8 +215,7 @@
     (\wbar+\nwell+\cbar+\wwell,-\vb)
     (\wbar+\nwell+\cbar+\wwell+\wbar,-\vb)};
 
-    
-	\addplot[rellenoa] fill between [of=plot1 and plot2];
+%\addplot[rellenoa] fill between [of=plot1 and plot2];
 
 		% \node[red] at (axis cs:9.5,0.5){CB};
 		% \node[blue] at (axis cs:9.5,-0.75){VB};
@@ -189,45 +227,45 @@
 
 
 
-\dimline[label style={fill=white,scale=1,rotate=180,inner sep=0.2mm},
-line style={arrows=Stealth-Stealth,line width=0.1mm},
-extension start length=0,
-extension end length=0] 
-{(axis cs:\wbar/2,\gap+\cb)}
-{(axis cs:\wbar/2,-\vb)}
-{\algaas};
+% \dimline[label style={fill=white,scale=1,rotate=180,inner sep=0.2mm},
+% line style={arrows=Stealth-Stealth,line width=0.1mm},
+% extension start length=0,
+% extension end length=0] 
+% {(axis cs:\wbar/2,\gap+\cb)}
+% {(axis cs:\wbar/2,-\vb)}
+% {\algaas};
 
-\dimline[label style={fill=white,scale=1,rotate=180,inner sep=0.2mm},
-line style={arrows=Stealth-Stealth,line width=0.1mm},
-extension start length=0,
-extension end length=0] 
-{(axis cs:\wbar+\nwell+\cbar+\wwell+\wbar/2,\gap+\cb)}
-{(axis cs:\wbar+\nwell+\cbar+\wwell+\wbar/2,-\vb)}
-{\algaas};
+% \dimline[label style={fill=white,scale=1,rotate=180,inner sep=0.2mm},
+% line style={arrows=Stealth-Stealth,line width=0.1mm},
+% extension start length=0,
+% extension end length=0] 
+% {(axis cs:\wbar+\nwell+\cbar+\wwell+\wbar/2,\gap+\cb)}
+% {(axis cs:\wbar+\nwell+\cbar+\wwell+\wbar/2,-\vb)}
+% {\algaas};
 
-\dimline[label style={fill=white,scale=1,rotate=180,inner sep=0.2mm},
-line style={arrows=Stealth-Stealth,line width=0.1mm},
-extension start length=0,
-extension end length=0] 
-{(axis cs:\wbar+\nwell+\cbar/2,\gap+\cb)}
-{(axis cs:\wbar+\nwell+\cbar/2,-\vb)}
-{\algaas};
+% \dimline[label style={fill=white,scale=1,rotate=180,inner sep=0.2mm},
+% line style={arrows=Stealth-Stealth,line width=0.1mm},
+% extension start length=0,
+% extension end length=0] 
+% {(axis cs:\wbar+\nwell+\cbar/2,\gap+\cb)}
+% {(axis cs:\wbar+\nwell+\cbar/2,-\vb)}
+% {\algaas};
 
-\dimline[label style={fill=white,scale=1,rotate=180,inner sep=0.2mm},
-line style={arrows=Stealth-Stealth,line width=0.1mm},
-extension start length=0,
-extension end length=0] 
-{(axis cs:\wbar+\nwell/2,\gap)}
-{(axis cs:\wbar+\nwell/2,0)}
-{GaAs};
+% \dimline[label style={fill=white,scale=1,rotate=180,inner sep=0.2mm},
+% line style={arrows=Stealth-Stealth,line width=0.1mm},
+% extension start length=0,
+% extension end length=0] 
+% {(axis cs:\wbar+\nwell/2,\gap)}
+% {(axis cs:\wbar+\nwell/2,0)}
+% {GaAs};
 
-\dimline[label style={fill=white,scale=1,rotate=180,inner sep=0.2mm},
-line style={arrows=Stealth-Stealth,line width=0.1mm},
-extension start length=0,
-extension end length=0] 
-{(axis cs:\wbar+\nwell+\cbar+\wwell/2,\gap)}
-{(axis cs:\wbar+\nwell+\cbar+\wwell/2,0)}
-{GaAs};
+% \dimline[label style={fill=white,scale=1,rotate=180,inner sep=0.2mm},
+% line style={arrows=Stealth-Stealth,line width=0.1mm},
+% extension start length=0,
+% extension end length=0] 
+% {(axis cs:\wbar+\nwell+\cbar+\wwell/2,\gap)}
+% {(axis cs:\wbar+\nwell+\cbar+\wwell/2,0)}
+% {GaAs};
 % \dimline[label style={fill=white,scale=1,rotate=-90},
 % line style={arrows=Stealth-Stealth,line width=0.1mm},
 % extension start length=0,
@@ -237,9 +275,10 @@ extension end length=0]
 % \node at (axis cs:17,-1.3){$z$};
 % \coordinate (cc2) at (axis cs:1,1);
 % \coordinate (cc1) at (axis cs:1,-1.2);
+\draw [line width=.3mm,decorate,decoration = {brace}] (axis cs:0,\gap+\cb+0.05) --  (\deltax,\gap+\cb+0.05);
+\node at (axis cs:1.5,\gap+\cb+0.17) {$\Delta z$};
 
 \end{axis}
-
 
 \end{tikzpicture}
 \end{document}

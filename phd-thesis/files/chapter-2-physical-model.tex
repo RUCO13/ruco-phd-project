@@ -260,17 +260,21 @@ The \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} it's then the
 \subsection{Finite Difference Method}
 \label{subsec:chapter-2-finite-difference-method}
 \vspace{-10mm} 
-In this section it will discuss the numerical method to solve the \gls{1d} \sch's equation, even tough this is a large discussed theme, here focus on a simple but powerful numerical method. Started from the fact that the \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} can it solve along of heterostructure and taken into account each semiconductor with compose it, this means that can discretize that and solved it for electron and holes. Although this, being a \gls{1d} equation, doesn't remove importance in the solution, that is to say, it's needing a robust method. It's important to remark which the spacial discretization depends on $\Delta z$. In \Cref{fig:chapter2-sec-numerical-calculations-fdm-potential} schemes the discrete potential profile considers, this band-edge profile corresponds to a \gls{SCQWs} structure.
-
-
-
-\begin{figure}[H]
+In this section it will discuss the numerical method to solve the \gls{1d} \sch's equation, even tough this is a large discussed theme, here focus on a simple but powerful numerical method. Started from the fact that the \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} can it solve along of heterostructure and taken into account each semiconductor with compose it, this means that can discretize that and solved it for electron and holes. Although this, being a \gls{1d} equation, doesn't remove importance in the solution, that is to say, it's needing a robust method. It's important to remark which the spacial discretization depends on $\delta z$.
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../figures/chapter-2/numerical-calculations/out/fdm-potential-1}
-	\caption{}
+	\caption{Sketch of discrete potential band-edge profile which depends on spacial desplacement $\delta z$.}
 	\label{fig:chapter2-sec-numerical-calculations-fdm-potential}
 \end{figure}
+In \Cref{fig:chapter2-sec-numerical-calculations-fdm-potential} schemes the discrete potential profile considers, this band-edge profile corresponds to a \gls{SCQWs} structure. Remember that the potential $V(z)$ comes from the bend-edge Energy $E_{edge}$, like in the \gls{CB} and \gls{VB}, from that take the effective mass which corresponds to each semiconductor which compounds all heterostructure. Then, we can divide a heterostructure with coupled quantum wells basically into two parts, the adjacent barriers, the zone of wells which is considered the coupled barrier and their width, also the relative widths of each well. So, if consider the discrete structure we can apply \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} in each point which composes that. 
 
+The solution of \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} it's the central discussion, although exist several numerical methods to solve it, in this work is employed the \emph{Finite Difference Method} (\gls{FDM}), which begin characterized by the easy computational application. Even if, this method doesn't unique in applied discretization in comparison with the other method as Shoting\cite{killingbeck2020microcomputer,harrison2016quantum}, reduce the computational time and assure the correct convergence as long as the boundary conditions are correct. In other words, the \gls{FDM} is a non-sensible convergence method, being focused on matrix solution.  Taking the \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} and reformulated as a \emph{difference equation}\cite{harrison2016quantum}:
+\begin{equation}\label{eqn:chapter2-sec-numerical-calculations-scrodinger-discrete}
+	-\dfrac{\hbar}{2m^{*}}\left[\dfrac{\psi(z+\delta z)-2\psi(z)+\psi(z-\delta z)}{(\delta z)^2}\right] + V(z)\psi(z)=E\psi(z).
+\end{equation}
+
+In the \Cref{eqn:chapter2-sec-numerical-calculations-scrodinger-discrete} it's denoted the changed derivative by numerical difference,  
 
 \section{Anisotropy model in CQWs \label{sub:chap2-anisotropy-model}}
 

@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts}
+\usepackage{tikz,pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{pgffor}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows,arrows.meta,calc}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+%
+\pgfplotstableread[col sep=comma]{
+    cathode,range,phi,lambda,id
+    bialkali (S-22) ,  300-630 , 26 , 400 , 0.1
+    multialkali (S-20), 180-800, 20, 480, 0.2
+    extended red multialcali (S-25) , 300-900, 7, 600, 1
+    GaAs, 300-920, 15, 700,2
+    Cs-Te,160-320,14,200,0.01
+}\cd
+
+
+\begin{document}
+\pgfplotstabletypeset[%
+        %Draw rules
+        every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},after row=\midrule},
+        every last row/.style={after row=\bottomrule\bottomrule},
+        every even row/.style={
+            before row={\rowcolor[gray]{0.92}}},
+        %Column styles
+        columns={cathode,range,phi,lambda,id},
+        columns/cathode/.style={string type,column name=Cathode, column type=l}, 
+        columns/range/.style={string type,column name=Range (nm), column type=c}, 
+        columns/phi/.style={string type, column name=$\phi(\%)$, column type=c}, 
+        columns/lambda/.style={ string type, column name= $\lambda$(nm),column type=c}, 
+        columns/id/.style={string type, column name=$i_{d}$ nA,column type=c}, 
+        ]{\cd}
+\end{document}

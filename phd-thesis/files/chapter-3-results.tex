@@ -47,7 +47,7 @@ The realistic structures present some details that can modify the experimental r
 The \Cref{sec:chapter 3 Spectroscopy}  shows each experimental setup implemented in this investigation with their respective results. Starting with the  \Cref{subsec:chapter-3-pl} shows PL spectroscopy, their experimental setup implemented to obtain transitions energies values and compare with numerical results, after,  in \Cref{subsec:chapter-3-pr} shown experimental setup and results of the PR spectroscopy, to get information about the intrinsic electric field and the effects caused by this. Finally,  \Cref{subsec:chapter-3-ras} shows the RAS experimental setup and exposes the experiments that were realized to study the anisotropy caused by the asymmetry due to the relative thickness between the CQWs.
 
 
-%=============================== Spectroscopy ==========================================%
+%=============================== Spectroscopy =====================================%
 \newpage
 \section{Spectroscopy: Experimental setups and  experimental results}
 \label{sec:chapter 3 Spectroscopy}
@@ -63,28 +63,35 @@ The optical process in semiconductors consists of the study of response due to \
 \end{figure}
 
 
-Before continuing with the manuscript of this chapter, I would like to mention that the experiments could not be carried out without the development of detectors, specifically optical detectors. To speak about optical detectors, it is impossible not to mention the photoelectric effect that in general terms is the transfer of energy from photons to electrons when the light spot on a surface\cite{einstein1905uber}. So, this fundamental quantum phenomenon is the basis of detectors in spectroscopy, these detectors are called photodetectors, where these convert the light power(photons incidence over their sense area)  into an electric signal, voltage, or current, then this signal we can measure and amplify it. The next sections will mention and discuss the PD implemented in the experimental setup and especially which are the pros and cons. It is important that the photo-cathode of the photo-detector corresponds to the spectral range of experiments. i.e, in our experiments the spectral range of interest is from 700nm to 900nm the PD should have characteristics to adequate of this range. The \Cref{tab:CH 3 Section 3.1 Photodectors materials} shows some PD and their characteristics\cite{tkachenko2006opticalspectroscopy}. 
+Before continuing with the manuscript of this chapter, I would like to mention that the experiments could not be carried out without the development of detectors, specifically optical detectors. To speak about optical detectors, it is impossible not to mention the photoelectric effect that in general terms is the transfer of energy from photons to electrons when the light spot on a surface\cite{einstein1905uber}. So, this fundamental quantum phenomenon is the basis of detectors in spectroscopy, these detectors are called photodetectors, where these convert the light power(photons incidence over their sense area)  into an electric signal, voltage, or current, then this signal we can measure and amplify it. The next sections will mention and discuss the PD implemented in the experimental setup and especially which are the pros and cons. It is important that the photo-cathode of the photo-detector corresponds to the spectral range of experiments. i.e, in our experiments the spectral range of interest is from 700nm to 900nm the PD should have characteristics to adequate of this range. The \Cref{tab:chapter-3-section-samples-photodectors-materials} shows some PD and their characteristics\cite{tkachenko2006opticalspectroscopy}. 
 
 
-\newcolumntype{C}{>{\centering\arraybackslash}p{22mm}}% a centered fixed-width-column
 \begin{table}[H]
 	\centering
-	\begin{tabular}{lCCCC}
-		\hline
-		\hline
-		cathode &  range (nm) &  $\phi$ (\%) & $\lambda_{m}$ (nm) & $i_{d}$ nA\\
-		\hline
-		 bialkali (S-22) &  300-630 & 26 & 400 & 0.1\\
-		 multialkali (S-20) & 180-800 & 20 & 480 & 0.2\\
-		 extended red multialcali (S-25) & 300-900 & 7 & 600& 1\\
-		 GaAs & 300-920 & 15& 700 &2\\
-		 Cs-Te & 160-320 & 14 & 200 & 0.01\\
-		\hline
-		\hline
-	\end{tabular}
-\caption{Photo-cathodes,  usually implemented in PD to the spectroscopy of semiconductors\cite{tkachenko2006opticalspectroscopy}.}
-\label{tab:CH 3 Section 3.1 Photodectors materials}
+	\includegraphics[width=\textwidth]{../tables/table-photodetectors/out/photodetectors.pdf}
+	\caption{Photo-cathodes,usually implemented in PD to the spectroscopy of semiconductors\cite{tkachenko2006opticalspectroscopy}. }
+	\label{tab:chapter-3-section-samples-photodectors-materials}
 \end{table}
+
+% \newcolumntype{C}{>{\centering\arraybackslash}p{22mm}}% a centered fixed-width-column
+% \begin{table}[H]
+% 	\centering
+% 	\begin{tabular}{lCCCC}
+% 		\hline
+% 		\hline
+% 		cathode &  range (nm) &  $\phi$ (\%) & $\lambda_{m}$ (nm) & $i_{d}$ nA\\
+% 		\hline
+% 		 bialkali (S-22) &  300-630 & 26 & 400 & 0.1\\
+% 		 multialkali (S-20) & 180-800 & 20 & 480 & 0.2\\
+% 		 extended red multialcali (S-25) & 300-900 & 7 & 600& 1\\
+% 		 GaAs & 300-920 & 15& 700 &2\\
+% 		 Cs-Te & 160-320 & 14 & 200 & 0.01\\
+% 		\hline
+% 		\hline
+% 	\end{tabular}
+% \caption{Photo-cathodes,  usually implemented in PD to the spectroscopy of semiconductors\cite{tkachenko2006opticalspectroscopy}.}
+% \label{tab:chapter-3-section-samples-photodectors-materials}
+% \end{table}
 
 As a comment, it is important to denote that the CCD devices are been span in many setups in recent years and this is because these devices enlarged the range of experiments that can be realized with these, above all in other areas of physics as in the experimental astrophysics in which has obtained awfully important results.  Nowadays, CCD devices in experimental solid-state physics have contributed to getting great experiments that previously were limited due to spatial resolution and time response.  In the \cref{subsec:CH 3 PL}, it discusses the advantages and cons of the detectors (PD and CCD)  in PL spectroscopy context. 
 
@@ -108,35 +115,43 @@ Some experiments shown below correspond to Carlos's bachelor thesis \cite{carlos
 
 The experiments are organized by labels, how shows in \Cref{tab:chapter3:Samples description}, started with the samples \m{1}{7}{1}, \m{1}{7}{2} and \m{2}{2}{6} where these samples were grown with objective the measure trions. The experimental parameters are shown in \Cref{tab:CH 3 PL experimental parameters}, in each experiment the optical setup was optimized to enhance the signal measured, the optimization process consisted in measure laser peak at a definite monochromator slit's aperture then finely move the mirror until achieving a high response in multimeter, repeat this closing the slit's and measuring the FWHM of the laser peak in each step, finally we obtained an optimal resolution about 1 nm in our PL experiments. 
 
-\begin{table}[t]
+% \begin{table}[t]
+% 	\centering
+% 	\pgfplotstableread[col sep=comma]{
+% 		sample,laser,range,step,lectures,slits
+% 		\m{1}{7}{1},680,800-820,0.1,20,75
+% 		\m{1}{7}{2},680,780-840,0.1,15,75
+% 		\m{2}{2}{6},680,800-820,0.1,20,100
+% 		\m{1}{4}{0},680,800-820,0.1,20,100
+% 		\m{1}{4}{1},680,800-820,0.1,20,100
+% 		\m{5}{2}{1},680,800-820,0.1,20,100
+% 		\m{5}{2}{2},680,800-820,0.1,20,100
+% 		\m{5}{2}{6},680,800-820,0.1,20,100
+% 	}\pltable
+% 	\pgfplotstabletypeset[%
+% 	%Draw rules
+% 	every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},after row=\midrule},
+% 	every last row/.style={after row=\bottomrule\bottomrule},
+% 	every even row/.style={
+% 		before row={\rowcolor[gray]{0.92}}},
+% 	%Column styles
+% 	columns={sample,laser,range,step,lectures,slits},
+% 	columns/sample/.style={string type,column name=Sample, column type=c}, 
+% 	columns/laser/.style={string type,column name=Laser, column type=c}, 
+% 	columns/range/.style={string type, column name=Range(nm), column type=c}, 
+% 	columns/step/.style={ string type, column name= $\lambda$ step (nm),column type=c}, 
+% 	columns/lectures/.style={string type, column name=No. of singnal acquisition,column type=c}, 
+% 	columns/slits/.style={numeric type,column name=Slits apereture ($\mu$m),column type=c}, 
+% 	]{\pltable}
+% 	\caption{PL experimental parameters implemented in each sample, all experiments were carried about 14K and was used the same red (680 nm) laser diode.   The measured parameters as a Wavelength step or number of acquisitions per step Wavelength were optimized as explains in the text.  }
+% 	\label{tab:CH 3 PL experimental parameters}
+% \end{table}
+
+
+\begin{table}[H]
 	\centering
-	\pgfplotstableread[col sep=comma]{
-		sample,laser,range,step,lectures,slits
-		\m{1}{7}{1},680,800-820,0.1,20,75
-		\m{1}{7}{2},680,780-840,0.1,15,75
-		\m{2}{2}{6},680,800-820,0.1,20,100
-		\m{1}{4}{0},680,800-820,0.1,20,100
-		\m{1}{4}{1},680,800-820,0.1,20,100
-		\m{5}{2}{1},680,800-820,0.1,20,100
-		\m{5}{2}{2},680,800-820,0.1,20,100
-		\m{5}{2}{6},680,800-820,0.1,20,100
-	}\pltable
-	\pgfplotstabletypeset[%
-	%Draw rules
-	every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},after row=\midrule},
-	every last row/.style={after row=\bottomrule\bottomrule},
-	every even row/.style={
-		before row={\rowcolor[gray]{0.92}}},
-	%Column styles
-	columns={sample,laser,range,step,lectures,slits},
-	columns/sample/.style={string type,column name=Sample, column type=c}, 
-	columns/laser/.style={string type,column name=Laser, column type=c}, 
-	columns/range/.style={string type, column name=Range(nm), column type=c}, 
-	columns/step/.style={ string type, column name= $\lambda$ step (nm),column type=c}, 
-	columns/lectures/.style={string type, column name=No. of singnal acquisition,column type=c}, 
-	columns/slits/.style={numeric type,column name=Slits apereture ($\mu$m),column type=c}, 
-	]{\pltable}
-	\caption{PL experimental parameters implemented in each sample, all experiments were carried about 14K and was used the same red (680 nm) laser diode.   The measured parameters as a Wavelength step or number of acquisitions per step Wavelength were optimized as explains in the text.  }
+	\includegraphics[width=\textwidth]{../tables/table-pl-parameters/out/pl-parameters.pdf}
+	\caption[Table of PL experimental parameters]{PL experimental parameters implemented in each sample, all experiments were carried about 14K and was used the same red (680 nm) laser diode.   The measured parameters as a Wavelength step or number of acquisitions per step Wavelength were optimized as explains in the text.  }
 	\label{tab:CH 3 PL experimental parameters}
 \end{table}
 
@@ -282,7 +297,7 @@ e1-lh1    &(E)&1.5318   &1.5402   &1.5286   &         &1.5234   &1.5406\\
 
 
 
-%+++++++++++++++++++++++++++++++++++++++++++++ PHOTOREFLECTANCE ======================================
+%++++++++++++++++++++++++++++++++++ PHOTOREFLECTANCE +++++++++++++++++++++
 \subsection{Photorreflectance spectroscopy (PR)}
 \label{subsec:chapter-3-pr}
 \vspace{-10mm} 

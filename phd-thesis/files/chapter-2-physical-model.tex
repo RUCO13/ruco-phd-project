@@ -235,7 +235,7 @@ If join all of that parameters involved it, the model to solve should being prop
 Then, assuming the simplicity term, in which practically mentioned that, it's important to consider the simple way to get a result as a long as this works. So, in this work, will discuss the increase of the  \gls{oa}  due to the relative width in the wells of the coupled system, then here only considers the potential profile as a really significant parameter, of course, the effective mass and   the band-gap are also essential, but these are considers as a part of the model. Being this the basis of the model, this work will employ the formalism of \gls{efa} where in a general explain, this it  gives the envelope functions to calculate the single electron behavior under periodic potential as a heterostructure, therefore, this can allow describing it  through position-depend material properties\cite{foreman1996envelope,benduke1966spacecharge,bastard1990wave}, then it's also indispensable to declare the boundary conditions owned by the \gls{efa}. Therefore with a mathematical formalism, then it's employed the \gls{ema} which parts of the fundamental  parameter which is the effective-mass, then it can works with the 1D-\sch's equation as a function of effective-mass, as traditional egen-value equation:
 
 \begin{equation}\label{eqn:chapter2-sec-numerical-calculations-eigen-value-equation}
-	H\psi(z)=E\psi(z)
+	\textbf{H}\psi(z)=E\psi(z)
 \end{equation}
 
 Then, the Hamiltonian of \gls{ema} it's developed mainly by the effective-mass, this has the advantage of evaluated along of heterostructure,  allowing  the change of semiconductors which composed that, so, this makes it a great method. Therefore the Hamiltonian for a particle is given by\cite{kamizato1989excitons,bastard1990wave,foreman1996envelope}:
@@ -245,7 +245,7 @@ Then, the Hamiltonian of \gls{ema} it's developed mainly by the effective-mass, 
 \end{equation}
 
 
-In \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian} it's taken $z$-axis as a direction perpendicular to interface of QWs, or simply as the growth direction, consequently the potential $V(z)$ it's depend on, and the effective-mass $m^{*}(z)$ also depends on position $z$. In \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian} it's taken $z$-axis as a direction perpendicular to interface of QWs, or simply as the growth direction, consequently the potential $V(z)$ it's depend on, and the effective-mass $m^{*}(z)$ also depends on position $z$. As can see in \Cref{subfig:chapter2-sec-numerical-calculations-band-edge-b}, it's showing the band-edge profile as a potential profile which depends on semiconductor band-gap along of heterostructure.  Also in \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian}, it considers the momentum as $p_{z}^{2}$ as a \gls{1d}, due to the before discussed. Then it's allow to developed a method to solution which depends of position $z$. Finally, it can denote a \gls{1d} \sch quation under \gls{ema} to electron also heavy- and light-holes : 
+In \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian} it's taken $z$-axis as a direction perpendicular to interface of QWs, or simply as the growth direction, consequently the potential $V(z)$ it's depend on, and the effective-mass $m^{*}(z)$ also depends on position $z$. The \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian} it's taken $z$-axis as a direction perpendicular to interface of QWs, or simply as the growth direction, consequently the potential $V(z)$ it's depend on, and the effective-mass $m^{*}(z)$ also depends on position $z$. As can see in \Cref{subfig:chapter2-sec-numerical-calculations-band-edge-b}, it's showing the band-edge profile as a potential profile which depends on semiconductor band-gap along of heterostructure.  Also in \Cref{eqn:chapter2-sec-numerical-calculations-ema-hamiltonian}, it considers the momentum as $p_{z}^{2}$ as a \gls{1d}, due to the before discussed. Then it's allow to developed a method to solution which depends of position $z$. Finally, it can denote a \gls{1d} \sch quation under \gls{ema} to electron also heavy- and light-holes : 
 
 \begin{equation}\label{eqn:chapter2-sec-numerical-calculations-ema-schrodinger}
 	\begin{split}
@@ -261,20 +261,53 @@ The \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} it's then the
 \label{subsec:chapter-2-finite-difference-method}
 \vspace{-10mm} 
 In this section it will discuss the numerical method to solve the \gls{1d} \sch's equation, even tough this is a large discussed theme, here focus on a simple but powerful numerical method. Started from the fact that the \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} can it solve along of heterostructure and taken into account each semiconductor with compose it, this means that can discretize that and solved it for electron and holes. Although this, being a \gls{1d} equation, doesn't remove importance in the solution, that is to say, it's needing a robust method. It's important to remark which the spacial discretization depends on $\delta z$.
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../figures/chapter-2/numerical-calculations/out/fdm-potential-1}
-	\caption{Sketch of discrete potential band-edge profile which depends on spacial desplacement $\delta z$.}
+	\caption{Sketch of discrete potential band-edge profile which depends on spacial desplacement $\delta z$. HJ denotes the Heterojuntion boundary.}
 	\label{fig:chapter2-sec-numerical-calculations-fdm-potential}
 \end{figure}
-In \Cref{fig:chapter2-sec-numerical-calculations-fdm-potential} schemes the discrete potential profile considers, this band-edge profile corresponds to a \gls{SCQWs} structure. Remember that the potential $V(z)$ comes from the bend-edge Energy $E_{edge}$, like in the \gls{CB} and \gls{VB}, from that take the effective mass which corresponds to each semiconductor which compounds all heterostructure. Then, we can divide a heterostructure with coupled quantum wells basically into two parts, the adjacent barriers, the zone of wells which is considered the coupled barrier and their width, also the relative widths of each well. So, if consider the discrete structure we can apply \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} in each point which composes that. 
+In \Cref{fig:chapter2-sec-numerical-calculations-fdm-potential} schemes the discrete potential profile considers, this band-edge profile corresponds to a \gls{SCQWs} structure. Remember that the potential $V(z)$ comes from the bend-edge Energy $E_{edge}$, like in the \gls{CB} and \gls{VB}, from that take the effective mass which corresponds to each semiconductor which compounds all heterostructure. Then, we can divide a heterostructure with coupled quantum wells basically into two parts, the adjacent barriers and the zone of wells which is considered the coupled barrier and their width as well as the relative widths of each well. So, if consider the discrete structure we can apply \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} in each point which composes that. 
 
 The solution of \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} it's the central discussion, although exist several numerical methods to solve it, in this work is employed the \emph{Finite Difference Method} (\gls{FDM}), which begin characterized by the easy computational application. Even if, this method doesn't unique in applied discretization in comparison with the other method as Shoting\cite{killingbeck2020microcomputer,harrison2016quantum}, reduce the computational time and assure the correct convergence as long as the boundary conditions are correct. In other words, the \gls{FDM} is a non-sensible convergence method, being focused on matrix solution.  Taking the \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} and reformulated as a \emph{difference equation}\cite{harrison2016quantum}:
-\begin{equation}\label{eqn:chapter2-sec-numerical-calculations-scrodinger-discrete}
+\begin{equation}\label{eqn:chapter2-sec-numerical-calculations-schrodinger-discrete}
 	-\dfrac{\hbar}{2m^{*}}\left[\dfrac{\psi(z+\delta z)-2\psi(z)+\psi(z-\delta z)}{(\delta z)^2}\right] + V(z)\psi(z)=E\psi(z).
 \end{equation}
 
-In the \Cref{eqn:chapter2-sec-numerical-calculations-scrodinger-discrete} it's denoted the changed derivative by numerical difference,  
+In the \Cref{eqn:chapter2-sec-numerical-calculations-schrodinger-discrete} it's denoted the derivative change by numerical difference,  being a discrete equation. Something that it's important to consider is the boundary conditions which depend on the number of semiconductors involves in the structure and their dimensions, then, if it requires high precision it's important two factors: the total dimension of the structure, which contemplates each heterojunction boundary and the spatial step defined by $\delta z$. Either way, if considering a wide structure, as well as a very small step ($\delta z \approx 1\AA$) the computational effort, is high, for this reason, the compute considered memory should be reasonable.Then, taking into account these two factors and considering the computational work, the best choose a Matrix solution.
+
+The Matricial solution allows solving the system of equations naturally as an eigenvalue problem, then it has several numerical alternatives\footnote{This refers to linear algebra techniques\cite{harrison2016quantum,davidson1993monster}} to solve the system. The reason to assert these has to do with the discrete solution as large as the ratio between structure width and spatial step. This means the matrix has  dimensions as : $N = \text{total width}/\delta z$. Then, the way to get matrix ($\textbf{H}$), from Harrison et al. \cite{harrison2016quantum}, consists in reformulate  \Cref{eqn:chapter2-sec-numerical-calculations-schrodinger-discrete} as function of spatial potential band edge taken into account the variable effective mass, then:
+
+\begin{equation}\label{eqn:chapter2-sec-numerical-calculations-schrodinger-discrete-to-matrix}
+	a_{i}\psi_{i-1}+b_{i}\psi_{i}+c_{i}\psi_{i+1}=E\psi_{i}
+\end{equation}
+where the coefficients are:
+
+\begin{equation}\label{eqn:chapter2-sec-numerical-calculations-schrodinger-discrete-to-matrix-coefficients}
+	a_{i+1}=c_{i}= -\dfrac{\hbar^2}{2m^{*}_{i+\frac{1}{2}}(\delta z)^2} \quad \text{and}\quad b_{i}=\dfrac{\hbar^{2}}{2(\delta z)^2}\left(\dfrac{1}{m^{*}_{i+\frac{1}{2}}}+\dfrac{1}{m^{*}_{i-\frac{1}{2}}}\right)+V_{i}
+\end{equation}
+
+From \Cref{eqn:chapter2-sec-numerical-calculations-eigen-value-equation}, then the matrix \textbf{H} is conformed by the system of equations which is evaluated in each point os structure, then \textbf{H} is:  
+\begin{equation}
+	\textbf{H}=\begin{pmatrix}
+		b_{1} & c_{1} & 0      &\cdots & 0\\
+		a_{2} & b_{2} & c_{2}  &\cdots &0\\
+		0     &\ddots &\ddots  &\ddots&0\\
+		\vdots&\cdots &a_{N-1} &b_{N-1}&c_{N-1}\\
+		0     &\cdots&0        &a_{N}  &b_{N} 
+	\end{pmatrix}
+\end{equation}
+then $\psi$ is in \Cref{eqn:chapter2-sec-numerical-calculations-eigen-value-equation} is a vector column which containing all the samples of the wave function. 
+
+Then to solve the $N\times N$ matrix it's the last work, but due to the \emph{tridiagonal} nature reduce the computational effort and exist great algebraic algorithms to solve it as cite{lapack, gnu}. Therefore, this method simplify the solution of any structure with arbirtrary or in our case dependent on band-edge potential. The next important question is over to define the potential profile, as this dependens of semiconductor effective-mass and gap energy we taken the corresponds paramters of several references 
+
+\begin{figure}[H]\label{fig:chapter2-sec-numerical-calculations-harrison-wells}
+	\centering
+	\includegraphics{../figures/chapter-2/numerical-calculations/out/harrison-wells}
+	\caption{}
+\end{figure}
+
+\section{Numerical Results}
 
 \section{Anisotropy model in CQWs \label{sub:chap2-anisotropy-model}}
 

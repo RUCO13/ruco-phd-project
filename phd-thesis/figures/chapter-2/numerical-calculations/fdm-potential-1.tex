@@ -140,7 +140,7 @@
     	%ylabel={Energy (eV)},
     	xlabel={Growth Direction ($z$)},
     	%xmin=-5e-2,xmax=5e-2,
-    	ymin=-0.6,ymax=1.35,
+    	ymin=-0.6,ymax=1.5,
         axis line style={line width=1pt,red,opacity=0},
 		]
 	
@@ -277,6 +277,8 @@
 % \coordinate (cc1) at (axis cs:1,-1.2);
 \draw [line width=.3mm,decorate,decoration = {brace}] (axis cs:0,\gap+\cb+0.05) --  (\deltax,\gap+\cb+0.05);
 \node at (axis cs:1.5,\gap+\cb+0.17) {$\delta z$};
+
+\draw[-{Stealth}] (axis cs:\wbar,\gap+\cb+0.2)--(axis cs:\wbar,\gap+\cb)node[below,yshift=10mm] {HJ Boundary};
 
 \end{axis}
 

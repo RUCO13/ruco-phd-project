@@ -122,3 +122,9 @@ bookmarksopenlevel=2
 \newcommand{\boldlm}[1]{$\boldsymbol{#1}$}
 \newcommand{\boldl}[1]{\boldsymbol{#1}}
 
+
+
+\newcommand{\algaasx}[1]{
+	\FPeval\xcomp{1-#1}
+	\FPeval\xcomp{round(xcomp:1)}	
+	$\mathrm{Al_{#1}Ga_{\xcomp}As}$}

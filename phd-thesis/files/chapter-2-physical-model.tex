@@ -299,8 +299,8 @@ From \Cref{eqn:chapter2-sec-numerical-calculations-eigen-value-equation}, then t
 \end{equation}
 then $\psi$ is in \Cref{eqn:chapter2-sec-numerical-calculations-eigen-value-equation} is a vector column which containing all the samples of the wave function. 
 
-Then to solve the $N\times N$ matrix it's the last work, but due to the \emph{tridiagonal} nature reduces the computational effort and thanks to exists great algebraic algorithms to solve it as cite{lapack, gnu}. Therefore, this method simplifies the solution of any structure with arbitrary or in our case dependent on band-edge potential. The next important question is over to define the potential profile, as this dependence of semiconductor effective-mass and gap energy we took the corresponds parameters of several references 
-
+Then, for the solution of the $N\times N$ matrix it's represents a computation work, but due to the \emph{tridiagonal} nature it reduces that effort and thanks to exist great algebraic algorithms to solve\cite{laug1999lapack,harris2020array}, this work can simplify enormous. 
+Therefore, this method simplifies the solution of any structure with arbitrary or in our case dependent on band-edge potential. The next task is over to define the potential profile and their dependence of  effective-mass and band gap energy.  Firstly, we take as reference the double quantum wells propose by Harrison et al.\cite{harrison2016chap3} and reproduce the  eigenenergies and wave functions as shows in \Cref{fig:chapter2-sec-numerical-calculations-harrison-wells}.For this structure, it takes into account symmetric double wells, that is to say, with same width $l_{w}=6$nm, \algaasx{0.2} central barrier of $l_{b}=6$.  
 
 \begin{figure}[H]\label{fig:chapter2-sec-numerical-calculations-harrison-wells}
 	\centering

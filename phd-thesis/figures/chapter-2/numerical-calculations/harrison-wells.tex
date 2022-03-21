@@ -88,10 +88,10 @@ ylabel={Energy (eV)},
 xlabel={Growth ($z-$) axis (nm)},
 ]
 
-\addplot[no markers,smooth,tension=0] table [x index={0},y index={1},col sep=comma] {/media/labfiles/ruco/repos/cqws-codes/cqws-v1/first-code-repply-harrison-nextnano/data/potential_profile.dat};
+\addplot[no markers,smooth,tension=0] table [x index={0},y index={1},col sep=comma] {/media/labfiles/ruco/repos/cqws-codes/cqws-v1/first-codes/data/potential_profile.dat};
 
-\addplot[no markers,smooth] table [x index={0},y expr=\thisrowno{1}*-1/20 + 0.04915,col sep=comma] {/media/labfiles/ruco/repos/cqws-codes/cqws-v1/first-code-repply-harrison-nextnano/data/psielectron_data.dat};
-\addplot[no markers,smooth,dashed] table [x index={0},y expr=\thisrowno{2}*-1/20 + 0.05772,col sep=comma] {/media/labfiles/ruco/repos/cqws-codes/cqws-v1/first-code-repply-harrison-nextnano/data/psielectron_data.dat};
+\addplot[no markers,smooth] table [x index={0},y expr=\thisrowno{1}*-1/20 + 0.04915,col sep=comma] {/media/labfiles/ruco/repos/cqws-codes/cqws-v1/first-codes/data/psielectron_data.dat};
+\addplot[no markers,smooth,dashed] table [x index={0},y expr=\thisrowno{2}*-1/20 + 0.05772,col sep=comma] {/media/labfiles/ruco/repos/cqws-codes/cqws-v1/first-codes/data/psielectron_data.dat};
 
 \end{axis}
 \end{tikzpicture}

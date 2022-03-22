@@ -300,14 +300,31 @@ From \Cref{eqn:chapter2-sec-numerical-calculations-eigen-value-equation}, then t
 then $\psi$ is in \Cref{eqn:chapter2-sec-numerical-calculations-eigen-value-equation} is a vector column which containing all the samples of the wave function. 
 
 Then, for the solution of the $N\times N$ matrix it's represents a computation work, but due to the \emph{tridiagonal} nature it reduces that effort and thanks to exist great algebraic algorithms to solve\cite{laug1999lapack,harris2020array}, this work can simplify enormous. 
-Therefore, this method simplifies the solution of any structure with arbitrary or in our case dependent on band-edge potential. The next task is over to define the potential profile and their dependence of  effective-mass and band gap energy.  Firstly, we take as reference the double quantum wells propose by Harrison et al.\cite{harrison2016chap3} and reproduce the  eigenenergies and wave functions as shows in \Cref{fig:chapter2-sec-numerical-calculations-harrison-wells}.For this structure, it takes into account symmetric double wells, that is to say, with same width $l_{w}=6$nm, \algaasx{0.2} central barrier of $l_{b}=6$.  
+Therefore, this method simplifies the solution of any structure with arbitrary or in our case dependent on band-edge potential. The next task is over to define the potential profile and their dependence of  effective-mass and band gap energy (\gls{eg}).  Firstly, we take as reference the double quantum wells propose by Harrison et al.\cite{harrison2016chap3} and reproduce the  eigenenergies and wave functions as shows in \Cref{fig:chapter2-sec-numerical-calculations-harrison-wells}.For this structure, it takes into account symmetric double wells, that is to say, with same width $l_{w}=6$nm, \algaasx{0.2} central barrier of $l_{b}=4$.  For the semiconductor parameters with compose that structure, as the model like shows in the \Cref{eqn:chapter2-sec-numerical-calculations-ema-schrodinger} doesn't take into account the effective mass as energy function and not taken into account the nonparabolicity\cite{nelson1987band,cooper2010finite}. Then, to define potential profile $V(z)$ uses the Varshni's model \cite{varshni1967temperature}, to calculate bandgap energy to GaAs/\algaas, how doesn't consider the mass-effective as energy dependence then it uses paramaters from: \cite{vurgaftman2001bandparameters,molenk1988determination,adachi2009properties,lew2009heterostructuresbasicformalism}, finally it employs the Vegard's law to define the thernary semiconductors\cite{donmez2012study,zhou2001deviation}. If defines the potential profile as:
+\begin{equation}\label{eqn:chapter2-sec-numerical-calculations-harrison-potential-profile}
+	V(z),m^{*}(z)=\begin{cases}
+		\text{\algaasx{0.2}}\quad &0<z<20\text{ nm}\\
+		\text{GaAs}\quad    &20<z<26\text{ nm}\\
+		\text{\algaasx{0.2}}\quad &26<z<32\text{ nm}\\
+		\text{GaAs}\quad    &32<z<38\text{ nm}\\
+		\text{\algaasx{0.2}}\quad &38<z<58\text{ nm}
+	\end{cases}
+\end{equation}
+where the $V(z)$ it defines by the correspond value of \gls{eg} and the effective-mass $m^{*}(z)$, both with the spatial $z$ dependence. But, this work as only in take Harrison et al.\cite{harrison2016quantum} like a reference, the \textbf{NEXTNANO} software\cite{birner2007nextnano,nextnanoharrison} also take that, in the \Cref{fig:chapter2-sec-numerical-calculations-harrison-wells} and 
 
-\begin{figure}[H]\label{fig:chapter2-sec-numerical-calculations-harrison-wells}
+\begin{figure}
 	\centering
-	\includegraphics[width=0.7\textwidth]{../figures/chapter-2/numerical-calculations/out/harrison-wells}
-	\caption{}
+	\includegraphics[width=0.8\textwidth]{../figures/chapter-2/numerical-calculations/out/harrison-wells}
+	\caption{Doble Quantum Wells structure reproduce from  Harrison et al.\cite{harrison2016chap3}}
+	\label{fig:chapter2-sec-numerical-calculations-harrison-wells}
 \end{figure}
-
+	
+\begin{table}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../tables/table-comparison-numerical-results/out/comparison-numerical-harrison-nextnano.pdf}
+	\caption{ }
+	\label{tab:chapter2-sec-numerical-calculations-comparison-harrison-nextnano}
+\end{table}
 \section{Numerical Results}
 
 \section{Anisotropy model in CQWs \label{sub:chap2-anisotropy-model}}

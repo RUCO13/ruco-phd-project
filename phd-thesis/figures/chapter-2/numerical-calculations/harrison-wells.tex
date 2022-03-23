@@ -93,7 +93,12 @@ xlabel={Growth ($z-$) axis (nm)},
 \addplot[no markers,smooth] table [x index={0},y expr=\thisrowno{1}*-1/20 + 0.04915,col sep=comma] {/media/labfiles/ruco/repos/cqws-codes/cqws-v1/first-codes/data/psielectron_data.dat};
 \addplot[no markers,smooth,dashed] table [x index={0},y expr=\thisrowno{2}*-1/20 + 0.05772,col sep=comma] {/media/labfiles/ruco/repos/cqws-codes/cqws-v1/first-codes/data/psielectron_data.dat};
 
+
 \end{axis}
+\node[anchor=north west,inner sep=0mm,xshift=3mm](table) at (harrison.north east){\includegraphics{../../../tables/table-comparison-numerical-results/out/comparison-numerical-harrison-nextnano.pdf}};
+\node[draw, fill=blue,text=white,inner sep=0mm,font=\bfseries,scale=1.5] at (harrison.north west){a)};
+\node[draw, fill=blue,text=white,inner sep=0mm,font=\bfseries,scale=1.5] at (table.north west){b)};
+
 \end{tikzpicture}
 \end{document}
 

@@ -98,7 +98,7 @@
 		   %xtick=\empty,     
            %============= Legend Plots ========================
            legend entries={H,L},
-           legend pos={north east},
+           legend pos={north west},
            legend style={draw=none,
            	fill=none,
            	row sep=-1pt,
@@ -156,7 +156,7 @@
 			%xtick pos= left,
             %============= Legend Plots ========================
            legend entries={Ee},
-           legend pos={north east},
+           legend pos={north west},
            legend style={draw=none,
            	fill=none,
            row sep=-1pt,
@@ -210,104 +210,7 @@
         
         
         
-%========================================================================== %  
-%																			%
-%			                PLOT ENERGY										%
-%																			%
-%																			%
-%===========================================================================%			        
-        
-% \begin{axis}[
-% width=1.2cm,
-% at={(bottom axiss.east)},
-% anchor=west,
-% xshift = 0.1cm,
-% name=bottom axis,
-% scale only axis,
-% axis x line*=bottom,
-% scale only axis,
-% xmin=0, xmax=1.1,
-% ytick pos=right,
-% ymin=-0.018,ymax=-0.0046,
-% %Parameters
-% yticklabel style={
-% 	/pgf/number format/fixed,
-% 	/pgf/number format/precision=3,
-% 	/pgf/number format/fixed zerofill
-% },
-% scaled y ticks=false,
-% minor y tick num=1,
-% xtick = {0.3,0.8},
-% xticklabels={ N, N },
-% ytick={-0.017, -0.013, -0.009, -0.005, -0.001},
-% %============== Axis labels ==============================
-% %tick scale binop = ,
-% ]
-% \addplot[mark=none,red,line width=0.5pt] coordinates {(0.1,\hhu) (1,\hhu)};
-% %\addplot[mark=none,red,line width=0.5pt,densely dotted] coordinates {(0.5,\hhu) (1,\hhu)};
-% \addplot[mark=none,black!50!green,line width=0.5pt] coordinates {(0.1,\lhu) (1,\lhu)};
-% %\addplot[mark=none,black!50!green,line width=0.5pt,densely dotted] coordinates {(0.5,\lhu) (1,\lhu)};
 
-
-% \addplot[mark=none,red,line width=0.5pt,densely dotted] coordinates {(0.1,\hhd) (1,\hhd)};
-% %\addplot[mark=none,red,line width=0.5pt,densely dotted] coordinates {(0.1,\hhd) (0.6,\hhd)};
-% \addplot[mark=none,black!50!green,line width=0.5pt,densely dotted] coordinates {(0.1,\lhd) (1,\lhd)};
-% %\addplot[mark=none,black!50!green,line width=0.5pt,densely dotted] coordinates {(0.1,\lhd) (0.6,\lhd)};
-
-% \draw[{Stealth[scale=0.3]}-{Stealth[scale=0.3]}] (axis cs:0.5,\hhu)--(axis cs:0.5,\hhd);
-% \draw[{Stealth[scale=0.5]}-{Stealth[scale=0.5]}] (axis cs:0.5,\lhu)--(axis cs:0.5,\lhd);
-
-
-
-% \node[scale=0.5] at (axis cs:0.6,-0.0065) {$\mathrm{\delta Ehh}$};
-% \node[scale=0.5] at (axis cs:0.68,-0.013) {$\mathrm{\delta Elh}$};
-
-
-% \end{axis}
-
-
-
-% \begin{axis}[
-% width=1.2cm,
-% scale only axis,
-% xmin=0, xmax=1.1,
-% ymin = 1.529, ymax= 1.545,
-% y tick label style={
-% 	/pgf/number format/.cd,
-% 	fixed,
-% 	fixed zerofill,
-% 	precision=3,
-% },
-% scaled y ticks=false,
-% minor y tick num=1,
-% xtick style={draw=none},
-% xticklabels={\empty},
-% %ytick={1.53 , 1.532, 1.534, 1.536, 1.538, 1.54 , 1.542, 1.544, 1.546,1.548, 1.55},
-% ytick pos=right,
-% %============================== break plot
-% name = top axis,
-% at=(bottom axis.north),
-% anchor=south, yshift=\pgfkeysvalueof{/tikz/axis break gap},
-% scale only axis,
-% axis x line*=top,
-% after end axis/.code={
-% 	\draw (rel axis cs:0,0) +(-0mm,0mm) -- +(1mm,0mm)
-% 	++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
-% 	+(-0mm,-0mm) -- +(1mm,0mm)
-% 	(rel axis cs:1,0) +(-1mm,-0mm) -- +(0mm,0mm)
-% 	++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
-% 	+(-1mm,-0mm) -- +(0mm,0mm);
-% },
-% % Parameters
-% ]
-
-% \addplot[mark=none,blue,line width=0.5pt] coordinates {(0.1,\eu) (1,\eu)};   
-% \addplot[mark=none,blue,line width=0.5pt,densely dotted] coordinates {(0.1,\ed) (1,\ed)};   
-
-% \draw[{Stealth[scale=0.5]}-{Stealth[scale=0.5]}] (axis cs:0.5,\eu)--(axis cs:0.5,\ed);
-% \node[scale=0.5] at (axis cs:0.7,1.5375) {$\mathrm{\delta Ee}$};
-% \end{axis}
-      
         
 \end{tikzpicture}
 \end{document}

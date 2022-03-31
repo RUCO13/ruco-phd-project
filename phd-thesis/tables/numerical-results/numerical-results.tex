@@ -1,0 +1,53 @@
+\documentclass{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsfonts}
+\usepackage{tikz,pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{pgffor}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows,arrows.meta,calc}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+%
+\pgfplotstableread[col sep=comma]{
+    sample,e1h1,e1l1,e2h2,e2l2,e3h3
+    SCQWs,($N$)1.5328,($N$)1.5380,($N$)1.5394,($N$)1.5499,($N$)1.5948
+        ,($E$)1.5297,($E$)1.5341,      ,      ,
+    ACQWs-1,($N$)1.5265,($N$)1.5296,($N$)1.5368,($N$)1.5460,($N$)1.5837
+        ,($E$)1.5273,($E$)1.5314,      ,      ,
+    ACQWs-2,($N$)1.5181,($N$)1.5206,($N$)1.5330,($N$)1.5394,($N$)1.5460
+        ,($E$)1.5190,($E$)1.5210,      ,      , 
+}\table
+
+
+\begin{document}
+\pgfplotstabletypeset[%
+        %Draw rules
+        every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},after row=[0.3ex]\midrule},
+        every last row/.style={after row=\bottomrule\bottomrule},
+        every odd row/.style={after row=[2ex]},
+        %    before row={\rowcolor[gray]{0.92}}},
+        %Column styles
+        columns={sample,e1h1,e1l1,e2h2,e2l2,e3h3},
+        columns/sample/.style={string type,column name=Sample, column type=c,
+        assign cell content/.code={%
+                                \pgfmathparse{int(Mod(\pgfplotstablerow,2)}%
+                                \ifnum\pgfmathresult=0%
+                                    \pgfkeyssetvalue{/pgfplots/table/@cell content}%
+                                    {\multirow{2}{*}{##1}}%
+                                \fi%
+                                },
+        }, 
+        columns/e1h1/.style={string type,column name=e1-hh1, column type=c}, 
+        columns/e1l1/.style={string type,column name=e1-lh1, column type=c}, 
+        columns/e2h2/.style={string type,column name=e2-hh2, column type=c}, 
+        columns/e2l2/.style={string type,column name=e2-lh2, column type=c}, 
+        columns/e3h3/.style={string type,column name=e3-hh3, column type=c}, 
+        ]{\table}
+\end{document}

@@ -85,6 +85,13 @@
 \node[anchor=south west,inner sep=0mm] at (current page.south west){\includegraphics[width=0.49\linewidth]{out/numerical-results-m43521}};
 \node[anchor=south east,inner sep=0mm] at (current page.south east){\includegraphics[width=0.49\linewidth]{out/numerical-results-m43172}};
 
-
+\foreach \pos/\an/
+\lb in {current page.north west/north west/a,
+current page.north east/north east/b,
+current page.south west/south west/c,
+current page.south east/south east/d}
+{
+\node[anchor=\an,draw, fill=blue,text=white,inner sep=0mm,font=\bfseries,scale=0.9] at (\pos){\lb)};
+}
 \end{tikzpicture}
 \end{document}

@@ -1,0 +1,45 @@
+\documentclass{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts}
+\usepackage{tikz,pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{pgffor}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows,arrows.meta,calc}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+%
+\pgfplotstableread[col sep=comma]{
+    code,eu,ed
+    Harrison,0.049,0.057
+    Nextnano,0.049,0.057
+    Our code,0.049,0.057
+}\results
+\begin{document}
+\pgfplotstabletypeset[
+    every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},after row=\midrule},
+    every last row/.style={after row=\bottomrule\bottomrule},
+    every even row/.style={before row={\rowcolor[gray]{0.92}}},
+    columns={code,eu,ed},
+    columns/code/.style={string type,column name=Code, column type=c,},
+    
+    columns/eu/.style={string type,column name=$e_{1}$, column type=c}, 
+    columns/ed/.style={string type,column name=$e_{2}$, column type=c}, 
+    every row 0 column 1/.append style={
+    postproc cell content/.append style={/pgfplots/table/@cell content/.add={}{\textcolor{red}{12}}}},
+    every row 0 column 2/.append style={
+        postproc cell content/.append style={/pgfplots/table/@cell content/.add={}{\textcolor{red}{70}}}},
+    every row 1 column 1/.append style={
+            postproc cell content/.append style={/pgfplots/table/@cell content/.add={}{\textcolor{red}{20}}}},
+    every row 1 column 2/.append style={
+                postproc cell content/.append style={/pgfplots/table/@cell content/.add={}{\textcolor{red}{79}}}},
+    every row 2 column 1/.append style={
+                    postproc cell content/.append style={/pgfplots/table/@cell content/.add={}{\textcolor{red}{12}}}},
+    every row 2 column 2/.append style={
+                        postproc cell content/.append style={/pgfplots/table/@cell content/.add={}{\textcolor{red}{71}}}},
+    ]{\results}
+\end{document}

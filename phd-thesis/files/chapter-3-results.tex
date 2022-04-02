@@ -32,25 +32,20 @@ The samples studied in this work, are made up of a GaAs (001) substrate, the GaA
 The realistic structures present some details that can modify the experimental results, some of these are inevitability due to the complexity of growth. One of these is the interfaces between two different materials, i.e., the typical structure of GaAs/AlGaas has an interface between these, then the problem is due to an imperfect mismatch of materials, therefore, can cause anisotropy effects. Other details which usually are considered are surface, point defects along of structure, or strained caused by overlayer in the epitaxial process.  Later, the interfacial detail gives the physical sense to RAS experiments in the symmetric CQWs structures. 
 
 
+\begin{sidewaystable}
+	\begin{table}[H]
+		\centering
+		\includegraphics[width=\textwidth]{../tables/chapter-3/table-1-samples/out/table-1-samples.pdf}
+		\caption[Table of samples description]{This table shows the CQWs structures studied in this work.  CQWs potential profiles $V(z)$ are shown to observe the different shapes, composition parameters, and dimensions of structures studied. The dashed line determines the symmetric reference in the last samples in which we focused (\tucu, \tcvu, \tcvd, \tcvt), due to their characteristic results. }
+		\label{tab:chapter3:Samples description} 
+	\end{table}
+\end{sidewaystable}
+
 \Cref{tab:chapter3:Samples description} shows the sample names, each sample has two QWs coupled by a thin barrier preferentially of \algaas semiconductor where Al percent is important because of the barriers potentials depends on this, in the case of AlAs barriers the potential barrier is bigger than \algaas. As a before-mentioned, this was taken into account in numerical calculations to generate the potential profile. Commonly for the case, \algaas barriers both in adjacent like the coupling barrier the $x$ values are in the interval $0.1<x<0.4$. Worth mentioning that the purpose of the first four samples (up to down in table) they were grown with the objective of measure indirect excitons (IX), so that,  the structures are more complex, and we omitted the value of n-doped since these samples are doping in bottom and top to minimize the intrinsic electric field (screening field effect) so that external perturbation is applied through a voltage over the sample\cite{yuan2018tunneling} and the n-doped enhance the external perturbation \footnote{Non-published, the specific information about the doped  in these growths, if you have a question about this, you can send email to Dr. Klaus Biermann \url{biermann@pdi-berlin.de}}. After realized experiments over the four first samples and observe possible trions  (\xp or \xm)  through PR spectroscopy and an apparent increase of the RAS signal, it was decided to focus the experiments on these structures, which have a less complex composition as in the case of the first three samples in the table (see \Cref{tab:chapter3:Samples description}). Therefore,  it took the sample \tucu as a  basis, i.e., same barriers widths both coupling barrier and adjacent barriers, obtained the samples \tcvu, \tcvd and \tcvt where sample \tcvd is the same to sample \tcvu in structure but with a different type of doping (p-type in \tcvd and n-type in \tcvu), samples \tcvu and \tcvd have the same doping type (n-type in both) but one of the QW is more width to another, this means that the sample \tcvt have the same thickness in both QWs (SCQWs) and sample \tcvu have one  QW  thick more than the another (ACQWs). 
-
-
-\begin{table}[H]
-	\centering
-	\includegraphics[width=\textwidth]{../tables/table-1-samples/build/table-1-samples.pdf}
-	\caption[Table of samples description]{This table shows the CQWs structures studied in this work.  CQWs potential profiles $V(z)$ are shown to observe the different shapes, composition parameters, and dimensions of structures studied. The dashed line determines the symmetric reference in the last samples in which we focused (\tucu, \tcvu, \tcvd, \tcvt), due to their characteristic results. }
-	\label{tab:chapter3:Samples description} 
-\end{table}
-
-
-
 
 The \Cref{sec:chapter 3 Spectroscopy}  shows each experimental setup implemented in this investigation with their respective results. Starting with the  \Cref{subsec:chapter-3-pl} shows PL spectroscopy, their experimental setup implemented to obtain transitions energies values and compare with numerical results, after,  in \Cref{subsec:chapter-3-pr} shown experimental setup and results of the PR spectroscopy, to get information about the intrinsic electric field and the effects caused by this. Finally,  \Cref{subsec:chapter-3-ras} shows the RAS experimental setup and exposes the experiments that were realized to study the anisotropy caused by the asymmetry due to the relative thickness between the CQWs.
 
-
-%=============================== Spectroscopy =====================================%
-\newpage
-\section{Spectroscopy: Experimental setups and  experimental results}
+\section{Spectroscopy: Experimental setups and results}
 \label{sec:chapter 3 Spectroscopy}
 \vspace{-10mm} 
 \lettrine[lines=3, lraise=.1, nindent=0mm, slope=0mm]{\textbf{O}}{ptical spectroscopy} frequently is defined as a branch of physics that studies the \emph{light-matter interaction}, this is important because the simple definition of interaction covers a vast realm of physical phenomena from classical to quantum electrodynamics\cite{weiner2017light}. Therefore, optical spectroscopy is an essential tool in experimental solid state physics, gives the guide to study optical and electronic properties of semiconductors.\\*
@@ -65,11 +60,9 @@ The optical process in semiconductors consists of the study of response due to \
 
 
 Before continuing with the manuscript of this chapter, I would like to mention that the experiments could not be carried out without the development of detectors, specifically optical detectors. To speak about optical detectors, it is impossible not to mention the photoelectric effect that in general terms is the transfer of energy from photons to electrons when the light spot on a surface\cite{einstein1905uber}. So, this fundamental quantum phenomenon is the basis of detectors in spectroscopy, these detectors are called photodetectors, where these convert the light power(photons incidence over their sense area)  into an electric signal, voltage, or current, then this signal we can measure and amplify it. The next sections will mention and discuss the PD implemented in the experimental setup and especially which are the pros and cons. It is important that the photo-cathode of the photo-detector corresponds to the spectral range of experiments. i.e, in our experiments the spectral range of interest is from 700nm to 900nm the PD should have characteristics to adequate of this range. The \Cref{tab:chapter-3-section-samples-photodectors-materials} shows some PD and their characteristics\cite{tkachenko2006opticalspectroscopy}. 
-
-
-\begin{table}[H]
+\begin{table}
 	\centering
-	\includegraphics[width=\textwidth]{../tables/table-photodetectors/out/photodetectors.pdf}
+	\includegraphics[width=\textwidth]{../tables/chapter-3/table-photodetectors/out/photodetectors.pdf}
 	\caption{Photo-cathodes,usually implemented in PD to the spectroscopy of semiconductors\cite{tkachenko2006opticalspectroscopy}. }
 	\label{tab:chapter-3-section-samples-photodectors-materials}
 \end{table}
@@ -151,7 +144,7 @@ The experiments are organized by labels, how shows in \Cref{tab:chapter3:Samples
 
 \begin{table}[H]
 	\centering
-	\includegraphics[width=\textwidth]{../tables/table-pl-parameters/out/pl-parameters.pdf}
+	\includegraphics[width=\textwidth]{../tables/chapter-3/table-pl-parameters/out/pl-parameters.pdf}
 	\caption[Table of PL experimental parameters]{PL experimental parameters implemented in each sample, all experiments were carried about 14K and was used the same red (680 nm) laser diode.   The measured parameters as a Wavelength step or number of acquisitions per step Wavelength were optimized as explains in the text.  }
 	\label{tab:CH 3 PL experimental parameters}
 \end{table}
@@ -246,51 +239,48 @@ of  $\lambda=$685 nm, although the laser energy is chosen in respect to energy g
 	\label{fig:chapter-3-PL-experiments-M4_3140-M4_3521-M4_3523}
 \end{figure}
 Contrary to the samples measured first, the samples \sm{3140}, \sm{3521}, and \sm{3526} exhibits the most spectral resolution this means that exhibit a more homogenous behavior  due to the QWs have quantized energy, therefore, the electron-hole recombination is more probably to measure than the other samples which present width spectrums so that these results may be due to the several internal mechanisms of which can be: impurities, large carrier density due doped,  defects, among others\cite{khmissi2010effectcarriers,kundrotas2005excitonic}. In each of these PL spectra, \Cref{fig:chapter-3-PL-experiments-M4_3171-M4_3172-M4_3226,fig:chapter-3-PL-experiments-M4_3140-M4_3521-M4_3523} present the most intense peaks associates with heavy- and light-holes exciton transitions denoted by e1-hh1 and e1-lh1 respectively.  In discussion with the aforementioned mentioned, several mechanisms can contribute to getting an inhomogeneous spectrum, even it can say that the two peaks which correspond to exciton transitions are thick and merge this can be related with the high doped level this is because very high dopant concentration causes an overlap of the impurity band with the free-carrier continuum\cite{kundrotas2005excitonic}. Table 5 shows the comparison between experimental transitions energies get with PL and the numerical results. It is important to mentioned that the approximation of numerical calculations are closed to experimental, the difference  is about of 5 meV for the PL case. It is well-known that the PL signal is increase as a function of decrease well widths, as shows 
-
-
-
-
 \begin{table}[H]
 \centering
+\includegraphics[width=\textwidth]{../tables/chapter-3/pl-comparison-numerical/out/pl-comparison-numerical.pdf}
 \caption{Comparison table between experimental transitions obtained trough PL measures and numerical transitions calculated as explained in \Cref{sec:chapter}}
 \label{tab:CH-3-PL-Experimental-vs-Numerical-transitions}
-\pgfplotstableread[col sep=&, row sep=\\]{
-transition&T&m43171   &m43172   &m43226   &m43140   &m43521   &m43523\\
-e1-hh1    &(E)&1.5270   &1.5341   &1.5329   &1.5170   &1.5207   &1.5354\\
-          &(N)&1.5313   &1.5342   &1.5339   &1.5292   &1.5196   &1.5354\\
-e1-lh1    &(E)&1.5318   &1.5402   &1.5286   &         &1.5234   &1.5406\\
-		  &(N)&1.5370   &1.5414   &1.5408   &1.5335   &1.5220   &1.5366\\
-}\energy
-	\pgfplotstabletypeset[%
-	CellColor/.style={postproc cell content/.append code={
-			\pgfplotstablegetelem{\pgfplotstablerow}{Color}\of{\mytable}%
-			\ifthenelse{\pgfplotsretval = 1 }% if 
-			{\pgfkeysalso{/pgfplots/table/@cell content/.add={\cellcolor{red}}{}}}% then
-			{}% else
-	}},
-	%Draw rules
-	every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},after row=\midrule},
-	every last row/.style={after row=\bottomrule\bottomrule},
-	columns/transition/.style={
-		assign cell content/.code={%
-			\pgfmathparse{int(Mod(\pgfplotstablerow,2)}%
-			\ifnum\pgfmathresult=0%
-			\pgfkeyssetvalue{/pgfplots/table/@cell content}%
-			{\multirow{2}{*}{##1}}%
-			\fi%
-		},
-	},
-	%every row 2 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{blue!10!white}}{},}},
-	%Column s
-	columns={transition,T,m43171,m43172,m43226,m43140,m43521,m43523},
-	columns/T/.style={string type,column name=\empty, column type=c}, 
-	columns/m43171/.style={column name=\sm{3171},fixed,fixed zerofill,precision=4,column type={c}},
-	columns/m43172/.style={column name=\sm{3172},fixed,fixed zerofill,precision=4,column type={c}},
-	columns/m43226/.style={column name=\sm{3226},fixed,fixed zerofill,precision=4,column type={c}},
-	columns/m43140/.style={column name=\sm{3140},fixed,fixed zerofill,precision=4,column type={c}},
-	columns/m43521/.style={column name=\sm{3521},fixed,fixed zerofill,precision=4,column type={c}},
-	columns/m43523/.style={column name=\sm{3523},fixed,fixed zerofill,precision=4,column type={c}},
-	]{\energy}
+% \pgfplotstableread[col sep=&, row sep=\\]{
+% transition&T&m43171   &m43172   &m43226   &m43140   &m43521   &m43523\\
+% e1-hh1    &(E)&1.5270   &1.5341   &1.5329   &1.5170   &1.5207   &1.5354\\
+%           &(N)&1.5313   &1.5342   &1.5339   &1.5292   &1.5196   &1.5354\\
+% e1-lh1    &(E)&1.5318   &1.5402   &1.5286   &         &1.5234   &1.5406\\
+% 		  &(N)&1.5370   &1.5414   &1.5408   &1.5335   &1.5220   &1.5366\\
+% }\energy
+% 	\pgfplotstabletypeset[%
+% 	CellColor/.style={postproc cell content/.append code={
+% 			\pgfplotstablegetelem{\pgfplotstablerow}{Color}\of{\mytable}%
+% 			\ifthenelse{\pgfplotsretval = 1 }% if 
+% 			{\pgfkeysalso{/pgfplots/table/@cell content/.add={\cellcolor{red}}{}}}% then
+% 			{}% else
+% 	}},
+% 	%Draw rules
+% 	every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},after row=\midrule},
+% 	every last row/.style={after row=\bottomrule\bottomrule},
+% 	columns/transition/.style={
+% 		assign cell content/.code={%
+% 			\pgfmathparse{int(Mod(\pgfplotstablerow,2))}%
+% 			\ifnum\pgfmathresult=0%
+% 			\pgfkeyssetvalue{/pgfplots/table/@cell content}%
+% 			{\multirow{2}{*}{##1}}%
+% 			\fi%
+% 		},
+% 	},
+% 	%every row 2 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{blue!10!white}}{},}},
+% 	%Column s
+% 	columns={transition,T,m43171,m43172,m43226,m43140,m43521,m43523},
+% 	columns/T/.style={string type,column name=\empty, column type=c}, 
+% 	columns/m43171/.style={column name=\sm{3171},fixed,fixed zerofill,precision=4,column type={c}},
+% 	columns/m43172/.style={column name=\sm{3172},fixed,fixed zerofill,precision=4,column type={c}},
+% 	columns/m43226/.style={column name=\sm{3226},fixed,fixed zerofill,precision=4,column type={c}},
+% 	columns/m43140/.style={column name=\sm{3140},fixed,fixed zerofill,precision=4,column type={c}},
+% 	columns/m43521/.style={column name=\sm{3521},fixed,fixed zerofill,precision=4,column type={c}},
+% 	columns/m43523/.style={column name=\sm{3523},fixed,fixed zerofill,precision=4,column type={c}},
+% 	]{\energy}
 \end{table}
 
 

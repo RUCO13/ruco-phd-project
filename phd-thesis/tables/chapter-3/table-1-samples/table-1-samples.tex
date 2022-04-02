@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage[paperwidth = 52.5cm, 
+            paperheight = 27.7cm, 
+            textwidth = 52.5cm,
+            textheight = 27.7cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts}
+\usepackage{tikz,pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{pgffor}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows,arrows.meta,calc}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+%
+\pgfplotstableread[col sep=comma]{
+names,nwell,wwell,wb,tb,ab,dopped,quantity
+3171,11.87,13.85,3.96,AlGaAs,$\mathrm{Al_{0.15}Ga_{0.85}As}$,n[Si]-i-n[Si],6e18
+3172,11.87,13.85,0.565,AlAs,$\mathrm{Al_{0.30}Ga_{0.70}As}$,n[Si]-i-n[Si],6e18
+3226,11.87,13.85,0.424,AlAs,$\mathrm{Al_{0.30}Ga_{0.70}As}$,n[Si]-i-n[Si],6e18
+3140 (ACQWs-1),11.87,13.85,1.98,AlGaAs,$\mathrm{Al_{0.15}Ga_{0.85}As}$,i-n[Si],6e18
+3141,11.87,13.85,3.96,AlGaAs,$\mathrm{Al_{0.15}Ga_{0.85}As}$,i-n[Si],6e18
+3521 (ACQWs-2),11.87,23.74,1.98,AlGaAs,$\mathrm{Al_{0.15}Ga_{0.85}As}$,i-n[Si],6e18
+3522 (ACQWs-3),11.87,23.74,1.98,AlGaAs,$\mathrm{Al_{0.15}Ga_{0.85}As}$,i-p[Be],0.5e17
+3523 (SCQWs),11.87,11.87,1.98,AlGaAs,$\mathrm{Al_{0.15}Ga_{0.85}As}$,i-n[Si],6e18
+}\table
+
+
+
+
+%\begin{filecontents}{samples.txt}
+%	name  wwell nwell wbarrier tbarrier 
+%	M4\_3171 13.85 11.87 3.96 $\AlGaAsd{0.15}{0.85}$
+%	M4\_3172 13.85 11.87 0.565 AlAs
+%	M4\_3226 13.85 11.87 0.424 AlAs
+%\end{filecontents}
+
+% Read data file, create new column ``upper CI boundary - mean''
+%\pgfplotstableread[col sep=comma]{data.txt}\data
+\pgfplotstableset{create on use/plots/.style={
+		create col/expr={\thisrow{nwell}-\thisrow{wwell}
+		}
+	}
+}
+
+
+
+\def\lb{18}
+
+% Define the command for the plot
+\newcommand{\qwplot}{%
+	\begin{tikzpicture}[trim axis left,trim axis right]
+		\tikzset{>=latex}
+		\begin{axis}[scale only axis,
+			height=21.5cm,
+			width=5cm,
+			xmin=-5,xmax=52,
+			ymin=-1,ymax=87,
+			axis y line*=middle,
+			axis y line shift=-\lb,
+			axis lines = middle,
+			y axis line style={densely dashed,line width=0.4mm},
+			x axis line style={line width=0.4mm},
+			axis x line*=bottom,
+			xlabel={$z$},
+			xticklabels={0},
+			xtick ={\lb},
+			x tick label style={/pgf/number format/.cd,fixed,precision=5},
+			every axis x label/.style= {at={(current axis.right of origin)},anchor=south east,scale=1.25,
+			xshift=20,
+			yshift=-25},
+			ytick=\empty,]
+	\foreach \i[count=\xi from 0] in {0,...,6}{
+				\addplot[mark=none,line width=0.3mm,blue] table[x expr=\thisrowno{0},y expr=\thisrowno{1},col sep=comma]  {M\i.txt};   }
+	\pgfplotsinvokeforeach {7,20,33, 46,59,72,85} {
+		\draw[line width=0.3mm,blue,{Stealth[scale=1.25]}-] (axis cs:-5, ##1) -- (axis cs:0, ##1);}
+	
+	\pgfplotsforeachungrouped \x/\y in {35/7,47/20,36/33, 38/46,35/59,35/72,38/85}{
+		\edef\temp{\noexpand\draw[line width=0.3mm,blue,-{Stealth[scale=1.25]}] (axis cs:\x, \y) -- (axis cs:\x+5, \y);	}\temp
+	}
+		\end{axis}
+	\end{tikzpicture}
+}
+
+\begin{document}
+	\pgfkeys{
+		/pgf/number format/.cd,
+		sci,
+		sci generic={mantissa sep=\times,exponent={10^{#1}}}}
+	% Get number of rows in datafile
+	\pgfplotstablegetrowsof{\table}
+	\let\numberofrows=\pgfplotsretval
+	
+	\pgfplotstabletypeset[
+	font=\fontsize{80pt}{1}\selectfont,
+	columns={names,nwell,plots,wwell,wb,tb,ab,dopped,quantity},
+	sm/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={M4\_}{}}},
+	every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},
+	after row={\midrule\midrule\\\\}},
+	every last row/.style={after row=[1cm]\bottomrule\bottomrule},
+	after row ={[2.5cm]},
+	every row no 5/.append style={after row={[3mm]\multicolumn{2}{c}{ }\\}},
+	columns/names/.style={column type=l,string type,column name=Sample},
+columns/plots/.style={
+		column name={$V(z)$},
+		assign cell content/.code={% use \multirow for Z column:
+			\ifnum\pgfplotstablerow=0
+			\pgfkeyssetvalue{/pgfplots/table/@cell content}
+			{\multirow{\numberofrows}{*}{\qwplot}}%
+			\else
+			\pgfkeyssetvalue{/pgfplots/table/@cell content}{}%
+			\fi
+		}
+	},
+	% Format numbers and titles
+	columns/wwell/.style={column type=c,column name=WW width (nm),fixed,fixed zerofill,},
+	columns/nwell/.style={column type=c,column name=NW width (nm),fixed,fixed zerofill,},
+	columns/wb/.style={column type=c,column name=Barrier width (nm),fixed,fixed zerofill,precision=3},
+	columns/tb/.style={column type=c,string type,column name=Barrier},
+	columns/ab/.style={column type=c,string type,column name=Adjacent barriers},
+	columns/dopped/.style={column type=c,string type,column name=Dopped type},
+	columns/quantity/.style={column type=c,column name=$\left[\dfrac{1}{cm^{3}}\right]$,
+		/pgf/number format/.cd,sci,
+		sci generic={mantissa sep=\times,exponent={10^{##1}}}
+	 },
+	columns/names/.append style={sm},
+	my special cell/.style={@cell content=\textcolor{blue}{##1}},
+	]{\table}
+	%Done!
+\end{document}

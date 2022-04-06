@@ -134,7 +134,11 @@ arc (\arcccd:\arcccd-100:1);
 
 \shade[ball color=cyan, fill opacity=0.8,] (current page.center) circle [radius=1cm] node[scale=3,opacity=1,font=\bfseries](c0) {$\pmb{C_{2v}}$};
 
-
+\begin{scope}
+	\node [draw=blue!60,circle,inner sep=-0.3mm,align=center,ball color=cyan,scale=4,opacity=1](c0) at (current page.center) {$\displaystyle C_{2v}$};
+	\clip (current page.center) circle (1cm) node [opacity=0.2] {\includegraphics[scale=0.1]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/acqws-symmetry1-out.pdf}};	
+	\end{scope}
+	
 
 
 

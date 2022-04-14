@@ -18,7 +18,6 @@
 \usepackage{pgfplotstable}
 \usepackage[backref=page]{hyperref}
 \usepackage{booktabs}
-\usepackage{graphicx}
 \usepackage{cleveref}
 %\crefname{figure}{Figure}{Figures}
 \usepackage{physics}        
@@ -48,7 +47,8 @@
 
 \usepackage[abbreviations,symbols,nogroupskip,toc]{glossaries-extra}
 \newglossary*{nomenclature}{Abbreviations}
-\glssetcategoryattribute{general}{textformat}{bf}
+%\glssetcategoryattribute{general}{textformat}{bf}
+\renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}}
 \makeglossaries
 
 % ======================================================================================
@@ -56,6 +56,7 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage[labelformat=simple]{subcaption}
 \renewcommand\thesubfigure{(\alph{subfigure})}
+\usepackage{graphicx}
 
 \usepackage[perpage]{footmisc}
 

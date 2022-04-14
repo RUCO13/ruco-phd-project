@@ -1,0 +1,298 @@
+\documentclass[border={-0mm -0mm -0mm -0mm}]{standalone}
+\usepackage{pgfplotstable}
+\tikzset{
+    axis break gap/.initial=1mm
+}
+
+\usepackage{amsmath,bm}
+\usepackage{tikz}
+\usetikzlibrary{arrows,
+	arrows.meta,
+	decorations.pathmorphing,
+	calc,%
+	decorations.pathmorphing,%
+	decorations.markings,
+	fadings,%
+	shadings,%
+	positioning,
+	spy,
+	shapes,
+	shapes.geometric,
+	shapes.arrows,
+	fit,	plotmarks,}
+\usepackage{tikz-dimline}
+
+\pgfplotsset{
+	width=5cm,
+	height=2.5cm,
+	scale only axis,
+    xmin   = 15,   xmax=70.72,
+	%yticklabel style={/pgf/number format/fixed}, 
+	every axis/.append style = {
+		line width = 0.4pt,
+		tick style = {line width=0.4pt,black},
+		%tick label style={font=\tiny},
+		every tick label/.append style={scale=0.75},
+		major tick length = 0.8mm,
+		minor tick length = 0.4mm,
+		%axis line style = thick,
+	},
+	every axis plot/.append style={line width = 0.7pt,}
+}
+%\pgfplotsset{
+%	compat=newest,
+%	/pgfplots/legend image code/.code={%
+%		\draw[mark repeat=1,mark phase=1,#1] 
+%		plot coordinates {
+%			(0cm,0cm) 
+%			(0.0cm,0cm)
+%			(0.0cm,0cm)
+%			(0.0cm,0cm)
+%			(0.3cm,0cm)%
+%		};
+%	},
+%}
+\pgfplotsset{
+	compat=newest,
+	/pgfplots/legend image code/.code={%
+		\fill[#1,draw =none] (0cm,0.1cm) rectangle (0.2cm,-0.1cm);
+	},
+}
+\def\eu{1.5235}
+\def\ed{1.5353}
+\def\hhu{-0.0015}
+\def\hhd{-0.0049}
+\def\lhu{-0.0043}
+\def\lhd{-0.0118}
+
+
+\begin{document}
+    \begin{tikzpicture}
+    									    
+
+%================================  PLOT  VB      
+        \begin{axis}[
+           ymin = -0.075, ymax   = 0.075,
+            name=bottom axiss,
+            scale only axis,
+            axis x line*=bottom,
+            ytick pos=left,
+            %Parameters
+           yticklabel style={
+           	/pgf/number format/fixed,
+           	/pgf/number format/precision=3,
+           	/pgf/number format/fixed zerofill
+           },
+           scaled y ticks=false,
+           minor y tick num=1,
+           %minor x tick num=1,   
+           %xtick style={draw=none},
+           xtick = {43},  
+           xticklabels = {0},      
+		   %xtick=\empty,     
+           %============= Legend Plots ========================
+           legend entries={H,L},
+           legend pos={north west},
+           legend style={draw=none,
+           	fill=none,
+           	row sep=-1pt,
+           inner sep=3pt,    		
+           nodes={scale=0.8,yshift=0mm}}, 
+           legend cell align = left,
+           %legend image post style={scale=0.4}, 
+          %============== Axis labels ==============================
+          xlabel ={$z$ (nm)},
+          every axis x label/.style= {
+          	at={(axis description cs:0.5,-0.2)},
+          	%rotate=90,
+          	scale=0.9},
+          ylabel ={Energy (ev)},
+          every axis y label/.style= {
+          	at={(axis description cs:-0.2,1)},
+          	rotate=90,
+          	scale=0.9},
+          tick scale binop = ,
+        ]
+
+       %%%================================= Add Data ===================================
+       \pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/numerical-results/data/m43521-band-edge.txt}{\vp};
+	   \pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/numerical-results/data/m43521-wf-hh.txt}{\psihh};
+	   \pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/numerical-results/data/m43521-wf-lh.txt}{\psilh}
+    
+        
+        \addplot[line width = 0.5pt,forget plot] table[x index=0,y index=2]{\vp};
+        
+        \addplot[smooth,black!50!green,forget plot] table[x index=0, y expr=\thisrowno{1}*0.7]{\psihh};
+        \addplot[smooth,black!50!green,densely dotted] table[x index=0,y expr=\thisrowno{2}*0.7]{\psihh};
+        \addlegendentry[yshift = -0.3mm,opacity = 1]{hh};
+        
+
+		\addplot[smooth,red,forget plot] table[x index=0, y expr=\thisrowno{1}*0.7]{\psilh};
+        \addplot[smooth,red,densely dotted] table[x index=0,y expr=\thisrowno{2}*0.7]{\psilh};
+        \addlegendentry[yshift = -0.3mm,opacity = 1]{lh};
+        \coordinate (pos1) at (axis cs:43,-0.075);        
+        \end{axis}
+        
+%================================  PLOT  CB         
+        
+        \begin{axis}[
+           ymin = 1.45, ymax   = 1.65,
+            y tick label style={
+            	/pgf/number format/.cd,
+            	fixed,
+            	fixed zerofill,
+            	precision=3,
+            },
+            scaled y ticks=false,
+            minor y tick num=1,
+            xtick = \empty,
+            %xticklabel={ },
+            ytick pos=left,
+			%xtick pos= left,
+            %============= Legend Plots ========================
+            legend entries={Ee},
+            legend pos={north west},
+            legend style={draw=none,
+                fill=none,
+            row sep=-1pt,
+            inner sep=5pt,    		
+            nodes={scale=0.8,yshift=0mm}}, 
+            legend cell align = left,
+           %legend image post style={scale=0.4},    
+           %============================== break plot
+           name = top axiss,
+           at=(bottom axiss.north),
+           anchor=south, yshift=\pgfkeysvalueof{/tikz/axis break gap},
+           scale only axis,
+           axis x line*=top,
+           after end axis/.code={
+           	\draw (rel axis cs:0,0) +(-0mm,0mm) -- +(2mm,0mm)
+           	++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
+           	+(-0mm,-0mm) -- +(2mm,0mm)
+           	(rel axis cs:1,0) +(-2mm,-0mm) -- +(0mm,0mm)
+           	++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
+           	+(-2mm,-0mm) -- +(0mm,0mm);
+           },
+        ]
+        
+       %%%================================= Add Data ===================================
+       \pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/numerical-results/data/m43521-band-edge.txt}{\vp};
+	   \pgfplotstableread[col sep=comma]{/media/labfiles/ruco/phd-ssp/numerical-results/data/m43521-wf-e.txt}{\psie};
+       
+    \addplot[line width = 0.5pt,forget plot] table[x index=0,y index=1]{\vp};
+    \addplot[smooth,blue,forget plot] table[x index=0, y expr=\thisrowno{1}*1]{\psie};    
+    \addplot[smooth,blue, densely dotted] table[x index=0, y expr=\thisrowno{2}]{\psie};    
+    \addlegendentry[yshift = -0.3mm,opacity = 1]{e};
+       
+    %    %\node[scale=1] at (axis cs:285,1.61) {(a)};
+       
+    \coordinate (pos2) at (axis cs:43,1.651);
+       
+    %     \dimline[color= black,
+    %    line style = {line width=0.4},
+    %    label style = {rotate=0,midway,scale=0.7},
+    %    ] {(axis cs:300,1.615)}{(axis cs: 311.87,1.615)}{$d_{2}$};
+    %    \dimline[color= black,
+    %    line style = {line width=0.4},
+    %    label style = {rotate=0,midway,scale=0.7},
+    %    ] {(axis cs:313.85,1.615)}{(axis cs: 325.72,1.615)}{$d_{1}$};
+
+\end{axis}
+        
+        
+\draw[densely dashed, line width = 0.4mm,gray] (pos1)--(pos2);                
+        
+       
+        
+\begin{axis}[width=1.2cm,
+    at={(bottom axiss.east)},
+    anchor=west,
+    xshift = 0.15cm,
+    name=bottom axis,
+    scale only axis,
+    axis x line*=bottom,
+    scale only axis,
+    xmin=0, xmax=1.1,
+    ytick pos=right,
+    ymin=-0.014,ymax=-0.001,
+    %Parameters
+    yticklabel style={
+        /pgf/number format/fixed,
+        /pgf/number format/precision=3,
+        /pgf/number format/fixed zerofill
+    },
+    scaled y ticks=false,
+    minor y tick num=1,
+    xtick = {0.3,0.8},
+    xticklabels={ N, W },
+    ytick={-0.014, -0.011, -0.008, -0.005, -0.002},
+    %============== Axis labels ==============================
+    ]
+    \addplot[mark=none,red,line width=0.5pt,densely dotted] coordinates {(0.1,\hhu) (0.6,\hhu)};
+    \addplot[mark=none,red,line width=0.5pt] coordinates {(0.5,\hhu) (1,\hhu)};
+    \addplot[mark=none,black!50!green,line width=0.5pt,densely dotted] coordinates {(0.1,\lhu) (0.6,\lhu)};
+    \addplot[mark=none,black!50!green,line width=0.5pt] coordinates {(0.5,\lhu) (1,\lhu)};
+    
+    
+    \addplot[mark=none,red,line width=0.5pt,densely dotted] coordinates {(0.5,\hhd) (1,\hhd)};
+    \addplot[mark=none,red,line width=0.5pt] coordinates {(0.1,\hhd) (0.6,\hhd)};
+    \addplot[mark=none,black!50!green,line width=0.5pt,densely dotted] coordinates {(0.5,\lhd) (1,\lhd)};
+    \addplot[mark=none,black!50!green,line width=0.5pt] coordinates {(0.1,\lhd) (0.6,\lhd)};
+    
+    \draw[{Stealth[scale=0.5]}-{Stealth[scale=0.5]}] (axis cs:0.3,\hhu)--(axis cs:0.3,\hhd);
+    \draw[{Stealth[scale=0.5]}-{Stealth[scale=0.5]}] (axis cs:0.75,\lhu)--(axis cs:0.75,\lhd);
+    
+    
+    \node[scale=0.5] at (axis cs:0.52,-0.003) {$\mathrm{\delta Ehh}$};
+    \node[scale=0.5] at (axis cs:0.55,-0.008) {$\mathrm{\delta Elh}$};
+    \end{axis}
+    
+    
+    
+    \begin{axis}[
+    width=1.2cm,
+    scale only axis,
+    xmin=0, xmax=1.1,
+    ymin = 1.519, ymax= 1.54,
+    y tick label style={
+        /pgf/number format/.cd,
+        fixed,
+        fixed zerofill,
+        precision=3,
+    },
+    scaled y ticks=false,
+    minor y tick num=1,
+    %xtick = { },
+    %xticklabel={e},
+    xtick style={draw=none},
+    xticklabels={\empty},
+    ytick={ 1.515, 1.52 , 1.525, 1.53 , 1.535, 1.54 },
+    ytick pos=right,
+    %============================== break plot
+    name = top axis,
+    at=(bottom axis.north),
+    anchor=south, yshift=\pgfkeysvalueof{/tikz/axis break gap},
+    scale only axis,
+    axis x line*=top,
+    after end axis/.code={
+        \draw (rel axis cs:0,0) +(-0mm,0mm) -- +(1mm,0mm)
+        ++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
+        +(-0mm,-0mm) -- +(1mm,0mm)
+        (rel axis cs:1,0) +(-1mm,-0mm) -- +(0mm,0mm)
+        ++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
+        +(-1mm,-0mm) -- +(0mm,0mm);
+    },
+    % Parameters
+    ]
+    \addplot[mark=none,blue,line width=0.5pt] coordinates {(0.5,\eu) (1,\eu)}; 
+    \addplot[mark=none,blue,line width=0.5pt,densely dotted] coordinates {(0.1,\eu) (0.6,\eu)};  
+    \addplot[mark=none,blue,line width=0.5pt] coordinates {(0.1,\ed) (0.6,\ed)};   
+    \addplot[mark=none,blue,line width=0.5pt,densely dotted] coordinates {(0.5,\ed) (1,\ed)};  
+    \draw[{Stealth[scale=0.8]}-{Stealth[scale=0.5]}] (axis cs:0.5,\eu)--(axis cs:0.5,\ed);
+    \node[scale=0.5] at (axis cs:0.75,1.530) {$\mathrm{\delta Ee}$};
+    \end{axis}  
+
+    \node[anchor=north east,draw, fill=blue,text=white,inner sep=0mm,font=\bfseries,scale=0.9] at (top axiss.north east){b)};
+
+    \end{tikzpicture}
+\end{document}

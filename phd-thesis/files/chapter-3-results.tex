@@ -464,14 +464,39 @@ rcode
 \subsection{Reflectance Anisotropy Spectroscopy (RAS)}
 \label{subsec:chapter-3-ras}
  \vspace{-10mm}
-\lettrine[lines=3, lraise=.1, nindent=0mm, slope=0mm]{\textbf{T}}{he RAS} is the experimental tool that completes the set in this work, without the intention of replicates the physical background and interpretations about RAS, we focus on specific terms to detail our great results.  This spectroscopy, is a  powerful tool in the studying of semiconductors physics, being characterized as default anisotropy study tool.  This experimental technique, was developed by Aspnes\cite{aspnes1973surface,aspnes1985anisotropies, aspnes1985above} to measure \emph{surface-induced} optical anisotropy in cubic semiconductors, although this can be applied around of near-band-edge\cite{wei1995theory}. So, to our purposes, RAS is an excellent experimental tool to study optical anisotropies in CQWs structures. 
+\lettrine[lines=3, lraise=.1, nindent=0mm, slope=0mm]{\textbf{T}}{he \gls{RAS}} is the experimental tool that completes the set in this work, without the intention of replicates the physical background and interpretations about RAS, we focus on specific terms to detail our great results.  This spectroscopy, is a  powerful tool in the studying of semiconductors physics, being characterized as default anisotropy study tool.  This experimental technique, was developed by Aspnes\cite{aspnes1973surface,aspnes1985anisotropies, aspnes1985above} to measure \emph{surface-induced} optical anisotropy in cubic semiconductors, although this can be applied around of near-band-edge\cite{wei1995theory}. So, to our purposes, \gls{RAS} is an excellent experimental tool to study optical anisotropies in CQWs structures. In our case both \gls{RAS} and \gls{PR} setup is the same with their exceptions, in the \gls{PR} case is necessary to add the laser to modulated spectroscopy while in the \gls{RAS} the modulation it's realized by the \gls{pem}, which changes the polarization state. As schemes in \Cref{fig:chapter-3-ras-setup}, the monochromatic light fisrt times troguh over polarizer prism and the \gls{pem} to finally being focused onto the sample with spot size of 5.00mm diameter. The light reflected by the sample is collected and detected by the multialkali photomultiplier tube (before discussed in \Cref{sec:chapter-3-section-samples-description} and shows in \Cref{tab:chapter-3-section-samples-photodectors-materials}). A detailed description of the RAS technique can be found elsewhere \cite{lflm1993spectrometer}. As shows in \Cref{fig:chapter-3-ras-setup}, the RAS signal is proportional to: 
+
+\begin{equation}\label{eqn:chapter-3-sec-ras-rasequation}
+\dfrac{\Delta R}{R} = 2\dfrac{R_{\left[110\right]}-R_{\left[1\overline{1}0\right]}}{R_{\left[110\right]}+
+R_{\left[1\overline{1}0\right]}}
+\end{equation}
+
+where denotes the orientations $\left[110\right]$ and $\left[1\overline{1}0\right]$ over crystalline directions(see \Cref{fig:chapter-3 GaAs Substrate}). In our experiments the \gls{RAS} signal is around of $\approx 10^{-4}$. As well's known if the \gls{RAS} signal it's detected, the structure exhibits an optical anisotropy for in-plane light propagation\cite{koopmans1998microscopic}. The experiments, as the PR case, were it performed at 30K. 
+
+The first part of experiments were carried out over the samples: \sm{3171}, \sm{3172} and \sm{3226},  we remember that these samples are the type n-i-n, this means that they consist in more growth layers, therefore it's expected that the \gls{RAS} signal being smaller. The \Cref{fig:chapter-3-subsec-ras-plots-set-1} shows the results to these samples, in top to bottom order, in left side plots the \gls{RAS} while in right side it's plotted the \gls{R} spectra. The \gls{R} spectra plotted to each sample is the average of all experiments performed, this means which in each \gls{RAS} experiment, the gls{R} was simultaneously measured, then to each sample it's taking the average.  In order to discuss the result of that samples, we can observe that in general therms these samples gets a smaller signal of \gls{RAS}, although in \gls{R} it does not happen, the direct transitions can being locate in accordance with the numerical results as shows with arrows.\\
+ Although these three samples consists in more several growth layers, it's possible to measure an in-plane anisotropy    
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{../figures/chapter-3/ras-setup/build/ras-setup-2.pdf}
+	\caption[RAS Scheme]{RAS setup implemented in this work, as  before explained in the PR  setup, this is a  dark configuration this due that photo-detector are exposed, then keeping closed to ambient light. The optical array is the same as the PR, with the difference which the role of polarization and PEM. This figure also schemes the  incidence angle which is about of $4.5^{\circ}$ and the directions of linear polarization.  }
+	\label{fig:chapter-3-ras-setup}
+\end{figure}
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{../figures/chapter-3/ras-plots/out/ras-set-1.pdf}
+	\caption{ }
+	\label{fig:chapter-3-subsec-ras-plots-set-1}
+\end{figure}
 
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=\textwidth]{../figures/chapter-3/ras-setup/build/ras-setup-2.pdf}
+	\includegraphics[width=\textwidth]{../figures/chapter-3/ras-plots/out/ras-set-2.pdf}
 	\caption{ }
-	\label{fig:chapter-3-ras-setup}
+	\label{fig:chapter-3-subsec-ras-plots-set-2}
 \end{figure}
 
 

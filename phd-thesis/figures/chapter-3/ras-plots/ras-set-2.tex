@@ -1,0 +1,201 @@
+% \documentclass{article}
+% \usepackage[paperwidth = 10cm, 
+%             paperheight =5.65cm, 
+%             textwidth = 10cm,
+%             textheight = 5.65cm,
+%             centering]{geometry}
+\documentclass[margin=0mm]{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphics}
+\usepackage{tikz,filecontents, pgfplots}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer,colormaps}
+\usetikzlibrary{pgfplots.colorbrewer}
+\input{../../../files/pgfplots-set.tex}
+
+
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/RDS-M4_3140.dat}\rasuno
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/ras-m43141.dat}\rasdos
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/RAS-M4_3521-PAPER1.dat}\rastres
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/RAS-M4_3522-PAPER1.dat}\rascuatro
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/RDS-M4_3523.dat}\rascinco
+
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/r-m43140.dat}\runo
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/r-m43141.dat}\rdos
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/r-m43521.dat}\rtres
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/r-m43522.dat}\rcuatro
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/r-m43523.dat}\rcinco
+
+\pgfplotsset{every axis legend/.style={
+		cells={anchor=center},
+		inner xsep=1pt,
+		inner ysep=1pt,
+		nodes={scale=0.55,inner sep=2pt, transform shape},
+		draw=none,
+		at={(1,1)},
+		anchor=north east,
+	},
+}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[scale only axis,
+	group style={group name=ras,
+					group size=1 by 5,
+					vertical sep=0pt,
+                    horizontal sep=1pt,
+					xticklabels at=edge bottom},
+	height=1.5cm,width=6cm,
+	minor x tick num=1,
+	ytick=\empty,
+	xmin = \xminimo,xmax=\xmaximo,
+    ymin=-16e-4,ymax=16e-4,
+	]
+	
+	
+	\nextgroupplot[axis x line*=top,xtick=\empty]
+	\addplot[color=Set1-A] table[x index=0,y expr=\thisrowno{1}]\rasuno;
+	 \addlegendentry{M4\_3140};
+	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+	\coordinate (cup) at (axis cs:1.51,1.5e-4);
+
+    % TRANSIITIONS	
+	\def\sc{0.7}
+	\bandt{1.5276}{13e-4}{2e-4}{$\thh{1}{1}$}{3}{\sc}{Set1-A}
+	\bandt{1.5334}{-13e-4}{-2e-4}{$\tlh{1}{1}$}{-2}{\sc}{Set1-A}
+
+
+	
+	\nextgroupplot[axis x line=none]
+	\addplot[color=Set1-B] table[x index=0,y expr=-\thisrowno{1}]\rasdos;
+	\addlegendentry{M4\_3141};
+	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+
+    %TRANSITIONS
+	\def\sc{0.7}
+	\bandt{1.5295}{13e-4}{2e-4}{$\thh{1}{1}$}{3}{\sc}{Set1-B}
+	\bandt{1.5351}{-13e-4}{-2e-4}{$\tlh{1}{1}$}{-3}{\sc}{Set1-B}
+
+
+	
+	\nextgroupplot[axis x line=none,ylabel={RAS}]
+	\addplot[color=Set1-C] table[x index=0,y expr=\thisrowno{5}]\rastres;
+	\addlegendentry{M4\_3521};
+	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+
+    %TRANSITIONS
+	\def\sc{0.7}
+	\bandt{1.5190}{-15e-4}{-3e-4}{$\thh{1}{1}$}{-12}{\sc}{Set1-C}
+	\bandt{1.5212}{13e-4}{1e-4}{$\tlh{1}{1}$}{4}{\sc}{Set1-C}
+	\bandt{1.5326}{11e-4}{2e-4}{$\thh{2}{2}$}{2}{\sc}{Set1-C}	
+	\bandt{1.5396}{-13e-4}{-3e-4}{$\tlh{2}{2}$}{-3}{\sc}{Set1-C}	
+
+
+    \nextgroupplot[axis x line=none,]
+	\addplot[color=Set1-D] table[x index=0,y expr={\thisrowno{3}*1.6-15e-4}]\rascuatro;
+	\addlegendentry{M4\_3522};
+	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+
+    %TRANSITIONS
+	\def\sc{0.7}
+	\bandt{1.5190}{-15e-4}{-3e-4}{$\thh{1}{1}$}{-5}{\sc}{Set1-D}
+	\bandt{1.5212}{13e-4}{-1e-4}{$\tlh{1}{1}$}{3}{\sc}{Set1-D}
+    
+    \dimline[label style = {rotate=-90,midway,xshift=1mm,scale=0.5},
+	line style = {line width=0.5pt,arrows={stealth[scale=0.3]}-{stealth[scale=0.3]}},
+	extension end length=0.5,
+	extension start length=0.5,
+	] {(axis cs:1.514,1e-4)}{(axis cs: 1.514,10e-4)}{$\mathrm{9\!\times\!10^{-4}}$};
+
+
+
+
+    \nextgroupplot[axis x line*=bottom,
+					xlabel={Photon energy (eV)}]
+	\addplot[color=Set1-E] table[x index=0,y expr=-\thisrowno{1}]\rascinco;
+	\addlegendentry{M4\_3523};
+	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+
+    %TRANSITIONS
+    \def\sc{0.7}
+	\bandt{1.5308}{-13e-4}{-2e-4}{$\thh{1}{1}$}{-5}{\sc}{Set1-E}
+	\bandt{1.5351}{13e-4}{3e-4}{$\tlh{1}{1}$}{4}{\sc}{Set1-E}
+
+	
+	\coordinate (cud) at (axis cs:1.51,-5e-4);
+
+
+\end{groupplot}
+
+\draw[dashed,line width=0.5pt] (cud)--(cup);
+
+
+
+\begin{groupplot}[scale only axis,
+	group style={group name=rset1,
+								group size=1 by 5,
+								vertical sep=0pt,
+								xticklabels at=edge top,
+                                },
+	height=1.5cm,width=1.5cm,
+	ytick=\empty,
+	xmin = \xminimo,xmax=\xmaximo,
+    ymin=-1.5e-4,ymax=1.5e-4,
+    every axis plot/.style={smooth,mark=none,line width=1pt},
+	]
+	
+	
+	\nextgroupplot[anchor=north west,at={(ras c1r1.north east)},
+    axis x line*=top,
+	xticklabel pos=top,
+	xlabel={Photon Energy (eV)},
+	xlabel style={scale=0.9},
+	]
+	\addplot[color=Set1-A] table[x index=0,y expr=\thisrowno{1}]\runo;
+	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+
+	% TRANSIITIONS	
+	% \def\sc{0.7}
+	% \bandt{1.5295}{3e-3}{0e-3}{$\thh{1}{1}$}{0}{\sc}{Dark2-A}
+	% \bandt{1.5351}{3e-3}{0e-3}{$\tlh{1}{1}$}{0}{\sc}{Dark2-A}
+	
+	\nextgroupplot[axis x line=none, ]
+	\addplot[color=Set1-B] table[x index=0,y expr=\thisrowno{1}]\rdos;
+	%\addlegendentry{M4\_3172};
+	 			
+	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+
+    \nextgroupplot[axis x line=none, 
+	ylabel={R},
+	ytick pos=right,
+	ylabel style={rotate=-180,scale=0.9},]
+	\addplot[color=Set1-C] table[x index=0,y expr=\thisrowno{1}]\rtres;
+	%\addlegendentry{M4\_3172};
+	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+
+    \nextgroupplot[axis x line=none, ]
+	\addplot[color=Set1-D] table[x index=0,y expr=\thisrowno{1}]\rcuatro;
+	%\addlegendentry{M4\_3172};
+
+	
+	\nextgroupplot[axis x line*=bottom,xtick=\empty]
+	\addplot[color=Set1-E] table[x index=0,y expr=\thisrowno{1}]\rcinco;
+	%\addlegendentry{M4\_3226};
+	
+	
+	% \draw (axis cs:0,0)--(axis cs:1.5025,0);
+	% \dimline[label style = {rotate=-90,midway,xshift=1mm,scale=0.6},
+	% line style = {line width=0.5pt,arrows=stealth-stealth},
+	% extension end length=-0.5,
+	% extension start length=-0.5,
+	% ] {(axis cs:1.515,0e-4)}{(axis cs: 1.515,3e-4)}{$\mathrm{3\!\times\!10^{-4}}$};
+\end{groupplot}
+
+\end{tikzpicture}
+\end{document}

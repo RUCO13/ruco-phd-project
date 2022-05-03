@@ -92,7 +92,7 @@ As a comment, it is important to denote that the CCD devices are been span in ma
 \subsection{Photoluminiscence Spectroscopy (PL)}
 \label{subsec:chapter-3-pl}
 \vspace{-10mm}
-\lettrine[lines=3, lraise=.1, nindent=0mm, slope=0mm]{\textbf{P}}{}hotolumniscense spectroscopy is characterized by be a fast spectroscopy to get optical properties (i.e band-gap) and transitions in  semiconductor materials, for this reason the work began with PL spectroscopy with aim of searching optical transitions in each CQWs samples and compare with  numerical solution of one-dimensional Schr\"odinger equation (see \Cref{chap:chapter-2}). 
+\lettrine[lines=3, lraise=.1, nindent=0mm, slope=0mm]{\textbf{P}}{}hotolumniscense spectroscopy is characterized by be a fast spectroscopy to get optical properties (i.e band-gap) and transitions in  semiconductor materials, for this reason the work began with PL spectroscopy with aim of searching optical transitions in each CQWs samples and compare with  numerical solution of one-dimensional Schr\"odinger equation (see \Cref{tab:sec-chapter-2-numerical-results}). 
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../figures/chapter-3/pl-setup/build/pl-setup}
@@ -106,7 +106,7 @@ The answer is not be for impatients\footnote{The author self-considers impatient
 Some experiments shown below correspond to Carlos's bachelor thesis \cite{carlos2020thesis}, who implemented a simple and reliable PL system also he makes a computational code to fit PL spectra using numerical and experimental results (you can check Carlos's codes in our laboratory  repository on GitHub\footnote{\url{https://github.com/Spectroscopies-Lab-IICO}}). These results were correlated with previously   realized  experiments taking into account the same parameters. 
 
 
-The experiments are organized by labels, how shows in \Cref{tab:chapter3:Samples description}, started with the samples \m{1}{7}{1}, \m{1}{7}{2} and \m{2}{2}{6} where these samples were grown with objective the measure trions. The experimental parameters are shown in \Cref{tab:CH 3 PL experimental parameters}, in each experiment the optical setup was optimized to enhance the signal measured, the optimization process consisted in measure laser peak at a definite monochromator slit's aperture then finely move the mirror until achieving a high response in multimeter, repeat this closing the slit's and measuring the FWHM of the laser peak in each step, finally we obtained an optimal resolution about 1 nm in our PL experiments. 
+The experiments are organized by labels, how shows in \Cref{tab:chapter3:Samples description}, started with the samples \m{1}{7}{1}, \m{1}{7}{2} and \m{2}{2}{6} where these samples were grown with objective the measure trions. The experimental parameters are shown in \Cref{tab:CH 3 PL experimental parameters}, in each experiment the optical setup was optimized to enhance the signal measured, the optimization process consisted in measure laser peak at a definite monochromator slit's aperture then finely move the mirror until achieving a high response in multimeter, repeat this closing the slit's and measuring the FWHM of the laser peak in each step, finally we obtained an optimal resolution about 1 nm in our \gls{PL} experiments. 
 
 % \begin{table}[t]
 % 	\centering
@@ -460,7 +460,9 @@ Therefore, we can say that the effects of the trions are associated with the asy
  \label{subsubsec:chapter-3-ps-conclusions}
  \vspace{-10mm}
  In conclusion, the PR remains a powerful tool for experimental solid-state physics, especially in semiconductors study the facility to implement it, and the great information which gives as about fundamental transitions that in comparison with other spectroscopy is still better. Along with the experimental work, we could notice that the PR has the capability of detect behaviors which doesn't common in this spectroscopy as trions measured, and although this work is still in progress, the satisfaction to propound a novel source to study of an excitonic behavior as the trions,  through easy spectroscopy without external perturbations.  On the other side, the AQCWs has a large potential to study quantum phenomena, especially the interactions and process due to the exciton confined, in this case, something so simple as the relative widths in the CQWs generates a surprising behavior. 
-rcode 
+
+
+
 \subsection{Reflectance Anisotropy Spectroscopy (RAS)}
 \label{subsec:chapter-3-ras}
  \vspace{-10mm}
@@ -471,7 +473,7 @@ rcode
 R_{\left[1\overline{1}0\right]}}
 \end{equation}
 
-where denotes the orientations $\left[110\right]$ and $\left[1\overline{1}0\right]$ over crystalline directions(see \Cref{fig:chapter-3 GaAs Substrate}). In our experiments the \gls{RAS} signal is around of $\approx 10^{-4}$. As well's known if the \gls{RAS} signal it's detected, the structure exhibits an optical anisotropy for in-plane light propagation\cite{koopmans1998microscopic}. The experiments, as the PR case, were it performed at 30K. 
+where denotes the orientations $\left[110\right]$ and $\left[1\overline{1}0\right]$ over crystalline directions(see \Cref{fig:chapter-3 GaAs Substrate}). In our experiments the \gls{RAS} signal is around of $10^{-4}$. As well's known if the \gls{RAS} signal it's detected, the structure exhibits an optical anisotropy for in-plane light propagation\cite{koopmans1998microscopic}. The experiments, as the PR case, were it performed at 30K. 
 
 The first part of experiments were carried out over the samples: \sm{3171}, \sm{3172} and \sm{3226},  we remember that these samples are the type n-i-n, this means that they consist in more growth layers, therefore it's expected that the \gls{RAS} signal being smaller. The \Cref{fig:chapter-3-subsec-ras-plots-set-1} shows the results to these samples, in top to bottom order, in left side plots the \gls{RAS} while in right side it's plotted the \gls{R} spectra. The \gls{R} spectra plotted to each sample is the average of all experiments performed, this means which in each \gls{RAS} experiment, the gls{R} was simultaneously measured, then to each sample it's taking the average.  In order to discuss the result of that samples, we can observe that in general therms these samples gets a smaller signal of \gls{RAS}, although in \gls{R} it does not happen, the direct transitions can being locate in accordance with the numerical results as shows with arrows.\\
 Although these three samples consists in more several growth layers, it's possible to measure an in-plane anisotropy   were in samples: \sm{3171} and \sm{3226} the signal amplitude it's relatively same in contrast with the sample \sm{3171}.
@@ -483,10 +485,9 @@ Although these three samples consists in more several growth layers, it's possib
 	\label{fig:chapter-3-ras-setup}
 \end{figure}
 
-The first RAS results even they are a asymmetric CQWs structure, the  RAS spectra it's higher in the samples with AlAs barier (\sm{3172} and \sm{3226}), then the potential barrier is higher than in the sample \sm{3171}, but the width of these barriers is small, therefore we have a case with great potential coupled barrier and 
-
-
-
+The first RAS results even they are an asymmetric \gls{CQWs} structures, the  \gls{RAS} spectra it's higher in the samples with AlAs barrier (\sm{3172} and \sm{3226}), then the potential barrier is higher than in the sample \sm{3171}, but the width of these barriers is small, therefore we have a case with samples they consist;  in high coupled barrier and thinner. 
+In the other sample, where the \gls{RAS} spectra is smaller (\sm{3171}), the coupled barrier is small in potential in comparison with the other samples, but is more wide. 
+Although, it was  expected that the spectra relatively same in these three samples, the coupled barrier plays an important role this due to the tunneling process,  wells it returns a \gls{RAS} spectra more definite (better line-shape) than the sample with less tunneling, this means, the coupled barrier is wide. Then, the sample \sm{3171} is approx three times smaller.  han the sample with less tunneling, this means, the coupled barrier is wide. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{../figures/chapter-3/ras-plots/out/ras-set-1.pdf}

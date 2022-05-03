@@ -51,7 +51,7 @@
 					vertical sep=0pt,
                     horizontal sep=1pt,
 					xticklabels at=edge bottom},
-	height=1.5cm,width=6cm,
+	height=1.5cm,width=5cm,
 	minor x tick num=1,
 	ytick=\empty,
 	xmin = \xminimo,xmax=\xmaximo,
@@ -121,6 +121,8 @@
 	\addplot[color=Set1-E] table[x index=0,y expr=-\thisrowno{1}]\rascinco;
 	\addlegendentry{M4\_3523};
 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+	\bandt{1.51}{-20e-4}{-1e-4}{Substrate}{1}{0.8}{black};
+
 
     %TRANSITIONS
     \def\sc{0.7}
@@ -143,11 +145,17 @@
 								vertical sep=0pt,
 								xticklabels at=edge top,
                                 },
-	height=1.5cm,width=1.5cm,
+	height=1.5cm,width=2cm,
 	ytick=\empty,
 	xmin = \xminimo,xmax=\xmaximo,
     ymin=-1.5e-4,ymax=1.5e-4,
-    every axis plot/.style={smooth,mark=none,line width=1pt},
+	every axis plot/.style=
+	{
+		smooth,mark=*,
+		mark options={scale=0.25,fill=white,line width=0.5pt},
+		line width=0.5pt
+	},
+   % every axis plot/.style={smooth,mark=none,line width=1pt},
 	]
 	
 	

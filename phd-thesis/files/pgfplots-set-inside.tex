@@ -1,0 +1,64 @@
+\usepackage{relsize}
+\renewcommand{\_}{\textscale{.7}{\textunderscore}}
+\def\xminimo{1.50}
+\def\xmaximo{1.55}
+\usepackage{tikz-dimline}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{scalerel}
+
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer,}
+\pgfplotsset{compat=newest,
+	every axis/.style = {
+		%scale only axis,
+		width=8cm,height=5cm,
+		line width = 0.7pt,
+		tick style = {line width=0.7pt,black},
+		ticklabel style={scale=0.8},
+		major tick length = 1.5mm,
+		minor tick length = 0.75mm,
+		minor x tick num=1,
+		minor y tick num=1,
+		xlabel style={scale=0.9},
+		ylabel style={scale=0.9},
+		zlabel style={scale=0.9},
+		%xlabel={Photon energy (eV)}, 
+	   	xticklabel style={
+	   	/pgf/number format/precision=2,
+	   	/pgf/number format/fixed,
+	   	/pgf/number format/fixed zerofill,
+	   },
+	   yticklabel style={
+	   	/pgf/number format/precision=2,
+	   	/pgf/number format/fixed,
+	   	/pgf/number format/fixed zerofill,
+	   },
+	},
+	every axis plot/.style={smooth,mark=*,mark options={scale=0.5,fill=white,line width=0.5pt},line width=0.5pt},
+	/pgfplots/legend image code/.code={%
+		\draw[mark repeat=1,mark phase=1,#1] 
+		plot coordinates {
+			(0cm,0cm) 
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.3cm,0cm)%
+		};
+	},
+}
+\pgfplotsset{every axis legend/.style={
+		cells={anchor=center},
+		inner xsep=1pt,
+		inner ysep=1pt,
+		nodes={scale=0.7,inner sep=2pt, transform shape},
+		draw=none,
+		at={(1,1)},
+		anchor=north east,
+	}
+}
+
+
+
+
+

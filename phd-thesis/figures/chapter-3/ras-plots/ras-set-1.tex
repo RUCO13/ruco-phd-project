@@ -47,7 +47,7 @@
 					vertical sep=0pt,
                     horizontal sep=1pt,
 					xticklabels at=edge bottom},
-	height=1.5cm,width=6cm,
+	height=1.5cm,width=5cm,
 	minor x tick num=1,
 	ytick=\empty,
 	xmin = \xminimo,xmax=\xmaximo,
@@ -86,17 +86,15 @@
 	] {(axis cs:1.515,0e-4)}{(axis cs: 1.515,3e-4)}{$\mathrm{3\!\times\!10^{-4}}$};
 	
 	\coordinate (cud) at (axis cs:1.51,-1.2e-4);
-	\bandt{1.51}{-3e-4}{-1.2e-4}{Substrate}{1}{0.5}{black};
+	\bandt{1.51}{-5e-4}{-0.5e-4}{Substrate}{1}{0.8}{black};
 
 	\def\sc{0.7}
 	\bandt{1.5340}{5e-4}{1.2e-4}{$\thh{1}{1}$}{2}{\sc}{Dark2-C}
-	\bandt{1.5417}{-5e-4}{-0.5e-4}{$\tlh{1}{1}$}{-5}{\sc}{Dark2-C}
+	\bandt{1.5417}{-5e-4}{-0.1e-4}{$\tlh{1}{1}$}{-5}{\sc}{Dark2-C}
 
 \end{groupplot}
 
 \draw[dashed,line width=0.5pt] (cud)--(cup);
-
-
 
 \begin{groupplot}[scale only axis,
 	group style={group name=rset1,
@@ -104,10 +102,16 @@
 								vertical sep=0pt,
 								xticklabels at=edge top,
                                 },
-	height=1.5cm,width=1.5cm,
+	height=1.5cm,width=2cm,
 	ytick=\empty,
 	xmin = \xminimo,xmax=\xmaximo,
     ymin=-4e-4,ymax=4e-4,
+	every axis plot/.style=
+	{
+		smooth,mark=*,
+		mark options={scale=0.25,fill=white,line width=0.5pt},
+		line width=0.5pt
+	},
 	]
 	
 	
@@ -117,7 +121,7 @@
 	xlabel={Photon Energy (eV)},
 	xlabel style={scale=0.9},
 	]
-	\addplot[color=Dark2-A] table[x index=0,y expr=\thisrowno{1}]\runo;
+	\addplot[color=Dark2-A] table[x index=0,y expr=-\thisrowno{1}*3]\runo;
 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
 
 	% TRANSIITIONS	
@@ -136,7 +140,7 @@
 
 	
 	\nextgroupplot[axis x line*=bottom,xtick=\empty]
-	\addplot[color=Dark2-C] table[x index=0,y expr=\thisrowno{1}]\rtres;
+	\addplot[color=Dark2-C] table[x index=0,y expr=\thisrowno{1}*2]\rtres;
 	%\addlegendentry{M4\_3226};
 	
 	

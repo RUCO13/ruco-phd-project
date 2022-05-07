@@ -29,7 +29,9 @@
 \begin{document}
 \pgfplotstabletypeset[%
         %Draw rules
-        every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},after row=[0.3ex]\midrule},
+        every head row/.style={
+        before row=\toprule\toprule\rowcolor{aliceblue},
+        after row={\midrule}},
         every last row/.style={after row=\bottomrule\bottomrule},
         every odd row/.style={after row=[2ex]},
         %    before row={\rowcolor[gray]{0.92}}},

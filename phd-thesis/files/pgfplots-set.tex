@@ -18,12 +18,14 @@
 		ticklabel style={scale=0.8},
 		major tick length = 1.5mm,
 		minor tick length = 0.75mm,
+		xtick pos=left,
+		ytick pos=left,
 		minor x tick num=1,
 		minor y tick num=1,
 		xlabel style={scale=0.9},
 		ylabel style={scale=0.9},
 		zlabel style={scale=0.9},
-		%xlabel={Photon energy (eV)}, 
+		xlabel={Photon energy (eV)}, 
 	   	xticklabel style={
 	   	/pgf/number format/precision=2,
 	   	/pgf/number format/fixed,
@@ -51,7 +53,7 @@
 		cells={anchor=center},
 		inner xsep=1pt,
 		inner ysep=1pt,
-		nodes={scale=0.7,inner sep=2pt, transform shape},
+		nodes={scale=0.6,inner sep=2pt, transform shape},
 		draw=none,
 		at={(1,1)},
 		anchor=north east,
@@ -84,7 +86,9 @@
 }
 
 
-
+\newcommand\trs[6]{
+	\node[scale=0.8,text width = 1em,inner sep = 2pt,transform canvas={xshift=#5}] at (axis cs:#1,#2) {#6} edge [-{Stealth[scale=#4]}] (axis cs:#1,#3);
+}
 
 
 

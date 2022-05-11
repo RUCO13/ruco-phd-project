@@ -122,7 +122,7 @@
 
 
 \begin{document}
-\begin{tikzpicture}
+\begin{tikzpicture}[arrow/.style={{Stealth[length=3mm]}-{Stealth[length=3mm]},line width=0.4mm}]
 \begin{axis}[
 	xmin = \xminimo,xmax=\xmaximo,
     ymin=-23e-4, ymax=11.9e-4,
@@ -130,35 +130,39 @@
 	
     %ACQWS-2
 	\addplot[smooth,no marks, line width=2pt] table[x index=0,y expr=\thisrowno{6}]\rascinco;
-	\addlegendentry{DR ACQWs-1};
+	\addlegendentry{DR n-type};
 	\addplot[color=Set1-B] table[x index=0,y expr=\thisrowno{3}*1.6-2.7e-3]
 	\rascuatro;
-	\addlegendentry{(a) ACQWs-1};
+	\addlegendentry{(a) RAS p-type};
 	\addplot[color=Set1-A] table[x index=0,y expr=\thisrowno{5}]\rastres;
-	\addlegendentry{(b) ACQWs-2};
-	% \node[scale=2,blue] at (axis cs:1.545,-2e-4){(a)};
+	\addlegendentry{(b) RAS n-type};
 
-	% \draw (axis cs:0,0)--(axis cs:1.5025,0);
+	\node[scale=1.5,blue] at (axis cs:1.542,-11e-4){(b) ACQWs-2};
+	\node[scale=1.5,blue] at (axis cs:1.542,7e-4){(a) ACQWs-1};
 
-    %TRANSITIONS
-    % \trs{1.5181}{-10e-4}{-5e-4}{1}{-6mm}{$\thh{1}{1}$}{1.2}
-    % \trs{1.5206}{5e-4}{0e-4}{1}{0mm}{$\tlh{1}{1}$}{1.2}
-    % \trs{1.5340}{-5e-4}{0e-4}{1}{-2mm}{$\thh{2}{2}$}{1.2}
-    % \trs{1.5394}{5e-4}{0e-4}{1}{-2mm}{$\tlh{2}{2}$}{1.2}
 
-	% \node[scale=0.8,text width = 1em,inner sep = 2pt,transform canvas={xshift=-6.5mm}] (S1H1) at (axis cs:1.5181,-5e-4) {$\thh{1}{1}$} edge [-{Stealth[scale=0.8]}] (axis cs:1.5181,0e-4);
+	\trs{1.5190}{11e-4}{5e-4}{1}{2mm}{$\thh{1}{1}$}{1.2}
+	\trs{1.5210}{8e-4}{4e-4}{1}{1mm}{$\tlh{1}{1}$}{1.2}
+	\trs{1.5330}{11e-4}{7e-4}{1}{-2mm}{$\thh{2}{2}$}{1.2}
+	\trs{1.5394}{4e-4}{1e-4}{1}{-2mm}{$\tlh{2}{2}$}{1.2}
+	\trs{1.5461}{5.5e-4}{2.5e-4}{1}{-2mm}{$\thh{3}{3}$}{1.2}
 
-	% \bandt{1.5326}{11e-4}{2e-4}{$\thh{2}{2}$}{2}{\sc}{Set1-C}	
-	% \bandt{1.5396}{-13e-4}{-3e-4}{$\tlh{2}{2}$}{-3}{\sc}{Set1-C}	
 
+
+	\node[scale=1.3] (H1) at (axis cs:1.51766,-1.2e-3) {};
+	\node[scale=1.3] (L1) at (axis cs:1.52023,-2e-3) {};
+	\node[scale=1.3] (H2) at (axis cs:1.5345,-0.1e-3) {};
+	\node[scale=1.3] (L2) at (axis cs:1.54003,-0.22e-3) {};
+	\draw[arrow] (H1) -- (axis cs:1.51766,-1.8e-3) |- (axis cs:1.52023,-2.2e-3) -| (L1) ;
+	\draw[arrow] (H2) -- (axis cs:1.5345,-4e-4) |- (axis cs:1.54003,-4e-4) -| (L2) ;
 	
-    \dimline[label style = {rotate=-90,midway,xshift=1mm,scale=1},
-	line style = {line width=0.5pt,arrows={Stealth[scale=1]}-{Stealth[scale=1]}},
+
+    \dimline[label style = {rotate=-90,midway,xshift=1mm,scale=1.1},
+	line style = {line width=0.5pt,arrows={Stealth[scale=1.1]}-{Stealth[scale=1.1]}},
 	extension end length=0.3,
 	extension start length=0.3,
 	] {(axis cs:1.512,3e-4)}{(axis cs: 1.512,11e-4)}{$\mathrm{7\!\times\!10^{-4}}$};
 
-    % \bandt{1.51}{-12e-4}{-7.3e-4}{Substrate}{2}{1.2}{black};
 
 
 	\coordinate (cud) at (axis cs:1.51,-7e-4);

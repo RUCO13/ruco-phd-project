@@ -245,50 +245,53 @@ of  $\lambda=$685 nm, although the laser energy is chosen in respect to energy g
 
 Contrary to the samples measured first, the samples \sm{3140}, \sm{3521}, and \sm{3526} exhibits the most spectral resolution this means that exhibit a more homogenous behavior  due to the QWs have quantized energy, therefore, the electron-hole recombination is more probably to measure than the other samples which present width spectrums so that these results may be due to the several internal mechanisms of which can be: impurities, large carrier density due doped,  defects, among others\cite{khmissi2010effectcarriers,kundrotas2005excitonic}. In each of these PL spectra, \Cref{fig:chapter-3-PL-experiments-M4_3171-M4_3172-M4_3226,fig:chapter-3-PL-experiments-M4_3140-M4_3521-M4_3523} present the most intense peaks associates with heavy- and light-holes exciton transitions denoted by e1-hh1 and e1-lh1 respectively.
 
-In discussion with the aforementioned mentioned, several mechanisms can contribute to getting an inhomogeneous spectrum, even it can say that the two peaks which correspond to exciton transitions are thick and merge this can be related with the high doped level this is because very high dopant concentration causes an overlap of the impurity band with the free-carrier continuum\cite{kundrotas2005excitonic}. Table 5 shows the comparison between experimental transitions energies get with PL and the numerical results. It is important to mentioned that the approximation of numerical calculations are closed to experimental, the difference  is about of 5 meV for the PL case. It is well-known that the PL signal is increase as a function of decrease well widths, as shows 
+
 \begin{table}[H]
-\centering
-\includegraphics[width=\textwidth]{../tables/chapter-3/pl-comparison-numerical/out/pl-comparison-numerical.pdf}
-\caption{Comparison table between experimental transitions obtained trough PL measures and numerical transitions calculated as explained in \Cref{sec:chapter-2-numerical-calculations}}
-\label{tab:CH-3-PL-Experimental-vs-Numerical-transitions}
-% \pgfplotstableread[col sep=&, row sep=\\]{
-% transition&T&m43171   &m43172   &m43226   &m43140   &m43521   &m43523\\
-% e1-hh1    &(E)&1.5270   &1.5341   &1.5329   &1.5170   &1.5207   &1.5354\\
-%           &(N)&1.5313   &1.5342   &1.5339   &1.5292   &1.5196   &1.5354\\
-% e1-lh1    &(E)&1.5318   &1.5402   &1.5286   &         &1.5234   &1.5406\\
-% 		  &(N)&1.5370   &1.5414   &1.5408   &1.5335   &1.5220   &1.5366\\
-% }\energy
-% 	\pgfplotstabletypeset[%
-% 	CellColor/.style={postproc cell content/.append code={
-% 			\pgfplotstablegetelem{\pgfplotstablerow}{Color}\of{\mytable}%
-% 			\ifthenelse{\pgfplotsretval = 1 }% if 
-% 			{\pgfkeysalso{/pgfplots/table/@cell content/.add={\cellcolor{red}}{}}}% then
-% 			{}% else
-% 	}},
-% 	%Draw rules
-% 	every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},after row=\midrule},
-% 	every last row/.style={after row=\bottomrule\bottomrule},
-% 	columns/transition/.style={
-% 		assign cell content/.code={%
-% 			\pgfmathparse{int(Mod(\pgfplotstablerow,2))}%
-% 			\ifnum\pgfmathresult=0%
-% 			\pgfkeyssetvalue{/pgfplots/table/@cell content}%
-% 			{\multirow{2}{*}{##1}}%
-% 			\fi%
-% 		},
-% 	},
-% 	%every row 2 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{blue!10!white}}{},}},
-% 	%Column s
-% 	columns={transition,T,m43171,m43172,m43226,m43140,m43521,m43523},
-% 	columns/T/.style={string type,column name=\empty, column type=c}, 
-% 	columns/m43171/.style={column name=\sm{3171},fixed,fixed zerofill,precision=4,column type={c}},
-% 	columns/m43172/.style={column name=\sm{3172},fixed,fixed zerofill,precision=4,column type={c}},
-% 	columns/m43226/.style={column name=\sm{3226},fixed,fixed zerofill,precision=4,column type={c}},
-% 	columns/m43140/.style={column name=\sm{3140},fixed,fixed zerofill,precision=4,column type={c}},
-% 	columns/m43521/.style={column name=\sm{3521},fixed,fixed zerofill,precision=4,column type={c}},
-% 	columns/m43523/.style={column name=\sm{3523},fixed,fixed zerofill,precision=4,column type={c}},
-% 	]{\energy}
-\end{table}
+	\centering
+	\includegraphics[width=\textwidth]{../tables/chapter-3/pl-comparison-numerical/out/pl-comparison-numerical.pdf}
+	\caption{Comparison table between experimental transitions obtained trough PL measures and numerical transitions calculated as explained in \Cref{sec:chapter-2-numerical-calculations}}
+	\label{tab:CH-3-PL-Experimental-vs-Numerical-transitions}
+	% \pgfplotstableread[col sep=&, row sep=\\]{
+	% transition&T&m43171   &m43172   &m43226   &m43140   &m43521   &m43523\\
+	% e1-hh1    &(E)&1.5270   &1.5341   &1.5329   &1.5170   &1.5207   &1.5354\\
+	%           &(N)&1.5313   &1.5342   &1.5339   &1.5292   &1.5196   &1.5354\\
+	% e1-lh1    &(E)&1.5318   &1.5402   &1.5286   &         &1.5234   &1.5406\\
+	% 		  &(N)&1.5370   &1.5414   &1.5408   &1.5335   &1.5220   &1.5366\\
+	% }\energy
+	% 	\pgfplotstabletypeset[%
+	% 	CellColor/.style={postproc cell content/.append code={
+	% 			\pgfplotstablegetelem{\pgfplotstablerow}{Color}\of{\mytable}%
+	% 			\ifthenelse{\pgfplotsretval = 1 }% if 
+	% 			{\pgfkeysalso{/pgfplots/table/@cell content/.add={\cellcolor{red}}{}}}% then
+	% 			{}% else
+	% 	}},
+	% 	%Draw rules
+	% 	every head row/.style={before row=\toprule\toprule\rowcolor{aliceblue},after row=\midrule},
+	% 	every last row/.style={after row=\bottomrule\bottomrule},
+	% 	columns/transition/.style={
+	% 		assign cell content/.code={%
+	% 			\pgfmathparse{int(Mod(\pgfplotstablerow,2))}%
+	% 			\ifnum\pgfmathresult=0%
+	% 			\pgfkeyssetvalue{/pgfplots/table/@cell content}%
+	% 			{\multirow{2}{*}{##1}}%
+	% 			\fi%
+	% 		},
+	% 	},
+	% 	%every row 2 column 2/.style={postproc cell content/.append style={/pgfplots/table/@cell content/.add={\cellcolor{blue!10!white}}{},}},
+	% 	%Column s
+	% 	columns={transition,T,m43171,m43172,m43226,m43140,m43521,m43523},
+	% 	columns/T/.style={string type,column name=\empty, column type=c}, 
+	% 	columns/m43171/.style={column name=\sm{3171},fixed,fixed zerofill,precision=4,column type={c}},
+	% 	columns/m43172/.style={column name=\sm{3172},fixed,fixed zerofill,precision=4,column type={c}},
+	% 	columns/m43226/.style={column name=\sm{3226},fixed,fixed zerofill,precision=4,column type={c}},
+	% 	columns/m43140/.style={column name=\sm{3140},fixed,fixed zerofill,precision=4,column type={c}},
+	% 	columns/m43521/.style={column name=\sm{3521},fixed,fixed zerofill,precision=4,column type={c}},
+	% 	columns/m43523/.style={column name=\sm{3523},fixed,fixed zerofill,precision=4,column type={c}},
+	% 	]{\energy}
+	\end{table}
+	
+
+In discussion with the before mentioned mentioned, several mechanisms can contribute to getting an inhomogeneous spectrum, even it can say that the two peaks which correspond to exciton transitions are thick and merge this can be related with the high doped level this is because very high dopant concentration causes an overlap of the impurity band with the free-carrier continuum\cite{kundrotas2005excitonic}. Table 5 shows the comparison between experimental transitions energies get with PL and the numerical results. It is important to mentioned that the approximation of numerical calculations are closed to experimental, the difference  is about of 5 meV for the PL case. It is well-known that the PL signal is increase as a function of decrease well widths, as shows 
 
 
 \Cref{tab:CH-3-PL-Experimental-vs-Numerical-transitions} shows the comparison between experimental transitions energies get with PL and the numerical results. It is important to mention that the approximation of numerical calculations is closed to experimental, the difference is about 5 meV for the PL case. It is well-known that the PL signal is increased as a function of decrease well widths, this due to the energy of the confined particle state depends on strongly in it and this is demonstrated in \Cref{fig:chapter-3-PL-experiments-M4_3140-M4_3521-M4_3523} this due to structures doesn't have top n-type epitaxial layer these structures are i-n type, staying only barriers structures and PL line shape presents strong confinement \cite{singh1984theory,juang1986field,maluenda1983abrupttransitions}.
@@ -358,11 +361,11 @@ In the \Cref{fig:chapter-3-PR-PLOT-SET2} can see the direct transitions numerica
 
 Even though in many works about the PR is normal to submit a line shape fit model  to clarify the effects of modulated intrinsic fields around of critical points or transitions and as before mentioned this doesn't the interest of this work. Although, the study and models of line shape for modulated spectroscopy as the PR are essential in the experimental study of semiconductor physics\cite{cardona1969modulation,seraphin1966bandstructure}.  Nevertheless, in our experiments  although the PR mechanism is observable in general around of the Gap ($E_0$) and direct transitions, the mechanism of modulation over the low intrinsic field, exhibit  effects  which is not frequently in the PR experiments, as it's shown in the following section. 
 
-
+\newpage
 \subsubsection{Excitonic effects}
 \label{subsubsec:chapter-3-PR-exciton-effects}
 \vspace{-10mm} 
-\lettrine[lines=3, lraise=.1, nindent=0mm, slope=0mm]{\textbf{T}}{he CQWs}, structures are useful to study excitonic effects under external perturbations of an applied electric field. These structures are coupled by the thin barrier, then the electrons overlap over both wells,  this behavior is very studied by the confinement effects and possibility to create devices based on electron properties.  In this work, we focus on the samples which exhibit exciton effects that commonly are observed under external field apply in our case, without external fields or external perturbations and nor any structure modifies\footnote{This refers to create strain by polish over the samples or mechanisms which generates strain, external perturbations also refers to temperature changes, applied currents, and others.} Starting with a comparison between ACQWs n- and p-type these are the \sm{3521} and \sm{3522} samples respectively, \Cref{fig:chapter-3-PR-PLOT-SET3-a)} shows the PR of both samples(left), where the p-type sample is approx five times smaller than the n-type sample, therefore we can conclude that the mechanism of photo-carriers generated in these are different even if it has the same CQWs structure.   
+\lettrine[lines=3, lraise=.1, nindent=0mm, slope=0mm]{\textbf{T}}{he CQWs}, structures are useful to study excitonic effects under external perturbations of an applied electric field. These structures are coupled by the thin barrier, then the electrons overlap over both wells,  this behavior is very studied by the confinement effects and possibility to create dev comoices based on electron properties.  In this work, we focus on the samples which exhibit exciton effects that commonly are observed under external field apply in our case, without external fields or external perturbations and nor any structure modifies\footnote{This refers to create strain by polish over the samples or mechanisms which generates strain, external perturbations also refers to temperature changes, applied currents, and others.} Starting with a comparison between ACQWs n- and p-type these are the \sm{3521} and \sm{3522} samples respectively, \Cref{fig:chapter-3-PR-PLOT-SET3-a)} shows the PR of both samples(left), where the p-type sample is approx five times smaller than the n-type sample, therefore we can conclude that the mechanism of photo-carriers generated in these are different even if it has the same CQWs structure.   
 
 \begin{figure}[ht!]
 	\centering
@@ -563,20 +566,25 @@ The arrows at the bottom of \Cref{fig:chapter-3-subsec-ras-plots-set-4} indicate
 From the numerical calculation results summarized in  \Cref{tab:sec-chapter-3-ras-table}, the energy splitting between transitions  en-hhn and  en-lhn  are $\mathrm{\Delta E_1}=2.0$ meV and $\mathrm{\Delta E_2}=6.4$ meV. In accordance with \Cref{eqn:chapter-2-sec-anisotropy-model-perturbative}, the \gls{oa} amplitude is proportional to $1/\mathrm{\Delta E_n}$. Considering the same valued for the overlapping and the mixing $\mel{\psi_{\mathrm{hhn}}}{\cal{H}}{\psi_{\mathrm{lhn}}}$ we estimate an amplitude ratio of 3.25 between these transitions. This value is close to the value of 3.9 obtained by the RAS spectrum of \Cref{fig:chapter-3-subsec-ras-plots-set-4} supporting our interpretation.
 
 Finally, we discuss the possible contribution to the RAS amplitude by an built-in electric field accross the CQWs both symmetric and asymmetric. To study this contribution, we have compared the RAS spectra of asymmetric samples \gls{ACQWs}-2 and \gls{ACQWs}-3. The difference between them is the doping of the AlGaAs layer (see \Cref{tab:chapter3:Samples description}). While for \gls{ACQWs}-2 it is n-type, for \gls{ACQWs}-3 it is p-type. Assuming that the built-in electric field  originates from charge transfer between surface states and  the AlGaAs doped layer (n or p), this field is expected to have opposite signs for samples \gls{ACQWs}-2 and \gls{ACQWs}-3 . Thus, the linear contribution of the electric field to the \gls{RAS} should be reversed in sign for such samples. \Cref{fig:chapter-3-subsec-ras-orientation} shows the comparison between the \gls{RAS} spectra of samples \gls{ACQWs}-2 and \gls{ACQWs}-3,  this with aim to demonstrate that  in the case of existed a field the sign is opposite.    The experiment, it was designed to measure both samples in a sequence way along the same preferential direction, in this case we choose the direction of pits $\left[1\overline{1}0\right]$ \cite{weyher2010defect}, if existed a field we expected a opposite RAS signal, but this doesn't occur, the sign in signal it was conserved in both samples. The \Cref{fig:chapter-3-subsec-ras-orientation} shows the results of this experiment, in top left and right it's placed the images of both samples of the pits orientation, this to corroborate that the direction of measured. 
-As can be seen (\Cref{fig:chapter-3-subsec-ras-plots-set-4}), RAS spectra are equivalent  in shape and have the same sign, thus indicating that the contribution of the electric field to the RAS signal is very small. \\
+As can be seen (\Cref{fig:chapter-3-subsec-ras-plots-set-4}), RAS spectra are equivalent  in shape and have the same sign, thus indicating that the contribution of the electric field to the \gls{RAS} signal is very small. \\
 \begin{figure}[H]
 	\floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top},capbesidewidth=0.4\textwidth}}]{figure}[0.95\FBwidth]
-	{ \caption{RAS experiment designed to demonstrate the non-existence of built-in electric field trough sequential measured along preferential direction, in this case it was chosen this direction along the pits $[1\overline{1}0]$\cite{weyher2010defect}. 
+	{ \caption{RAS experiment designed to demonstrate the non-existence of built-in electric field trough sequential measured along the preferential direction, in this case, it was chosen  along the pits $[1\overline{1}0]$\cite{weyher2010defect}. The signal result in both samples practically is the same, the sign is conserving. At top left and right located the images taken with a microscope of back substrate which shows the pit reveals along of $[1\overline{1}0]$ direction. 
 	}\label{fig:chapter-3-subsec-ras-orientation}}
 	{
 	\includegraphics[width=0.6\textwidth]{../figures/chapter-3/ras-plots/out/ras-set-5.pdf}
 	}
 \end{figure}
-We conclude, thus, that the dominant contribution to RAS spectra is the asymmetry of the \gls{ACQWs} system.
+It's natural to suppose that the built-in electric field contributes to increase of the \gls{RAS} signal, and although  we estimate that this field is small, it is still important to discussed it and show different ways to affirms that  the built-in field isn't the reason of the \gls{oa}. 
+We conclude, thus, that the dominant contribution to \gls{RAS} spectra is the asymmetry of the \gls{CQWs} system. 
 
-
-
-
+\subsubsection{The RAS summary}
+\label{subsubsec:chapter-3-ras-conclusions}
+\vspace{-10mm}
+In conclusion, the RAS proofs experimentally that the \gls{oa} increases as a degree of asymmetry in CQWs structures. This behavior is attributed to the reduction of the symmetry of the electronic states in the CQWs with QWs of different thicknesses. The nature of the transitions was identified by
+using PL spectroscopy and numerical calculations. We believe
+that the results presented in this work are important and will
+be useful in understanding the evolution of the optical transition induced by the breakdown of translation symmetry in asymmetric CQWS.
 
 
 

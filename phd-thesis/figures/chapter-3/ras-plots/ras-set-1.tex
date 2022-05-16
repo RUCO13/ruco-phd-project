@@ -55,7 +55,7 @@
 	]
 	
 	
-	\nextgroupplot[axis x line*=top,xtick=\empty]
+	\nextgroupplot[axis x line*=top,xtick=\empty,xlabel={}]
 	\addplot[color=Dark2-A] table[x index=0,y expr=\thisrowno{1}]\rasuno;
 	 \addlegendentry{M4\_3171};
 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
@@ -139,7 +139,7 @@
 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
 
 	
-	\nextgroupplot[axis x line*=bottom,xtick=\empty]
+	\nextgroupplot[axis x line*=bottom,xtick=\empty,xlabel={}]
 	\addplot[color=Dark2-C] table[x index=0,y expr=\thisrowno{1}*2]\rtres;
 	%\addlegendentry{M4\_3226};
 	

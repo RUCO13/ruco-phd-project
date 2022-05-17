@@ -1,0 +1,174 @@
+% \documentclass{article}
+% \usepackage[paperwidth = 10cm, 
+%             paperheight =5.65cm, 
+%             textwidth = 10cm,
+%             textheight = 5.65cm,
+%             centering]{geometry}
+\documentclass[margin=0mm]{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphics}
+\usepackage{tikz,filecontents, pgfplots}
+\pgfplotsset{compat=1.3}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{relsize}
+\renewcommand{\_}{\textscale{.7}{\textunderscore}}
+\def\xminimo{1.50}
+\def\xmaximo{1.55}
+\usepackage{tikz-dimline}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{scalerel}
+
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer,colormaps}
+\usetikzlibrary{pgfplots.colorbrewer}
+
+
+\newcommand{\m}[3]{M4\_3#1#2#3 }
+\newcommand{\sm}[1]{M4\_#1}
+\DeclareMathSymbol{\mh}{\mathord}{operators}{`\-}
+\newcommand\thh[2]{\mathrm{e_{\scaleto{#1\mathstrut}{5pt}} \mh hh_{\scaleto{#2\mathstrut}{5pt}}}}
+\newcommand\tlh[2]{\mathrm{e_{\scaleto{#1\mathstrut}{5pt}} \mh lh_{\scaleto{#2\mathstrut}{5pt}}}}
+\newcommand\bandt[7]{
+\path (axis cs:#1,#2) -- node[midway,scale=#6-0.1,yshift=#5,color=#7,inner sep=1pt] (point) {#4} (axis cs:#1,#3);
+	\draw[-{Stealth[scale=#6]},line width=0.7pt,color=#7] (axis cs:#1,#2) -- (point) -- (axis cs:#1,#3);
+}
+
+
+\newcommand\trs[7]{
+	\node[scale=#7,text width = 1em,inner sep = 2pt,transform canvas={xshift=#5}] at (axis cs:#1,#2) {#6} edge [-{Stealth[scale=#4]}] (axis cs:#1,#3);
+}
+
+\pgfplotsset
+{	height=15cm,
+	width= 12cm,
+	ytick=\empty,
+	xmin=1.50,  xmax=1.55,
+	minor x tick num=1,
+	minor y tick num=1,
+	xtick pos=left,
+	ytick pos=left,
+	xtick distance=1e-2,
+	xlabel ={ Photon Energy (eV) },
+	every axis/.append style = 
+		{
+			line width = 1.2pt,
+			tick style = {line width=1.2pt,black},
+			every tick label/.append style={scale=1.5},
+			major tick length = 3mm,
+			minor tick length = 1.5mm,
+		},
+	every axis plot/.style=
+		{
+			smooth,mark=*,mark options={scale=1,fill=white,line width=0.5pt},line width=0.5pt
+		},
+	x tick label style=
+		{
+			/pgf/number format/.cd,
+			fixed,
+			fixed zerofill,
+			precision=2,
+			/tikz/.cd
+		},
+	every axis x label/.style= 
+		{
+			at={(axis description cs:0.5,-0.08)},
+			scale=1.8
+		},
+	every axis y label/.style= 
+		{
+			at={(axis description cs:-0.05,0.5)},
+			rotate=90,
+			scale=1.8
+		},
+	/pgfplots/legend image code/.code=
+		{%
+			\draw[mark repeat=1,
+				mark phase=1,#1] 
+				plot coordinates 
+			{
+					(0cm,0cm) 
+					(0.0cm,0cm)
+					(0.0cm,0cm)
+					(0.0cm,0cm)
+					(0.5cm,0cm)%
+			};
+		},
+		every axis legend/.style=
+		{
+			cells={anchor=center},
+			inner xsep=1pt,
+			inner ysep=1pt,
+			nodes={scale=1.2,inner sep=2pt, transform shape},
+			draw=none,
+			at={(1,0.15)},
+			anchor=north east,
+			legend cell align={left},
+		},
+}
+
+
+
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/ras-m43521-3l4.dat}\rasuno
+\pgfplotstableread[col sep=comma]{../../../../scripts/data/ras-m43521-l4.dat}\rasdos
+
+
+\begin{document}
+\begin{tikzpicture}[arrow/.style={{Stealth[length=3mm]}-{Stealth[length=3mm]},line width=0.4mm}]
+\begin{axis}[
+	xmin = \xminimo,xmax=\xmaximo,
+    ymin=-6e-4, ymax=9e-4,
+	]
+	
+    %ACQWS-2
+
+	\addplot[color=Set1-A] table[x index=0,y expr=\thisrowno{1}*1.6]
+	\rasuno;
+	% \addlegendentry{(a) RAS $	\circlearrowright$};
+	\addplot[color=Set1-B] table[x index=0,y expr=\thisrowno{1}*1.6]\rasdos;
+	% \addlegendentry{(b) RAS $\circlearrowleft$};
+
+	\node[scale=2,color=Set1-A] at (axis cs:1.54,4e-4){(a) RAS  $\circlearrowright$};
+    \node[scale=2,color=Set1-B] at (axis cs:1.54,-3e-4){(b) RAS  $\circlearrowleft$};
+	% \node[scale=1.5,blue] at (axis cs:1.542,7e-4){(a) ACQWs-1};
+
+
+	% \trs{1.5190}{11e-4}{5e-4}{1}{2mm}{$\thh{1}{1}$}{1.2}
+	% \trs{1.5210}{8e-4}{4e-4}{1}{1mm}{$\tlh{1}{1}$}{1.2}
+	% \trs{1.5330}{11e-4}{7e-4}{1}{-2mm}{$\thh{2}{2}$}{1.2}
+	% \trs{1.5394}{4e-4}{1e-4}{1}{-2mm}{$\tlh{2}{2}$}{1.2}
+	% \trs{1.5461}{5.5e-4}{2.5e-4}{1}{-2mm}{$\thh{3}{3}$}{1.2}
+
+
+
+	% \node[scale=1.3] (H1) at (axis cs:1.51766,-1.2e-3) {};
+	% \node[scale=1.3] (L1) at (axis cs:1.52023,-2e-3) {};
+	% \node[scale=1.3] (H2) at (axis cs:1.5345,-0.1e-3) {};
+	% \node[scale=1.3] (L2) at (axis cs:1.54003,-0.22e-3) {};
+	% \draw[arrow] (H1) -- (axis cs:1.51766,-1.8e-3) |- (axis cs:1.52023,-2.2e-3) -| (L1) ;
+	% \draw[arrow] (H2) -- (axis cs:1.5345,-4e-4) |- (axis cs:1.54003,-4e-4) -| (L2) ;
+	
+
+    % \dimline[label style = {rotate=-90,midway,xshift=1mm,scale=1.1},
+	% line style = {line width=0.5pt,arrows={Stealth[scale=1.1]}-{Stealth[scale=1.1]}},
+	% extension end length=0.3,
+	% extension start length=0.3,
+	% ] {(axis cs:1.512,3e-4)}{(axis cs: 1.512,11e-4)}{$\mathrm{7\!\times\!10^{-4}}$};
+
+
+
+	\coordinate (cud) at (axis cs:1.51,-7e-4);
+
+
+\end{axis}
+
+% \draw[dashed,line width=0.5pt] (cud)--(cup);
+
+
+\end{tikzpicture}
+\end{document}

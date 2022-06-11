@@ -11,6 +11,3 @@ This repository ✨ holds Oscar's PhD thesis, also contains all scripts which we
 * [PGF/TikZ](https://github.com/pgf-tikz/pgf.git)
 
 Also, this repository it's found in [Dr. L.F. Lastras-Martinez](https://github.com/lflm-spectra-labs-iico) respository group.
-
-
-

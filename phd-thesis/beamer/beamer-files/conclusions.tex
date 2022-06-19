@@ -1,0 +1,60 @@
+\section{Trabajo futuro y conclusiones  }
+
+\subsection{RAS con campo externo}
+
+\begin{frame}[t]{RAS con campo externo }
+\begin{tikzpicture}[remember picture, overlay]
+\node<1->[anchor=north west,xshift=0cm,yshift=-1cm,scale=1.5,blue](t1) at (current page.north west){Muestra sim\'etrica $d_{1}=d_{2}$};
+\node<1-3>[anchor= north east,xshift=-2cm,yshift=-0.2 5cm] at (current page.north east){\includegraphics[scale=0.25]{Figures/STRUCTURES/FIG1}};
+\foreach [count=\xi from 2]\x in {1,...,2}{
+	\node<\xi>[anchor=north west,xshift=-0.15cm](sp1) at (t1.south west){\includegraphics[page={\x},width=0.6\textwidth]{Figures/SPOT/SPOT-2}};
+}
+
+\foreach [count=\xi from 4]\x in {1,...,6}{
+	\node<\xi>[anchor=north west,xshift=-0.15cm,yshift=0.25cm](sp2) at (t1.south west){\includegraphics[page={\x},width=0.8\textwidth]{Figures/SPOT/SPOT-1}};
+}
+
+\node<10->[anchor=north east,xshift=-21mm,yshift=-7mm](sp3) at (current page.north east){\includegraphics[page={1},width=0.4\textwidth]{Figures/SPOT/SPOT-3}};
+\node<10->[anchor=east,xshift=0.8cm,yshift=-10mm](AES) at (sp3.south west){
+	\animategraphics[autoplay,loop,width=0.65\textwidth]{2}{FIGURES/AEF-RAS/AEF-RAS}{0}{5}};
+
+
+
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}[t]{Conclusiones}
+\vspace{-2cm}
+\begin{tikzpicture}[remember picture, overlay]
+\node[anchor=center, xshift = -1cm,yshift = 1cm] at (current page.center) {
+	\begin{tcolorbox}[enhanced,
+					 title=Conclusiones y perspectivas,
+				     halign=center,
+					 width=9.5cm,
+					 left=1mm,
+					 top=1mm,
+					 bottom=1mm,
+					 right=1mm,
+					 boxsep=0mm,
+					 fonttitle=\bfseries,
+					coltitle=blue!25!black,
+					attach boxed title to top center={yshift=-2mm,
+					yshifttext=-1mm},
+					boxed title style={colframe=blue!75!black,
+										colback=myblue}]
+					\hspace{-1cm}
+					\begin{itemize}	
+					\justifying
+							\item<1->El articulo esta en etapa final para ser enviado.
+                            \item<2-> Experimentos de RAS con campo aplicado
+							\item<3->  Se realizar\'an experimentos de \emph{Fotorreflectancia en modo exitaci\'on} para entender las transiciones de los Triones y correlacionar los resultados con los experimentos de campo aplicado.
+					\end{itemize}          
+	\end{tcolorbox}
+};
+
+\end{tikzpicture}
+
+
+
+\end{frame}

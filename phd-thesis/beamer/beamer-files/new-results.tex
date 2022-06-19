@@ -1,0 +1,64 @@
+\section{Trabajo Reciente }
+
+\subsection{Modulaci\'on de anisotropia con campo externo}
+
+\begin{frame}[t]{Modulaci\'on de anisotropia con campo externo }
+\begin{tikzpicture}[remember picture, overlay]
+\node<1->[anchor=north west,xshift=0cm,yshift=-1cm,scale=1.25,blue](t1) at (current page.north west){Muestra sim\'etrica $d_{1}=d_{2}$};
+\node<1->[anchor= north east,xshift=-2cm,yshift=-0.2 5cm](st1) at (current page.north east){\includegraphics[scale=0.2]{Figures/STRUCTURES/FIG1}};
+\foreach [count=\xi from 2]\x in {1,...,2}{
+	\node<\xi>[anchor=north west,xshift=-0.15cm](sp1) at (t1.south west){\includegraphics[page={\x},width=0.68\textwidth]{Figures/SPOT/SPOT-2}};
+}
+
+\node<4>[anchor=north,xshift=2mm](sp1) at (st1.south){\includegraphics[page={2},width=0.3\textwidth]{Figures/SPOT/SPOT-2}};
+\node<4->[anchor=south west,xshift=0cm,yshift=2mm](AES) at (current page.south west){\animategraphics[autoplay,loop,width=0.7\textwidth]{2}{Figures/CQWS-AEF/AEF-RAS}{0}{5}};
+
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}[t]{Montaje experimental}
+\begin{tikzpicture}[remember picture, overlay]
+
+\node<1>[anchor=center,xshift=-10mm, yshift=-5mm,rotate=-90,draw](i1) at (current page.center){\includegraphics[width=0.8\textwidth]{Figures/AEF-SETUP/2.jpg}};
+\node<2>[anchor=center,xshift=-10mm, yshift=-5mm,rotate=0,draw](i2) at (current page.center){\includegraphics[width=0.8\textwidth]{Figures/AEF-SETUP/3.jpg}};
+\node<3>[anchor=center,xshift=-10mm, yshift=-5mm,rotate=-90,draw](i2) at (current page.center){\includegraphics[width=0.8\textwidth]{Figures/AEF-SETUP/4.jpg}};
+\node<4>[anchor=center,xshift=-10mm, yshift=-5mm,rotate=-90,draw](i2) at (current page.center){\includegraphics[width=0.8\textwidth]{Figures/AEF-SETUP/5.jpeg}};
+%\node<2>[anchor=north west,xshift=-25mm, yshift=-3mm,rotate=0,draw](i2) at (i1.west){\includegraphics[width=0.5\textwidth]{Figures/AEF-SETUP/3.jpg}};
+%\node<4>[anchor=north,xshift=-23mm, yshift=-5mm,rotate=-90,draw](i3) at (current page.east){\includegraphics[width=0.75\textwidth]{Figures/AEF-SETUP/4.jpg}};
+%\node<5->[anchor=north,xshift=-23mm, yshift=-5mm,rotate=-90,draw](i4) at (current page.east){\includegraphics[width=0.75\textwidth]{Figures/AEF-SETUP/5.jpg}};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}[t]{Primeros Resultados}
+\begin{tikzpicture}[remember picture, overlay]
+\node<1->[anchor=south west,xshift=-2mm,yshift=0mm](IV) at (current page.south west){\animategraphics[autoplay,loop,width=0.55\textwidth]{5}{Figures/AEF-SETUP/IV-CURVES}{0}{30}};
+\foreach [count=\xi from 1]\x in {1,...,2}{
+	\node<\xi->[anchor=north west,xshift=-2mm](sp1) at (IV.north east){\includegraphics[page={\x},width=0.48\textwidth]{Figures/R_RAS-AEF/R-AEF}};
+}
+\foreach [count=\xi from 1]\x in {1,...,3}{
+	\node<\xi>[anchor=north,yshift=-2mm](sp1) at (sp1.south){\includegraphics[page={\x},width=0.48\textwidth]{Figures/R_RAS-AEF/RAS-AEF}};
+}
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}[t]{Primeros Resultados $\mu$RAS}
+\begin{tikzpicture}[remember picture, overlay]
+
+\node<1>[anchor=north,xshift=-10mm,yshift=-8mm](ccd1) at (current page.north){\includegraphics[width=0.8\textwidth]{/mnt/d/OneDrive - Universidad Autonoma de San Luis Potosi - UASLP/Documentos/RUCO/ANALISIS/M4_3598/2021-01-07-DATA/RAS-CCD/RAS-CCD-EXP001}};
+\node<1>[anchor=north,xshift=0mm,yshift=-1mm](ccd2) at (ccd1.south){\includegraphics[width=0.8\textwidth]{/mnt/d/OneDrive - Universidad Autonoma de San Luis Potosi - UASLP/Documentos/RUCO/ANALISIS/M4_3598/2021-01-07-DATA/RAS-CCD/RAS-CCD-EXP002}};
+\node<2>[anchor=center,xshift=-8mm,yshift=-4mm](ccd1) at (current page.center){\animategraphics[autoplay,loop,width=0.78\textwidth]{1}{/mnt/d/OneDrive - Universidad Autonoma de San Luis Potosi - UASLP/Documentos/RUCO/ANALISIS/M4_3598/2021-01-07-DATA/RAS-CCD/PIX-}{0}{11}};
+
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}[t]{Primeros Resultados $\mu$R}
+\begin{tikzpicture}[remember picture, overlay]
+
+\node<1>[anchor=north,xshift=-10mm,yshift=-8mm](ccd1) at (current page.north){\includegraphics[width=0.8\textwidth]{/mnt/d/OneDrive - Universidad Autonoma de San Luis Potosi - UASLP/Documentos/RUCO/ANALISIS/M4_3598/2021-01-07-DATA/R-CCD/R-CCD-EXP001}};
+\node<1>[anchor=north,xshift=0mm,yshift=-1mm](ccd2) at (ccd1.south){\includegraphics[width=0.8\textwidth]{/mnt/d/OneDrive - Universidad Autonoma de San Luis Potosi - UASLP/Documentos/RUCO/ANALISIS/M4_3598/2021-01-07-DATA/R-CCD/R-CCD-EXP002}};
+\node<2>[anchor=center,xshift=-8mm,yshift=-4mm](ccd1) at (current page.center){\animategraphics[autoplay,loop,width=0.78\textwidth]{1}{/mnt/d/OneDrive - Universidad Autonoma de San Luis Potosi - UASLP/Documentos/RUCO/ANALISIS/M4_3598/2021-01-07-DATA/R-CCD/PIX-}{0}{11}};
+
+\end{tikzpicture}
+\end{frame}
+

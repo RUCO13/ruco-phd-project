@@ -1,0 +1,127 @@
+\documentclass[border={-0.2cm -0.3cm 0 -0.2cm }]{standalone}
+% \usepackage[
+% paperwidth = 15cm, 
+% paperheight=10cm,
+% textwidth = 15cm,
+% textheight =10cm,
+% nohead,
+% nofoot,
+% nomarginpar,         
+% margin=0mm]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric}
+\usetikzlibrary{calc,fadings,decorations.pathreplacing}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer,}
+\usepackage{pgfplotstable}
+\usetikzlibrary{3d,spy}
+\usepgfmodule{plot}
+\usepackage{scalerel}
+\usepackage{graphicx}
+\usepackage{tikz-dimline}
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=out/,suffix=-generated}
+\definecolor{As}{RGB}{255,255,0}
+\definecolor{Al}{RGB}{173,216,230}
+\definecolor{Ga}{RGB}{0,128,150}
+
+\definecolor{background}{RGB}{77,77,77}
+
+\definecolor{plane100}{RGB}{0,178,69}
+\definecolor{plane010}{RGB}{0,255,208}
+
+\newcommand*{\xMin}{0}%
+\newcommand*{\xMax}{14}%
+\newcommand*{\yMin}{-7}%
+\newcommand*{\yMax}{0}%
+
+
+
+
+
+
+
+
+\usetikzlibrary{shapes.geometric} % Cylinder
+\usetikzlibrary{shadows.blur,arrows.meta,bending,positioning}
+\usetikzlibrary{%
+	calc,%
+	decorations.pathmorphing,%
+	fadings,%
+	shadings,
+   decorations.pathreplacing,calligraphy
+}
+\usepackage{xcolor}
+\makeatletter% from https://tex.stackexchange.com/a/39698/121799
+\def\grd@save@target#1{%
+  \def\grd@target{#1}}
+\def\grd@save@start#1{%
+  \def\grd@start{#1}}
+\tikzset{
+  labeled grid/.style={
+    to path={%
+      \pgfextra{%
+        \edef\grd@@target{(\tikztotarget)}%
+        \tikz@scan@one@point\grd@save@target\grd@@target\relax
+        \edef\grd@@start{(\tikztostart)}%
+        \tikz@scan@one@point\grd@save@start\grd@@start\relax
+        \draw[minor help lines] (\tikztostart) grid (\tikztotarget);
+        \draw[major help lines] (\tikztostart) grid (\tikztotarget);
+        \grd@start
+        \pgfmathsetmacro{\grd@xa}{\the\pgf@x/1cm}
+        \pgfmathsetmacro{\grd@ya}{\the\pgf@y/1cm}
+        \grd@target
+        \pgfmathsetmacro{\grd@xb}{\the\pgf@x/1cm}
+        \pgfmathsetmacro{\grd@yb}{\the\pgf@y/1cm}
+        \pgfmathsetmacro{\grd@xc}{\grd@xa + \pgfkeysvalueof{/tikz/grid with coordinates/major step}}
+        \pgfmathsetmacro{\grd@yc}{\grd@ya + \pgfkeysvalueof{/tikz/grid with coordinates/major step}}
+        \foreach \x in {\grd@xa,\grd@xc,...,\grd@xb}
+        \node[anchor=north] at (\x,\grd@ya) {\pgfmathprintnumber{\x}};
+        \foreach \y in {\grd@ya,\grd@yc,...,\grd@yb}
+        \node[anchor=east] at (\grd@xa,\y) {\pgfmathprintnumber{\y}};
+        \path foreach \x in {\grd@xa,\grd@xc,...,\grd@xb}
+        {foreach \y in {\grd@ya,\grd@yc,...,\grd@yb}
+         { (\x,\y) node[grid with coordinates/grid label,opacity=0.3] {$(\pgfmathprintnumber{\x},\pgfmathprintnumber{\y})$}}};
+      }
+    }
+  },
+  minor help lines/.style={
+    help lines,
+    step=\pgfkeysvalueof{/tikz/grid with coordinates/minor step},
+    draw=none
+  },
+  major help lines/.style={
+    help lines,
+    line width=\pgfkeysvalueof{/tikz/grid with coordinates/major line width},
+    step=\pgfkeysvalueof{/tikz/grid with coordinates/major step}
+  },
+  grid with coordinates/.cd,
+  minor step/.initial=.2,
+  major step/.initial=1,
+  major line width/.initial=2pt,
+  grid label/.style={below left,scale=0.5,opacity=0.5}
+}
+\makeatother
+
+
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{scope}[opacity=0.1]
+    %\draw(0,0) to[labeled grid] (10,8);
+    \clip (5,4)  circle (3cm) ;    
+    \node[anchor=center] at (5,4) {\includegraphics[scale=0.2]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/acqws-symmetry1-out.pdf}};
+    %\clip (0,0) circle (2.5) node [opacity=0.2] {\includegraphics[scale=0.1]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/acqws-symmetry1-out.pdf}};	
+    % \node at (2.5,2.5) {\includegraphics[scale=0.01]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/acqws-symmetry1-out.pdf}};
+\end{scope}
+
+
+
+\end{tikzpicture}
+	
+	
+
+
+\end{document}

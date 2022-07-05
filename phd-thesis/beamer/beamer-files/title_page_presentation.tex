@@ -5,24 +5,24 @@
 
 \node[at=(current page.center),
       opacity=0.1,
-      fill=white,
+      fill=none,
       inner sep=0pt,
-     ]  {\includegraphics[width=\paperwidth,height=\paperheight]{./Figures/Beamer/qc2}};
+     ]  {\includegraphics[width=\paperwidth,]{../figures/chapter-2/symmetry/build-ruco/sym-back.pdf}};
      
 
 \node[anchor=north east,
-scale=0.07,
+scale=0.08,
 inner sep=0pt,
 opacity=1,
 ](iicologo) 
-at (current page.north east) {\includegraphics{./Figures/Beamer/LOGO_IICO_AZUL.png}};
+at (current page.north east) {\includegraphics{../figures/title-page/iicologo.png}};
 
 \node[anchor=north west,
 scale=0.15,
 inner sep=0pt,
 opacity=1,
 ](iicologo) 
-at (current page.north west) {\includegraphics{./Figures/Beamer/LOGO_UASLP_AZUL.png}};      
+at (current page.north west) {\includegraphics{../figures/title-page/uaslplogo.png}};      
      
      
 \node[font=\fontsize{7}{14}\selectfont, 
@@ -76,6 +76,7 @@ yshift=0,
 align=center] (profesor) { 
 		                {\color{blue}Asesores de tesis} \\
                         Dr. Luis Felipe Lastras Martinez\\
+                        Dr. Raul Eduardo Balderas Navarro\\
                         Dr. Edgar Armando Cerda Mendez
                      };   
 \node[below = of profesor,

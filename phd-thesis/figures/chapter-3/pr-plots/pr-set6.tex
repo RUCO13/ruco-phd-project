@@ -9,6 +9,7 @@
 \usepackage{gensymb}
 \usepackage{amsmath}
 \usepackage{xkcdcolors}
+\pgfplotsset{compat=1.17}
 \usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
 \usetikzlibrary{pgfplots.colorbrewer,}
 
@@ -49,14 +50,10 @@
 			xmin = \xminimo,xmax=\xmaximo,
 			ymin=-3e-3,
 			% ymax=1e-2,
-			cycle from colormap manual style/.style={
-				every axis plot/.style={mark=*,mark options={scale=0.5,fill=white,line width=0.3pt},line width=0.3pt},
-			},
-			cycle from colormap manual style,
 			]
 			%=================================== 50mW ===========================================
 			
-			\nextgroupplot[axis x line*=top,xtick=\empty]
+			\nextgroupplot[axis x line*=top,xtick=\empty,xlabel={}]
 			\addplot[Spectral-O] table[x index=0,y expr=\thisrowno{1}]\prcinco;
 			\addlegendentry{50mW};
 			\draw (axis cs:0,0)--(axis cs:1.5025,0);
@@ -127,7 +124,6 @@
 		x label style={sloped,scale=0.9},
 		z label style={sloped,scale=0.9},
 		y label style={sloped,scale=0.9},
-		cycle from colormap manual style,
 		]
 		
 		

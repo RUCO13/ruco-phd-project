@@ -40,7 +40,7 @@
 \begin{document}
 	
 	\begin{tikzpicture}
-		\begin{axis}[scale only axis,
+		\begin{axis}[
 			width=8cm,height=5cm,
 			name=prcomp,
 			minor x tick num=1,
@@ -49,7 +49,6 @@
 			xlabel={Photon Energy (eV)},
 			ylabel={Photoreflectance},
 			cycle list/Paired,
-			cycle from colormap manual style,
 			]
 			\addplot table[x index=0,y expr=\thisrowno{1}]\prtres;
 			\addlegendentry{M4\_3521 n-type};
@@ -77,10 +76,9 @@
 			ylabel style={rotate=-180,scale=0.9},
 			tick label style={scale=0.8},
 			cycle from colormap manual style/.style={
-				every axis plot/.style={smooth,mark=none,line width=0.5pt},
-			},
-			cycle list/Paired,
-			cycle from colormap manual style,]
+			 	every axis plot/.style={smooth,mark=none,line width=0.5pt},
+			 },
+			cycle list/Paired]
 		\addplot table[x index=0,y expr=\thisrowno{2}]\prtres;
 		\addplot table[x index=0,y expr=\thisrowno{2}]\prcuatro;
 		%\addplot table[x index=0,y expr=\thisrowno{2}]\prcinco;
@@ -95,5 +93,6 @@
 		\bandt{1.5406}{-1.5}{-0.9}{$\tlh{2}{2}$}{0}{\sc}{Paired-B}
 		\end{axis}
 		
-	\end{tikzpicture}
+	% 
+\end{tikzpicture}
 \end{document}

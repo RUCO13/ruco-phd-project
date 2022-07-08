@@ -1,0 +1,176 @@
+\documentclass[margin=-0.0mm]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphics}
+\usepackage{tikz,filecontents, pgfplots}
+\usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{xkcdcolors}
+\pgfplotsset{compat=1.17}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer,}
+
+\input{/media/labfiles/ruco/phd-ssp/phd-thesis/files/pgfplots-set.tex}
+
+\newcommand{\tenergy}[7]{
+	\path (axis cs:#1,#2) -- node[anchor=center,scale=#6-0.1,yshift=#5mm,color=#7,inner sep=0.7pt] (#4) {#4} (axis cs:#1,#3);
+	\draw[-{Stealth[scale=#6]},line width=0.5pt,color=#7] (axis cs:#1,#2) -- (#4) -- (axis cs:#1,#3);
+}
+
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-1mW.txt}\pruno
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-3mW.txt}\prdos
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-8mW.txt}\prtres
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-30mW.txt}\prcuatro
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2021-08-03-m43140-pr-50mW.txt}\prcinco
+\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2022-07-06-pr-m4-3140.txt}\pr
+
+\pgfplotsset{every axis legend/.style={
+		cells={anchor=center},
+		inner xsep=1pt,
+		inner ysep=1pt,
+		nodes={scale=0.55,inner sep=2pt, transform shape},
+		draw=none,
+		at={(1,1)},
+		anchor=north east,
+	}
+}
+
+\pgfplotsset{
+	cycle from colormap manual style/.style={
+	every axis plot/.style={smooth,mark=*,mark options={scale=0.15,fill=white,line width=0.5pt},line width=0.5pt},
+	},
+}
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{groupplot}[scale only axis,
+			group style={group name=PRSET,
+				group size=1 by 5,
+				vertical sep=0pt,
+				xticklabels at=edge bottom},
+			height=1cm,width=2cm,
+			minor x tick num=1,
+			ytick=\empty,
+			xmin = \xminimo,xmax=\xmaximo,
+			ymin=-3e-3,
+			% ymax=1e-2,
+            every axis plot/.style={smooth,mark=*,mark options={scale=0.4,fill=white,line width=0.5pt},line width=0.5pt},
+			]
+			%=================================== 50mW ===========================================
+			
+			\nextgroupplot[axis x line*=top,xtick=\empty,xlabel={}]
+			\addplot[Spectral-O] table[x index=0,y expr=\thisrowno{1}]\prcinco;
+			\addlegendentry{50mW};
+			\draw (axis cs:0,0)--(axis cs:1.5025,0);
+			
+			%===================================  30mW ===========================================
+			\nextgroupplot[axis x line=none,]
+			\addplot[Spectral-N] table[x index=0,y expr=\thisrowno{1}]\prcuatro;
+			\addlegendentry{30mW};
+			\draw (axis cs:0,0)--(axis cs:1.5025,0);
+	
+			%===================================  8mW ===========================================
+			\nextgroupplot[	axis x line=none]
+			\addplot[Spectral-M] table[x index=0,y expr=\thisrowno{1}]\prtres;
+			\addlegendentry{8mW};
+			\draw (axis cs:0,0)--(axis cs:1.5025,0);
+
+			%===================================  3mW ===========================================
+			\nextgroupplot[	axis x line=none]
+			\addplot[Spectral-L] table[x index=0,y expr=\thisrowno{1}]\prdos;
+			\addlegendentry{3mW};
+			\draw (axis cs:0,0)--(axis cs:1.5025,0);
+			
+			%===================================  1mW ===========================================
+			\nextgroupplot[axis x line*=bottom, xlabel={Photon energy (eV)}]
+			\addplot[Spectral-K] table[x index=0,y expr=\thisrowno{1}]\pruno;
+			\addlegendentry{1mW};
+			\draw (axis cs:0,0)--(axis cs:1.5025,0);
+		\end{groupplot}
+			
+		
+		
+	\begin{axis}[%,
+		anchor=north east,
+		at={(PRSET c1r1.north west)},
+		width=6cm,height=6cm,
+		scale only axis,
+		view/h=45,
+		view/el=40,
+		%view={-45}{-45},
+		%domain=1.50:1.55,
+		%zmax=10e-3,
+		plot box ratio=1 1 1,
+		grid=major,
+		%3d box=complete,
+		minor x tick num=1,
+		xmin=1.49,xmax=1.55,
+		ymin = 0,ymax=10,
+		%xmin=1.50,xmax=1.55,
+		zmin =-2.0e-3,
+		ytick={1,3,5,7,9},
+		ytick pos=upper,
+		xtick pos=bottom,
+		major tick length=1mm,
+		%yticklabels=\empty,
+		yticklabels={1mW,3mW,8mW,30mW,50mw},
+		ztick=\empty,
+		xlabel={Photon Energy},
+		ylabel={Laser power (mW)},
+		zlabel = {Peak height},
+		x label style={sloped,scale=0.9},
+		z label style={sloped,scale=0.9},
+		y label style={sloped,scale=0.9},
+		colormap/jet
+		]
+		
+		\addplot3[red,-{stealth},mark options={solid,scale=0.5}] coordinates {
+			(1.490000,1.000000,0.000298)
+			(1.490000,3.000000,0.000606)
+			(1.490000,5.000000,0.001998)
+			(1.490000,7.000000,0.003080)
+			(1.490000,9.000000,0.009122)
+		};
+		
+		\addplot3[red,-{stealth},mark options={solid,scale=0.5}] coordinates {
+			(1.523353,10.000000,0.000298)
+			(1.523353,10.000000,0.000606)
+			(1.523166,10.000000,0.001998)
+			(1.520177,10.000000,0.003080)
+			(1.511648,10.000000,0.009122)
+		};
+		
+		
+		\foreach \i/\c/\s in {5/1/Spectral-K,4/3/Spectral-L,3/5/Spectral-M,1/7/Spectral-N,2/9/Spectral-O} {
+			\addplot3 table [x index={0}, y expr={\c},z index={\i}]\pr;
+
+		}
+%		
+		
+		% \addplot3[Spectral-K,] table [x index={0}, y expr={1},z index={1}]\pruno;
+		% \addplot3[Spectral-L,] table [x index={0}, y expr={3},z index={1}]\prdos;
+		% \addplot3[Spectral-M,] table [x index={0}, y expr={5},z index={1}]\prtres;
+		% \addplot3[Spectral-N,] table [x index={0}, y expr={7},z index={1}]\prcuatro;
+		% \addplot3[Spectral-O,] table [x index={0}, y expr={9},z index={1}]\prcinco;
+		
+			
+		\addplot3[red,-{stealth},mark options={solid,scale=0.5},line width=1pt] coordinates {
+		(1.523353,1.000000,0.000398)
+		(1.523353,3.000000,0.000706)
+		(1.523166,5.000000,0.000953)
+		(1.520177,7.000000,0.003180)
+		(1.511648,9.000000,0.009222)
+		};
+		
+
+	%\node[anchor=center,scale=0.6,red,rotate=-32] at (axis cs:1.532,10,6e-3){$X^{-}$ redshift};
+
+		
+		
+	\end{axis}
+	
+	\end{tikzpicture}
+\end{document}

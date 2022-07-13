@@ -1,14 +1,10 @@
 \documentclass[margin=-0.0mm]{standalone}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{graphics}
 \usepackage{tikz,filecontents, pgfplots}
 \usetikzlibrary{calc,arrows,arrows.meta,shapes,shadows,shapes.arrows,spy,angles,animations,backgrounds,decorations,patterns,babel,bending}
 \usepackage{pgfplotstable}
 \usepackage{siunitx}
 \usepackage{gensymb}
 \usepackage{amsmath}
-\usepackage{xkcdcolors}
 \pgfplotsset{compat=1.17}
 \usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
 \usetikzlibrary{pgfplots.colorbrewer,}
@@ -38,64 +34,104 @@
 	}
 }
 
-\pgfplotsset{
-	cycle from colormap manual style/.style={
-	every axis plot/.style={smooth,mark=*,mark options={scale=0.15,fill=white,line width=0.5pt},line width=0.5pt},
-	},
-}
+% \pgfplotsset{
+% 	cycle from colormap manual style/.style={
+% 	every axis plot/.style={smooth,mark=*,mark options={scale=0.15,fill=white,line width=0.5pt},line width=0.5pt},
+% 	},
+% }
+\pgfplotsset{compat=1.16}
+\def\PgfmathparseFPU#1{\begingroup%
+\pgfkeys{/pgf/fpu,/pgf/fpu/output format=fixed}%
+\pgfmathparse{#1}%
+\pgfmathsmuggle\pgfmathresult\endgroup}%
 
+
+\def\Tmax{10}             
+\def\peaks{100,200,300,400,500}
+\edef\labels{"1mW","3mW","8mW","30mW","50mW"}
 \begin{document}
 	\begin{tikzpicture}
-		\begin{groupplot}[scale only axis,
-			group style={group name=PRSET,
-				group size=1 by 5,
-				vertical sep=0pt,
-				xticklabels at=edge bottom},
-			height=1cm,width=2cm,
-			minor x tick num=1,
-			ytick=\empty,
-			xmin = \xminimo,xmax=\xmaximo,
-			ymin=-3e-3,
-			% ymax=1e-2,
-            every axis plot/.style={smooth,mark=*,mark options={scale=0.4,fill=white,line width=0.5pt},line width=0.5pt},
-			]
-			%=================================== 50mW ===========================================
-			
-			\nextgroupplot[axis x line*=top,xtick=\empty,xlabel={}]
-			\addplot[Spectral-O] table[x index=0,y expr=\thisrowno{1}]\prcinco;
-			\addlegendentry{50mW};
-			\draw (axis cs:0,0)--(axis cs:1.5025,0);
-			
-			%===================================  30mW ===========================================
-			\nextgroupplot[axis x line=none,]
-			\addplot[Spectral-N] table[x index=0,y expr=\thisrowno{1}]\prcuatro;
-			\addlegendentry{30mW};
-			\draw (axis cs:0,0)--(axis cs:1.5025,0);
-	
-			%===================================  8mW ===========================================
-			\nextgroupplot[	axis x line=none]
-			\addplot[Spectral-M] table[x index=0,y expr=\thisrowno{1}]\prtres;
-			\addlegendentry{8mW};
-			\draw (axis cs:0,0)--(axis cs:1.5025,0);
 
-			%===================================  3mW ===========================================
-			\nextgroupplot[	axis x line=none]
-			\addplot[Spectral-L] table[x index=0,y expr=\thisrowno{1}]\prdos;
-			\addlegendentry{3mW};
-			\draw (axis cs:0,0)--(axis cs:1.5025,0);
+	\begin{axis}[name=pr1,
+		scale only axis,
+		width=2.5cm,
+		height=7cm,
+		ytick=\empty,
+		xmin = \xminimo,xmax=\xmaximo,
+		ymin=-2e-3,ymax=0.032,
+		colormap/GnBu,
+    colorT/.style={/utils/exec={\PgfmathparseFPU{#1} \pgfplotscolormapdefinemappedcolor{\pgfmathresult}},color=mapped color}
+	% colormap/GnBu, % define color map, not cycle list
+	% cycle list={[indices of colormap={2,3,4,5,6}]},
+	]
+	\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2022-07-06-pr-m4-3140.txt}{\pr};
+
+	\foreach \i/\c [count=\x from 2] in{
+		1 / 1,
+		2 / 3,
+		3 / 5,
+		4 / 7,
+		5 / 9}{ 
+\edef\temp{
+	
+			\noexpand\addplot[colorT={\x*(100)}] table [col sep=comma,x index={0}, y index=\i]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2022-07-06-pr-m4-3140-v2.txt};
+			%\noexpand\addlegendentry{\labels[\i]};
+		   }
+			\temp
+}
+%		
+	\end{axis}
+		% \begin{groupplot}[scale only axis,
+		% 	group style={group name=PRSET,
+		% 		group size=1 by 5,
+		% 		vertical sep=0pt,
+		% 		xticklabels at=edge bottom},
+		% 	height=1cm,width=2cm,
+		% 	minor x tick num=1,
+		% 	ytick=\empty,
+		% 	xmin = \xminimo,xmax=\xmaximo,
+		% 	ymin=-3e-3,
+		% 	% ymax=1e-2,
+        %     every axis plot/.style={smooth,mark=*,mark options={scale=0.4,fill=white,line width=0.5pt},line width=0.5pt},
+		% 	]
+		% 	%=================================== 50mW ===========================================
 			
-			%===================================  1mW ===========================================
-			\nextgroupplot[axis x line*=bottom, xlabel={Photon energy (eV)}]
-			\addplot[Spectral-K] table[x index=0,y expr=\thisrowno{1}]\pruno;
-			\addlegendentry{1mW};
-			\draw (axis cs:0,0)--(axis cs:1.5025,0);
-		\end{groupplot}
+		% 	\nextgroupplot[axis x line*=top,xtick=\empty,xlabel={}]
+		% 	\addplot[Spectral-O] table[x index=0,y expr=\thisrowno{1}]\prcinco;
+		% 	\addlegendentry{50mW};
+		% 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+			
+		% 	%===================================  30mW ===========================================
+		% 	\nextgroupplot[axis x line=none,]
+		% 	\addplot[Spectral-N] table[x index=0,y expr=\thisrowno{1}]\prcuatro;
+		% 	\addlegendentry{30mW};
+		% 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+	
+		% 	%===================================  8mW ===========================================
+		% 	\nextgroupplot[	axis x line=none]
+		% 	\addplot[Spectral-M] table[x index=0,y expr=\thisrowno{1}]\prtres;
+		% 	\addlegendentry{8mW};
+		% 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+
+		% 	%===================================  3mW ===========================================
+		% 	\nextgroupplot[	axis x line=none]
+		% 	\addplot[Spectral-L] table[x index=0,y expr=\thisrowno{1}]\prdos;
+		% 	\addlegendentry{3mW};
+		% 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+			
+		% 	%===================================  1mW ===========================================
+		% 	\nextgroupplot[axis x line*=bottom, xlabel={Photon energy (eV)}]
+		% 	\addplot[Spectral-K] table[x index=0,y expr=\thisrowno{1}]\pruno;
+		% 	\addlegendentry{1mW};
+		% 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+		% \end{groupplot}
 			
 		
 		
 	\begin{axis}[%,
 		anchor=north east,
-		at={(PRSET c1r1.north west)},
+		%at={(PRSET c1r1.north west)},
+		at={(pr1.north west)},
 		width=6cm,height=6cm,
 		scale only axis,
 		view/h=45,
@@ -124,7 +160,8 @@
 		x label style={sloped,scale=0.9},
 		z label style={sloped,scale=0.9},
 		y label style={sloped,scale=0.9},
-		colormap/jet
+		colormap/GnBu,
+    colorT/.style={/utils/exec={\PgfmathparseFPU{#1} \pgfplotscolormapdefinemappedcolor{\pgfmathresult}},color=mapped color}
 		]
 		
 		\addplot3[red,-{stealth},mark options={solid,scale=0.5}] coordinates {
@@ -144,12 +181,27 @@
 		};
 		
 		
-		\foreach \i/\c/\s in {5/1/Spectral-K,4/3/Spectral-L,3/5/Spectral-M,1/7/Spectral-N,2/9/Spectral-O} {
-			\addplot3 table [x index={0}, y expr={\c},z index={\i}]\pr;
-
+		\foreach \i/\c [count=\x from 2,] in{
+				5 / 1,
+				4 / 3,
+				3 / 5,
+				1 / 7,
+				2 / 9}{ 
+		\edef\temp{
+			        \noexpand\addplot3[colorT={\x*(100)}] table [col sep=comma,x index={0}, y expr={\c},z index={\i}]{/media/labfiles/ruco/analisis/by-groups/pr-group/data/2022-07-06-pr-m4-3140.txt};
+				   }
+					\temp
 		}
 %		
-		
+% \pgfplotsforeachungrouped \i/\j in  {
+% 	5 / 1,
+% 	4 / 3,
+% 	3 / 5,
+% 	1 / 7,
+% 	2 / 9}{
+% 		\edef\temp{\noexpand\addplot3 table [x index={0}, y expr={\j},z index={\i}]\pr;}
+% 		\temp
+% }
 		% \addplot3[Spectral-K,] table [x index={0}, y expr={1},z index={1}]\pruno;
 		% \addplot3[Spectral-L,] table [x index={0}, y expr={3},z index={1}]\prdos;
 		% \addplot3[Spectral-M,] table [x index={0}, y expr={5},z index={1}]\prtres;
@@ -157,7 +209,7 @@
 		% \addplot3[Spectral-O,] table [x index={0}, y expr={9},z index={1}]\prcinco;
 		
 			
-		\addplot3[red,-{stealth},mark options={solid,scale=0.5},line width=1pt] coordinates {
+		\addplot3[red,-{stealth},mark options={solid,scale=0.5},line width=1pt,] coordinates {
 		(1.523353,1.000000,0.000398)
 		(1.523353,3.000000,0.000706)
 		(1.523166,5.000000,0.000953)
@@ -174,3 +226,4 @@
 	
 	\end{tikzpicture}
 \end{document}
+

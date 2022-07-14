@@ -25,7 +25,7 @@ We start describing the band structure (\gls{BS}) of zincblende semiconductors. 
 
 where  $N_{n}$ is the number of atomic nuclei, $N_{e}$ is the number of electrons with mass $m_{0}$, asumming that each nuclei has mass $M$, and charge $Z_{e}$. As a result, this Hamiltonian is too complicated as the sum of five terms which consists in: kinetic energies to electrons and nuclei, the nucleus-nucleus, nucleus-electron and electron-electron Coulomb interactions; also $\bff{R}_{i}$ are the positions of the nuclei and $\bff{r}_{j}$ are the position of the electrons, the operators $\bff{P}$ and $\bff{p}$ are momentum operators to nuclei and electrons respectively.  Finally, the Coulomb potential $V_{c}$\cite{alloul2010introduction} is also considered.  
 
-Fortunately, because  the QS are formed by crystalline materials, the Bloch theorem provide with most important tool to develop the required equations. The Bloch theorem establishes a periodic potential $U(\rv)$ for electrons, accounting for the material's periodicity (definition of crystal structure) and the \sch equation can thus be described in terms of single electron picture as:  
+Fortunately, because  the QS are formed by crystalline materials, the Bloch theorem provides with most important tool to handle the required equations. The Bloch theorem establishes a periodic potential $U(\rv)$ for electrons, accounting for the material's periodicity (definition of crystal structure) and the \sch equation can thus be described in terms of single electron picture as:  
 
 
 \begin{equation}
@@ -35,7 +35,7 @@ Fortunately, because  the QS are formed by crystalline materials, the Bloch theo
 
 The key reason that the periodic potential in a crystal structure is highly important is their translational invariance concept and the consequent symmetry operations that are possible in a crystalline solid. The symmetry concept, as a  tool to understand solids, is discussed with major detail in the next chapter. In according to Bloch's theorem, we can associate a wave vector $\boldsymbol{k}$ with each energy state, $E_{n}(\boldsymbol{k})$. Thus, it is useful to display the energies $E_{n}(\bf{k})$ as a function of the wave vector $\boldsymbol{k}$. This result also known as dispersion relation, but in general terms is the electron band structure of the given solid\cite{piprek2017handbook}.   
 
-Even if the calculation of electron band structure in solids are very complex by the distance between atoms that composes it, and the Bloch's theorem provides the most important tool to reduce the problem to crystalline structures, there exist several methods to  calculate the realistic bandstructure for semiconductors that are categorized into two groups: Atomistic methods\footnote{In this category can include the ab initio methods, these are the most complex methods due to propose  solutions of the many-body problem} (Tight-binding, orthogonalized plane wave methods) and Perturbative methods ($\boldsymbol{k}\bigcdot \boldsymbol{p}$)\footnote{In fact, both TB and $\boldsymbol{k}\bigcdot \boldsymbol{p}$ also consider in same kind, because both are \emph{semi-empirical} methods due to they consider experimental parameters.}. 
+Even if the calculation of electron band structure in solids is futher complicated by the inclusion of the distance between atoms, and because the Bloch theorem provides the most important tool to reduce the problem to crystalline structures, there exist several methods to calculate the realistic bandstructure for semiconductors that can be categorized into two groups: Atomistic methods\footnote{In this category can include the ab initio methods, these are the most complex methods due to propose  solutions of the many-body problem} (Tight-binding, orthogonalized plane wave methods) and Perturbative methods ($\boldsymbol{k}\bigcdot \boldsymbol{p}$)\footnote{In fact, both TB and $\boldsymbol{k}\bigcdot \boldsymbol{p}$ also consider in same kind, because both are \emph{semi-empirical} methods due to they consider experimental parameters.}. 
 These two main categories with theirs respective methodologies, have special characteristics which becomes in the reasons to choose them. The reasons have to do how to  described \gls{BS} which means, in case of Atomistic methods, the entire bands  (both valence and conduction) can be described, whereas in perturbative methods are focudes to near bandedge \gls{BS}. Hence, each of these methods can be chosen and enhanced as the system to study requires. 
 We will not enter in details regarding  which of these methods are the best for ouer case and the reasons are simple: each method is very powerful and we must bear in mind that the complexity of solutions requires that these are solved by numerical techniques, given very good approximations. 
 Thus, we basically conclude that the electron behavior inside a semiconductor consist in solutions of the Schrödinger equation\cite{boer2018semiconductor}.  
@@ -179,7 +179,7 @@ where the $m^{*}$ is the effective mass in each material, and $V(z)$ is the pote
 		\phantomsubcaption\label{subfig:subsection-1.2-single-quantum-well-scheme2-a)}
 		\phantomsubcaption\label{subfig:subsection-1.2-single-quantum-well-scheme2-b)}
 	\end{subfigure}
-	\caption{General scheme of typical Schrödinger's equation solutions to one-dimensional potential as \subref{subfig:subsection-1.2-single-quantum-well-scheme2-a)} where the Eigenenergies of both electron and holes are denoted with same color depending on  $n$ value.\subref{subfig:subsection-1.2-single-quantum-well-scheme2-b)} It's plot, of the subbands in  the same case of  \subref{subfig:subsection-1.2-single-quantum-well-scheme2-a)} to both particles.  }
+	\caption{General scheme of typical Schrödinger's equation solutions to one-dimensional potential as \subref{subfig:subsection-1.2-single-quantum-well-scheme2-a)} where the eigenenergies of both electron and holes are denoted with same color depending on  $n$ value.\subref{subfig:subsection-1.2-single-quantum-well-scheme2-b)} It's plot, of the subbands in  the same case of  \subref{subfig:subsection-1.2-single-quantum-well-scheme2-a)} to both particles.  }
 	\label{fig:subsection-1.2-single-quantum-well-scheme2}
 \end{figure}
 
@@ -190,15 +190,30 @@ These subbands are the result of the sum of $E_{z}$ and $E_{x,y}$, which are the
 \begin{equation}\label{eqn:chapter-1-total-enery-ema-aprox}		
 	E = E_{n} + \dfrac{\hbar^{2}|\boldsymbol{k}_{x,y}|^{2}}{2m^{*}}.
 \end{equation}  
-From equation the effective mass  $m^*$ depends on particle, i.e the effective mass to electrons in CB and the holes in VB. So, the most relevant in the solutions is the energy $E_{n}$ (\Cref{subfig:subsection-1.2-single-quantum-well-scheme2-a)})  is discrete, this is the quantum confinement in the low-dimensional heterostructures. 
+From equation the effective mass  $m^*$ depends on particle, i.e the effective mass to electrons in CB and the holes in VB. Hence, the most relevant parameter in the solution is the energy $E_{n}$ (\Cref{subfig:subsection-1.2-single-quantum-well-scheme2-b)}) which discrete, thus yielding the quantum confinement in the low-dimensional
+heterostructures.
 
 
 \section{Summary}
 \vspace{-10mm} 
-In this chapter, was exposed the generalities of semiconductor band structure and low-dimensional heterostructures, highlighting or taking in major GaAs/\algaas that's the semiconductors of major importance in this work. 
-The band structure interpretation  usually be so hard, and their calculations even more, but the impact and relevance in optical properties of semiconductors starts from that interpretation, from here arises the mathematical arsenal to right physical interpretation. Another significant concept which was treatment as first approach is the effective mass concept, even if, when solved, the bulk Hamiltonian it considers the mass as constant parameter or depending on semiconductor material, contrary  in low-dimensional structures have an important role.  \\
+This chapter exposed the generalities of semiconductor band structure and low-dimensional
+heterostructures, highlighting GaAs/\algaas, which is of importance in this work. The band structure interpretation
+is usually hard to tackle  but the impact and relevance in
+optical properties of semiconductors starts from that interpretation, Another significant concept which
+was treated as first approach, is the effective mass concept, even if, when solved, the bulk
+Hamiltonian it considers the mass as constant parameter or depending on semiconductor
+material, contrary in low-dimensional structures have an important role.
 
-In generally, the band structure of semiconductors is the key to understand quantum properties of solids, in this work the  relevant is the light-matter. Remember that light-mater interaction in solids can be studied by process resulting in it, as absorption, reflection, transmission, diffraction, scattering, and others\cite{rivera2020light}.  Although, the light-matter interactions are fundamentally  quantum electrodynamical, also, can be studied in quantum way through before mentioned process. Firstly, is the photon absorption process can help to understand or calculate the fundamental parameter in semiconductors as is bandgap energy. 
-This parameter is the started point in the study of semiconductors, this is the start point in the map called bandstructure, if it ignores the gap value in the semiconductor to study it couldn't possibly get the principal optical properties of that. \\*
-Then, the bandstructure of semiconductors is the map to understand them, without these routes or fundamental parameters couldn't have quantum devices. 
+In general, the band structure of semiconductors is the key to understand quantum
+properties of solids, in this work the relevant is the light-matter. Remember that lightmater
+interaction in solids can be studied by process resulting in it, as absorption,
+reflection, transmission, diffraction, scattering, and others \cite{rivera2020light}. Although, the light-matter
+interactions are fundamentally quantum electrodynamical, also, it can be studied in quantum
+way through aforementioned process. Firstly, is the photon absorption process can help
+to understand or calculate the fundamental parameter in semiconductors as is bandgap
+energy. This parameter is the started point in the study of semiconductors, this is the start
+point in the map called bandstructure, if it ignores the gap value in the semiconductor to
+study it couldn't possibly get the principal optical properties of that.
+Then, the bandstructure of semiconductors is the map to understand them, without these
+routes or fundamental parameters couldd not have quantum devices.
  

@@ -92,7 +92,11 @@
 				xlabel={Photon Energy (eV)},
 				x label style={sloped,scale=0.8},
 			cycle list/Set1,
-			cycle from colormap manual style,
+			xticklabel style={
+	   	/pgf/number format/precision=2,
+	   	/pgf/number format/fixed,
+	   	/pgf/number format/fixed zerofill,
+	   },
 		       ]
 				\addplot3 table [x index={0}, y expr={1},z index={1}]\pruno;
 				\addplot3 table [x index={0}, y expr={3},z index={1}]\prdos;
@@ -117,6 +121,11 @@
 		x label style={sloped,scale=0.8},
 		cycle list/Set1,
 		cycle from colormap manual style,
+		xticklabel style={
+	   	/pgf/number format/precision=2,
+	   	/pgf/number format/fixed,
+	   	/pgf/number format/fixed zerofill,
+	   },
 		]
 		\addplot table [x index={0},y index={1}]\pruno;
 		\addlegendentry{1500$\mu$m};

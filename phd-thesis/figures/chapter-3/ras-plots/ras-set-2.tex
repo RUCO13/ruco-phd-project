@@ -42,10 +42,11 @@
 		anchor=north east,
 	},
 }
+\def\sc{0.6}
 
 \begin{document}
 \begin{tikzpicture}
-\begin{groupplot}[scale only axis,
+\begin{groupplot}[
 	group style={group name=ras,
 					group size=1 by 5,
 					vertical sep=0pt,
@@ -59,14 +60,13 @@
 	]
 	
 	
-	\nextgroupplot[axis x line*=top,xtick=\empty]
+	\nextgroupplot[axis x line*=top,xtick=\empty,xlabel=\empty]
 	\addplot[color=Set1-A] table[x index=0,y expr=\thisrowno{1}]\rasuno;
 	 \addlegendentry{M4\_3140};
 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
 	\coordinate (cup) at (axis cs:1.51,1.5e-4);
 
     % TRANSIITIONS	
-	\def\sc{0.7}
 	\bandt{1.5276}{13e-4}{2e-4}{$\thh{1}{1}$}{3}{\sc}{Set1-A}
 	\bandt{1.5334}{-13e-4}{-2e-4}{$\tlh{1}{1}$}{-2}{\sc}{Set1-A}
 
@@ -78,7 +78,6 @@
 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
 
     %TRANSITIONS
-	\def\sc{0.7}
 	\bandt{1.5295}{13e-4}{2e-4}{$\thh{1}{1}$}{3}{\sc}{Set1-B}
 	\bandt{1.5351}{-13e-4}{-2e-4}{$\tlh{1}{1}$}{-3}{\sc}{Set1-B}
 
@@ -90,7 +89,6 @@
 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
 
     %TRANSITIONS
-	\def\sc{0.7}
 	\bandt{1.5190}{-15e-4}{-3e-4}{$\thh{1}{1}$}{-12}{\sc}{Set1-C}
 	\bandt{1.5212}{13e-4}{1e-4}{$\tlh{1}{1}$}{4}{\sc}{Set1-C}
 	\bandt{1.5326}{11e-4}{2e-4}{$\thh{2}{2}$}{2}{\sc}{Set1-C}	
@@ -103,7 +101,6 @@
 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
 
     %TRANSITIONS
-	\def\sc{0.7}
 	\bandt{1.5190}{-15e-4}{-3e-4}{$\thh{1}{1}$}{-5}{\sc}{Set1-D}
 	\bandt{1.5212}{13e-4}{-1e-4}{$\tlh{1}{1}$}{3}{\sc}{Set1-D}
     
@@ -125,7 +122,6 @@
 
 
     %TRANSITIONS
-    \def\sc{0.7}
 	\bandt{1.5308}{13e-4}{3e-4}{$\thh{1}{1}$}{5}{\sc}{Set1-E}
 	\bandt{1.5351}{-13e-4}{-3e-4}{$\tlh{1}{1}$}{-5}{\sc}{Set1-E}
 
@@ -139,7 +135,7 @@
 
 
 
-\begin{groupplot}[scale only axis,
+\begin{groupplot}[
 	group style={group name=rset1,
 								group size=1 by 5,
 								vertical sep=0pt,
@@ -155,6 +151,8 @@
 		mark options={scale=0.25,fill=white,line width=0.5pt},
 		line width=0.5pt
 	},
+	xlabel style={scale=0.8},
+	tick label style={scale=0.8},
    % every axis plot/.style={smooth,mark=none,line width=1pt},
 	]
 	
@@ -192,7 +190,7 @@
 	%\addlegendentry{M4\_3172};
 
 	
-	\nextgroupplot[axis x line*=bottom,xtick=\empty]
+	\nextgroupplot[axis x line*=bottom,xtick=\empty,xlabel=\empty]
 	\addplot[color=Set1-E] table[x index=0,y expr=\thisrowno{1}]\rcinco;
 	%\addlegendentry{M4\_3226};
 	

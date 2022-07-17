@@ -14,11 +14,11 @@
 	every axis/.style = {
 		%scale only axis,
 		width=8cm,height=5cm,
-		line width = 2pt,
-		tick style = {line width=0.5pt,black},
-		ticklabel style={scale=0.7},
-		major tick length = 1.8mm,
-		minor tick length = 0.9mm,
+		line width = 0.7pt,
+		tick style = {line width=0.7pt,black},
+		ticklabel style={scale=0.8},
+		major tick length = 1.5mm,
+		minor tick length = 0.75mm,
 		minor x tick num=1,
 		minor y tick num=1,
 		xlabel style={scale=0.9},
@@ -66,8 +66,8 @@
 \newcommand{\m}[3]{M4\_3#1#2#3 }
 \newcommand{\sm}[1]{M4\_#1}
 \DeclareMathSymbol{\mh}{\mathord}{operators}{`\-}
-\newcommand\thh[2]{e_{\scaleto{#1\mathstrut}{5pt}} \mh hh_{\scaleto{#2\mathstrut}{5pt}}}
-\newcommand\tlh[2]{e_{\scaleto{#1\mathstrut}{5pt}} \mh lh_{\scaleto{#2\mathstrut}{5pt}}}
+\newcommand\thh[2]{e_{\scaleto{#1\mathstrut}{5pt}}\mathrm{\mh hh_{\scaleto{#2\mathstrut}{5pt}}}}
+\newcommand\tlh[2]{e_{\scaleto{#1\mathstrut}{5pt}}\mathrm{\mh lh_{\scaleto{#2\mathstrut}{5pt}}}}
 \newcommand\bandt[7]{
 \path (axis cs:#1,#2) -- node[midway,scale=#6-0.1,yshift=#5,color=#7,inner sep=1pt] (point) {#4} (axis cs:#1,#3);
 	\draw[-{Stealth[scale=#6]},line width=0.7pt,color=#7] (axis cs:#1,#2) -- (point) -- (axis cs:#1,#3);

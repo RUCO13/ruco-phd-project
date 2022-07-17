@@ -32,8 +32,8 @@
 \newcommand{\m}[3]{M4\_3#1#2#3 }
 \newcommand{\sm}[1]{M4\_#1}
 \DeclareMathSymbol{\mh}{\mathord}{operators}{`\-}
-\newcommand\thh[2]{\mathrm{e_{\scaleto{#1\mathstrut}{5pt}} \mh hh_{\scaleto{#2\mathstrut}{5pt}}}}
-\newcommand\tlh[2]{\mathrm{e_{\scaleto{#1\mathstrut}{5pt}} \mh lh_{\scaleto{#2\mathstrut}{5pt}}}}
+\newcommand\thh[2]{e_{\scaleto{#1\mathstrut}{5pt}}\mathrm{\mh hh_{\scaleto{#2\mathstrut}{5pt}}}}
+\newcommand\tlh[2]{e_{\scaleto{#1\mathstrut}{5pt}}\mathrm{\mh lh_{\scaleto{#2\mathstrut}{5pt}}}}
 \newcommand\bandt[7]{
 \path (axis cs:#1,#2) -- node[midway,scale=#6-0.1,yshift=#5,color=#7,inner sep=1pt] (point) {#4} (axis cs:#1,#3);
 	\draw[-{Stealth[scale=#6]},line width=0.7pt,color=#7] (axis cs:#1,#2) -- (point) -- (axis cs:#1,#3);
@@ -55,7 +55,7 @@
 	xtick pos=left,
 	ytick pos=left,
 	xtick distance=1e-2,
-	xlabel ={ Photon Energy (eV) },
+	xlabel ={Photon Energy (eV) },
 	ylabel ={RAS},
 	every axis/.append style = 
 		{

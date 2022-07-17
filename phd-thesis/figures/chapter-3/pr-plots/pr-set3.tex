@@ -56,10 +56,10 @@
 			\addlegendentry{M4\_3522 p-type};
 			%\addplot table[x index=0,y expr=\thisrowno{1}]\prcinco;
 			%\addlegendentry{M4\_3523 n-type};
-			\node[font=\bfseries,blue,anchor=north west] at (yticklabel cs:1) {a)};
+			\node[font=\bfseries,blue,anchor=north west] at (yticklabel cs:1) {(a)};
 		\end{axis}
 	
-		\begin{axis}[scale only axis,
+		\begin{axis}[
 			anchor=north west,
 			at={(prcomp.north east)},
 			width=3cm,
@@ -75,14 +75,12 @@
 			ylabel=$\mathrm{R}$,
 			ylabel style={rotate=-180,scale=0.9},
 			tick label style={scale=0.8},
-			cycle from colormap manual style/.style={
-			 	every axis plot/.style={smooth,mark=none,line width=0.5pt},
-			 },
+			every axis plot/.style={smooth,mark=none,no marks,line width=0.5pt},
 			cycle list/Paired]
-		\addplot table[x index=0,y expr=\thisrowno{2}]\prtres;
-		\addplot table[x index=0,y expr=\thisrowno{2}]\prcuatro;
+		\addplot+ table[x index=0,y expr=\thisrowno{2}]\prtres;
+		\addplot+ table[x index=0,y expr=\thisrowno{2}]\prcuatro;
 		%\addplot table[x index=0,y expr=\thisrowno{2}]\prcinco;
-		\node[font=\bfseries,blue,anchor=north west] at ( axis description cs:0,1) {b)};
+		\node[font=\bfseries,blue,anchor=north west] at ( axis description cs:0,1) {(b)};
 		
 		
 		\def\sc{0.7}

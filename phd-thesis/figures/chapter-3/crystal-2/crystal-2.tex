@@ -1,19 +1,6 @@
-% !TeX document-id = {d69ee402-8146-4393-ad78-f4dd492ad4f6}
-% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
 \documentclass[margin=0mm,tikz]{standalone}
 \usetikzlibrary{arrows,arrows.meta,shadows,shapes,shapes.arrows}
 \usepackage{graphicx}
-
-
-
-
-
-
-
-
-
-
-
 
 
 \pgfkeys{
@@ -70,12 +57,15 @@ pitch/.code={%
 	}
 }
 
+\definecolor{As}{RGB}{255,255,0}
+\definecolor{Al}{RGB}{173,216,230}
+\definecolor{Ga}{RGB}{0,128,150}
 
 
 \begin{document}
 	\begin{tikzpicture}
 		\useasboundingbox (-18mm,-25mm) rectangle (125mm,30mm);
-		\node[anchor=south,] at (60mm,-12mm){\includegraphics[width=\linewidth]{/media/labfiles/RUCO/PhD-PHOTONICS/PhD-CODES/STRUCTURES/AlGaAs0.pdf}};
+		\node[anchor=south,] at (60mm,-7mm){\includegraphics[width=\linewidth]{/media/labfiles/ruco/phd-ssp/scripts/structures/AlGaAs.pdf}};
 		
 		
 		\begin{scope}[line width=3,yshift=-9mm,xshift=-5mm]
@@ -87,5 +77,10 @@ pitch/.code={%
 			\node[scale=1,rotate=90] at (0mm,21mm){$[1\overline{1}0]$};
 			\node[scale=1,rotate=45] at (-9mm,-9mm){$[110]$};
 		\end{scope}
+
+		\shade [ball color=Ga] (110mm,-10mm) circle (0.25) node[label=right:{\large\, \textbf{Ga}},font=\bf](Ga) { } ;
+		\shade [ball color=Al] ([yshift=-5mm]Ga.south) circle (0.25) node[label=right:{\large\, \textbf{Al}}](Al) { } ;
+        \shade [ball color=As] ([xshift=0cm,yshift=-5mm]Al.south) circle (0.25) node[label=right:{\large\, \textbf{As}},font=\bf] { };	
+
 	\end{tikzpicture}
 \end{document}

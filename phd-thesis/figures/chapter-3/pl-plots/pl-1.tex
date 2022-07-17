@@ -9,18 +9,13 @@
 \usepackage{gensymb}
 \usepackage{amsmath}
 \usepackage{xcolor}
-\input{/media/labfiles/ruco/phd-ssp/phd-thesis/files/pgfplots-set.tex}
+\input{/media/labfiles/ruco/phd-ssp/phd-thesis/files/pgfplots-set-2.tex}
 
 \newcommand{\rgb}[3]{rgb:red,#1;green,#2;blue,#3}
 
 \pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-samples/m43171/data/2021-06-17-PL-M43171.dat}\samf
 \pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-samples/m43171/data/2021-06-17-PL-M43172.dat}\samd
 \pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-samples/m43171/data/2021-06-17-PL-M43226.dat}\samt
-
-
-
-
-
 
 
 
@@ -62,7 +57,7 @@
 			\addlegendentry{M4\_3226};
 			
 			\node[scale=1] at(axis cs:1.52,1){$\mathrm{T\!=\!14K}$};
-			\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){a)};
+			\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){(a)};
 			 
 \end{axis}
 	
@@ -88,7 +83,7 @@
 		 \addplot[color=Set1-A] table [x index=0, y expr=\thisrowno{1}/688.8] \samf;
 		 \addplot[color=Set1-B] table [x index=0, y expr=1.1+\thisrowno{1}/469.2] \samd;
 		 \addplot[color=Set1-C] table [x index=0, y expr=2+\thisrowno{1}/764.4] \samt;
-		 	\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){b)};
+		 	\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){(b)};
 		 
 		 
 		\def\sc{0.7}

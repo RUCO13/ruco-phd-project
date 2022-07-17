@@ -14,7 +14,7 @@
 \newcommand{\rgb}[3]{rgb:red,#1;green,#2;blue,#3}
 
 
-\input{/media/labfiles/ruco/phd-ssp/phd-thesis/files/pgfplots-set.tex}
+\input{/media/labfiles/ruco/phd-ssp/phd-thesis/files/pgfplots-set-2.tex}
 
 \pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-samples/m43523/data/PL-M4_3523.dat}\pl
 \pgfplotstableread[col sep=comma]{/media/labfiles/ruco/analisis/by-samples/m43140/data/PL-M4_3140-2.dat}\pld
@@ -66,7 +66,7 @@
 			\addlegendentry{M4\_3523};
 			
 			\node[scale=1,font=\bf,anchor=east] at(axis description cs:0.95,0.7){$\mathrm{T\!=\!14K}$};
-			\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){a)};
+			\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){(a)};
 			
 		\end{axis}
 		
@@ -74,27 +74,25 @@
 		
 		
 \begin{axis}[scale only axis,
-			anchor=north west,
-			at={(PL.north east)},
-			width=3cm,
-			height=5cm,
-			minor x tick num=1,
-			minor y tick num=1,
-			xmin=1.515,xmax=1.545,
-			ymin=-0.2,ymax=2.85,
-			ytick=\empty,
-			%axis x line*=top,
-			xtick pos=top,
-			xlabel={Photon Energy (eV)},
-			xlabel style={scale=1},
-			tick label style={scale=1},
-			legend style ={at={(1,1)},anchor=north east,}
-			every axis plot/.append style={mark=*,smooth,mark options={scale=0.5,fill=white,line width=0.5pt},}
-			]
+	anchor=north west,
+	at={(PL.north east)},
+	width=3cm,
+	height=5cm,
+	minor x tick num=1,
+	minor y tick num=1,
+	xmin = 1.515,xmax=1.545,
+	ymin=-0.2,ymax=2.85,
+	ytick=\empty,
+	xtick pos=top,
+	xlabel={Photon Energy (eV)},
+	xlabel style={scale=0.8},
+	tick label style={scale=0.8},
+	every axis plot/.append style={mark=*,smooth,mark options={scale=0.5,fill=white,line width=0.5pt},}
+	]
 			\addplot[color=Set1-A] table [x index=0, y expr=\thisrowno{1}/2] \pl;
 			\addplot[color=Set1-B] table [x index=0, y expr=0.5+\thisrowno{2}/2] \pld;
 			\addplot[color=Set1-C] table [x index=0, y expr=1+\thisrowno{1}/2] \plt;
-			\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){b)};
+			\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){(b)};
 			
 			
 			\def\sc{0.7}%scale arrow head 

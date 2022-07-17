@@ -42,11 +42,10 @@
 	minor x tick num=1,
 	ytick=\empty,
 	xmin = \xminimo,xmax=\xmaximo,
-	cycle from colormap manual style,
 	]
 	
 	
-	\nextgroupplot[axis x line*=top,xtick=\empty]
+	\nextgroupplot[axis x line*=top,xtick=\empty,xlabel={}]
 	\addplot[color=Dark2-A] table[x index=0,y expr=\thisrowno{1}]\pruno;
 	 \addlegendentry{M4\_3171};
 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
@@ -62,7 +61,7 @@
 	\bandt{1.5295}{3e-3}{0e-3}{$\thh{1}{1}$}{0}{\sc}{Dark2-A}
 	\bandt{1.5351}{3e-3}{0e-3}{$\tlh{1}{1}$}{0}{\sc}{Dark2-A}
 	
-	\nextgroupplot[axis x line=none, ylabel={Photoreflectance}]
+	\nextgroupplot[axis x line=none, ylabel={Photoreflectance},xlabel={}]
 	\addplot[color=Dark2-B] table[x index=0,y expr=\thisrowno{1}]\prdos;
 	\addlegendentry{M4\_3172};
 	 			

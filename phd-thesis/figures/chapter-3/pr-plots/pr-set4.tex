@@ -39,7 +39,7 @@
 \begin{document}
 	
 	\begin{tikzpicture}
-		\begin{axis}[scale only axis,
+		\begin{axis}[
 			width=10cm,height=5cm,
 			name=prcomp,
 			minor x tick num=1,
@@ -49,7 +49,6 @@
 			xlabel={Photon Energy (eV)},
 			ylabel={Photoreflectance},
 			cycle list/Paired,
-			cycle from colormap manual style,
 			]
 			\addplot table[x index=0,y expr=\thisrowno{1}]\prtres;
 			\addlegendentry{M4\_3521 n-type};
@@ -69,9 +68,9 @@
 			\bandt{1.5224}{1.5e-2}{0.5e-2}{$\thh{1}{2}$}{3}{\sc}{Paired-A}
 			%\bandt{1.5365}{1.5e-2}{0.5e-2}{e1-lh3}{0}{\sc}{Paired-A}
 		    
-			\node[anchor=north west,inner sep=-0.1mm] at (axis description cs:0,1.0){\includegraphics{/media/labfiles/ruco/analisis/by-groups/cqws/build/plots-scqws.pdf}};
+			\node[anchor=north west,inner sep=-0.1mm] at (axis description cs:0,1.0){\includegraphics{/media/labfiles/ruco/analisis/by-groups/plots/cqws/build/plots-scqws.pdf}};
 			
-			\node[anchor=north east,inner sep=-0.1mm] at (axis description cs:1.0,1.0){\includegraphics{/media/labfiles/ruco/analisis/by-groups/cqws/build/plots-acqws-1.pdf}};
+			\node[anchor=north east,inner sep=-0.1mm] at (axis description cs:1.0,1.0){\includegraphics{/media/labfiles/ruco/analisis/by-groups/plots/cqws/build/plots-acqws-1.pdf}};
 %			
 %			
 			\bandt{1.5300}{-1.8e-2}{-1e-2}{$\thh{1}{1}$}{-2}{\sc}{Paired-B}

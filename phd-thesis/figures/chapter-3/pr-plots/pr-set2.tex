@@ -33,8 +33,7 @@
 
 \begin{document}
 	\begin{tikzpicture}
-		\begin{groupplot}[scale only axis,
-			group style={group name=PRSET1,
+		\begin{groupplot}[group style={group name=PRSET1,
 				group size=1 by 5,
 				vertical sep=0pt,
 				xticklabels at=edge bottom},
@@ -43,11 +42,10 @@
 			ytick=\empty,
 			xmin = \xminimo,xmax=\xmaximo,
 			ymin=-1.5e-2, ymax=1.5e-2,
-			cycle from colormap manual style,
 			]
 			%=================================== M4_3140 ===========================================
 			
-			\nextgroupplot[axis x line*=top,xtick=\empty]
+			\nextgroupplot[axis x line*=top,xtick=\empty,xlabel=\empty]
 			\addplot[color=Set1-A] table[x index=0,y expr=\thisrowno{1}*-4]\pruno;
 			\addlegendentry{M4\_3140};
 			\draw (axis cs:0,0)--(axis cs:1.5025,0);

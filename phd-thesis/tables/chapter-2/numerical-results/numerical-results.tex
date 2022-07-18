@@ -25,7 +25,9 @@
         ,($E$)1.5190,($E$)1.5210,      ,      , 
 }\table
 
-
+\DeclareMathSymbol{\mh}{\mathord}{operators}{`\-}
+\newcommand\thh[2]{e_#1\mathrm{\mh hh_#2}}
+\newcommand\tlh[2]{e_#1\mathrm{\mh lh_#2}}
 \begin{document}
 \pgfplotstabletypeset[%
         %Draw rules
@@ -46,11 +48,11 @@
                                 \fi%
                                 },
         }, 
-        columns/e1h1/.style={string type,column name=e1-hh1, column type=c}, 
-        columns/e1l1/.style={string type,column name=e1-lh1, column type=c}, 
-        columns/e2h2/.style={string type,column name=e2-hh2, column type=c}, 
-        columns/e2l2/.style={string type,column name=e2-lh2, column type=c}, 
-        columns/e3h3/.style={string type,column name=e3-hh3, column type=c}, 
+        columns/e1h1/.style={string type,column name=$\thh{1}{1}$, column type=c}, 
+        columns/e1l1/.style={string type,column name=$\tlh{1}{1}$, column type=c}, 
+        columns/e2h2/.style={string type,column name=$\thh{2}{2}$, column type=c}, 
+        columns/e2l2/.style={string type,column name=$\tlh{2}{2}$, column type=c}, 
+        columns/e3h3/.style={string type,column name=$\thh{3}{3}$, column type=c}, 
         font=\footnotesize
         ]{\table}
 \end{document}

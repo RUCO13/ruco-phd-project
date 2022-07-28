@@ -11,3 +11,5 @@ This repository ✨ holds Oscar's PhD thesis, also contains all scripts which we
 * [PGF/TikZ](https://github.com/pgf-tikz/pgf.git)
 
 Also, this repository it's found in [Nanophotonics IICO's research group](https://github.com/NanophotonIICOs) respository group.
+
+> :warning: **If you need a specific image, and it is not here, this is due to the size (high resolution) of that image being higher than allowing git**: You can email me: ruizoscar.1393@gmail.com and I send you!

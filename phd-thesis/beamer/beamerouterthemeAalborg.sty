@@ -253,7 +253,10 @@
      very thick,] at ([yshift=2mm] BE) {{\usebeamercolor[fg]{subsection in sidebar}\inserttotalframenumber}};
     }
     %insert the logo
+    \node[anchor=south east,opacity=0.1,rotate=0,inner sep=0pt] at (current page.south east){\includegraphics[trim=3000 0 0 0,clip,width=\beamer@width,height=\paperheight-\beamer@height]{../../../scripts/structures/AlGaAs-back.pdf}};
+    \node[anchor=north west,opacity=0.1,rotate=0,inner sep=0pt] at (current page.north west){\includegraphics[trim=0 2000 0 3000,clip,width=\paperwidth,height=\beamer@height]{../../../scripts/structures/AlGaAs-back.pdf}};
     \node at (logopos) {\insertlogo};
+
   \end{tikzpicture}%
 }
 

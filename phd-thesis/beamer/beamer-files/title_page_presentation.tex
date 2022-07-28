@@ -4,10 +4,10 @@
 \coordinate (A) at (0,0);
 
 \node[at=(current page.center),
-      opacity=0.1,
+      opacity=0.2,
       fill=none,
       inner sep=0pt,
-     ]  {\includegraphics[width=\paperwidth,]{../../../scripts/structures/AlGaAs-back-1.pdf}};
+     ]  {\includegraphics[width=\paperwidth,height=\paperheight]{../../../scripts/structures/AlGaAs-back-3}};
      
 
 \node[anchor=north east,
@@ -25,13 +25,12 @@ opacity=1,
 at (current page.north west) {\includegraphics{./beamer-figures/title-page/logo_uaslp_azul.png}};      
      
      
-\node[font=\fontsize{7}{14}\selectfont, 
-      text width=30cm,
+\node[text width=0.65\paperwidth,
       anchor=north,
-	  inner sep=0pt,
-	  yshift=-0.5cm,
-      blue,
-      align=center] (uni) at (current page.north) { 
+	inner sep=0pt,
+	yshift=-0.5cm,
+      align=center,
+      scale=1.2] (uni) at (current page.north) { 
    UNIVERSIDAD AUTONOMA DE SAN LUIS POTOSI\\
    FACULTAD DE CIENCIAS\\
    POSGRADO EN CIENCIAS APLICADAS        
@@ -49,22 +48,24 @@ at (current page.north west) {\includegraphics{./beamer-figures/title-page/logo_
 %       
 \node[%
 %font=\bfseries\fontsize{20}{10}\selectfont, 
-text width=4cm,
+text width=0.9\paperwidth,
 anchor=center,
 inner sep=0pt,
 yshift=1cm,
-color=blue!20!black!80,
+color=blue,
 align=center,
-scale=3] (title) at (current page.center)  { 
-	Anisotropias 'Opticas  de pozos cu\'anticos acoplados  asim\'etricos de GaAs(001)
+scale=2] (title) at (current page.center)  { 
+	Pozos Cuánticos Acoplados como una nueva\\
+fuente de Anisotropías \'Opticas\\
+en Sistemas Nanoestructurados
 };
        
 \node[below = of title,
-font=\fontsize{8}{14}\selectfont, 
-text width=30cm,
+text width=0.5\paperwidth,
 inner sep=0pt,
-yshift=1cm,
-align=center] (author) {
+yshift=0cm,
+align=center,
+scale=1.2] (author) {
                         OSCAR RUIZ CIGARRILLO\\
                          };       
        

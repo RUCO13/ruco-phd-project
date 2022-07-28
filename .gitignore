@@ -27,13 +27,11 @@
 
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
-phd-thesis/build-ruco/2022-ruco-phd-thesis.pdf
-phd-thesis/beamer/build-ruco/2022-rucophd-defense.pdf
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
 *.bcf
 *.blg
-*-blx.aux
+*-blx.auxg
 *-blx.bib
 *.run.xml
 
@@ -294,3 +292,9 @@ _minted*
 *.mlf*
 *.mlt*
 
+phd-thesis/build-ruco/2022-ruco-phd-thesis.pdf
+phd-thesis/beamer/build-ruco/2022-rucophd-defense.pdf
+scripts/structures/AlGaAs-back-1.eps
+scripts/structures/AlGaAs.eps
+scripts/structures/AlGaAs-back.eps
+scripts/structures/GaAs.eps

@@ -1,66 +1,42 @@
-
 \section{Introducción}
-\subsection{Estructuras de Pozos Acoplados}
+\subsection{Estructura de Bandas de Semiconductores}
 \begin{frame}[t]
-\frametitle{Introduccion}
+\frametitle{Introducci\'on}
 \framesubtitle{}
 \vspace{-0.5cm}
 \begin{tikzpicture}[remember picture, overlay]
-\node<1->[anchor = north west, text width = 5cm, yshift = -0.75cm](txt) at (current page.north west) {
-	\begin{tcolorbox}[enhanced,title = Experimentos Realizados,
+\node<1->[anchor = north west, text width =0.7\textwidth, yshift = -0.75cm](txt) at (current page.north west) {
+	\begin{tcolorbox}[enhanced,title =Estructura de Bandas,
 	fonttitle=\bfseries,
 	left=1mm,
 	top=1mm,
 	bottom=1mm,
 	right=1mm,
-	width = 5cm,
-	height=2.25cm,
+	width =\textwidth,
+	height=2.5cm,
 	boxsep = 0cm,
 	coltitle=green!25!black,
 	attach boxed title to top center={yshift=-2mm,yshifttext=-1mm},
 	boxed title style={colframe=green!75!black,
 		colback=yellow!50!green}]
 	\begin{itemize}
-	\fontsize{8}{1}\selectfont
-	\item<1-> Estructuras de Pozos cu\'anticos acoplados
-	%\item<1-> Se realizaron calculos de las energ\'ias y las funciones de onda.
-
+	\item<1-> Dicta el comportamiento de los electrones dentro de un solido
+	\item<2-> En un solido $\approx 10^{23}$ atomos\\$\rightarrow$\text{\color{red}problema complejo de muchos cuerpos}
+	\item<3-> Hamiltoniano de un solido
 	\end{itemize}
 	\end{tcolorbox}	
 };
 
+\node<1->[anchor=north east,xshift=-2cm,yshift=-1cm] at (current page.north east){\includegraphics[width=0.35\textwidth]{../../../scripts/structures/GaAs-2}};
 
-
-
-
-
-
-
-\node<1-5>[anchor= north east,xshift=-2cm,yshift=-0.2 5cm] at (current page.north east){\includegraphics[scale=0.25]{Figures/STRUCTURES/FIG1}};
-
-\node<2-5>[xshift = -1cm,yshift=-3.25cm] at (current page.center){
-	\begin{tabular}{cccc} \toprule
-	Sample number                     & $d_{1} (nm)$ & $d_{2} (nm)$ & $\mathrm{Al_{0.15}Ga_{0.85}As}$ \\ \midrule
-	\myrowcolour
-	$\mathrm{M4\_3140}$               & 13.85        & 11.87        & Si doped, $\mathrm{n=6\times 10^{18} cm^{-3}}$\\ 	
-	\visible<3-5>{$\mathrm{M4\_3523}$ & 11.87        & 11.87        & Si doped, $\mathrm{n=6\times 10^{18} cm^{-3}}$}\\ 	
-	\visible<4-5>{
-		{$\mathrm{M4\_3521}$}         & 23.74        & 11.87        & Si doped, $\mathrm{n=6\times 10^{18} cm^{-3}}$}\\ 
-	\visible<5>{$\mathrm{M4\_3522}$   & 23.74        & 11.87        & Be doped, $\mathrm{p=5\times 10^{19} cm^{-3}}$}\\ \bottomrule
-	\end{tabular}
+\node<3->[anchor=center,text width=\textwidth,font=\sffamily,xshift=-1cm,yshift=-1cm] at (current page.center){
+\begin{equation*}
+	\begin{split}
+	H  =  &\dfrac{1}{2M}\sum\limits_{i=1}^{N_{n}} \bff{P}_{j}^{2} + \dfrac{1}{2m_{0}} \sum\limits_{j=1}^{N_{e}} \bff{p}_{j}^{2} + \dfrac{Z^{2}}{2} \sum\limits_{i,j=1,i\neq j}^{N_{n}} V_{c}\left(\bff{R}_{i}-\bff{R}_{j}\right)-Z\sum\limits_{i=1}^{N_{n}}\sum\limits_{j=1}^{N_{e}}V_{c}\left(\bff{r}_{j}-\bff{R}_{i}\right) \\
+	& + \dfrac{1}{2} \sum\limits_{i,j=1,i\neq j}^{N_{e}} V_{c} \left(\bff{r}_{i}-\bff{r}_{j}\right)
+	\end{split}
+\end{equation*}
 };
-
-
-
-\node<6->[anchor=north,
-           color=blue,
-           text width=5cm,
-           font=\fontsize{8pt}{1}\selectfont,
-           xshift=0.5cm] at (txt.south){
-	$\left[- \dfrac{\hbar^{2}}{2}\partial_{z} \dfrac{1}{m^{*}(z)} \partial_{z} + V(z) - E  \psi(z)\right]=0$}; 
-
-
-
 
 \end{tikzpicture}
 \end{frame}

@@ -52,7 +52,7 @@
 %the height of the header is 2.5 times the lineheight of the frame title
 \newlength{\beamer@height}
 \usebeamerfont{frametitle} %use the frame title font
-\setlength{\beamer@height}{1.7\baselineskip} 
+\setlength{\beamer@height}{2\baselineskip} 
 \reset@font %reset fonts
 \def\beamer@lefttext{left} %used for comparison below
 %width of vertical bar separating the main text from the sidebar
@@ -253,8 +253,12 @@
      very thick,] at ([yshift=2mm] BE) {{\usebeamercolor[fg]{subsection in sidebar}\inserttotalframenumber}};
     }
     %insert the logo
-    \node[anchor=south east,opacity=0.1,rotate=0,inner sep=0pt] at (current page.south east){\includegraphics[trim=3000 0 0 0,clip,width=\beamer@width,height=\paperheight-\beamer@height]{../../../scripts/structures/AlGaAs-back.pdf}};
-    \node[anchor=north west,opacity=0.1,rotate=0,inner sep=0pt] at (current page.north west){\includegraphics[trim=0 2000 0 3000,clip,width=\paperwidth,height=\beamer@height]{../../../scripts/structures/AlGaAs-back.pdf}};
+    \node[anchor=south east,opacity=0.1,inner ysep=0pt,inner xsep=-1mm] at (current page.south east){\includegraphics[width=1.04\beamer@width,height=\paperheight-0.885cm]{../../../scripts/structures/AlGaAs-back-5}};
+    \node[anchor=north west,opacity=0.1,inner ysep=-1mm,inner xsep=-1mm] at (current page.north west){\includegraphics[width=1.2\paperwidth,height=1.04\beamer@height]{../../../scripts/structures/AlGaAs-back-vh-1.png}};
+  %   \node[at=(current page.center),
+  %   opacity=0.1,
+  %   inner sep=0pt,
+  %  ]  {\includegraphics[width=\paperwidth,height=\paperheight]{../../../scripts/structures/AlGaAs-back-0}};
     \node at (logopos) {\insertlogo};
 
   \end{tikzpicture}%

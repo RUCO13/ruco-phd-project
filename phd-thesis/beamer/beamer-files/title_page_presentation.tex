@@ -1,28 +1,25 @@
-
 \begin{titlepage}
 \begin{tikzpicture}[remember picture,overlay]
 \coordinate (A) at (0,0);
 
 \node[at=(current page.center),
       opacity=0.2,
-      fill=none,
-      inner sep=0pt,
-     ]  {\includegraphics[width=\paperwidth,height=\paperheight]{../../../scripts/structures/AlGaAs-back-3}};
+     ]  {\includegraphics[width=\paperwidth,height=\paperheight]{../../../scripts/structures/AlGaAs-back-0-lp}};
      
 
-\node[anchor=north east,
+\node[anchor=north west,
 scale=0.08,
 inner sep=0pt,
 opacity=1,
 ](iicologo) 
-at (current page.north east) {\includegraphics{./beamer-figures/title-page/logo_iico_azul.png}};
+at (current page.north west) {\includegraphics{./beamer-figures/title-page/logo_iico_azul.png}};
 
-\node[anchor=north west,
+\node[anchor=north east,
 scale=0.15,
 inner sep=0pt,
 opacity=1,
 ](iicologo) 
-at (current page.north west) {\includegraphics{./beamer-figures/title-page/logo_uaslp_azul.png}};      
+at (current page.north east) {\includegraphics{./beamer-figures/title-page/logo_uaslp_azul.png}};      
      
      
 \node[text width=0.65\paperwidth,
@@ -30,7 +27,7 @@ at (current page.north west) {\includegraphics{./beamer-figures/title-page/logo_
 	inner sep=0pt,
 	yshift=-0.5cm,
       align=center,
-      scale=1.2] (uni) at (current page.north) { 
+      scale=1.1] (uni) at (current page.north) { 
    UNIVERSIDAD AUTONOMA DE SAN LUIS POTOSI\\
    FACULTAD DE CIENCIAS\\
    POSGRADO EN CIENCIAS APLICADAS        
@@ -70,24 +67,23 @@ scale=1.2] (author) {
                          };       
        
 \node[below = of author,
-font=\fontsize{8}{14}\selectfont, 
 text width=30cm,
 inner sep=0pt,
-yshift=0,
-align=center] (profesor) { 
+yshift=0.5,
+align=center,
+scale=1.1] (profesor) { 
 		                {\color{blue}Asesores de tesis} \\
                         Dr. Luis Felipe Lastras Martinez\\
                         Dr. Raul Eduardo Balderas Navarro\\
                         Dr. Edgar Armando Cerda Mendez
                      };   
 \node[below = of profesor,
-font=\fontsize{5}{14}\selectfont, 
-text width=30cm,
+text width=\textwidth,
 inner sep=0pt,
 yshift=0.5cm,
-align=center] (date) {SAN LUIS POTOSÍ, MÉXICO, \today};                     
+align=center,
+scale=0.7] (date) {SAN LUIS POTOSÍ, MÉXICO, \today};                     
                              
 \end{tikzpicture}
 
-\
 \end{titlepage}

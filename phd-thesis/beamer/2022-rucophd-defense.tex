@@ -85,10 +85,10 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Beamer Options %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setbeamerfont{section in sidebar}{size=\fontsize{6}{5}\selectfont}
-\setbeamerfont{subsection in sidebar}{size=\fontsize{5}{5}\selectfont}
-\setbeamerfont{subsubsection in sidebar}{size=\fontsize{4}{5}\selectfont}
-\setbeamerfont{caption}{series=\mdseries,size=\tiny,family=\rmfamily}
+% \setbeamerfont{section in sidebar}{size=\fontsize{6}{5}\selectfont}
+% \setbeamerfont{subsection in sidebar}{size=\fontsize{5}{5}\selectfont}
+% \setbeamerfont{subsubsection in sidebar}{size=\fontsize{4}{5}\selectfont}
+% \setbeamerfont{caption}{series=\mdseries,size=\tiny,family=\rmfamily}
 \setitemize{label=\usebeamerfont*{itemize item}%
 	\usebeamercolor[fg]{itemize item}
 	\usebeamertemplate{itemize item}}
@@ -182,6 +182,7 @@ Defensa de Tesis ]{}
 
 ]{}
 
+\input{../files/commands}
 
 \begin{document}
 
@@ -198,7 +199,7 @@ Defensa de Tesis ]{}
 
 %============================================ Introduction ================================================
 
-%\include{./Files/INTRODUCTION}
+\input{beamer-files/introduction.tex}
 % \include{./Files/RESUMEN}
 % \include{./Files/NEW-RESULTS}
 %\include{./Files/CONCLUSIONS}

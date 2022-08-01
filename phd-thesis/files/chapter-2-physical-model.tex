@@ -128,9 +128,11 @@ Then, the facility of solve \sch's equation it is limited to only getting inform
 \label{subsubsec:chapter-2-coupled-quantum-wells}
 \vspace{-10mm}
 % The symmetry breaking does not only wight in mathematical aspect, for physics this concept with leads to discover many important and exotic phenomena. When a system reduces its symmetry, their physical properties changes. It is the change in physical properties which reason to study it, in semiconductors as QWs the symmetry breaking starts with modify their band structure (fingerprint) splitting the valence band and reducing the degeneracy, although it  can be the first one to appear  their consequences get more relevance. \\*
-In therms to study changes in physical properties in this work it is focus on optical properties, the light matter interaction gets information about the symmetry breaking through transitions.  The GaAs QWs as a direct band gap semiconductor are excellent platform to study light-matter interaction and the effects on symmetry. It is important to remark  that from here the excitons  played it  an important role, in fact, over them falls  the physical interpretation of optical properties.  
-
-\begin{figure}[h!]
+% In therms to study changes in physical properties in this work it is focus on optical properties, the light matter interaction gets information about the symmetry breaking through transitions.  The GaAs QWs as a direct band gap semiconductor are excellent platform to study light-matter interaction and the effects on symmetry. It is important to remark  that from here the excitons  played it  an important role, in fact, over them falls  the physical interpretation of optical properties.  
+% In terms to study changes in physical properties, this work is focused on optical properties, where the light matter interaction couples information about the symmetry breaking through transitions. The GaAs QWs as a direct band gap semiconductor are excellent
+% platform to study light-matter interaction and the effects on symmetry. It is important to remark that from here the excitons played it an important role, in fact, over them falls the physical interpretation of optical properties.
+In aiming to study changes in physical properties, this work is focused on optical properties, where the \emph{light-matter} interaction couples information about the symmetry breaking through electronic-excitonic transitions. The GaAs QWs as a direct band gap semiconductor are excellent platform to study \emph{light-matter}  interaction and the effects on symmetry. It is important to remark that from here the excitons played it an important role, in fact, over them falls upon  the physical interpretation of optical properties.
+\begin{figure}[ht!]
 	\centering
 	\begin{subfigure}{\textwidth}
 		\includegraphics[width=\linewidth]{../figures/chapter-2/symmetry/build-ruco/sym-2-wob}
@@ -355,7 +357,6 @@ In \Cref{eqn:chapter-2-sec-numerical-calculations-schrodinger-discrete} the diff
 %Either way, if considering a wide structure, as well as a very small step ($\delta z \approx 1\AA$) the computational effort, is high, for this reason, the compute considered memory should be reasonable.Then, taking into account these two factors and considering the computational work, the best choose a Matrix solution.
 
 The Matricial solution allows solving the system of equations naturally as an eigenvalue problem, then it has several numerical alternatives\footnote{This refers to linear algebra techniques\cite{harrison2016quantum,davidson1993monster}} to solve the system. The reason to assert these have to do with the discrete solution as large as the ratio between structure width and spatial step. This means the matrix has  dimensions as: $N = \text{total width}/\delta z$. Then, the way to get matrix ($\textbf{H}$), from Harrison et al. \cite{harrison2016quantum}, consists in reformulate  \Cref{eqn:chapter-2-sec-numerical-calculations-schrodinger-discrete} as function of spatial potential band edge taken into account the variable effective mass, then:
-
 \begin{equation}\label{eqn:chapter-2-sec-numerical-calculations-schrodinger-discrete-to-matrix}
 	a_{i}\psi_{i-1}+b_{i}\psi_{i}+c_{i}\psi_{i+1}=E\psi_{i}
 \end{equation}
@@ -363,7 +364,7 @@ where the coefficients are:
 \begin{equation}\label{eqn:chapter-2-sec-numerical-calculations-schrodinger-discrete-to-matrix-coefficients}
 	a_{i+1}=c_{i}= -\dfrac{\hbar^2}{2m^{*}_{i+\frac{1}{2}}(\delta z)^2} \quad \text{and}\quad b_{i}=\dfrac{\hbar^{2}}{2(\delta z)^2}\left(\dfrac{1}{m^{*}_{i+\frac{1}{2}}}+\dfrac{1}{m^{*}_{i-\frac{1}{2}}}\right)+V_{i}.
 \end{equation}
-From \Cref{eqn:chapter-2-sec-numerical-calculations-eigen-value-equation}, then the matrix \textbf{H} is conformed by the system of equations which is evaluated in each point os structure, then \textbf{H} is:  
+From \Cref{eqn:chapter-2-sec-numerical-calculations-eigen-value-equation}, then the matrix \textbf{H} is conformed by the system of equations which is evaluated in each point of structure, then \textbf{H} is:  \\*
 \begin{equation}
 	\textbf{H}=\begin{pmatrix}
 		b_{1} & c_{1} & 0      &\cdots & 0\\
@@ -414,7 +415,7 @@ Here, we introduce the results obtained in \gls{CQWs} studied in this work. \Cre
 % it is detailed of the structures' composition as well as the properties of these. Then, here focus only in the  numerical and computational results, over all, in the calculation of confined energies it remembers that our model is oriented only about energies, so that, frequently explain many parameters and arguments that does not consider here. But, that does not mean which the obtained results minimize the quality of this work, in fact, we achieve very interest results without need to draw on to the very hard models. The \Cref{fig:chapter-2-sec-numerical-calculations-results} shows the plot of wave functions for electrons, heavy- and light-holes resultant of numerical calculations, here taken into account only four samples detailed in \Cref{sec:chapter-3-section-samples-description} at the \Cref{tab:chapter3:Samples description}, all of these samples are the CQWs structures studied in this work, then over each of these was calculated the confined energies and the wave functions profiles. 
 details the structures' composition as well as their properties. Then, here we focus only on the numerical and computational results. \Cref{fig:chapter-2-sec-numerical-calculations-results} shows the plot of wave functions for electrons, and both heavy- and light-holes resultant from numerical calculations taking into account only four samples detailed in \Cref{sec:chapter-3-section-samples-description} of \Cref{tab:chapter3:Samples description}.
 In the \Cref{fig:chapter-2-sec-numerical-calculations-results} it is calculated $\psi$ to denoted more clarify the overlapping wave functions over two coupled wells, even tough here does not show the total table of confinement energies results, later these will  compare with the experimental transitions.  Therefore, in this section, we limited to specify the numerical results  in accordance with the published work\cite{ruiz2021optical}. 
-\begin{table}[hb!]
+\begin{table}[ht!]
 	\centering
 	\includegraphics[width=\textwidth]{../tables/chapter-2/numerical-results/build-ruco/numerical-results.pdf}
 	\caption{Direct transitions ($\mathbf{X}$) calculated for two ACQWs and one SCQW detailed in \Cref{sec:chapter-3-section-samples-description} and \Cref{tab:chapter3:Samples description}. From up to down shows the numerical ($E$) and experimental results, the experimental results was obtained from RAS experiments which are performed at 30K. }
@@ -425,7 +426,7 @@ In the \Cref{tab:sec-chapter-2-numerical-results} exposes and compares the numer
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}{\textwidth}
-	\includegraphics[width=\textwidth]{../figures/chapter-2/numerical-calculations/out/numerical-results}
+	\includegraphics[width=\textwidth]{../figures/chapter-2/numerical-calculations/build-ruco/numerical-results}
 	\phantomsubcaption\label{subfig:chapter-2-sec-numerical-results-a}
 	\phantomsubcaption\label{subfig:chapter-2-sec-numerical-results-b}
 	\phantomsubcaption\label{subfig:chapter-2-sec-numerical-results-c}
@@ -446,7 +447,7 @@ Now, we focus on the central part either, the core of this work. The asymmetry i
 \begin{figure}[b]
 	\centering
 	\includegraphics[width=0.65\textwidth]{../figures/chapter-2/model/build-ruco/model-scheme}
-	\caption{Diagram of three principal structures studied in this work, starting with CQWs with the same width (bottom, $d_{1}=d_{2}$), this sample structure is called as SCQWs, the second one the first asymmetric structure (top, $d_{1}\sim d_{2}$ ), this means that one of the wells is slightly width than the other. Finally the third sample (right middle) it is more asymmetric, which means that one of the wells is double wider than the other.    }
+	\caption{Diagram of three principal structures studied in this work, starting with CQWs with the same width (bottom, $d_{1}=d_{2}$), this sample structure is called as SCQWs, the second one the first asymmetric structure (top, $d_{1}\sim d_{2}$ ), this means that one of the wells is slightly width than the other. Finally, the third sample (right middle) it is more asymmetric, which means that one of the wells is double wider than the other.    }
 	\label{fig:chapter-2-anisotropy-model-samples-studied}
 \end{figure}
 Generalizing the before discussed in the symmetry section exists several mechanisms to reduce symmetry in QWs structures, principally in the single QWs with external perturbations such as electric or magnetic field, mechanics perturbations as applied strain among others.  But, the objective is the same, reduce the symmetry in these structures from  $T_{d}$ which is the symmetry group to cubic crystals to $C_{2v}$ which in turn a  subgroup of this. As the result of the symmetry breaking,  it originates an OA which was measured through \gls{RAS} experiments results in a peculiar way, this refers to the spectral results. In our case, it compares the experimental results of \gls{RAS} experiments (later discussed) about three CQWs structures, in which the difference between these is only the width of one of the wells (as many times mentioned), the \gls{RAS} spectra increase as the relative width also,  this, come back to these structures very interesting.  Therefore, it will discuss the Anisotropy Model which includes all of the previous contained and focused on the \gls{CQWs}. The \gls{oa} was borns as of the Quantum-mechanically effect of mixing between holes states, the theoretical formalism frequently is developed around effective mass but it is important to remember the difficulty of solid physics, now if it adds the physics of the interface this is so crazy. The role of interfaces is crucially in heterostructures in point of fact is the principal cause, then, having a standard model which explains it, is practically impossible. Therefore, the \emph{simplicity method is ever the good choice.}\\*

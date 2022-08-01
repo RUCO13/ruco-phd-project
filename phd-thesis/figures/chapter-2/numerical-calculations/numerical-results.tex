@@ -80,18 +80,21 @@
 \begin{document}
 \thispagestyle{empty}
     \begin{tikzpicture}[overlay,remember picture,]
-\node[anchor=north west,inner sep=0mm] at (current page.north west){\includegraphics[width=0.49\linewidth]{out/numerical-results-m43523}};
-\node[anchor=north east,inner sep=0mm] at (current page.north east){\includegraphics[width=0.49\linewidth]{out/numerical-results-m43522}};
-\node[anchor=south west,inner sep=0mm] at (current page.south west){\includegraphics[width=0.49\linewidth]{out/numerical-results-m43521}};
-\node[anchor=south east,inner sep=0mm] at (current page.south east){\includegraphics[width=0.49\linewidth]{out/numerical-results-m43172}};
+\node[anchor=north west,inner sep=0mm](i1) at (current page.north west){\includegraphics[width=0.49\linewidth]{out/numerical-results-m43523}};
+\node[anchor=north east,inner sep=0mm](i2) at (current page.north east){\includegraphics[width=0.49\linewidth]{out/numerical-results-m43522}};
+\node[anchor=south west,inner sep=0mm](i3) at (current page.south west){\includegraphics[width=0.49\linewidth]{out/numerical-results-m43521}};
+\node[anchor=south east,inner sep=0mm](i4) at (current page.south east){\includegraphics[width=0.49\linewidth]{out/numerical-results-m43172}};
 
-\foreach \pos/\an/
-\lb in {current page.north west/north west/a,
-current page.north east/north east/b,
-current page.south west/south west/c,
-current page.south east/south east/d}
+\foreach \an/
+\lb in {1/a,2/b,3/c,4/d}
 {
-\node[anchor=\an,draw, fill=blue,text=white,inner sep=0mm,font=\bfseries,scale=0.9] at (\pos){\lb)};
+\node[anchor=north east,draw=white, fill=blue,text=white,inner sep=0.1mm,font=\bfseries,scale=0.7] at (i\an.north east){(\lb)};
 }
+
+% \node[anchor=north east,draw=white, fill=blue,text=white,inner sep=0.1mm,font=\bfseries,scale=0.7] at (i1.north east){(a)};
+% \node[anchor=north east,draw=white, fill=blue,text=white,inner sep=0.1mm,font=\bfseries,scale=0.7] at (i2.north east){(b)};
+% \node[anchor=north east,draw=white, fill=blue,text=white,inner sep=0.1mm,font=\bfseries,scale=0.7] at (i3.north east){(c)};
+% \node[anchor=north east,draw=white, fill=blue,text=white,inner sep=0.1mm,font=\bfseries,scale=0.7] at (i4.north east){(d)};
+
 \end{tikzpicture}
 \end{document}

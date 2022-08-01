@@ -14,5 +14,6 @@ Also, this repository it's found in [Nanophotonics IICO's research group](https:
 
 > :warning: **If you need a specific image, and it is not here, this is due to the size (high resolution) of that image being higher than allowing git**: You can email me: ruizoscar.1393@gmail.com and I send you!
 
-
-<object data="2022-ruco-phd-thesis-2022-08-01.pdf" type="application/pdf" width="100%"> </object>
+<!-- <object data="/readme/titlepage/build-ruco/readme-tp.pdf" type="application/pdf" width="100%">
+</object> -->
+<embed src="/readme/titlepage/build-ruco/readme-tp.pdf" type="application/pdf">

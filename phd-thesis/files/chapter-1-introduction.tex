@@ -6,22 +6,23 @@ quantum structures that were implemented to understand the results in this work.
 \minitoc
 \newpage
 
-\lettrine[lines=3, lraise=.1, nindent=0mm, slope=0mm]{\textbf{Q}}{uantum mechanics}  concerns electronic behavior that manifest many phenomena not explained by the classical regime. Quantum structures (QS) are artificially systems conformed by semiconductors where electrons exhibit quantum nature, and is a great platform to propose novel devices. Nowadays, the progress in creation of QS consist in precisely deposition of thin films, in which electrons show interesting electrical and optical properties\cite{sundram1991structures}. Most of these properties consist in quantum behavior  such as energy confinement, which is the principal interest in the study of electrons and their 
-%consequent interactions. 
-consequent magnetic and electrical interactions.
-Therefore,  their study is still an ongoing emerging topic. 
-%In this chapter, it is presented the fundamental concepts to describe the physical  phenomena resultant in this work, without the intention to replicate concepts and models already explained in publications with major impact. Therefore, the aim of  this chapter is to highlight the subtle concepts behind the results of this thesis.
+\lettrine[lines=3, lraise=.1, nindent=0mm, slope=0mm]{\textbf{Q}}{uantum mechanics}  concerns electronic behavior that manifest many phenomena not explained by the classical regime. In semiconducting condensate matter, Quantum structures (\gls{QS}) are artificially systems conformed by semiconductors where both electrons and holes exhibit quantum nature and are great platforms to propose novel devices. Nowadays, the progress in creation of \gls{QS} consist in precisely synthetizing conglomerates, in which electrons and holes show remarkable electrical and optical properties \cite{sundram1991structures,mcdonald2016dimensional}. Most of these properties arise due energy confinement, which is the principal interest in the study of electrons and their consequent magnetic, optical and electrical interactions. Therefore, their study is still an ongoing emerging topic\cite{argyropoulos2022asymmetric}.\\*
 In this chapter, fundamental concepts to describe the physical phenomena inherent to this work, without the intention to replicate concepts and models already explained in publications with major impact, are presented. Therefore, the aim of this chapter is to highlight the subtle concepts behind the results of this thesis.
+% Quantum structures (QS) are artificially systems conformed by semiconductors where electrons exhibit quantum nature, and is a great platform to propose novel devices. Nowadays, the progress in creation of QS consist in precisely deposition of thin films, in which electrons show interesting electrical and optical properties\cite{sundram1991structures}. Most of these properties consist in quantum behavior  such as energy confinement, which is the principal interest in the study of electrons and their 
+%consequent interactions. 
+% consequent magnetic and electrical interactions.
+% Therefore,  their study is still an ongoing emerging topic. 
+%In this chapter, it is presented the fundamental concepts to describe the physical  phenomena resultant in this work, without the intention to replicate concepts and models already explained in publications with major impact. Therefore, the aim of  this chapter is to highlight the subtle concepts behind the results of this thesis.
+% In this chapter, fundamental concepts to describe the physical phenomena inherent to this work, without the intention to replicate concepts and models already explained in publications with major impact, are presented. Therefore, the aim of this chapter is to highlight the subtle concepts behind the results of this thesis.
 
 \section{Semiconductor Band Structure}
 \label{sec:chapter-1-semiconductor}
 \vspace{-10mm}
-We start describing the band structure (\gls{BS}) of zincblende semiconductors. The \gls{BS} dictates the electron behavior in a solid; therefore, we will need to invoke the \sch equation. Inside a solid, around $10^{23}$ valence electrons contribute to the bonding in each cubic centimeter, which results in a many-body complex problem \cite{piprek2017handbook}, with a general Hamiltonian \cite{alloul2010introduction,cardona2005fundamentals}: 
+We start describing the band structure (\gls{BS}) of zincblende semiconductors. The \gls{BS} dictates the electron behavior in a solid; therefore, we can invoke the \sch\' equation. Inside a solid, around $10^{23}$ valence electrons contribute to the bonding in each cubic centimeter, which results in a many-body complex problem \cite{piprek2017handbook}, with a general Hamiltonian \cite{alloul2010introduction,cardona2005fundamentals}: 
 
 \begin{equation}
 \begin{split}
-	H  =  &\dfrac{1}{2M}\sum\limits_{i=1}^{N_{n}} \bff{P}_{j}^{2} + \dfrac{1}{2m_{0}} \sum\limits_{j=1}^{N_{e}
-	ruco} \bff{p}_{j}^{2} + \dfrac{Z^{2}}{2} \sum\limits_{i,j=1,i\neq j}^{N_{n}} V_{c}\left(\bff{R}_{i}-\bff{R}_{j}\right)-Z\sum\limits_{i=1}^{N_{n}}\sum\limits_{j=1}^{N_{e}}V_{c}\left(\bff{r}_{j}-\bff{R}_{i}\right) \\
+	H  =  &\dfrac{1}{2M}\sum\limits_{i=1}^{N_{n}} \bff{P}_{j}^{2} + \dfrac{1}{2m_{0}} \sum\limits_{j=1}^{N_{e}} \bff{p}_{j}^{2} + \dfrac{Z^{2}}{2} \sum\limits_{i,j=1,i\neq j}^{N_{n}} V_{c}\left(\bff{R}_{i}-\bff{R}_{j}\right)-Z\sum\limits_{i=1}^{N_{n}}\sum\limits_{j=1}^{N_{e}}V_{c}\left(\bff{r}_{j}-\bff{R}_{i}\right) \\
 	   & + \dfrac{1}{2} \sum\limits_{i,j=1,i\neq j}^{N_{e}} V_{c} \left(\bff{r}_{i}-\bff{r}_{j}\right),
 \end{split}
 \label{eq:chapter-1-solid-hamiltonian}
@@ -51,7 +52,10 @@ The bandgap, which is proportional to separation energy of valence and conductio
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/chapter-1/solid-sort/build/solid-sort}
-	\caption{Band energy diagram for insulators (left), semiconductors(center) and metals (right). The principal difference is the gap energy, for insulators this is longer than semiconductors, although in semiconductors gap energy depends on materials, finally in metals does not exist gap energy instead exist an overlap bands characterize these. Dashed line determines the Fermi level.}
+	\caption{
+Band energy diagram for insulators (left), semiconductors (center) and metals (right). The principal difference is the gap energy: for insulators this is bigger than semiconductors, although in semiconductors gap energy depends on materials. Metals do not exhibit gap energy, instead exist overlapping bands. Dashed line determines the Fermi level.
+% Band energy diagram for insulators (left), semiconductors(center) and metals (right). The principal difference is the gap energy, for insulators this is longer than semiconductors, although in semiconductors gap energy depends on materials, finally in metals does not exist gap energy instead exist an overlap bands characterize these. Dashed line determines the Fermi level.
+	}
 	\label{fig:subsubsection-1.1.1-solid-types}
 \end{figure}
 
@@ -69,7 +73,7 @@ To calculate \gls{BS} of bulk semiconductors it is important to define specific 
 
 The most ``exact'' computation is carried out by DFT theory. These calculations are  commonly  called atomistic even some  semiempirical models can be regarded as atomistic, but the semiemprical models are also good approximations in comparison with the DFT approach. Then, which is the reason to call ``exact'' solutions to the DFT results? The answer leads us to big discussion, and it is not intended to get into controversy,  but in general the DFT calculations have the capacity to calculate several properties in terms of electrons interaction and the empirical methods are based in the electrical potential choice.\\
  
-We will not get into details regarding BS theories and models, but will give a brief reference and the importance to this work. The models much preferred in semiconductor heterostructures such as GaAs/AlGaAs are semiempirical, this is because
+We will not get into details regarding BS theories and models, but will give a brief reference and the importance to this work. The models much preferred in semiconductor heterostructures such as GaAs/\algaas are semiempirical, this is because
 \gls{DFT} theory and their derived models are very limited to carry out into large structures, and
 their electron interaction nature need high computational performance. Therefore, in comparison
 with empirical models where the main role is the potential of semiconductor structures, it reduces computational effort.
@@ -100,10 +104,13 @@ All the above discussion refers to a basic quantum mechanism in solids. The elec
 \subsection{Excitons}
 \label{subsec:chapter-1-excitons}
 \vspace{-10mm}
-The importance to study \gls{BS} of semiconductors is very clear so far, so that it could be stated that absorption process is the source of optical properties of solids. It is because of this that the importance to study of semiconductors for optoelectronics applications. In addition, this process gives rise to the formation of one of the most important excitations in the crystal structures. The photon absorption process promotes an electron to be excited from  the \gls{CB} to \gls{VB}, generating an empty location in \gls{VB} which has a net positive charge. This positive empty location called as hole, thereby the electron and hole have opposite charge then it is to be expected that they are attracted by Coulomb force, thus creating bound state called an exciton\cite{leonard2017exciton,tanguy1995optical-dispersion}. 
+% The importance to study \gls{BS} of semiconductors is very clear so far, so that it could be stated that absorption process is the source of optical properties of solids. It is because of this that the importance to study of semiconductors for optoelectronics applications. In addition, this process gives rise to the formation of one of the most important excitations in the crystal structures. The photon absorption process promotes an electron to be excited from  the \gls{CB} to \gls{VB}, generating an empty location in \gls{VB} which has a net positive charge. This positive empty location called as hole, thereby the electron and hole have opposite charge then it is to be expected that they are attracted by Coulomb force, thus creating bound state called an exciton\cite{leonard2017exciton,tanguy1995optical-dispersion}. 
 
-From \Cref{fig:subsubsection-1.1.1-GaAsbands-2} and \Cref{fig:subsubsection-1.1.1-x-1}  it is clear that excitons are commonly present in direct band gap semiconductors such as GaAs, denoted by absorption experiments. This is  mentioned in \Cref{subsec:chapter-3-pl} as the cause in the photoluminescence mechanism.
+% From \Cref{fig:subsubsection-1.1.1-GaAsbands-2} and \Cref{fig:subsubsection-1.1.1-x-1}  it is clear that excitons are commonly present in direct band gap semiconductors such as GaAs, denoted by absorption experiments. This is  mentioned in \Cref{subsec:chapter-3-pl} as the cause in the photoluminescence mechanism.
+The importance to study \gls{BS} of semiconductors is very clear so far, so it could be stated that the absorption process is the source of optical properties of solids, and is because of this that the importance to study of semiconductors for optoelectronics applications. In addition, this process gives rise to the formation of one of the most important excitations in crystal structures. The photon absorption process promotes an electron to be excited from the \gls{CB} to \gls{VB}, generating an empty location in \gls{VB} which has a net positive charge. This positive empty location is called a hole, thereby the electron and hole have opposite charges then it is to be expected that they are attracted by Coulomb force, thus
+creating bound state called an exciton \cite{leonard2017exciton,tanguy1995optical-dispersion}.
 
+From \Cref{fig:subsubsection-1.1.1-GaAsbands-2} and \Cref{fig:subsubsection-1.1.1-x-1}  it is clear that excitons are commonly present indirect band gap semiconductors such as GaAs, denoted by absorption experiments. This is mentioned in \Cref{subsec:chapter-3-pl} as the cause of the photoluminescence mechanism.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{../figures/chapter-1/exciton-1/build/x-1}
@@ -124,7 +131,8 @@ The answers  are well-known: when two materials with relatively same structural 
 	\label{fig:subsection-1.2-heterostructure}
 \end{figure}
 \Cref{fig:subsection-1.2-heterostructure} shows  a general scheme for a heterostructure. In this case it is presented three species of atoms Al, As and Ga. These atoms are located in the III-V columns in periodic table, hence they are called III-V semiconductors. The principal characteristic of these atoms is that they can create matched structures such as GaAs, AlAs and ternary alloys as \algaas with specific Al concentration. The matched semiconductors produce a material with new properties based principally in the difference of bandgap which involves the alloys. 
-As can see in \Cref{fig:subsection-1.2-heterostructure} it is consisting a GaAs/\algaas heterostructure, these interface is well-matched due to the lattice parameters is relatively equals, therefore and thanks to powerful growth technics as MBE it is possible to get high-quality quantum structures. \\*
+As can see in \Cref{fig:subsection-1.2-heterostructure} it is consisting a GaAs/\algaas heterostructure, these interface is well-matched due to the lattice parameters is relatively equals, therefore and thanks to powerful growth technics as MBE it is possible to get high-quality quantum structures. 
+
 Also, the heterostructure composed by two semiconductors with different band gaps generate a discontinuity in either the conduction or the valence band can be represented by a constant potential term\cite{harrison2016quantum}.  The theory for treatment of the electron behavior in these structures is relatively simple if we consider the above. 
 Although this chapter has not the intention to explore the theory of electron behavior, it is worth noting that in order to get the one-dimensional potential $V(z)$ for both bands,  the Schr\"odinger equation can be solved accurately. 
 
@@ -136,7 +144,7 @@ the junction of semiconductors results in an interesting quantum structures with
 dimensions. From 3D bulk, the dimensions reduce to 2D, 1D and 0D dimensional structures.
 Therefore, each of that has interesting properties and their corresponding applications. 
 \Cref{fig:subsection-1.2-heterostructures} shows the low dimensional heterostructures from 3D bulk, the first low dimensional from 3D to 2D is the Quantum Wells, then from 2D to 1D it has the
-Quantum Wires finally with 0D have the Quantum Dots. Quantum confinement is the principal reason to study those structures. The electron behavior exhibited in it should help to understand a great variety of quantum mechanical phenomena as electron interaction in a crystal. Suppose a heterostructure composed with a two
+Quantum Wires finally with 0D have the Quantum Dots. Quantum confinement is the principal reason to study those structures. The electron behavior exhibited in it should help to understand a gamut of quantum mechanical phenomena as electron interaction in a crystal. Suppose a heterostructure composed with a two
 semiconductor alloys, this 2D quantum structure is called a Single Quantum
 Well (SQW).\\*
 \begin{figure}
@@ -157,7 +165,7 @@ The latter, is the consequence of quantum confinement due to the space reduction
 \end{figure}
 Then the quantum confinement is our starting point to understand the optical properties in \gls{QW}s. As is referred in the figure, the uni-dimensional potential profile can well describe by top conduction- and bottom valence-bands, where band offset in these two of correspond gap energy between that, while Al concentration increases their bandgap and the band offset ($\mathrm{Q_{c}}$ to \gls{CB} and $\mathrm{Q_{v}}$ to \gls{VB}) also to.   
 
-It is  now clear  that  \gls{QW}s have the potential to exhibit amazing quantum properties, even if all of these are very important, we focus on the optical properties and basically our interest is the light-matter interaction.  
+It is  now clear  that  \gls{QW}s have the potential to exhibit amazing quantum properties, even if all of these are very important, we focus on the optical properties and basically our interest is the light-matter interaction process.  
  
 \subsection{Preliminary Approach of Quantum Confinement Effect in QWs}
 \label{subsection:chapter-1-preliminary-approach-of-quantum-confinment-effect-in-qws}
@@ -185,7 +193,7 @@ The model which give the tools to get the solutions is called as Effective Mass 
 where the $m^{*}$ is the effective mass in each material, and $V(z)$ is the potential profile deduced from  heterostructure materials properties. Therefore, that differential equation can be solved as in textbooks \cite{de2014introduccion,griffiths2018introduction,sakurai1995modern,cohen2019quantum,chuang1995physics,harrison2016quantum,fox2002optical,bastard1990wave}. The idea is to think as a one particle in a finite potential well with definite and established  boundary conditions and solving the Schrödinger equation in each part of single \gls{QW}, this means that we need to create a potential function. Thus the Eigenfunctions and their corresponding Eigenenergies are computed.
 
 The principal idea is not reproducing something which is very well known, the objective of this part is to established the scope of the next chapter. Therefore,  before to continue, we will finish explaining the dispersion in-plane of single \gls{QW}. As in the \gls{QW} the one-dimensional potential set up the 1D confinement, is important do not confuse which the \gls{QW} is a 2D structure, but their confinement is along of $z$ direction, this means a 1D. Then, the particle can motion in the $x-y$ plane. By this reason, even if consider 3D Schrödinger equation and  the above is considered it obtain \Cref{eq:chapter-1-ema-schroedinger}
-therefore, the solutions in the one-dimensional potential produce discrete states of energy $E_{z}=E_{n}$\cite{harrison2016quantum}, where $n$ is the energy level it which produce  subbands as shows in \Cref{fig:subsection-1.2-single-quantum-well-scheme2}. In contrast, before it called as ``energy bands'' in the bulk case, now due to the quantum confinement gets subbands to both conduction- and valence bands.
+therefore, the solutions in the one-dimensional potential produce discrete states of energy $E_{z}=E_{n}$\cite{harrison2016quantum}, where $n$ is the energy level it which produce subbands as shows in \Cref{fig:subsection-1.2-single-quantum-well-scheme2}. In contrast, before it called as ``energy bands'' in the bulk case, now due to the quantum confinement gets subbands to both conduction- and valence bands.
 
 These subbands are the result of the sum of $E_{z}$ and $E_{x,y}$, which are the 1D confinement energy and the in-plane momentum $k_{x,y}$ then\cite{harrison2016quantum}:
 \begin{equation}\label{eqn:chapter-1-total-enery-ema-aprox}		
@@ -196,9 +204,8 @@ heterostructures.
 \section{Summary}
 \vspace{-10mm} 
 This chapter exposed the generalities of semiconductor band structure and low-dimensional
-heterostructures, highlighting GaAs/\algaas, which is of importance in this work. The band structure interpretation
-is usually hard to tackle  but the impact and relevance in optical properties of semiconductors starts from that interpretation, Another significant concept which was treated as first approach, is the effective mass concept, even if solved, the bulk
-Hamiltonian it considers the mass as constant parameter or depending on semiconductor
+heterostructures, highlighting GaAs/\algaas, which is of uttermost importance in this work. The band structure interpretation
+is usually hard to tackle analytically, the impact and relevance in optical properties of semiconductors starts from that interpretation. Another significant concept which was treated as first approach, is the effective mass concept, even if solved, the bulk Hamiltonian it considers the mass as constant parameter or depending on semiconductor
 material, contrary in low-dimensional structures have an important role.
 
 In general, the band structure of semiconductors is key to understand quantum

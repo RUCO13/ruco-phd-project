@@ -16,4 +16,5 @@ Also, this repository it's found in [Nanophotonics IICO's research group](https:
 
 <!-- <object data="/readme/titlepage/build-ruco/readme-tp.pdf" type="application/pdf" width="100%">
 </object> -->
-<embed src="/readme/titlepage/build-ruco/readme-tp.pdf" type="application/pdf">
+<!-- <embed src="/readme/titlepage/build-ruco/readme-tp.png" type="application/pdf"> -->
+<image src="readme/titlepage/build-ruco/readme-tp.png" width="100%">

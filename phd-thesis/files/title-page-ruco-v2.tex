@@ -1,0 +1,44 @@
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\begin{titlepage}
+\newgeometry{
+a4paper,
+left=   1.5cm,
+right=  1.5cm,
+top=    1.7cm,
+bottom= 1.7cm,
+}
+\begin{tikzpicture}[remember picture, overlay]
+	\node[anchor=center,opacity=0.15] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{../../scripts/structures/AlGaAs-back-0-vtp-0}};
+	\node[anchor=north west,xshift=15mm,yshift=-20mm](uaslp) at (current page.north west){\includegraphics[scale=0.25]{../figures/title-page/uaslplogo2}};
+	\node[anchor=north east,xshift=-15mm,yshift=-20mm](fc) at (current page.north east){\includegraphics[scale=0.25]{../figures/title-page/fclogo}};
+	
+	\draw[line width=0.7mm] (uaslp.south)--([yshift=-20cm]uaslp.south);
+	\draw[line width=0.7mm] ([xshift=1.5mm]uaslp.south)--([xshift=1.5mm,yshift=-20cm]uaslp.south);
+	
+	\draw[line width=0.7mm] ([yshift=-7mm]uaslp.north east)--([yshift=-7mm]fc.north west);
+    \draw[line width=0.7mm] ([yshift=-8.5mm]uaslp.north east)--([yshift=-8.5mm]fc.north west);
+    
+    \draw[line width=0.7mm] ([yshift=2mm]uaslp.south east)--([yshift=2mm]fc.south west);
+    \draw[line width=0.7mm] ([yshift=3.5mm]uaslp.south east)--([yshift=3.5mm]fc.south west);
+	
+	\node[font=\bfseries,scale=1.25,anchor=north,yshift=-2.75cm](l1) at (current page.north){Universidad Autónoma de San Luis Potosí};
+	\node[font=\bfseries,scale=1.25,anchor=north,yshift=0mm](l2) at (l1.south){ Facultad de Ciencias        };
+	
+	\node[scale=1.8,font=\bfseries,text width=0.4\textwidth,align=center,anchor=center,yshift=3cm,xshift=0mm](title) at (current page.center){Coupled quantum wells as a novel source of optical anisotropies in nanostructured systems};
+	
+	\node[scale=1.2, anchor=north,yshift=-10mm, text width=7cm, align=center](l3) at (title.south)  {Doctoral Thesis in Applied Sciences \\ submitted by: };
+	
+	\node[font=\bfseries,scale=1.5,anchor=north,yshift=-5mm](author) at (l3.south){Oscar Ruiz Cigarrillo};
+	
+	\node[scale=1.25,anchor=north,yshift=-5mm](supvisors) at (author.south){Supervisors:};
+	
+	\node[scale=1.25,anchor=north,yshift=-5mm](supvisor1) at (supvisors.south){Dr. Luis Felipe Lastras Mart\'inez};
+	\node[scale=1.25,anchor=north,yshift=-2mm](supvisor2) at (supvisor1.south){Dr. Raul Eduardo Balderas Navarro};
+	\node[scale=1.25,anchor=north,yshift=-2mm](supvisor3) at (supvisor2.south){Dr. Edgar Armando Cerda M\'endez};
+	\node[scale=1.2,anchor=south,yshift=-35mm](city) at (supvisor3.south) {\textsc{San Luis Potos\'i, S.L.P. M\'exico} };
+	\node[scale=1.2,anchor=north,yshift=0mm](year) at (city.south) {\textsc{AUGUST 2022}  };
+\end{tikzpicture}
+\end{titlepage}
+

@@ -29,7 +29,7 @@
 
 \node<1->[anchor=north east,xshift=-2cm,yshift=-1cm] at (current page.north east){\includegraphics[width=0.35\textwidth]{../../../scripts/structures/GaAs-2}};
 
-\node<3->[anchor=center,text width=\textwidth,font=\sffamily,xshift=-1cm,yshift=-1cm] at (current page.center){
+\node<3>[anchor=center,text width=\textwidth,font=\sffamily,xshift=-1cm,yshift=-1cm] at (current page.center){
 \begin{equation*}
 	\begin{split}
 	H  =  &\dfrac{1}{2M}\sum\limits_{i=1}^{N_{n}} \bff{P}_{j}^{2} + \dfrac{1}{2m_{0}} \sum\limits_{j=1}^{N_{e}} \bff{p}_{j}^{2} + \dfrac{Z^{2}}{2} \sum\limits_{i,j=1,i\neq j}^{N_{n}} V_{c}\left(\bff{R}_{i}-\bff{R}_{j}\right)-Z\sum\limits_{i=1}^{N_{n}}\sum\limits_{j=1}^{N_{e}}V_{c}\left(\bff{r}_{j}-\bff{R}_{i}\right) \\
@@ -37,6 +37,8 @@
 	\end{split}
 \end{equation*}
 };
+
+\node<4->[anchor=south west,yshift=0cm,inner sep=0mm](g2) at (current page.south west){\animategraphics[autoplay,loop,trim = {0cm 0cm 0cm 0cm},width=\textwidth,palindrome]{25}{beamer-figures/introduction/build-ruco/blochs}{}{}};
 
 \end{tikzpicture}
 \end{frame}

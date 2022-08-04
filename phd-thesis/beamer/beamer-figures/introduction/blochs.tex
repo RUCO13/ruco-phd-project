@@ -2,7 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amsfonts}
 \usepackage{grid-guide}
-\usepackage{tikz}
+\usepackage{tikz,pgfplots}
 \usetikzlibrary{shapes.geometric} % Cylinder
 \usetikzlibrary{shadows.blur,arrows.meta,bending,positioning}
 \usetikzlibrary{%
@@ -15,19 +15,37 @@
 \usepackage{animate}
 
 \begin{document}
-\begin{animateinline}[loop]{90}
-    \multiframe{90}{i=0+1}{
+\begin{animateinline}[loop]{1}
+    \multiframe{60}{i=0+1}{
   \begin{tikzpicture}[remember picture]
     \node[anchor=center,opacity=0.5](i1) at (10,3.5){\includegraphics[width=\paperwidth]{atom-line.png}};
     %  \draw[labeled grid](0,0) to (20,7);   
-    \begin{scope}[yshift=2cm,xshift=1cm]
-        \def\x{\i}
-        \def\xmax{\i}
-        \pgfmathsetmacro\xx{\i*0.2};
-        \draw[variable=\xx,smooth,domain=0:\xx,color=red]plot[mark=*,mark options={scale=1.5},line width=2pt](\xx,{2*sin(50*\xx)});
+    \begin{scope}[yshift=1cm,xshift=1cm]
+        % \def\x{\i}
+        % \def\xmax{\i}
+        % \pgfmathsetmacro\xx{\i*0.2};
+        % \draw[variable=x,color=red]plot[samples=100,domain=0:10] function {\i*sin(x)};
+        \begin{axis}[width=18cm,height=4.5cm,hide axis,xmax=0,xmax=6*pi,ymin=-3.2,ymax=3.2]
+         
+          \pgfmathsetmacro\xx{\i*0.1};
+          \ifnum\i<15
+              \addplot[domain=0:6*pi,samples=100,line width=2pt,red] {0.2*\i*cos(deg(x))};
+          \else
+              \ifnum\i<30
+                \addplot[domain=0:6*pi,samples=100,line width=2pt,red] {0.2*(15-(\i-15))*cos(deg(x))};
+              \else
+                  \ifnum\i<45
+                  \addplot[domain=0:6*pi,samples=100,line width=2pt,red] {0.2*(\i-45)*sin(deg(x))};
+                  \else 
+                  \addplot[domain=0:6*pi,samples=100,line width=2pt,red] {0.2*(45-\i)*sin(deg(x))};
+                  \fi
+              \fi
+          \fi
+      
+        \end{axis}
     \end{scope}
         
-   \node[red, scale=3,anchor=north west] at (i1.north west){$\psi(r)=e^{ik\cdot r}u(r)$};
+   \node[red, scale=3,anchor=north west] at (i1.north west){$\psi(\mathbf{r})=e^{i\mathbf{k}\cdot \mathbf{r}}U(\mathbf{r})$};
   \end{tikzpicture}
   }
 \end{animateinline}

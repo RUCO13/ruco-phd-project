@@ -238,20 +238,20 @@
     \draw[color=fg,line width=\beamer@barwidth] (BS) -- (IS) -- (BE);
     }
     %insert the total number of frames
-    {%
-      \usebeamercolor{palette sidebar primary}%
-      \usebeamercolor{Aalborg}%
-      \usebeamerfont{subsection in sidebar}%
-     \node[fill=palette sidebar primary.bg,
-     draw=Aalborg.fg,
-     shape=single arrow,
-     inner sep=2pt, 
-     single arrow head extend=1.5pt,
-     minimum width=3pt,
-     top color=white, 
-     bottom color=fg,
-     very thick,] at ([yshift=2mm] BE) {{\usebeamercolor[fg]{subsection in sidebar}\inserttotalframenumber}};
-    }
+    % {%
+    %   \usebeamercolor{palette sidebar primary}%
+    %   \usebeamercolor{Aalborg}%
+    %   \usebeamerfont{subsection in sidebar}%
+    %  \node[fill=palette sidebar primary.bg,
+    %  draw=Aalborg.fg,
+    %  shape=single arrow,
+    %  inner sep=2pt, 
+    %  single arrow head extend=1.5pt,
+    %  minimum width=3pt,
+    %  top color=white, 
+    %  bottom color=fg,
+    %  very thick,] at ([yshift=2mm] BE) {{\usebeamercolor[fg]{subsection in sidebar}\inserttotalframenumber}};
+    % }
     %insert the logo
     \node[anchor=south east,opacity=0.1,inner ysep=0pt,inner xsep=-1mm] at (current page.south east){\includegraphics[width=1.04\beamer@width,height=\paperheight-0.885cm]{../../../scripts/structures/AlGaAs-back-5}};
     \node[anchor=north west,opacity=0.1,inner ysep=-1mm,inner xsep=-1mm] at (current page.north west){\includegraphics[width=1.2\paperwidth,height=1.04\beamer@height]{../../../scripts/structures/AlGaAs-back-vh-1.png}};
@@ -286,13 +286,13 @@
     \node[
     	draw=bg,
     	shape=single arrow,
-    	inner sep=1.5pt, 
-   	 	single arrow head extend=1.5pt,
-   	 	minimum width=3pt,
-    	top color=white, 
-    	bottom color=bg,
-    	scale=1.25,
-    	thick,] at (CF) {{{\usebeamercolor[fg]{subsection in sidebar}#1}}};
+    	inner sep=0.3mm,
+      minimum height=3mm, 
+   	 	single arrow head extend=0.25mm,
+      fill=black,
+      text=white,
+    	font=\bf,
+      anchor=center] at (CF) {{{\usebeamercolor{subsection in sidebar}#1}}};
 
   }
   \end{tikzpicture}%

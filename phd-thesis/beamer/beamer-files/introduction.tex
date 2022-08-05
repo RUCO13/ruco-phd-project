@@ -39,7 +39,7 @@
 };
 
 \node<4->[anchor=south west,opacity=0.5](i1) at (current page.south west){\includegraphics[width=\textwidth,trim = {0cm 0cm 0cm 2cm},clip]{beamer-figures/introduction/atom-line.png}};
-\node<4->[anchor=center,yshift=0cm,inner sep=0mm,yshift=-0.5cm](bloch) at (i1.center){\animategraphics[autoplay,loop,width=\textwidth,palindrome,draft]{8}{beamer-figures/introduction/b1}{}{}};
+\node<4->[anchor=center,yshift=0cm,inner sep=0mm,yshift=-0.5cm](bloch) at (i1.center){\animategraphics[autoplay,loop,width=\textwidth]{8}{beamer-figures/introduction/b1}{}{}};
 
 \node<4->[anchor=south west,text width=\textwidth,scale=0.7] at (current page.south west) {Image credit: from \href{https://commons.wikimedia.org/wiki/File:Standing_wave.gif}{Wikimedia Commons}, public domain};
 \node<5->[anchor=south west,yshift=-0.5cm,inner sep=0mm](schrodinger)at(bloch.north){$\left[-\dfrac{\hbar^2}{2m_{0}}\nabla^2 + U(\rv)\right]\psi (r)=\senergy\psi(\rv)$}; 
@@ -55,7 +55,7 @@
 	\vspace{-0.5cm}
 	\begin{tikzpicture}[remember picture, overlay]
 	\node<1-2>[anchor=north east,xshift=-2cm,yshift=-0.9cm] at (current page.north east){\includegraphics[width=0.35\textwidth]{../../../scripts/structures/GaAs-2}};
-	\node<1-2>[anchor=north west,inner sep=0mm,yshift=-0.9cm](h) at (current page.north west){\animategraphics[autoplay,loop,width=0.3\textwidth,palindrome,draft]{1}{beamer-figures/introduction/build-ruco/H}{}{}};
+	\node<1-2>[anchor=north west,inner sep=0mm,yshift=-0.9cm](h) at (current page.north west){\animategraphics[autoplay,loop,width=0.3\textwidth]{1}{beamer-figures/introduction/build-ruco/H}{}{}};
 \node<1-2>[anchor=north west,text width=0.2\textwidth,font=\sffamily,xshift=0cm,yshift=0.7cm,scale=2,blue](e1) at (h.south west){
 \begin{equation*}
 	\left(\tikzmarknode{a}{\mathcal{H}}-\varepsilon(\mathbf{k}\lambda)\ket{\mathbf{k\lambda}}\right)=0
@@ -120,10 +120,18 @@ $};
 		\end{itemize}
 		\end{tcolorbox}	
 	};
-	
+
+
 	\node<1->[anchor=north east,xshift=-2cm,yshift=-1cm] at (current page.north east){\includegraphics[width=0.25\textwidth]{../../../scripts/structures/GaAs-2}};
 	\node<2>[anchor=south west,xshift=10mm] at (current page.south west){\includegraphics[width=0.59\textwidth]{../../figures/chapter-1/heterostructures/build-ruco/hs-01}};
 	\node<3>[anchor=south west,xshift=10mm] at (current page.south west){\includegraphics[width=0.59\textwidth]{../../figures/chapter-1/heterostructures/build-ruco/lds-00}};
-	\end{tikzpicture}
+	\node<4>[anchor=south west,xshift=0mm](qw1) at (current page.south west){\includegraphics[width=0.48\textwidth]{../../figures/chapter-1/heterostructures/out/qw1}};
+	\node<5>[anchor=south west,xshift=0mm](qw2) at (current page.south west){\includegraphics[width=0.55\textwidth]{../../figures/chapter-1/heterostructures/out/qw2}};
+
+%equations
+\node<4->[anchor=north west,xshift=5mm,blue](e1) at (qw1.north east){$-\dfrac{\hbar^{2}}{2m^{*}}\dfrac{\partial^{2}}{\partial {z}^{2}}\psi(z)+V(z)\psi(z)=E\psi(z)$};
+\node<5->[anchor=north west,blue](e2) at (e1.south west){$E = E_{n} + \dfrac{\hbar^{2}|\boldsymbol{k}_{x,y}|^{2}}{2m^{*}}$};
+
+\end{tikzpicture}
 	\end{frame}
 	

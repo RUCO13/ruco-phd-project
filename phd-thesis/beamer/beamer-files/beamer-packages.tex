@@ -1,0 +1,129 @@
+%\usefonttheme{professionalfonts}
+% If you want to change the colors of the various elements in the theme, edit and uncomment the following lines
+% Change the bar and sidebar colors:
+%\setbeamercolor{Aalborg}{fg=red!20,bg=red}
+%\setbeamercolor{sidebar}{bg=red!20}
+% Change the color of the structural elements:
+%\setbeamercolor{structure}{fg=red}
+% Change the frame title text color:
+%\setbeamercolor{frametitle}{fg=blue}
+% Change the normal text color background:
+%\setbeamercolor{normal text}{bg=gray!10}
+% ... and you can of course change a lot more - see the beamer user manual.
+\usepackage[activeacute,spanish,es-tabla]{babel} 
+\usepackage{amsmath,amssymb,amsfonts,latexsym,stmaryrd,eucal,amsthm,textcomp,cancel,nicefrac}
+\usepackage{fourier}
+\usepackage{graphicx}
+\usepackage{animate}
+\usepackage{empheq,fancybox}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{xfrac}
+\spanishdecimal{.}
+\usepackage{etoolbox}
+\usepackage[listings,most]{tcolorbox}
+\usepackage{ragged2e}
+\usepackage[export]{adjustbox}
+\usepackage{pgffor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{physics}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Ref Equations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[spanish]{cleveref}
+\crefname{equation}{ecuación}{ecuaciones}
+\Crefname{equation}{Ecuación}{Ecuaciones}
+\crefname{table}{tabla}{tablas}
+\Crefname{table}{Tabla}{Tablas}
+
+\crefname{figure}{figura}{figuras}
+\Crefname{figure}{Figuras}{Figuras}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Beamer Options %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setbeamerfont{section in sidebar}{size=\fontsize{6}{5}\selectfont}
+% \setbeamerfont{subsection in sidebar}{size=\fontsize{5}{5}\selectfont}
+% \setbeamerfont{subsubsection in sidebar}{size=\fontsize{4}{5}\selectfont}
+% \setbeamerfont{caption}{series=\mdseries,size=\tiny,family=\rmfamily}
+\setitemize{label=\usebeamerfont*{itemize item}%
+	\usebeamercolor[fg]{itemize item}
+	\usebeamertemplate{itemize item}}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}{[\theenumiv]}
+\setbeamertemplate{navigation symbols}{}
+
+%\setbeamercolor{section in sidebar shaded}{fg=blue} 
+% \setbeamercolor{subsection in sidebar}{bg=gc} 
+% \setbeamertemplate{section in head/foot}{\hfill\insertsectionheadnumber.~\insertsectionhead}
+% \setbeamertemplate{section in head/foot shaded}{\color{structure!50}\hfill\insertsectionheadnumber.~\insertsectionhead}
+% \setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+
+
+% \makeatletter
+% \patchcmd{\insertverticalnavigation}%
+% {\ifx\beamer@nav@css\beamer@hidetext{\usebeamertemplate{section in sidebar}}\else{\usebeamertemplate{section in sidebar shaded}}\fi}%
+% {{\usebeamertemplate{section in sidebar}}}{}{}
+% \makeatother
+
+
+% ----->  Some definitions
+
+% Set up some colors
+\definecolor{gc}{RGB}{136,216,192}% green
+\definecolor{myblue}{rgb}{0.476,0.832,1}
+\definecolor{myred}{rgb}{0.74,0.22,0.15}
+\definecolor{mygreen}{rgb}{0.05,0.52,0.42}
+\definecolor{myyellow}{rgb}{0.96,0.92,0.13}                          
+\definecolor{myorange}{rgb}{1,0.61,0.36}
+\definecolor{mypurple}{rgb}{0.71,0.02,1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Tikz packages%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz,pgfplots} %crear graficos en latex
+\pgfplotsset{compat=newest}
+\tikzset{
+	every picture/.append style={
+		execute at begin picture={\deactivatequoting},
+		execute at end picture={\activatequoting}
+}}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows,
+	tikzmark,
+	shadows,
+	arrows.meta,decorations.pathmorphing,calc,%
+	decorations.pathmorphing,%
+	decorations.markings,
+	fadings,%
+	shadings,%
+	positioning,
+	shapes.geometric,
+	shapes.arrows,
+	fit,                % <-- added
+	shapes.multipart,   % <-- added
+	spy,
+    positioning,3d}
+\pgfarrowsdeclarecombine{newlatex}{newlatex}{latex}{latex}{}{}
+\tikzset{every picture/.style={remember picture}}
+
+\pgfdeclareimage[height=1cm]{mainlogo}{beamer-figures/title-page/logo_iico_azul.png} % placed in the upper left/right corner
+\logo{\pgfuseimage{mainlogo}}
+
+
+\title[Posgrado en Ciencias Aplicadas\\ 
+Defensa de Tesis ]{}
+\author[Oscar Ruiz Cigarrillo] {}
+\institute[
+{% \vspace{-0.3cm}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,xshift=-3mm] at (current page.south east){\includegraphics[scale=0.08]{beamer-figures/title-page/logo_uaslp_azul.png}};
+\end{tikzpicture}
+}
+]{}
+
+
+\tcbset{enhanced,colback=gc!10,colframe=gc,left=1mm,top=1mm,
+bottom=1mm,right=1mm,boxsep=0mm,drop shadow}

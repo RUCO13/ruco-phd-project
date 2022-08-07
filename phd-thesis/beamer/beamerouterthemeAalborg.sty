@@ -230,6 +230,7 @@
     \fi
     \coordinate (IS) at (BS -| BE); %intersection
     \coordinate (logopos) at (\beamer@width/2,-\beamer@height/2);%coordinate of the logo
+    \coordinate (logopos2) at (\beamer@width/2, \beamer@height/2);%coordinate of the logo
     %draw the background of the header and the sidebar
     {\usebeamercolor{palette sidebar primary}%
     \fill[fill=palette sidebar primary.bg] (BS) -- (IS) -- (BE) -- (LC) |- (UC) -- cycle;}
@@ -253,8 +254,8 @@
     %  very thick,] at ([yshift=2mm] BE) {{\usebeamercolor[fg]{subsection in sidebar}\inserttotalframenumber}};
     % }
     %insert the logo
-    \node[anchor=south east,opacity=0.1,inner ysep=0pt,inner xsep=-1mm] at (current page.south east){\includegraphics[width=1.04\beamer@width,height=\paperheight-0.885cm]{../../../scripts/structures/AlGaAs-back-5}};
-    \node[anchor=north west,opacity=0.1,inner ysep=-1mm,inner xsep=-1mm] at (current page.north west){\includegraphics[width=1.2\paperwidth,height=1.04\beamer@height]{../../../scripts/structures/AlGaAs-back-vh-1.png}};
+    \node[anchor=south east,opacity=0.1,inner ysep=0pt,inner xsep=-1mm] at (current page.south east){\includegraphics[width=1.045\beamer@width,height=\paperheight]{../../../scripts/structures/AlGaAs-back-5}};
+    \node[anchor=north west,opacity=0.1,inner ysep=-1mm,inner xsep=-1mm] at (current page.north west){\includegraphics[width=\paperwidth-0.95\beamer@width,height=1.05\beamer@height]{../../../scripts/structures/AlGaAs-back-vh-1.png}};
   %   \node[at=(current page.center),
   %   opacity=0.1,
   %   inner sep=0pt,
@@ -294,7 +295,6 @@
     	font=\bf,
       scale=1.25,
       anchor=center] at (CF) {{{\usebeamercolor{subsection in sidebar}#1}}};
-
   }
   \end{tikzpicture}%
 }

@@ -10,11 +10,12 @@
 % Change the normal text color background:
 %\setbeamercolor{normal text}{bg=gray!10}
 % ... and you can of course change a lot more - see the beamer user manual.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[activeacute,spanish,es-tabla]{babel} 
 \usepackage{amsmath,amssymb,amsfonts,latexsym,stmaryrd,eucal,amsthm,textcomp,cancel,nicefrac}
 \usepackage{fourier}
 \usepackage{graphicx}
-\usepackage{animate}
 \usepackage{empheq,fancybox}
 \usepackage{xcolor}
 \usepackage{colortbl}
@@ -29,8 +30,16 @@
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage{physics}
+\usepackage{animate}
 
-
+% Set up some colors
+\definecolor{gc}{RGB}{136,216,192}% green
+\definecolor{myblue}{rgb}{0.476,0.832,1}
+\definecolor{myred}{rgb}{0.74,0.22,0.15}
+\definecolor{mygreen}{rgb}{0.05,0.52,0.42}
+\definecolor{myyellow}{rgb}{0.96,0.92,0.13}                          
+\definecolor{myorange}{rgb}{1,0.61,0.36}
+\definecolor{mypurple}{rgb}{0.71,0.02,1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Ref Equations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[spanish]{cleveref}
@@ -53,17 +62,22 @@
 \setitemize{label=\usebeamerfont*{itemize item}%
 	\usebeamercolor[fg]{itemize item}
 	\usebeamertemplate{itemize item}}
-\setbeamertemplate{caption}[numbered]
-\setbeamertemplate{bibliography item}{[\theenumiv]}
 \setbeamertemplate{navigation symbols}{}
 
-%\setbeamercolor{section in sidebar shaded}{fg=blue} 
-% \setbeamercolor{subsection in sidebar}{bg=gc} 
-% \setbeamertemplate{section in head/foot}{\hfill\insertsectionheadnumber.~\insertsectionhead}
-% \setbeamertemplate{section in head/foot shaded}{\color{structure!50}\hfill\insertsectionheadnumber.~\insertsectionhead}
-% \setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamercolor{section in sidebar shaded}{fg=blue} 
+\setbeamercolor{subsection in sidebar}{bg=gc} 
+\setbeamertemplate{section in head/foot}{\hfill\insertsectionheadnumber.~\insertsectionhead}
+\setbeamertemplate{section in head/foot shaded}{\color{structure!50}\hfill\insertsectionheadnumber.~\insertsectionhead}
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{subsection in toc}{%
+  \hspace{1.2em}{\color{gc}\rule[0.3ex]{3pt}{3pt}}~\inserttocsubsection\par}
 
 
+\setbeamercolor{footnote}{fg=blue}
+\setbeamercolor{footnote mark}{fg=blue}
+\let\oldfootnoterule\footnoterule
+\renewcommand{\footnoterule}{\color{black}{\oldfootnoterule}}
+\renewcommand{\thefootnote}{\arabic{footnote}}
 % \makeatletter
 % \patchcmd{\insertverticalnavigation}%
 % {\ifx\beamer@nav@css\beamer@hidetext{\usebeamertemplate{section in sidebar}}\else{\usebeamertemplate{section in sidebar shaded}}\fi}%
@@ -73,14 +87,7 @@
 
 % ----->  Some definitions
 
-% Set up some colors
-\definecolor{gc}{RGB}{136,216,192}% green
-\definecolor{myblue}{rgb}{0.476,0.832,1}
-\definecolor{myred}{rgb}{0.74,0.22,0.15}
-\definecolor{mygreen}{rgb}{0.05,0.52,0.42}
-\definecolor{myyellow}{rgb}{0.96,0.92,0.13}                          
-\definecolor{myorange}{rgb}{1,0.61,0.36}
-\definecolor{mypurple}{rgb}{0.71,0.02,1}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Tikz packages%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{tikz,pgfplots} %crear graficos en latex

@@ -10,27 +10,25 @@
 %    hideallsubsections,  % hide all subsections
 %    left                % right of left position of sidebar (default is right)
 ]{Aalborg}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+
 
 \input{beamer-files/beamer-packages.tex}
-\input{../files/commands}
+
+
 
 \begin{document}
 \begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the 
  \input{./beamer-files/title_page_presentation.tex}
 \end{frame}
 
-
-
-\begin{frame}[t]{Contenido}{}
+\begin{frame}
+  \frametitle{Contenido}
 \tableofcontents
 \end{frame}
 
 %============================================ Introduction ================================================
 % \section{Introducción}
 % \input{beamer-files/introduction.tex}
-\section{Modelo F\'isico}
 \input{beamer-files/physical_model.tex}
 
 % \include{./Files/RESUMEN}

@@ -22,24 +22,24 @@ We start describing the band structure (\gls{BS}) of zincblende semiconductors. 
 
 \begin{equation}
 \begin{split}
-	H  =  &\dfrac{1}{2M}\sum\limits_{i=1}^{N_{n}} \bff{P}_{j}^{2} + \dfrac{1}{2m_{0}} \sum\limits_{j=1}^{N_{e}} \bff{p}_{j}^{2} + \dfrac{Z^{2}}{2} \sum\limits_{i,j=1,i\neq j}^{N_{n}} V_{c}\left(\bff{R}_{i}-\bff{R}_{j}\right)-Z\sum\limits_{i=1}^{N_{n}}\sum\limits_{j=1}^{N_{e}}V_{c}\left(\bff{r}_{j}-\bff{R}_{i}\right) \\
+	H  =  &\dfrac{1}{2M}\sum\limits_{i=1}^{N_{n}} \bff{P}_{j}^{2} + \dfrac{1}{2m_{0}} \sum\limits_{j=1}^{N_{e}} \bff{p}_{j}^{2} + \dfrac{Z_{e}^{2}}{2} \sum\limits_{i,j=1,i\neq j}^{N_{n}} V_{c}\left(\bff{R}_{i}-\bff{R}_{j}\right)-Z_{e}\sum\limits_{i=1}^{N_{n}}\sum\limits_{j=1}^{N_{e}}V_{c}\left(\bff{r}_{j}-\bff{R}_{i}\right) \\
 	   & + \dfrac{1}{2} \sum\limits_{i,j=1,i\neq j}^{N_{e}} V_{c} \left(\bff{r}_{i}-\bff{r}_{j}\right),
 \end{split}
 \label{eq:chapter-1-solid-hamiltonian}
 \end{equation}
 
-where  $N_{n}$ is the number of atomic nuclei, $N_{e}$ is the number of electrons with mass $m_{0}$, assuming that each nuclei has mass $M$, and charge $Z_{e}$. As a result, this Hamiltonian is too complicated as the sum comprises five terms which consists in: kinetic energies of electrons and nuclei, the nucleus-nucleus interactions, the nucleus-electron and electron-electron Coulomb interactions $V_{c}\left(\vec{x}\right)$; $\bff{R}_{i}$ are the positions of the nuclei and $\bff{r}_{j}$ are the position of the electrons; the operators $\bff{P}$ and $\bff{p}$ are momentum operators to nuclei and electrons respectively\cite{alloul2010introduction}.
+where  $N_{n}$ is the number of atomic nuclei, $N_{e}$ is the number of electrons with mass $m_{0}$, assuming that all nuclei has mass $M$, and charge $Z_{e}$. As a result, this Hamiltonian is too complicated as the sum comprises five terms which consists in: kinetic energies of electrons and nuclei, the nucleus-nucleus interactions, the nucleus-electron and electron-electron Coulomb interactions $V_{c}\left(\vec{x}\right)$; $\bff{R}_{i}$ are the positions of the nuclei and $\bff{r}_{j}$ are the position of the electrons; the operators $\bff{P}$ and $\bff{p}$ are momentum operators to nuclei and electrons respectively\cite{alloul2010introduction}.
 Fortunately, because  the \gls{QS} are formed by crystalline materials, the Bloch theorem provides us with a most important tool to handle the required equations. The Bloch theorem establishes a periodic potential $U(\rv)$ for electrons, accounting for the material's periodicity (definition of crystal structure) and the \sch\, equation can thus be described in terms of single electron picture as:  
 
 
 \begin{equation}
-	\left[-\dfrac{\hbar^2}{2m_{0}}\nabla^2 + U(\rv)\right]\psi (r)=\senergy\psi(\rv).
+	\left[-\dfrac{\hbar^2}{2m_{0}}\nabla^2 + U(\rv)\right]\psi (r)=E\psi(\rv).
 	\label{eq:chapter-1-first-sch}
 \end{equation}
 
-The key reason that the periodic potential in a crystal structure is highly important relies on both the translational invariance concept and the consequent symmetry operations that are inherent in a crystalline solid. The symmetry concept, as a tool to further understand solids, is discussed in detail in the next chapter. In according to Bloch theorem, we can associate a wave vector $\boldsymbol{k}$ with each energy state, $E_{n}(\boldsymbol{k})$. Thus, it is useful to display the energies $E_{n}(\bf{k})$ as a function of the wave vector $\boldsymbol{k}$. This result is known as dispersion relation, but in general terms, is the electron band structure of the given solid, and the \gls{QS} stemming from it \cite{piprek2017handbook}.   
+The key reason that the periodic potential in a crystal structure is highly important relies on both the translational invariance concept and the consequent symmetry operations that are inherent in a crystalline solid. The symmetry concept, as a tool to further understand solids, is discussed in detail in the next chapter. In accordance to Bloch theorem, we can associate a wave vector $\boldsymbol{k}$ with each energy state, $E_{n}(\boldsymbol{k})$. Thus, it is useful to display the energies $E_{n}(\bf{k})$ as a function of the wave vector $\boldsymbol{k}$. This result is known as dispersion relation, but in general terms, is the electron band structure of the given solid, and the \gls{QS} stemming from it \cite{piprek2017handbook}.   
 
-Even if the calculation of electron band structure in solids is further complicated by the inclusion of the distance between atoms, and because the Bloch theorem provides the most important tool to reduce the problem to crystalline structures, there exist several methods to calculate the realistic \gls{BS} for semiconductors that can be categorized into two groups: Atomistic methods\footnote{In this category can include the ab initio methods, these are the most complex methods due to propose  solutions of the many-body problem} (Tight-binding, orthogonalized plane wave methods) and Perturbative methods ($\boldsymbol{k}\bigcdot \boldsymbol{p}$)\footnote{In fact, both TB and $\boldsymbol{k}\bigcdot \boldsymbol{p}$ also consider in same kind, because both are \emph{semi-empirical} methods due to they consider experimental parameters.}. 
+Even if the calculation of electron band structure in solids is further complicated by the inclusion of the distance between atoms, and because the Bloch theorem provides the most important tool to reduce the problem to crystalline structures, there exist several methods to calculate the realistic \gls{BS} for semiconductors that can be categorized into two groups: Atomistic methods\footnote{This category can include the ab initio methods, these are the most complex methods due to proposed solutions of the many-body problem.} (Tight-binding, orthogonalized plane wave methods) and Perturbative methods ($\boldsymbol{k}\bigcdot \boldsymbol{p}$)\footnote{In fact, both TB and $\boldsymbol{k}\bigcdot \boldsymbol{p}$ are considered of the sane kind, because both are \emph{semi-empirical} methods due to they considered experimental parameters.}. 
 These two main categories with theirs respective methodologies, have special characteristics which become in the decision to choose them. The reasons have to do on how to describe \gls{BS} which means, in case of Atomistic methods, the entire bands  (both valence and conduction) can be well described; whereas  perturbative methods are focused to near band edge \gls{BS}. Hence, each of these methods can be chosen and enhanced as the system to study requires. 
 We will not enter in details regarding  which of these methods are the best for our case and the reasons are simple: each method is very powerful, and we must bear in mind that the complexity of solutions requires that these are solved by numerical techniques, each giving very good approximations. 
 Thus, we basically conclude that the (effective) electron behavior inside a semiconductor consist in solutions of the Schrödinger equation\cite{boer2018semiconductor}.  
@@ -47,7 +47,7 @@ Thus, we basically conclude that the (effective) electron behavior inside a semi
 \label{subsec:chapter-1-valence-and-conduction-bands}
 \vspace{-10mm}
 In general,  the bands of semiconductors are composed by valence and conduction bands separated by a  region known as bandgap. 
-The bandgap, which is proportional to separation energy of valence and conduction bands is also called as forbidden region; this is because electron states are nominally forbidden. Therefore, this gap energy determines the electron conduction in a semiconductor and the difference they have with the insulators and metals, as shown in \Cref{fig:subsubsection-1.1.1-solid-types}.  
+The bandgap, which is proportional to separation energy of valence and conduction bands is also called as forbidden region; this is because electron states are nominally forbidden. Therefore, this gap energy determines the electron conductivity in a semiconductor and the difference they have with the insulators and metals, as shown in \Cref{fig:subsubsection-1.1.1-solid-types}.  
 
 \begin{figure}[h!]
 	\centering
@@ -59,15 +59,15 @@ Band energy diagram for insulators (left), semiconductors (center) and metals (r
 	\label{fig:subsubsection-1.1.1-solid-types}
 \end{figure}
 
-The bandgap determines many characteristics and functionalities in semiconductors. In addition, the bandgap energy is classified in direct and indirect, but they do not only depend on this energy but the \gls{BS} is the liable signature for this difference. As pointed out before, it is so difficult to describe electron behavior in solids due to the many body interactions that exists rendering the Scr\"odinger equation very hard to solve. 
+The bandgap determines many characteristics and functionalities in semiconductors. In addition, the bandgap energy is classified as direct and indirect, but they do not only depend on this energy but the \gls{BS} is the liable signature for this difference. As pointed out before, it is so difficult to describe electron behavior in solids due to the many body interactions that exists rendering the Scr\"odinger equation very hard to solve. 
 Starting by describing bulk semiconductors, for example GaAs, that belongs to the  family III-V cubic semiconductor with a lattice composed by two sublattices with a single atom each (\Cref{fig:subsubsection-1.1.1-bulk-1}). For this case when the atoms in two sublattice are different the crystal structure is called \emph{zinc-blende}\cite{vurgaftman2020bands}.
 
-To calculate \gls{BS} of bulk semiconductors it is important to define specific symmetry directions. For each three-dimensional wave vector $\boldsymbol{k}$, then the plot energy as a function of $\boldsymbol{k}$ is along of different high-symmetry directions\cite{piprek2017handbook}.  GaAs is a direct semiconductor for which the $\left[001\right]$ direction is of high-symetry denoted by $\Gamma$ point ($\boldsymbol{k}=0$)
+To calculate \gls{BS} of bulk semiconductors it is important to define specific symmetry directions. For each three-dimensional wave vector $\boldsymbol{k}$, then the plot energy as a function of $\boldsymbol{k}$ is along of different high-symmetry directions\cite{piprek2017handbook}.  GaAs is a direct semiconductor for which the $\left[000\right]$ direction is of high-symetry denoted by $\Gamma$ point ($\boldsymbol{k}=0$)
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/chapter-1/bulk-1/build/bulk-1}
 	\caption{
-		 GaAs crystal structure, where each sublattice corresponds to Ga and As atoms respectively. }
+		 GaAs crystal structure, where each sublattice corresponds to Ga and As atoms, respectively. }
 	\label{fig:subsubsection-1.1.1-bulk-1}
 \end{figure}
 
@@ -86,15 +86,18 @@ Then, most models used in semiconductor BS are empirical, and thus these models 
 	\phantomsubcaption\label{subfig:subsubsection-1.1.1-GaAsbands-1-a)}
 	\phantomsubcaption\label{subfig:subsubsection-1.1.1-GaAsbands-1-b)}
 \end{subfigure}
-	\caption{Band structure of GaAs, \subref{subfig:subsubsection-1.1.1-GaAsbands-1-a)} shows a zoom around of $\Gamma$  to denote the direct band gap and the electron energy  needed to jump from valence to conduction band. \subref{subfig:subsubsection-1.1.1-GaAsbands-1-b)} denotes the two directions of dispersion bands corresponding to Brillouin zone: $\Gamma\to\mathrm{X}$ and  $\Gamma\to\mathrm{L}$.\cite{fox2002optical}}
+	\caption{Band structure of GaAs, \subref{subfig:subsubsection-1.1.1-GaAsbands-1-a)} shows a zoom around of $\Gamma$  to denote the direct band gap and the electron energy needed to jump from valence to conduction band. \subref{subfig:subsubsection-1.1.1-GaAsbands-1-b)} denotes the two directions of dispersion bands corresponding to Brillouin zone: $\Gamma\to\mathrm{X}$ and  $\Gamma\to\mathrm{L}$.\cite{fox2002optical}}
 \end{figure}
-\Cref{fig:subsubsection-1.1.1-GaAsbands-1} shows the results of calculations of \gls{TB} model as discussed in \cite{vogl1983asemiempirical} and the code was implemented by R. Muller \cite{rpmuller2017}. The model proposed by Vogl \textit{et al.},  takes into account a small number of localized pseudo-orbitals  based on the empirical parameters to be  substituted in a TB Hamiltonian.  The importance to calculate the BS is to  predict  reliable and detailed optical properties of solid structures that can be compared with the experimental data.
+\Cref{fig:subsubsection-1.1.1-GaAsbands-1} shows the results of calculations of \gls{TB} model as discussed in \cite{vogl1983asemiempirical} and the code was implemented by R. Muller \cite{rpmuller2017}. The model proposed by Vogl \textit{et al.},  takes into account a small number of localized pseudo-orbitals  based on the empirical parameters to be  substituted in a \gls{TB} Hamiltonian.  The importance to calculate the BS is to  predict  reliable and detailed optical properties of solid structures that can be compared with the experimental data.
 
-\Cref{subfig:subsubsection-1.1.1-GaAsbands-1-a)} shows  the GaAs \gls{BS}. \Cref{subfig:subsubsection-1.1.1-GaAsbands-1-b)} depicts the band dispersion around $\Gamma$ point, which exhibits the highest symmetry.  It is well-known that the band dispersion increasing $\boldsymbol{k}$ along two different directions of the Brillouin zone, from $\boldsymbol{k}=(0,0,0)$ to X point $\boldsymbol{k}=(2\pi a_{L})(1,0,0)$ and L point $\boldsymbol{k}=(2\pi a_{L})(1,1,1)$. These figures are the typical representation of a direct gap III-V semiconductors around  $\boldsymbol{k}=0$ and the shape of the dispersion is parabolic. The BS of GaAs shown in \Cref{fig:subsubsection-1.1.1-GaAsbands-1} does not take into account the contribution of the spin\footnote{This spin contribution as called as split-off (so) hole band.}.  It is important to mention that the characteristic curvature $E\!\!-\!\!\boldsymbol{k}$ of the dispersion bands correspond to an electron ($e$) in case of positive curvature, while the negative curvature corresponds to hole states; heavy (hh) and light hole (lh) bands, denoting that the transitions, are of dipole nature\cite{fox2002optical,cardona2005fundamentals}. 
+\Cref{subfig:subsubsection-1.1.1-GaAsbands-1-a)} shows  the GaAs \gls{BS}. \Cref{subfig:subsubsection-1.1.1-GaAsbands-1-b)} depicts the band dispersion around $\Gamma$ point, which exhibits the highest symmetry.  It is well-known that the band dispersion increasing $\boldsymbol{k}$ along two different directions of the Brillouin zone, from $\boldsymbol{k}=(0,0,0)$ to X point $\boldsymbol{k}=(2\pi a_{L})(1,0,0)$ and L point $\boldsymbol{k}=(2\pi a_{L})(1,1,1)$. These figures are the typical representation of a direct gap III-V semiconductors around  $\boldsymbol{k}=0$ and the shape of the dispersion is parabolic. The BS of GaAs shown in \Cref{fig:subsubsection-1.1.1-GaAsbands-1} does not take into account the contribution of the spin\footnote{This spin contribution as called as split-off (so) hole band.}.  It is important to mention that the characteristic curvature $E\!\!-\!\!\boldsymbol{k}$ of the dispersion bands correspond to an electron ($e$) in case of positive curvature, while the negative curvature corresponds to hole states; heavy (hh) and light hole (lh) bands, denoting that the transitions, are of dipolar nature\cite{fox2002optical,cardona2005fundamentals}. 
 \begin{figure}[h!]
 	\centering
 		\includegraphics[width=0.5\linewidth]{../figures/chapter-1/bands/build/bands02}
-	\caption{Two typical transitions for GaAs near $\boldsymbol{k}=0$. The first one correspond to the heavy-hole and second one to the light-hole. }
+	\caption{
+		% Two typical transitions for GaAs near $\boldsymbol{k}=0$. The first one correspond to the heavy-hole and second one to the light-hole. 
+		Two typical transitions for GaAs near $\boldsymbol{k}=0$. The first one corresponds to the heavy-hole and second one to the light-hole.
+		}
 	\label{fig:subsubsection-1.1.1-GaAsbands-2}
 \end{figure}
 
@@ -114,7 +117,7 @@ From \Cref{fig:subsubsection-1.1.1-GaAsbands-2} and \Cref{fig:subsubsection-1.1.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{../figures/chapter-1/exciton-1/build/x-1}
-	\caption{Qualitative scheme of exciton creation in GaAs as direct gap.}
+	\caption{Qualitative scheme of exciton creation in GaAs.}
 	\label{fig:subsubsection-1.1.1-x-1}
 \end{figure}
 
@@ -122,7 +125,7 @@ From \Cref{fig:subsubsection-1.1.1-GaAsbands-2} and \Cref{fig:subsubsection-1.1.
 \label{sec:chapter-1-low-dimensional-structures}
 \vspace{-10mm} 
 The previous section considered the principles of semiconductors; in particular throughout the existence of their \gls{BS}. The first approximations were done for bulk GaAs, for which its symmetry practically defines their nature and consequently the physical effects as excitons existence.  But, what happens  if several semiconductors with the same symmetry and similar structural parameters are joined together?. Do the bulk properties and physical properties are the same?. 
-The answers  are well-known: when two materials with relatively same structural parameters, as lattice constant can create a matched heterojunction, the union of several heterojunction make up a heterostructure with a profound impact on the overall optoelectronics properties.\\
+The answers  are well-known: when two materials with relatively similar structural parameters, as lattice constant can create a matched heterojunction, the union of several heterojunction make up a heterostructure with a profound impact on the overall optoelectronics properties.\\
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.6\textwidth]{../figures/chapter-1/heterostructures/build-ruco/hs-01}
@@ -131,7 +134,7 @@ The answers  are well-known: when two materials with relatively same structural 
 	\label{fig:subsection-1.2-heterostructure}
 \end{figure}
 \Cref{fig:subsection-1.2-heterostructure} shows  a general scheme for a heterostructure. In this case it conforms three species of atoms Al, As and Ga. These atoms are located in the III-V columns in periodic table, hence they are called III-V semiconductors. The principal characteristic of these atoms is that they can create matched structures such as GaAs, AlAs and ternary alloys as \algaas with specific Al concentration. The matched semiconductors produce a material with new properties based principally in the difference of bandgap which involves the alloys. 
-As can see in \Cref{fig:subsection-1.2-heterostructure} it is consisting a GaAs/\algaas heterostructure, these interface is well-matched due to the lattice parameters is relatively equals, therefore and thanks to powerful growth technics as MBE it is possible to get high-quality quantum structures. 
+As shown in \Cref{fig:subsection-1.2-heterostructure} it is consisting a GaAs/\algaas heterostructure, these interface is well-matched due to the lattice parameters are relatively equal, therefore and thanks to powerful growth technics as MBE it is possible to get high-quality quantum structures. 
 
 Also, the heterostructure composed by two semiconductors with different band gaps generate a discontinuity in either the conduction or the valence band can be represented by a constant potential term\cite{harrison2016quantum}.  The theory for treatment of the electron behavior in these structures is relatively simple if we consider the above. 
 Although this chapter has not the intention to explore the theory of electron behavior, it is worth noting that in order to get the one-dimensional potential $V(z)$ for both bands,  the Schr\"odinger equation can be solved accurately. 
@@ -153,9 +156,9 @@ Well (SQW).\\*
 	\caption{Heterostructures from bulk (3D), to Quantum Wells (2D), Quantum Wires (1D) and Quantum Dots (0D).  }
 	\label{fig:subsection-1.2-heterostructures}
 \end{figure}
-These  dissimilar semiconductors in terms of their potential energy ($V(z)$) can be schematized in \Cref{fig:subsection-1.2-single-quantum-well-scheme}. The Gap difference of \algaas and GaAs is due to $x$ (Al concentration) in \algaas;  a one dimensional potential profile is obtained, with the possibility to confinement electrons in a 2D plane perpendicular to the  $z$ direction (growth direction). 
+These  dissimilar semiconductors in terms of their potential energy ($V(z)$) can be schematized in \Cref{fig:subsection-1.2-single-quantum-well-scheme}. The Gap difference of \algaas and GaAs is due to $x$ (Al concentration) in \algaas;  a one dimensional potential profile is obtained, with the possibility to confine electrons in a 2D plane perpendicular to the  $z$ direction (growth direction). 
 If we consider an electron captured by two potential barriers separated a distance $L$, the wavefunction describing such an electron will be spatially confined.
-So if we confine many electrons in that potential,  we have two important physical aspects: the first one is knowing as Pauli exclusion principle, which give Fermion nature and prevents carriers with the same spin occupying the same region in  space\cite{harrison2016quantum,pauli1925zusammenhang}. The second  concerns the Heisenberg's uncertainty principle. 
+So if we confine many electrons in that potential,  we have two important physical aspects: the first one is known as Pauli exclusion principle, which give Fermion nature and prevents carriers with the same spin occupying the same region in  space\cite{harrison2016quantum,pauli1925zusammenhang}. The second  concerns the Heisenberg's uncertainty principle. 
 The latter, is the consequence of quantum confinement due to the space reduction of the electrons, which brings that momentum to be increased by an amount of the order $\hbar/L$. Therefore, the energy of that confined particles increases, and it is referred to as confinement energy\cite{cardona2005fundamentals}. \\*
 \begin{figure}
 	\centering
@@ -185,36 +188,36 @@ In this case, the electronic properties in comparison with a bulk semiconductor 
 % In general way, as mentioned previously, the Schrödinger equation solution is the fundamental pillar to understand, where it is taken into account which  in a crystal the periodic potential is the key. 
 Here we exploit the symmetry properties to understand the corresponding Hamiltonian describing the \gls{QW}.
 % Here are important remarks before to continue, when it has a heterostructure starting with the bulk model it is clearly that the system is not the same, the Quantum Mechanics which is behind takes into account the symmetry properties, then it can be developed a Hamiltonian  to understand that system.  In the next chapter will be explained details and the formalism both physical and mathematical to solve and discus it is. 
-The model which give the tools to get the solutions is called as Effective Mass Approximation, thus their correspond Schrödinger equation is\cite{harrison2016quantum,chuang1995physics,singh2003electronic,bastard1990wave,fox2002optical,davies1998physics}: 
+The model which gives the tools to get the solutions is called  Effective Mass Approximation, thus its correspondin Schrödinger equation is\cite{harrison2016quantum,chuang1995physics,singh2003electronic,bastard1990wave,fox2002optical,davies1998physics}: 
 \begin{equation}\label{eq:chapter-1-ema-schroedinger}
-	-\dfrac{\hbar^{2}}{2m^{*}}\dfrac{\partial^{2}}{\partial {z}^{2}}\psi(z)+V(z)\psi(z)=E\psi(z),
+	-\dfrac{\hbar^{2}}{2m^{*}}\dfrac{d^{2}}{d {z}^{2}}\psi(z)+V(z)\psi(z)=E\psi(z),
 \end{equation}
 
 where the $m^{*}$ is the effective mass in each material, and $V(z)$ is the potential profile deduced from  heterostructure materials properties. Therefore, that differential equation can be solved as in textbooks \cite{de2014introduccion,griffiths2018introduction,sakurai1995modern,cohen2019quantum,chuang1995physics,harrison2016quantum,fox2002optical,bastard1990wave}. The idea is to think as a one particle in a finite potential well with definite and established  boundary conditions and solving the Schrödinger equation in each part of single \gls{QW}, this means that we need to create a potential function. Thus the Eigenfunctions and their corresponding Eigenenergies are computed.
 
-The principal idea is not reproducing something which is very well known, the objective of this part is to established the scope of the next chapter. Therefore,  before to continue, we will finish explaining the dispersion in-plane of single \gls{QW}. As in the \gls{QW} the one-dimensional potential set up the 1D confinement, is important do not confuse which the \gls{QW} is a 2D structure, but their confinement is along of $z$ direction, this means a 1D. Then, the particle can motion in the $x-y$ plane. By this reason, even if consider 3D Schrödinger equation and  the above is considered it obtain \Cref{eq:chapter-1-ema-schroedinger}
+The principal idea is not reproducing something which is very well known, the objective of this part is to established the scope of the next chapter. Therefore,  before to continue, we will finish explaining the dispersion in-plane of single \gls{QW}. As in the \gls{QW} the one-dimensional potential set up the 1D confinement, is important do not confuse which the \gls{QW} is a 2D structure, but their confinement is along of $z$ direction, this means a 1D. Then, the particle can move in the $x-y$ plane. By this reason, even if consider 3D Schrödinger equation, and  the above is considered obtains \Cref{eq:chapter-1-ema-schroedinger}
 therefore, the solutions in the one-dimensional potential produce discrete states of energy $E_{z}=E_{n}$\cite{harrison2016quantum}, where $n$ is the energy level it which produce subbands as shows in \Cref{fig:subsection-1.2-single-quantum-well-scheme2}. In contrast, before it called as ``energy bands'' in the bulk case, now due to the quantum confinement gets subbands to both conduction- and valence bands.
 
 These subbands are the result of the sum of $E_{z}$ and $E_{x,y}$, which are the 1D confinement energy and the in-plane momentum $k_{x,y}$ then\cite{harrison2016quantum}:
 \begin{equation}\label{eqn:chapter-1-total-enery-ema-aprox}		
 	E = E_{n} + \dfrac{\hbar^{2}|\boldsymbol{k}_{x,y}|^{2}}{2m^{*}}.
 \end{equation}  
-From this equation the effective mass  $m^*$ depends on particle, i.e the effective mass to electrons in CB and the holes in VB. Hence, the most relevant parameter in the solution is the energy $E_{n}$ (\Cref{subfig:subsection-1.2-single-quantum-well-scheme2-b)}) which discrete, thus yielding the quantum confinement in the low-dimensional
+From this equation the effective mass  $m^*$ depends on particle, i.e the effective mass to electrons in \gls{CB} and the holes in VB. Hence, the most relevant parameter in the solution is the energy $E_{n}$ (\Cref{subfig:subsection-1.2-single-quantum-well-scheme2-b)}) which is discrete, thus yielding the quantum confinement in the low-dimensional
 heterostructures.
 \section{Summary}
 \vspace{-10mm} 
 This chapter exposed the generalities of semiconductor band structure and low-dimensional
 heterostructures, highlighting GaAs/\algaas, which is of uttermost importance in this work. The band structure interpretation
 is usually hard to tackle analytically, the impact and relevance in optical properties of semiconductors starts from that interpretation. Another significant concept which was treated as first approach, is the effective mass concept, even if solved, the bulk Hamiltonian it considers the mass as constant parameter or depending on semiconductor
-material, contrary in low-dimensional structures have an important role.
+material. On the contrary in low-dimensional structures have an important role.
 
 In general, the band structure of semiconductors is key to understand quantum
-properties of solids, and for this work the relevant issued  is the \emph{light-matter} interaction within the linear regime. Remember that \emph{light-matter} interaction in solids can be studied by process resulting in it, as absorption,
+properties of solids, and for this work the relevant issue  is the \emph{light-matter} interaction within the linear regime. Remember that \emph{light-matter} interaction in solids can be studied by process resulting in it, as absorption,
 reflection, transmission, diffraction, scattering, and others \cite{rivera2020light}. Although, the light-matter
 interactions are fundamentally quantum electrodynamical, also, it can be studied in quantum
-way through aforementioned process. Firstly, is the photon absorption process can help
+way through aforementioned process. First, is the photon absorption process can help
 to understand or calculate the fundamental parameter in semiconductors as is bandgap
-energy. This parameter is the started point in the study of semiconductors, this is the start
+energy. This parameter is the starting point in the study of semiconductors, this is the start
 point in the map called \gls{BS}, if it ignores the gap value in the semiconductor to
 study it couldn't possibly get the principal optical properties of that.
 % Then, the \gls{BS} of semiconductors is the map to understand them, without these

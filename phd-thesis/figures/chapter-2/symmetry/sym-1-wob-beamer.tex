@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[
+paperwidth = 15cm, 
+textwidth = 15cm,
+paperheight=9cm, 
+textheight =9cm,
+nohead,
+nofoot,
+nomarginpar,
+margin=0mm]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows,arrows.meta,bending,calc,decorations,shadings,shadows,shapes,shapes.arrows,shapes.geometric}
+\usetikzlibrary{calc,fadings,decorations.pathreplacing}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer,}
+\usepackage{pgfplotstable}
+\usetikzlibrary{3d,spy}
+\usepgfmodule{plot}
+\usepackage{scalerel}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=out/,suffix=-generated}
+\newcommand*{\xMin}{-3}%
+\newcommand*{\xMax}{10}%
+\newcommand*{\yMin}{-5}%
+\newcommand*{\yMax}{5}%
+\definecolor{As}{RGB}{255,255,0}
+\definecolor{Al}{RGB}{173,216,230}
+\definecolor{Ga}{RGB}{0,128,150}
+
+%\definecolor{background}{RGB}{77,77,77}
+\definecolor{background}{RGB}{255,255,255}
+
+\definecolor{plane100}{RGB}{0,178,69}
+\definecolor{plane010}{RGB}{0,255,208}
+
+
+\begin{document}
+	\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+
+    \def\textplanecolor{black}
+% \draw[fill=background] (current page.north west)--
+% 					(current page.south west)--
+% 					(current page.south east)-- 
+% 					(current page.north east) --cycle;
+
+\node[anchor=south,inner sep=0mm](s1) at (current page.south)
+	{
+	\includegraphics[width=\textwidth,trim={0cm 0cm 0 0},clip]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/sqw-symmetry0-out}
+	};
+
+% \foreach \i[count=\xi from 0] in {0,1,...,4}
+% 	{
+% 	\node[anchor=north west,inner sep=0mm] at ([xshift=\xi*2.9 cm]current page.north west){\includegraphics[width=0.23\textwidth,trim={5cm 0 0.1cm 0},clip]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/algaas-rot-\i}};
+
+% 	};
+
+\node[xshift=-1.95cm,yshift=-0.5cm](a1) at (current page.center){\includegraphics[width=0.2\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/algaas-interface-0-out.pdf}};
+
+\node[anchor = west,xshift=0.5cm,yshift=0.0cm](a2) at (a1.east){\includegraphics[width=0.2\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/symmetry/algaas-interface-1-out.pdf}};
+
+\draw[densely dashed,\textplanecolor,line width=0.5mm] 
+	([yshift=1.9cm]current page.west)--
+	([yshift=2.4cm]a1.center)--
+	([yshift=-3cm]a1.center)--
+	([yshift=-3cm,xshift=3.8cm]a1.center)--
+	([yshift=2.4cm]a2.center)--
+	([yshift=1.9cm]current page.east);
+
+
+% \draw[fill = Al] ([yshift=2.75cm]current page.west) rectangle ++(1,0.3) 
+% 	node [anchor=west,right,midway,xshift=0.5cm] {\(\left(100\right)\)};
+% \draw[fill = Ga] ([yshift=2.4cm]current page.west) rectangle ++(1,0.3) 
+% 	node [anchor=west,right,midway,xshift=0.5cm] {\(\left(010\right)\)};
+
+
+\shade [ball color=Ga,] ([xshift=-15mm,yshift=4cm]s1.east) circle (0.2) node[anchor=east,label=right:{\Large\, Ga}] { } ;
+\shade [anchor=east,ball color=Al,] ([xshift=-15mm,yshift=3.5cm]s1.east) circle (0.2) node[label=right:{\Large\, Al}] { } ;
+\shade [anchor=east,ball color=As,] ([xshift=-15mm,yshift=3.0cm]s1.east) circle (0.2) node[label=right:{\Large\, As}] { };
+
+
+% \node[anchor=west,white,xshift=1cm,yshift=1.90cm,scale=1.5]  at (current page.west){$\displaystyle\text{Al$_{x}$Ga$_{1-x}$As}$};
+% \node[anchor=center,white,xshift=-0.2cm,yshift=1.90cm,scale=1.5]  at (current page.center){$\displaystyle\text{GaAs}$};
+% \node[anchor=east,white,xshift=-1cm,yshift=1.90cm,scale=1.5]  at (current page.east){$\displaystyle\text{Al$_{x}$Ga$_{1-x}$As}$};
+
+% \begin{scope}[xshift=0.9cm,yshift=-6.5cm,rotate around z=0,scale=1.5]
+% 	\draw[very thick,-{Stealth},green] (0,0,0) -- (0,0,1.9) node[anchor=south,green,yshift=2mm,scale=1.5]{$x$};
+% 	\draw[very thick,-{Stealth},red]   (0,0,0) -- (0,1.9,0) node[anchor=west,red,yshift=-2mm,scale=1.5]{$y$};
+% 	\draw[very thick,-{Stealth},blue]  (0,0,0) -- (1.9,0,0) node[anchor=west,blue,scale=1.5]{$z$};
+	
+% 	\draw[fill=gray,fill opacity=0.1,draw=\textplanecolor,line width=0.05mm] (0,0,0)--(1.5,0,0)--(1.5,1.5,0)--(0,1.5,0)--cycle;
+% 	\draw[fill=gray,fill opacity=0.1,draw=\textplanecolor,line width=0.05mm] (0,0,0)--(0,1.5,0)--(0,1.5,1.5)--(0,0,1.5)--cycle;
+% 	\draw[fill=gray,fill opacity=0.1,draw=\textplanecolor,line width=0.05mm] (0,0,0)--(0,0,1.5)--(1.5,0,1.5)--(1.5,0,0)--cycle;
+
+% 	\node[canvas is yz plane at x = 0,rotate=270,scale=1.35,font=\boldmath,\textplanecolor] at (0,0.75,0.7) 
+% 	 {$z_{_{\parallel}}(001)$};
+% 	\node[canvas is zx plane at y = 0,rotate=90,scale=1.35,font=\boldmath,\textplanecolor] at (0.75,0,0.75) 
+% 	 {$x_{_{\parallel}}(100)$};
+% 	 \node[canvas is xy plane at z = 0,rotate=0,scale=1.35,font=\boldmath,\textplanecolor] at (0.75,0.75,0) 
+% 	 {$y_{_{\parallel}}(010)$};
+% \end{scope}
+\end{tikzpicture}
+	
+	
+
+\end{document}

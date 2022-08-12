@@ -134,3 +134,11 @@ Defensa de Tesis ]{}
 
 \tcbset{enhanced,colback=gc!10,colframe=gc,left=1mm,top=1mm,
 bottom=1mm,right=1mm,boxsep=0mm,drop shadow}
+\def\algaas{Al$_{x}$Ga$_{1-x}$As }
+\def\xp{${\mathbf{X}}^{\mathrm{\ensuremath{+}}}$ }
+\def\xm{${\mathbf{X}}^{\mathrm{\ensuremath{-}}}$ }
+\def\xhh{${\mathit{X}}_{\mathrm{\ensuremath{hh}}}$ }
+\def\xlh{${\mathit{X}}_{\mathrm{\ensuremath{lh}}}$ }
+\usepackage{fp}
+\newcommand{\algaasx}[1]{\FPeval\xcomp{1-#1}\FPeval\xcomp{round(xcomp:1)}$\mathrm{Al_{#1}Ga_{\xcomp}As}$}
+

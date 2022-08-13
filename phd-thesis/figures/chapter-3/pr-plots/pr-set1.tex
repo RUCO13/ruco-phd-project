@@ -49,12 +49,13 @@
 	\addplot[color=Dark2-A] table[x index=0,y expr=\thisrowno{1}]\pruno;
 	 \addlegendentry{M4\_3171};
 	\draw (axis cs:0,0)--(axis cs:1.5025,0);
+	\coordinate (cup) at (axis cs:1.51,1.8e-3);
 %	
-%	\dimline[label style = {rotate=-90,midway,xshift=1mm,scale=0.6},
-%	line style = {line width=0.5pt,arrows=stealth-stealth},
-%	extension end length=-0.5,
-%	extension start length=-0.5,
-%	] {(axis cs:1.527,-3e-3)}{(axis cs: 1.527,0e-3)}{$\mathrm{3\!\times\!10^{-3}}$};
+	\dimline[label style = {rotate=-90,midway,xshift=1mm,scale=0.5},
+	line style = {line width=0.5pt,arrows=stealth-stealth},
+	extension end length=0.25,
+	extension start length=0.25,
+	] {(axis cs:1.52,0e-3)}{(axis cs: 1.52,1.5e-3)}{$\mathrm{1.5\!\times\!10^{-3}}$};
 	
 	% TRANSIITIONS	
 	\def\sc{0.7}
@@ -94,10 +95,12 @@
 	\def\sc{0.7}
 	\bandt{1.5340}{5e-3}{1e-3}{$\thh{1}{1}$}{2}{\sc}{Dark2-C}
 	\bandt{1.5417}{5e-3}{0e-3}{$\tlh{1}{1}$}{0}{\sc}{Dark2-C}	
+	\coordinate (cud) at (axis cs:1.51,-1e-3);
 	
-
+	\bandt{1.51}{-5e-3}{-0.2e-3}{Substrate}{1}{0.5}{black};
 \end{groupplot}
 
+\draw[dashed,line width=0.5pt] (cud)--(cup);
 
 
 \end{tikzpicture}

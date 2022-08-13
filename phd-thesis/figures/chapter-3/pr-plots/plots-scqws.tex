@@ -1,0 +1,160 @@
+\documentclass[margin=0mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplotstable}
+\tikzset{
+	axis break gap/.initial=1mm
+}
+
+\usepackage{amsmath,bm}
+\usepgfplotslibrary{units,fillbetween,groupplots,colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer}
+\usetikzlibrary{arrows,
+	arrows.meta,
+	decorations.pathmorphing,
+	calc,%
+	decorations.pathmorphing,%
+	decorations.markings,
+	fadings,%
+	shadings,%
+	positioning,
+	spy,
+	shapes,
+	shapes.geometric,
+	shapes.arrows,
+	fit,	plotmarks,}
+
+
+\pgfplotsset{compat=newest,
+	every axis/.style = {
+		%scale only axis,
+		width=3cm,height=1cm,
+		line width = 0.4pt,
+		tick style = {line width=0.4pt,black},
+		ticklabel style={scale=0.4},
+		major tick length = 0.8mm,
+		minor tick length = 0.4mm,
+		xtick pos=left,
+		%ytick pos=left,
+		xlabel style={scale=0.6},
+		ylabel style={scale=0.6},
+		yticklabel style={
+			/pgf/number format/precision=3,
+			/pgf/number format/fixed,
+			/pgf/number format/fixed zerofill,
+		},
+	},
+	/pgfplots/legend image code/.code={%
+		\draw[mark repeat=1,mark phase=1,#1] 
+		plot coordinates {
+			(0cm,0cm) 
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.3cm,0cm)%
+		};
+	},
+}	
+
+
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{axis}[scale only axis,
+			xmin = 282.86,xmax=342.86,
+			ymin = -0.085, ymax   = 0.085,
+			name=bottom axiss,
+			axis x line*=bottom,
+			axis y line*=left,
+			ytick pos=right,
+			%Parameters
+			yticklabel style={
+				/pgf/number format/fixed,
+				/pgf/number format/precision=3,
+				/pgf/number format/fixed zerofill
+			},
+			scaled y ticks=false,
+			minor y tick num=1,
+			minor x tick num=1,       
+			xtick = {312.86},
+			xticklabels = {0},    
+			%============= Legend Plots ========================
+			%legend entries={H,L},
+			%legend pos={north east},
+			legend style={draw=none,
+				fill=none,
+				row sep=-1pt,
+				inner sep=0pt,
+				nodes={scale=0.45,xshift=-10mm}}, 
+			legend cell align = left,
+			%============== Axis labels ==============================
+			xlabel ={$z$ (nm)},
+			ylabel ={Energy (ev)},
+			every axis y label/.style= {at={(ticklabel cs:1.1)},rotate=-90,anchor=near ticklabel,scale=0.5},
+			]
+			%%%================================= Add Data ===================================
+			
+			
+			\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/cqws-codes/cqws/data/potentials-m43523.txt}{\vp};
+			
+			\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/cqws-codes/cqws/data/psi-hh-m43523.txt}{\hh};
+			\addlegendentry[yshift = -0.3mm,opacity = 1]{hh2};
+			\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/cqws-codes/cqws/data/psi-lh-m43523.txt}{\lh};
+			\addlegendentry[yshift = -0.3mm,opacity = 1]{lh2};
+			
+			%==================================== PLOT ==============================
+			
+			
+			
+			\addplot[gray,no marks,forget plot] table[x index=0,y index=2]{\vp};
+			\addplot[draw=Spectral-B,fill=Spectral-B,fill opacity=0.3,line width=0.3pt] table[x index=0, y index=2]{\lh};
+			%\addplot[color=Set1-C,fill=Set1-C,fill opacity=0.3] table[x index=0, y index=2]{\lh};
+			\addplot[draw=Spectral-B,densely dashdotted,fill=Spectral-B,fill opacity=0.3,line width=0.3pt] table[x index=0, y index=2]{\hh};
+			%\addplot table[x index=0, y index=2]{\hh};
+			
+		\end{axis}
+		
+		\begin{axis}[%
+			%============================== break plot
+			scale only axis,
+			name = top axiss,
+			at=(bottom axiss.north),
+			anchor=south, 
+			yshift=\pgfkeysvalueof{/tikz/axis break gap},
+			axis x line =none,
+			axis y line*=right,
+			after end axis/.code={
+				\draw[inner sep=0pt] (rel axis cs:0,0) +(-0mm,0mm) -- +(2mm,0mm)
+				++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
+				+(-0mm,-0mm) -- +(2mm,0mm)
+				(rel axis cs:1,0) +(-2mm,-0mm) -- +(0mm,0mm)
+				++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
+				+(-2mm,-0mm) -- +(0mm,0mm);
+			},
+			% Parameters
+			scaled y ticks=false,
+			minor y tick num=1,
+			ytick pos=right,
+			xmin = 282.86,xmax=342.86,
+			ymin = 1.515, ymax   = 1.66,
+			every axis y label/.style= {at={(ticklabel cs:0.5)},rotate=90,anchor=near ticklabel,scale=0.5},
+			]
+			%=================================== Add Data ===================================
+			\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/cqws-codes/cqws/data/potentials-m43523.txt}{\vp};			
+			\pgfplotstableread[col sep=comma]{/media/labfiles/ruco/cqws-codes/cqws/data/psi-e-m43523.txt}{\e};
+			%
+			%\addlegend[yshift=0mm]{,color=blue}
+			\addplot[gray,no marks] table[x index=0,y index=1]{\vp};
+			\addplot[draw=Spectral-E,fill=Spectral-E,fill opacity=0.5,line width=0.3pt] table[x index=0,y index=1]{\e};  			  
+			\addplot[draw=Spectral-B,fill=Spectral-B,fill opacity=0.3,line width=0.3pt] table[x index=0,y index=2]{\e};    
+			\node[anchor=east,scale=0.5,color=Spectral-B] at (axis cs: 312.8,1.647) {$\mathrm{d_{1}}$};
+			\node[anchor=center,scale=0.5] at (axis cs: 312.86,1.647) {$=$};
+			\node[anchor=west,scale=0.5,color=Spectral-E] at (axis cs: 313.1,1.647) {$\mathrm{d_{2}}$};
+			
+			
+			\draw[{Stealth[scale=0.5]}-{Stealth[scale=0.5]},color=Spectral-B] (axis cs:300,1.62)--(axis cs:311.87,1.62);
+			\draw[{Stealth[scale=0.5]}-{Stealth[scale=0.5]},color=Spectral-E] (axis cs:313.85,1.62)--(axis cs:325.72,1.62);
+		\end{axis}
+	\end{tikzpicture}
+\end{document}
+
+

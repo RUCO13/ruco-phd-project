@@ -69,6 +69,13 @@
 			\bandt{1.5295}{1.4e-2}{0.2e-2}{$\thh{1}{1}$}{1}{\sc}{Set1-B}
 			\bandt{1.5351}{-1.4e-2}{-.2e-2}{$\tlh{1}{1}$}{-1}{\sc}{Set1-B}
 			\node[anchor=west,scale=0.5,Set1-B] at (axis cs: 1.50,-1e-2){Power=5mW $\times 4$};
+
+				\dimline[label style = {rotate=-90,midway,xshift=1mm,scale=0.5},
+	line style = {line width=0.5pt,arrows=stealth-stealth},
+	extension end length=-0.25,
+	extension start length=-0.25,
+	] {(axis cs:1.514,-5e-3)}{(axis cs: 1.514,12e-3)}{$\mathrm{17\!\times\!10^{-3}}$};
+	
 			%=================================== M4_3521 ===========================================
 			\nextgroupplot[	axis x line=none,ylabel={Photoreflectance}]
 			\addplot[color=Set1-C] table[x index=0,y expr=\thisrowno{1}]\prtres;

@@ -142,3 +142,7 @@ bottom=1mm,right=1mm,boxsep=0mm,drop shadow}
 \usepackage{fp}
 \newcommand{\algaasx}[1]{\FPeval\xcomp{1-#1}\FPeval\xcomp{round(xcomp:1)}$\mathrm{Al_{#1}Ga_{\xcomp}As}$}
 
+\newcommand{\sm}[1]{M4\_#1}
+\DeclareMathSymbol{\mh}{\mathord}{operators}{`\-}
+\newcommand\thh[2]{e_#1\mathrm{\mh hh_#2}}
+\newcommand\tlh[2]{e_#1\mathrm{\mh lh_#2}}

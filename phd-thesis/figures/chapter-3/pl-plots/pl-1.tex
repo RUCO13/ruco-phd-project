@@ -40,12 +40,17 @@
 \begin{axis}[scale only axis,
 			name=PL,
 			minor x tick num=1,
-			xmin=1.51,xmax=\xmaximo,
+			xmin=1.51,xmax=1.545,
 			ytick=\empty,
 			xtick pos=left,
 			xlabel={Photon Energy (eV)},
 			ylabel={PL intensity (arb. units)},
-			every axis plot/.append style={mark=*,smooth,mark options={scale=0.9,fill=white,line width=0.5pt},}
+			every axis plot/.append style={mark=*,smooth,mark options={scale=0.9,fill=white,line width=0.5pt},},
+			xticklabel style={
+				/pgf/number format/precision=3,
+				/pgf/number format/fixed,
+				/pgf/number format/fixed zerofill,
+			},
 			]
 			 \addplot[color=Set1-A] table [x index=0,   y expr=\thisrowno{1}/764.4] \samf;
 			 \addlegendentry{M4\_3171};
@@ -56,7 +61,7 @@
 			\addplot[color=Set1-C] table [x index=0,  y expr=\thisrowno{1}/764.4] \samt;
 			\addlegendentry{M4\_3226};
 			
-			\node[scale=1] at(axis cs:1.52,1){$\mathrm{T\!=\!14K}$};
+			\node[scale=1,font=\bf,anchor=east] at(axis description cs:0.95,0.7){$\mathrm{T\!=\!14K}$};
 			\node[scale=1,anchor=north west,font=\bf,blue] at (axis description cs:0,1){(a)};
 			 
 \end{axis}
@@ -71,7 +76,7 @@
 		 height=5cm,
 		 minor x tick num=1,
 		 minor y tick num=1,
-		 xmin=1.51,xmax=\xmaximo,
+		 xmin=1.51,xmax=1.545,
 		 ymin=-0.05,ymax=3.45,
 		 ytick=\empty,
 		 xtick pos=top,

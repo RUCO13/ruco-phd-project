@@ -15,11 +15,10 @@
 \usepackage[activeacute,spanish,es-tabla]{babel} 
 \usepackage{amsmath,amssymb,amsfonts,latexsym,stmaryrd,eucal,amsthm,textcomp,cancel,nicefrac}
 \usepackage{fourier}
+\usepackage{animate}
 \usepackage{graphicx}
-\usepackage{empheq,fancybox}
 \usepackage{xcolor}
 \usepackage{colortbl}
-\usepackage{booktabs}
 \usepackage{xfrac}
 \spanishdecimal{.}
 \usepackage{etoolbox}
@@ -30,7 +29,6 @@
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage{physics}
-\usepackage{animate}
 
 % Set up some colors
 \definecolor{gc}{RGB}{136,216,192}% green
@@ -91,7 +89,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Tikz packages%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{tikz,pgfplots} %crear graficos en latex
-\pgfplotsset{compat=newest}
+\pgfplotsset{compat=1.14}
 \tikzset{
 	every picture/.append style={
 		execute at begin picture={\deactivatequoting},
@@ -146,3 +144,31 @@ bottom=1mm,right=1mm,boxsep=0mm,drop shadow}
 \DeclareMathSymbol{\mh}{\mathord}{operators}{`\-}
 \newcommand\thh[2]{e_#1\mathrm{\mh hh_#2}}
 \newcommand\tlh[2]{e_#1\mathrm{\mh lh_#2}}
+\newcommand{\rv}{\displaystyle\mathrm{\bf r}}
+
+
+\newcommand\bff[1]{\mathrm{\bf #1}}
+% \newcommand\thh[2]{\mathrm{e_{\scaleto{#1\mathstrut}{5pt}} \mh hh_{\scaleto{#2\mathstrut}{5pt}}}}
+% \newcommand\tlh[2]{\mathrm{e_{\scaleto{#1\mathstrut}{5pt}} \mh lh_{\scaleto{#2\mathstrut}{5pt}}}}
+% RGB COLOR COMMAND
+\newcommand{\rgb}[3]{rgb:red,#1;green,#2;blue,#3}
+
+% defined bold and emph nomenclature
+% nomenclature commands and definitions
+\def\sym{\emph{symmetry }}
+\def\cry{\emph{crystal }}
+\def\brill{\emph{Brillouin }}
+\def\bz{\textbf{BZ }}
+\def\ks{$\boldsymbol{k}$ }
+\def\ksm{\boldsymbol{k} }
+\def\hh{\mathrm{hh} }
+\def\lh{\mathrm{lh} }
+\def\el{\mathrm{e} }
+
+\newcommand{\bdlo}[2]{$\boldsymbol{#1}(#2)$}
+\newcommand{\bdli}[2]{$#1(\boldsymbol{#2})$}
+\newcommand{\boldlm}[1]{$\boldsymbol{#1}$}
+\newcommand{\boldl}[1]{\boldsymbol{#1}}
+
+
+

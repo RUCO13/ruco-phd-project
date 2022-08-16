@@ -1,0 +1,267 @@
+\documentclass[export,border=0pt]{standalone}
+\usepackage{tikz,filecontents, pgfplots}
+\usepackage{pgfplotstable}
+\tikzset{
+    axis break gap/.initial=1mm
+}
+
+\usepackage{amsmath,bm}
+\usetikzlibrary{arrows,
+	arrows.meta,
+	decorations.pathmorphing,
+	calc,%
+	decorations.pathmorphing,%
+	decorations.markings,
+	fadings,%
+	shadings,%
+	positioning,
+	spy,
+	shapes,
+	shapes.geometric,
+	shapes.arrows,
+	fit,	plotmarks,}
+\usepackage{tikz-dimline}
+
+\pgfplotsset{
+	width=5cm,
+	height=2.5cm,
+	scale only axis,
+    %xmin   = 0,   xmax=46,
+	%yticklabel style={/pgf/number format/fixed}, 
+	every axis/.append style = {
+		line width = 0.4pt,
+		tick style = {line width=0.4pt,black},
+		%tick label style={font=\tiny},
+		every tick label/.append style={scale=0.75},
+		major tick length = 0.8mm,
+		minor tick length = 0.4mm,
+		%axis line style = thick,
+	},
+	every axis plot/.append style={line width = 0.7pt,}
+}
+\pgfplotsset{
+	compat=newest,
+	/pgfplots/legend image code/.code={%
+		\draw[mark repeat=1,mark phase=1,#1] 
+		plot coordinates {
+			(0cm,0cm) 
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.3cm,0cm)%
+		};
+	},
+}
+
+%\def\eu{1.5327}
+%\def\ed{1.5412}
+%\def\hhu{-0.0047}
+%\def\hhd{-0.0055}
+%\def\lhu{-0.0097}
+%\def\lhd{-0.0164}
+\usepackage{animate}
+\usepackage{ifthen}
+
+\begin{document}
+\begin{animateinline}[loop]{1}
+	\multiframe{6}{i=1+1}{
+    \begin{tikzpicture}
+    
+%========================================================================== %  
+%																			%
+%			                PLOT WAVEFUNCTIONS								%
+%																			%
+%																			%
+%===========================================================================%																			    
+
+%================================  PLOT  VB      
+  
+   
+        \begin{axis}[
+            name=bottom axiss,
+            scale only axis,
+            ymin =-0.07, ymax= 0.09,
+            axis x line*=bottom,
+            ytick=\empty,
+            xtick = {22.85},
+            xticklabels={ 0 },
+             %============= Legend Plots ========================
+            legend entries={H,L},
+            legend pos={north east},
+            legend style={draw=none,
+            	fill=none,
+            	row sep=-1pt,
+            	inner sep=3pt,    		
+            	nodes={scale=0.8,yshift=-0.2mm}}, 
+            legend cell align = left,
+        ]
+
+       %%%================================= Add Data ===================================
+       \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-VB.dat}{\vp};
+        \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-Pshh-1.dat}{\psihhu};
+        \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-Pshh-2.dat}{\psihhd};
+        \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-Pslh-1.dat}{\psilhu};
+        \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-Pslh-2.dat}{\psilhd};
+
+
+
+            	\addplot[line width = 0.5pt,forget plot] table[x index=0,y index=\i]{\vp};
+          
+            	
+                 \addplot[smooth,black!50!green,dash dot,fill=black!50!green,fill opacity=0.25,forget plot] table[x index=0, y index=\i]{\psilhu};
+                 \addplot[smooth,black!50!green,dash dot,fill=black!50!green,fill opacity=0.25] table[x index=0, y index=\i]{\psilhd};
+                 \addlegendentry[yshift = -0.3mm,opacity = 1]{L};
+  
+  				\addplot[smooth,red,fill=red, fill opacity=0.25,forget plot] table[x index=0, y index=\i]{\psihhu};
+  				\addplot[smooth,red,fill=red, fill opacity=0.25] table[x index=0, y index=\i]{\psihhd};
+ 				 \addlegendentry[yshift = -0.3mm,opacity = 1]{H};
+       
+     
+    
+ 
+        \end{axis}
+        
+%================================  PLOT  CB         
+        
+        \begin{axis}[
+        scale only axis,
+        xtick style={draw=none},
+        xticklabels={\empty},
+        ymin = 1.515, ymax= 1.67,
+        ytick=\empty,
+           name = top axiss,
+           at=(bottom axiss.north),
+           anchor=south, yshift=\pgfkeysvalueof{/tikz/axis break gap},
+           scale only axis,
+           axis x line*=top,
+           after end axis/.code={
+           	\draw (rel axis cs:0,0) +(-0mm,0mm) -- +(1mm,0mm)
+           	++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
+           	+(-0mm,-0mm) -- +(1mm,0mm)
+           	(rel axis cs:1,0) +(-1mm,-0mm) -- +(0mm,0mm)
+           	++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
+           	+(-1mm,-0mm) -- +(0mm,0mm);
+           },
+        ]
+        
+       %%%================================= Add Data ===================================
+         \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-CB.dat}{\cb};
+        \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-Psie-1.dat}{\eu};
+        \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-Psie-2.dat}{\ed};
+      
+      
+      
+      % plots ================================
+
+         \addplot[line width = 0.5pt,forget plot] table[x index=0, y index=\i]{\cb};
+         \addplot[smooth,blue,forget plot,fill=blue, fill opacity=0.25] table[x index=0,y index=\i]{\eu};  
+         \addplot[smooth,blue,fill=blue, fill opacity=0.25] table[x index=0,y index=\i]{\ed};  
+         \pgfmathsetmacro\result{int(\i-1)} 
+         \node[anchor=north east,scale=0.65,yshift=-1cm,font=\bfseries] at (current axis.north east){$F=\result \dfrac{\mathrm{kV}}{\mathrm{m}}$};
+
+
+\end{axis}
+        
+    \begin{axis}[
+    width=1.2cm,
+    at={(bottom axiss.east)},
+    anchor=west,
+    xshift = 0.1cm,
+    name=bottom axis,
+    scale only axis,
+    axis x line*=bottom,
+    scale only axis,
+    xmin=0, xmax=1.1,
+    ytick pos=right,
+   ymin =-0.02, ymax= 0.01,
+    %Parameters
+    ytick=\empty,
+    scaled y ticks=false,
+    minor y tick num=1,
+    xtick = {0.3,0.8},
+    xticklabels={ N, N },
+    %============== Axis labels ==============================
+    %tick scale binop = ,
+    ]
+    
+    \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-Ehh.dat}{\ehh};
+    \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-Elh.dat}{\elh};
+    
+    
+    \pgfplotstablegetelem{\i}{[index]0}\of{\ehh}
+    \pgfmathsetmacro{\ehhu}{\pgfplotsretval}  
+    \addplot[mark=none,red,line width=0.5pt] coordinates {(0.1,\ehhu) (1,\ehhu)};
+    \pgfplotstablegetelem{\i}{[index]1}\of{\ehh}
+    \pgfmathsetmacro{\ehhd}{\pgfplotsretval}  
+    \addplot[mark=none,red,line width=0.5pt] coordinates {(0.1,\ehhd) (1,\ehhd)}; 
+    
+    \pgfplotstablegetelem{\i}{[index]0}\of{\elh}
+    \pgfmathsetmacro{\elhu}{\pgfplotsretval}  
+    \addplot[mark=none,black!50!green,line width=0.5pt] coordinates {(0.1,\elhu) (1,\elhu)};
+    \pgfplotstablegetelem{\i}{[index]1}\of{\elh}
+    \pgfmathsetmacro{\elhd}{\pgfplotsretval}  
+    \addplot[mark=none,black!50!green,line width=0.5pt] coordinates {(0.1,\elhd) (1,\elhd)}; 
+    
+    
+    
+    \draw[{Stealth[scale=0.3]}-{Stealth[scale=0.3]},red] (axis cs:0.5,\ehhu)--(axis cs:0.5,\ehhd);
+    \draw[{Stealth[scale=0.5]}-{Stealth[scale=0.5]},black!50!green] (axis cs:0.5,\elhu)--(axis cs:0.5,\elhd);
+    
+    
+    
+    %\node[scale=0.5] at (axis cs:0.5,0.008) {$\Delta E_{H}$};
+    %\node[scale=0.5] at (axis cs:0.5,-0.018) {$\Delta E_{L}$};
+    
+    
+    \end{axis}
+    
+    
+    
+    \begin{axis}[
+    width=1.2cm,
+    scale only axis,
+    xmin=0, xmax=1.1,
+    ymin = 1.52, ymax= 1.56,
+    ytick=\empty,
+    scaled y ticks=false,
+    minor y tick num=1,
+    xtick style={draw=none},
+    xticklabels={\empty},
+    %ytick={1.53 , 1.532, 1.534, 1.536, 1.538, 1.54 , 1.542, 1.544, 1.546,1.548, 1.55},
+    ytick pos=right,
+    %============================== break plot
+    name = top axis,
+    at=(bottom axis.north),
+    anchor=south, yshift=\pgfkeysvalueof{/tikz/axis break gap},
+    scale only axis,
+    axis x line*=top,
+    after end axis/.code={
+    	\draw (rel axis cs:0,0) +(-0mm,0mm) -- +(1mm,0mm)
+    	++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
+    	+(-0mm,-0mm) -- +(1mm,0mm)
+    	(rel axis cs:1,0) +(-1mm,-0mm) -- +(0mm,0mm)
+    	++(0pt,-\pgfkeysvalueof{/tikz/axis break gap})
+    	+(-1mm,-0mm) -- +(0mm,0mm);
+    },
+    % Parameters
+    ]
+    \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-Ee.dat}{\eu};
+%     \pgfplotstableread[col sep=comma]{../../../../../repos/cqws-codes/cqws-v2/efiled-m4_3523/AEF-Ed.dat}{\ed};
+    
+    %\addplot[mark=none,blue,line width=0.5pt] table {\eu};
+    \pgfplotstablegetelem{\i}{[index]0}\of{\eu}
+     \pgfmathsetmacro{\ex}{\pgfplotsretval}  
+    \addplot[mark=none,blue,line width=0.5pt] coordinates {(0.1,\ex) (1,\ex)}; 
+    \pgfplotstablegetelem{\i}{[index]1}\of{\eu}
+    \pgfmathsetmacro{\exd}{\pgfplotsretval}  
+    \addplot[mark=none,blue,line width=0.5pt] coordinates {(0.1,\exd) (1,\exd)};  
+    \draw[{Stealth[scale=0.5]}-{Stealth[scale=0.5]},blue] (axis cs:0.5,\ex)--(axis cs:0.5,\exd);
+
+    
+    
+   
+    \end{axis}
+
+\end{tikzpicture}}
+\end{animateinline}
+\end{document}

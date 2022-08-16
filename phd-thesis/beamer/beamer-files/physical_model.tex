@@ -1,4 +1,32 @@
-\section{Modelo F\'isico}
+\section{Fundamentos F\'isicos}
+
+\subsection{Pozos Cu\'anticos Acoplados}
+\begin{frame}[t]
+\frametitle{\secname}
+\framesubtitle{\subsecname}
+\vspace{-0.5cm}
+\begin{tikzpicture}[remember picture, overlay]
+\node<1->[anchor = north west, text width =0.73\textwidth, yshift = -0.75cm](txt) at (current page.north west) {
+	\begin{tcolorbox}[width =\textwidth,title=\subsecname]
+	\begin{itemize}
+	\item<1-> Sistemas Nanoestructurados$\rightarrow$ Pozo Cu\'antico Simple.
+	\item<2-> Pozos Cu\'anticos Acoplados
+	\end{itemize}
+	\end{tcolorbox}	
+};
+
+\node<1->[anchor=north west,inner sep=0mm,yshift=10mm,xshift=-2mm](f) at (txt.north east){\includegraphics[width=0.3\textwidth]{../beamer-figures/results/Fig_1}};
+
+\node<1->[anchor=north west,yshift=-3mm](i1) at (txt.south west){\includegraphics[width=0.5\textwidth,trim={0cm 0cm 0cm 2.5cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-1-wob-beamer.pdf}};
+
+\node<2->[anchor=north west,inner sep=0mm,yshift=-3mm](i2) at (i1.south west){\includegraphics[width=0.5\textwidth,trim={0cm 0cm 0cm 0cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-2-wob-beamer.pdf}};
+
+
+\node<2->[anchor=north west,inner sep=0mm,yshift=-5mm](i3) at (i1.north east){\animategraphics[autoplay,loop,width=0.5\textwidth,]{2}{beamer-figures/physical-model/build-ruco/aef}{0}{}};
+\end{tikzpicture}
+\end{frame}
+
+
 \subsection{Contexto de Simetr\'ia}
 \begin{frame}[t]
 \frametitle{\secname}
@@ -21,13 +49,13 @@
 	\begin{itemize}
 	\item<1-> Simetr\'ia es un cambio sin cambio.
 	\item<2-> Transformaciones u operaciones que no alteran un ``objeto''
-	\item<3-> En f\'isica la formalidad de la simetr\'ia la otorga la \textcolor{magenta}{teoria de grupos}
+	\item<3-> La Teoria de Grupos aplicada a una estructura cristalina resulta en el mapa o ruta de los electrones conocido como la Zona de Brillouin
 	\end{itemize}
 	\end{tcolorbox}	
 };
 
 	\node<1->[anchor=north east,xshift=-20mm,yshift=-9mm] (i1) at (current page.north east){\includegraphics[width=0.33\textwidth]{../beamer-figures/physical-model/BigPlatoBig.png}};
-	\def\optionc{0}
+	\def\optionc{1}
 
 	\ifnum\optionc=1
 	\node<2-3>[anchor=north west,inner sep=0mm,xshift=2mm,yshift=2mm](sym1) at (txt.south west){\animategraphics[autoplay,loop,width=0.22\textwidth,]{20}{beamer-figures/physical-model/sym1}{}{}};
@@ -68,14 +96,14 @@
 	boxed title style={colframe=blue,
 		colback=gc!90}]
 	\begin{itemize}
-	\item<1-> Simetr\'ia ``Macroscopica''.
-	\item<2-> Simetr\'ia ``Microscopica''.\\ \textcolor{red}{\emph{La s\'imetria de un sistema define las funciones base para obteener la Estructura de Bandas}}
+	\item<1-> Simetr\'ia ``Macroscopica'' +  Simetr\'ia ``Microscopica'' = Simetria del Sistema.
+	\item<2-> \textcolor{red}{\emph{La s\'imetria de un sistema define las funciones base para obteener la Estructura de Bandas}}
 	
 	\end{itemize}
 	\end{tcolorbox}	
 };
 
-\def\optionc{0}
+\def\optionc{1}
 \ifnum\optionc=1
 	\node<1>[anchor=north west,inner sep=0mm,xshift=-5mm,yshift=5mm](sym1) at (txt.north east){\animategraphics[autoplay,loop,width=0.4\textwidth]{10}{beamer-figures/physical-model/sym9}{}{}};
 \fi

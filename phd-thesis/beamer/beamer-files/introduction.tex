@@ -1,4 +1,28 @@
 \section{Introducción}
+
+\subsection{Semiconductores}
+\begin{frame}[t]
+\frametitle{\secname}
+\framesubtitle{\subsecname}
+\vspace{-0.5cm}
+\begin{tikzpicture}[remember picture, overlay]
+\node<1->[anchor = north west, text width =0.7\textwidth, yshift = -0.75cm](txt) at (current page.north west) {
+	\begin{tcolorbox}[title =\subsecname, width=\textwidth]
+	\begin{itemize}
+	\item<1-> Aplicaciones potenciales de los pozos cuanticos.\footnotemark[1] 
+	\end{itemize}
+	\end{tcolorbox}	
+};
+
+
+\node<1->[anchor=south west,xshift=0mm,yshift=5mm] at (current page.south west){\includegraphics[width=\textwidth]{./beamer-figures/introduction/app1-v2.png}};
+\end{tikzpicture}
+
+\footnotetext[1]{Li, J. et al. (2020). Novel Nitride LED Technology. In: III-Nitrides Light Emitting Diodes: Technology and Applications. Springer Series in Materials Science, vol 306. Springer, Singapore.}
+\end{frame}
+
+
+
 \subsection{Estructura de Bandas}
 \begin{frame}[t]
 \frametitle{Introducci\'on}
@@ -48,50 +72,23 @@
 	\framesubtitle{Bandas de Valencia y Conducci\'on para un semiconductor en Bulto}
 	\vspace{-0.5cm}
 	\begin{tikzpicture}[remember picture, overlay]
-	\node<1-2>[anchor=north east,xshift=-2cm,yshift=-0.9cm] at (current page.north east){\includegraphics[width=0.35\textwidth]{../../../scripts/structures/GaAs-2}};
-	\node<1-2>[anchor=north west,inner sep=0mm,yshift=-0.9cm](h) at (current page.north west){\animategraphics[autoplay,loop,width=0.3\textwidth]{1}{beamer-figures/introduction/build-ruco/H}{}{}};
-\node<1-2>[anchor=north west,text width=0.2\textwidth,font=\sffamily,xshift=0cm,yshift=0.7cm,scale=2,blue](e1) at (h.south west){
-\begin{equation*}
-	\left(\tikzmarknode{a}{\mathcal{H}}-\varepsilon(\mathbf{k}\lambda)\ket{\mathbf{k\lambda}}\right)=0
-\end{equation*}
-};
-
-
-\node<2>[anchor=north west,yshift=0mm,scale=0.55](h1) at (e1.south west){
-$ \tikzmarknode{b}{\mathcal{H}}=
-\begin{pmatrix}
-E\left(s,a\right)&v\left(s,a\right)g_{0}&0&0&0&v\left(sa,pc\right)g_{1}&v\left(sa,pc\right)g_{2}&v\left(sa,pc\right)g_{3}&0&0\\
-v\left(s,a\right)g_{0}^{*}&E\left(s,c\right)&-v\left(pa,sc\right)g_{1}^{*}&-v\left(pa,sc\right)g_{2}^{*}&-v\left(pa,sc\right)g_{3}^{*}&0&0&0&0&0\\
-0&-v\left(pa,sc\right)g_{1}&E(p,a)&0&0&v\left(x,x\right)g_{0}&v\left(x,y\right)g_{3}&v\left(x,y\right)g_{2}&0&-v\left(pa,s^{*}\!c\right)g_{1}\\
-0&-v\left(pa,sc\right)g_{2} &0&E\left(p,a\right)&0&v\left(x,y\right)g_{2}&v\left(x,y\right)g_{1} &v\left(x,y\right)g_{1} &0 &-v\left(pa,s^{*}\!c\right)g_{2}\\
-0&-v\left(pa,sc\right)g_{3} &0&0&E\left(p,a\right) &v\left(x,y\right)g_{2} &v\left(x,y\right)g_{1} &v\left(x,x\right)g_{0} &0 &-v\left(pa,s^{*}\!c\right)g_{3}\\ 
-v\left(sa,pc\right)g_{1}^{*}&0&v\left(x,x\right)g_{0}^{*}&v\left(x,y\right)g_{3}^{*} &v\left(x,x\right)g_{2}^{*} &E(p,c) &0 &0 &v\left(s^{*}\!a,pc\right)g_{1}^{*}&0  \\ 
-v\left(sa,pc\right)g_{2}^{*}&0&v\left(x,y\right)g_{3}^{*}&v\left(x,x\right)g_{0}^{*}&v\left(x,y\right)g_{1}^{*} &0 &E(p,c) &0 &v\left(s^{*}\!a,pc\right)g_{2}^{*}&0  \\ 
-v\left(sa,pc\right)g_{3}^{*}&0&v\left(x,y\right)g_{2}^{*}&v\left(x,y\right)g_{1}^{*}&v\left(x,x\right)g_{0}^{*} &0 &0 &E(p,c)&v\left(s^{*}\!a,pc\right)g_{3}^{*}&0 \\ 
-0&0&0&0  &0 &v\left(s^{*}\!a,pc\right)g_{1}^{*} &v\left(s^{*}\!a,pc\right)g_{2}^{*} &v\left(s^{*}\!a,pc\right)g_{3}^{*} &E(s^{*}\!,a)&v(s^{*}\!.s^{*}\!)g_{0} \\ 
-0&0&-v\left(pa,s^{*}\!c\right)g_{1}^{*}&-v\left(pa,s^{*}\!c\right)g_{2}^{*}  &-v\left(pa,s^{*}\!c\right)g_{3}^{*} &0 &0 &0 &v(s^{*}\!.s^{*}\!)g_{0}&E(s^{*}\!,c)  
-\end{pmatrix}
-$};
-
-\node<2>[anchor=south west,text width=0.5\textwidth] at (h1.north west) {Hamiltoniano Tight-Binding $sp^{3}s^{*}$};
-\node<2>[anchor=south west,text width=\textwidth,scale=0.75] at (current page.south west){\emph{Vogl, P., Hjalmarson, H. P., \& Dow, J. D. (1983). A semi-empirical tight-binding theory of the electronic structure of semiconductors. Journal of physics and chemistry of solids, 44(5), 365-378.}};
 
 
 %==========> parte 2
 
-\node<3->[anchor=north east,xshift=-2cm,yshift=-0.9cm] at (current page.north east){\includegraphics[width=0.3\textwidth]{../../../scripts/structures/GaAs-2}};
+\node<1->[anchor=north east,xshift=-2cm,yshift=-0.9cm] at (current page.north east){\includegraphics[width=0.3\textwidth]{../../../scripts/structures/GaAs-2}};
 % \node<3->[anchor=south east,text width=0.2\textwidth,font=\sffamily,xshift=-5mm,yshift=-8mm,scale=1.5,blue,inner sep=0mm](e1) at (s.south east){
 % \begin{equation*}
 % 	\left(\tikzmarknode{a}{\mathcal{H}}-\varepsilon(\mathbf{k}\lambda)\ket{\mathbf{k\lambda}}\right)=0
 % \end{equation*}
 % };
-\node<3->[anchor=south west,inner sep=0mm,yshift=0mm](bs) at (current page.south west){\includegraphics[width=1.05\textwidth]{../../figures/chapter-1/bands/build/bands01}};
-\node<3->[anchor=south west,text width=0.6\textwidth,scale=1.1] at (bs.north west){Estructura de bandas para GaAs en bulto};
+\node<1->[anchor=south west,inner sep=0mm,yshift=0mm](bs) at (current page.south west){\includegraphics[width=1.05\textwidth]{../../figures/chapter-1/bands/build/bands01}};
+\node<1->[anchor=south west,text width=0.6\textwidth,scale=1.1] at (bs.north west){Estructura de bandas para GaAs en bulto};
 
 
-\node<3->[anchor=north west,inner sep=0mm,yshift=-8mm](b02) at (current page.north west){\includegraphics[width=0.28\textwidth]{../../figures/chapter-1/bands/build/bands02}};
+\node<1->[anchor=north west,inner sep=0mm,yshift=-8mm](b02) at (current page.north west){\includegraphics[width=0.28\textwidth]{../../figures/chapter-1/bands/build/bands02}};
 
-\node<4->[anchor=north west,inner sep=0mm,xshift=7mm,yshift=-2mm](b03) at (b02.north east){\includegraphics[width=0.33\textwidth]{../../figures/chapter-1/exciton-1/build/x-1}};
+\node<1->[anchor=north west,inner sep=0mm,xshift=7mm,yshift=-2mm](b03) at (b02.north east){\includegraphics[width=0.33\textwidth]{../../figures/chapter-1/exciton-1/build/x-1}};
 \end{tikzpicture}
 \end{frame}
 	

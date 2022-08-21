@@ -96,8 +96,7 @@
 	boxed title style={colframe=blue,
 		colback=gc!90}]
 	\begin{itemize}
-	\item<1-> Simetr\'ia ``Macroscopica'' +  Simetr\'ia ``Microscopica'' = Simetria del Sistema.
-	\item<2-> \textcolor{red}{\emph{La s\'imetria de un sistema define las funciones base para obteener la Estructura de Bandas}}
+	\item<1-> \textcolor{red}{\emph{La s\'imetria de un sistema define las funciones base para obteener la Estructura de Bandas}}
 	
 	\end{itemize}
 	\end{tcolorbox}	
@@ -249,32 +248,32 @@
 \end{frame}
 
 
-\begin{frame}[t]
-	\frametitle{\secname}
-	\framesubtitle{\subsecname}
-	\begin{tikzpicture}[remember picture, overlay]
-	\node<1->[anchor = north west, text width =0.7\textwidth, yshift = -0.75cm,scale=1](txt) at (current page.north west) {
-		\begin{tcolorbox}[width=\textwidth]
-		\begin{itemize}
-		\item<1-> Resultados num\'ericos
-		\end{itemize}
-		\end{tcolorbox}	
-	};
+% \begin{frame}[t]
+% 	\frametitle{\secname}
+% 	\framesubtitle{\subsecname}
+% 	\begin{tikzpicture}[remember picture, overlay]
+% 	\node<1->[anchor = north west, text width =0.7\textwidth, yshift = -0.75cm,scale=1](txt) at (current page.north west) {
+% 		\begin{tcolorbox}[width=\textwidth]
+% 		\begin{itemize}
+% 		\item<1-> Resultados num\'ericos
+% 		\end{itemize}
+% 		\end{tcolorbox}	
+% 	};
 	
-	\node<1>[anchor=north west,text width=0.7\textwidth](e2) at (txt.south west){
-		\begin{equation}
-			V(z),m^{*}(z)=\begin{cases}
-				\text{\algaasx{0.2}}\quad &0<z<20\text{ nm}\\
-				\text{GaAs}\quad    &20<z<26\text{ nm}\\
-				\text{\algaasx{0.2}}\quad &26<z<32\text{ nm}\\
-				\text{GaAs}\quad    &32<z<38\text{ nm}\\
-				\text{\algaasx{0.2}}\quad &38<z<58\text{ nm},
-			\end{cases}
-		\end{equation}
-};
+% 	\node<1>[anchor=north west,text width=0.7\textwidth](e2) at (txt.south west){
+% 		\begin{equation}
+% 			V(z),m^{*}(z)=\begin{cases}
+% 				\text{\algaasx{0.2}}\quad &0<z<20\text{ nm}\\
+% 				\text{GaAs}\quad    &20<z<26\text{ nm}\\
+% 				\text{\algaasx{0.2}}\quad &26<z<32\text{ nm}\\
+% 				\text{GaAs}\quad    &32<z<38\text{ nm}\\
+% 				\text{\algaasx{0.2}}\quad &38<z<58\text{ nm},
+% 			\end{cases}
+% 		\end{equation}
+% };
 
-\node<1>[anchor=south west,inner sep=0mm,yshift=5mm](i3) at (current page.south west){\includegraphics[width=\textwidth]{../../figures/chapter-2/numerical-calculations/out/harrison-wells}};
-\node<2->[anchor=south west,inner sep=0mm,xshift=10mm](i3) at (current page.south west){\includegraphics[width=0.8\textwidth]{../../figures/chapter-2/numerical-calculations/build-ruco/numerical-results}};
-	\end{tikzpicture}
+% \node<1>[anchor=south west,inner sep=0mm,yshift=5mm](i3) at (current page.south west){\includegraphics[width=\textwidth]{../../figures/chapter-2/numerical-calculations/out/harrison-wells}};
+% \node<2->[anchor=south west,inner sep=0mm,xshift=10mm](i3) at (current page.south west){\includegraphics[width=0.8\textwidth]{../../figures/chapter-2/numerical-calculations/build-ruco/numerical-results}};
+% 	\end{tikzpicture}
 	
-	\end{frame}
+% 	\end{frame}

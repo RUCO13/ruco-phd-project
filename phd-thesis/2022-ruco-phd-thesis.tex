@@ -9,7 +9,12 @@ toc=listofnumbered]{scrbook}
 \input{files/packages}
 \input{files/commands}
 \begin{document}
-\input{files/title-page-ruco}
+\def\pgtitle{1}
+\ifnum\pgtitle=2
+    \input{files/title-page-ruco}
+\else
+    \input{files/title-page-ruco-v2}
+\fi
 \input{files/statement.tex}
 \input{files/abstract.tex}
 \author

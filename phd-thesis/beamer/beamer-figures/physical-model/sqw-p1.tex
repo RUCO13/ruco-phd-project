@@ -1,0 +1,34 @@
+\documentclass[border=0mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsfonts}
+\usepackage{grid-guide}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric} % Cylinder
+\usetikzlibrary{shadows.blur,arrows.meta,bending,positioning}
+\usetikzlibrary{%
+	calc,%
+	decorations.pathmorphing,%
+	fadings,%
+	shadings,
+   decorations.pathreplacing,calligraphy
+}
+\begin{document}
+\begin{tikzpicture}
+
+    % \begin{scope}[opacity=0.2]
+    %     \draw[labeled grid](0,0) to (4,4.5);    
+        
+    % \end{scope}
+
+    % \draw[line width=0.3mm] plot coordinates  { (0,2) (2,2) (2,0) (4,0) sin(1,4) };
+
+    \coordinate (h1) at (3.3,4);
+    \draw[line width=0.3mm] (0,4)--++(0.7,0) to [bend left=6] (1,0)--++(2,0) to[bend left=4] (h1)--++(0.72,0);
+
+
+\end{tikzpicture}
+	
+	
+
+
+\end{document}

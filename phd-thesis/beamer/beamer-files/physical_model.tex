@@ -55,7 +55,7 @@
 };
 
 	\node<1->[anchor=north east,xshift=-20mm,yshift=-9mm] (i1) at (current page.north east){\includegraphics[width=0.33\textwidth]{../beamer-figures/physical-model/BigPlatoBig.png}};
-	\def\optionc{1}
+	\def\optionc{0}
 
 	\ifnum\optionc=1
 	\node<2-3>[anchor=north west,inner sep=0mm,xshift=2mm,yshift=2mm](sym1) at (txt.south west){\animategraphics[autoplay,loop,width=0.22\textwidth,]{20}{beamer-figures/physical-model/sym1}{}{}};
@@ -119,48 +119,75 @@
 \frametitle{\secname}
 \framesubtitle{\subsecname}
 \begin{tikzpicture}[remember picture, overlay]
-\node<1->[anchor = north west, text width =0.75\textwidth, yshift = -0.75cm,scale=1](txt) at (current page.north west) {
+\node<1->[anchor = north west, text width =0.85\textwidth, yshift = -0.75cm,scale=1](txt) at (current page.north west) {
 	\begin{tcolorbox}[width=\textwidth]
 	\begin{itemize}
 	\item<1-> \emph{De las simetrias de un sistema se definen las propiedades del mismo.}	
 	\item<2-> En 1894 Pierre Curie $\rightarrow$``principio de simetría''\\
-	\emph{\color{magenta}Cuando ciertas causas producen ciertos efectos, los elementos de simetría de las causas deben encontrarse en los efectos producidos.\footnotemark[1]}
-	\item<3->Ruptura de simetr\'ia en Pozos Cuanticos Acoplados
+	\emph{\color{magenta}Cuando ciertas causas producen ciertos efectos, los elementos de simetría de las causas deben encontrarse en los efectos producidos.\only<2>{\footnotemark[1]}}
+	\item<4->Ruptura de simetr\'ia en Pozos Cuanticos Acoplados
 	\end{itemize}
 	\end{tcolorbox}	
 };
 
-\node<1->[anchor=north west,yshift=-2mm] at (txt.north east){\includegraphics[width=0.25\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/structures/GaAs1.pdf}};
+% \node<1->[anchor=north west,yshift=-2mm] at (txt.north east){\includegraphics[width=0.25\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/structures/GaAs1.pdf}};
 
-\node<2>[anchor=west,yshift=-15mm](i2) at (current page.west){\includegraphics[width=\textwidth,trim={0cm 0cm 0cm 0cm},clip]{beamer-figures/physical-model/sym001.jpg}};
-\node<2>[anchor=north west,text width=\textwidth,scale=0.8] at (i2.south west) {Kibble T. W. B. 2015Spontaneous symmetry breaking in gauge theories \textit{Phil. Trans. R. Soc. A.} \textbf{373:}20140033};
-\node<2>[anchor=south west,text width=0.5\textwidth,xshift=15mm] at (i2.north west) {Unbroken symmetry};
-\node<2>[anchor=south east,text width=0.5\textwidth,xshift=15mm] at (i2.north east) {Broken symmetry};
+\node<1->[anchor=north west,draw=white,fill=black,text=white,scale=2](p1) at (txt.south west) {$T_{d}$};
 
-\node<3-4>[anchor=west,yshift=-15mm](i3) at (current page.west){\includegraphics[width=0.3\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/structures/GaAs1.pdf}};
-\node<3-4>[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i3.south) {$T_{d}$};
-\node<3>[anchor=west,yshift=0mm](i4) at (i3.east){\includegraphics[width=0.4\textwidth]{../../figures/chapter-1/bands/build-ruco/bands01-beamer}};
+\node<1->[anchor=west,draw=white,fill=black,text=white,scale=2,opacity=0.1,xshift=5mm] (p2)at (p1.east) {$D_{d2}$};
+\draw<1->[-{Stealth},scale=2,opacity=0.1] (p1)--(p2);
 
-\node<4>[anchor=north west,xshift=8mm](i5) at (i3.north east){\includegraphics[width=0.6\textwidth,trim={0cm 0cm 0cm 2.5cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-1-wob-beamer.pdf}};
-\node<4>[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i5.south) {$D_{2d}$};
-\draw<4>[-{Stealth},scale=2] (i3)--(i5);
+\node<1->[anchor=west,draw=white,fill=black,text=white,scale=2,opacity=0.1,xshift=5mm] (p3)at (p2.east) {$C_{2v}$};
+\draw<1->[-{Stealth},scale=2,opacity=0.1] (p2)--(p3);
 
-\node<5>[anchor=west,xshift=0mm,yshift=-15mm](i6) at (current page.west){\includegraphics[width=0.6\textwidth,trim={0cm 0cm 0cm 2.5cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-1-wob-beamer.pdf}};
-\node<5>[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i6.south) {$D_{2d}$};
-\node<5>[anchor=west,yshift=0mm](i7) at (i6.east){\includegraphics[width=0.6\textwidth]{../../figures/chapter-2/numerical-calculations/out/kp-bands}};
+\node<2-3>[anchor=west,draw=white,fill=black,text=white,scale=2,opacity=1,xshift=5mm] (p2)at (p1.east) {$D_{d2}$};
+\draw<2-3>[-{Stealth},scale=2,opacity=1] (p1)--(p2);
 
-\node<6>[anchor=south,xshift=-10mm,yshift=13mm](i7) at (current page.south){\includegraphics[width=0.7\textwidth,trim={0cm 0cm 0cm 0cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-2-wob-beamer.pdf}};
-\node<6>[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i7.south) {$D_{2d}$};
+\node<3>[anchor=west,draw=white,fill=black,text=white,scale=2,opacity=1,xshift=5mm] (p3)at (p2.east) {$C_{2v}$};
+\draw<3>[-{Stealth},scale=2,opacity=1] (p2)--(p3);
+% \node<2>[anchor=west,yshift=-15mm](i2) at (current page.west){\includegraphics[width=\textwidth,trim={0cm 0cm 0cm 0cm},clip]{beamer-figures/physical-model/sym001.jpg}};
+% \node<2>[anchor=north west,text width=\textwidth,scale=0.8] at (i2.south west) {Kibble T. W. B. 2015Spontaneous symmetry breaking in gauge theories \textit{Phil. Trans. R. Soc. A.} \textbf{373:}20140033};
+% \node<2>[anchor=south west,text width=0.5\textwidth,xshift=15mm] at (i2.north west) {Unbroken symmetry};
+% \node<2>[anchor=south east,text width=0.5\textwidth,xshift=15mm] at (i2.north east) {Broken symmetry};
 
-\node<7>[anchor=south,xshift=-10mm,yshift=13mm](i8) at (current page.south){\includegraphics[width=0.7\textwidth,trim={0cm 0cm 0cm 0cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-3-wob-beamer.pdf}};
-\node<7>[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i8.south) {$C_{2v}$};
+\node<1-3>[anchor=west,yshift=-23mm](i3) at (current page.west){\includegraphics[width=0.4\textwidth]{/media/labfiles/ruco/phd-ssp/scripts/structures/GaAs1.pdf}};
+% \node<1-3>[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i3.south) {$T_{d}$};
+\node<1>[anchor=west,yshift=0mm](i4) at (i3.east){\includegraphics[width=0.5\textwidth]{../../figures/chapter-1/bands/build-ruco/bands01-beamer}};
+
+\node<2>[anchor=north west,xshift=0mm,yshift=-4.2mm](i5) at (i3.north east){\includegraphics[width=0.6\textwidth,trim={0cm 0cm 0cm 2.5cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-1-wob-beamer.pdf}};
+% \node<2>[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i5.south) {$D_{2d}$};
+\draw<2>[-{Stealth},scale=2] (i3)--([xshift=-10mm]i5.center);
+
+\node<3>[anchor= west,xshift=10mm,yshift=10mm](i6) at (i3.east) {\includegraphics[width=0.5\textwidth]{beamer-figures/physical-model/English.png}};
+\node<3>[anchor=north, yshift=0cm, text width=9cm,scale=0.6,align=justify,blue](t2) at (i6.south){
+	English, D. J., et al. ``Effect of symmetry reduction on the spin dynamics of (001)-oriented GaAs quantum wells.'' Physical Review B 87.7 (2013): 075304.
+};
+\draw<3>[-{Stealth},scale=2] (i3)--([yshift=-5mm]i6.west);
 
 
-% ../figures/chapter-2/symmetry/out/roadmap
+\node<2>[anchor=north west,xshift=-30mm,yshift=4mm](dir) at (txt.south east){\includegraphics[width=0.35\textwidth,trim={0cm 0cm 0cm 0cm},clip]{beamer-figures/physical-model/dir.png}};
+% \node<6>[anchor=west,xshift=0mm,yshift=-15mm](i6) at (current page.west){\includegraphics[width=0.6\textwidth,trim={0cm 0cm 0cm 2.5cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-1-wob-beamer.pdf}};
+% \node<6>[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i6.south) {$D_{2d}$};
+% \node<6>[anchor=west,yshift=0mm](i7) at (i6.east){\includegraphics[width=0.6\textwidth]{../../figures/chapter-2/numerical-calculations/out/kp-bands}};
+
+\node<4>[anchor=south west,xshift=0mm,yshift=0mm](i7) at (current page.south west){\includegraphics[width=0.7\textwidth,trim={0cm 0cm 0cm 0cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-2-wob-beamer.pdf}};
+% \node<4->[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i7.south) {$D_{2d}$};
+\node<4->[anchor=west,draw=white,fill=black,text=white,scale=2,opacity=1,xshift=5mm] (p2)at (p1.east) {$D_{d2}$};
+\draw<4->[-{Stealth},scale=2,opacity=1] (p1)--(p2);
+\node<4>[anchor=north west,xshift=11mm,yshift=2mm] at (txt.south) {\includegraphics[width=0.45\linewidth]{beamer-figures/physical-model/M4_3523-IOA}};
+
+
+\node<5>[anchor=south west,xshift=0mm,yshift=0mm](i8) at (current page.south west){\includegraphics[width=0.7\textwidth,trim={0cm 0cm 0cm 0cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-3-wob-beamer.pdf}};
+% \node<5>[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i8.south) {$C_{2v}$};
+
+\node<5>[anchor=west,draw=white,fill=black,text=white,scale=2,opacity=1,xshift=5mm] (p3)at (p2.east) {$C_{2v}$};
+\draw<5>[-{Stealth},scale=2,opacity=1] (p2)--(p3);
+\node<5>[anchor=north west,xshift=11mm,yshift=2mm] at (txt.south) {\includegraphics[width=0.47\linewidth]{beamer-figures/physical-model/M4_3521-IOA}};
+
 
 \end{tikzpicture}
 
-\onslide<2->{\footnotetext[1]{Curie, P. (1894). On symmetry in physical phenomena, symmetry of an electric field and of a magnetic field. J. Phys, 3, 395-415.}}
+\only<2>{\footnotetext[1]{Curie, P. (1894). On symmetry in physical phenomena, symmetry of an electric field and of a magnetic field. J. Phys, 3, 395-415.}}
 \end{frame}
 	
 

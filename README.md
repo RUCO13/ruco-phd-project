@@ -1,4 +1,4 @@
-# Oscar's PhD Thesis :mexico:  (PRELIMINARY VERSION)
+# Oscar's PhD Thesis :mexico: 
 <image src="readme/titlepage/build-ruco/readme-tp-1.png" width="100%">
 <img src="https://img.shields.io/github/v/tag/ruco13/phd-project?color=green&label=Thesis%20version&logo=github&style=for-the-badge"><a href="https://wakatime.com/badge/user/2502acb2-1684-4597-a422-d30dfa6a2f67/project/f72be288-905f-4146-8c86-b44cbc3784ef"><img src="https://wakatime.com/badge/user/2502acb2-1684-4597-a422-d30dfa6a2f67/project/f72be288-905f-4146-8c86-b44cbc3784ef.svg?style=for-the-badge" alt="wakatime"></a><img src="https://img.shields.io/twitter/follow/ruco0713?color=blue&logo=twitter&style=for-the-badge">
 

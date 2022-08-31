@@ -55,7 +55,7 @@
 };
 
 	\node<1->[anchor=north east,xshift=-20mm,yshift=-9mm] (i1) at (current page.north east){\includegraphics[width=0.33\textwidth]{../beamer-figures/physical-model/BigPlatoBig.png}};
-	\def\optionc{0}
+	\def\optionc{1}
 
 	\ifnum\optionc=1
 	\node<2-3>[anchor=north west,inner sep=0mm,xshift=2mm,yshift=2mm](sym1) at (txt.south west){\animategraphics[autoplay,loop,width=0.22\textwidth,]{20}{beamer-figures/physical-model/sym1}{}{}};
@@ -174,7 +174,7 @@
 % \node<4->[anchor=north,draw=white,fill=black,text=white,scale=1.25] at (i7.south) {$D_{2d}$};
 \node<4->[anchor=west,draw=white,fill=black,text=white,scale=2,opacity=1,xshift=5mm] (p2)at (p1.east) {$D_{d2}$};
 \draw<4->[-{Stealth},scale=2,opacity=1] (p1)--(p2);
-\node<4>[anchor=north west,xshift=11mm,yshift=2mm] at (txt.south) {\includegraphics[width=0.45\linewidth]{beamer-figures/physical-model/M4_3523-IOA}};
+\node<4>[anchor=north west,xshift=15mm,yshift=2mm] at (txt.south) {\includegraphics[width=0.4\linewidth]{beamer-figures/physical-model/build-ruco/m43523-ioa.pdf}};
 
 
 \node<5>[anchor=south west,xshift=0mm,yshift=0mm](i8) at (current page.south west){\includegraphics[width=0.7\textwidth,trim={0cm 0cm 0cm 0cm},clip]{../../figures/chapter-2/symmetry/build-ruco/sym-3-wob-beamer.pdf}};
@@ -182,7 +182,7 @@
 
 \node<5>[anchor=west,draw=white,fill=black,text=white,scale=2,opacity=1,xshift=5mm] (p3)at (p2.east) {$C_{2v}$};
 \draw<5>[-{Stealth},scale=2,opacity=1] (p2)--(p3);
-\node<5>[anchor=north west,xshift=11mm,yshift=2mm] at (txt.south) {\includegraphics[width=0.47\linewidth]{beamer-figures/physical-model/M4_3521-IOA}};
+\node<5>[anchor=north west,xshift=15mm,yshift=2mm] at (txt.south) {\includegraphics[width=0.4\linewidth]{beamer-figures/physical-model/build-ruco/m43521-ioa.pdf}};
 
 
 \end{tikzpicture}
@@ -275,32 +275,31 @@
 \end{frame}
 
 
-% \begin{frame}[t]
-% 	\frametitle{\secname}
-% 	\framesubtitle{\subsecname}
-% 	\begin{tikzpicture}[remember picture, overlay]
-% 	\node<1->[anchor = north west, text width =0.7\textwidth, yshift = -0.75cm,scale=1](txt) at (current page.north west) {
-% 		\begin{tcolorbox}[width=\textwidth]
-% 		\begin{itemize}
-% 		\item<1-> Resultados num\'ericos
-% 		\end{itemize}
-% 		\end{tcolorbox}	
-% 	};
+\begin{frame}[t]
+	\frametitle{\secname}
+	\framesubtitle{\subsecname}
+	\begin{tikzpicture}[remember picture, overlay]
+	\node<1->[anchor = north west, text width =0.7\textwidth, yshift = -0.75cm,scale=1](txt) at (current page.north west) {
+		\begin{tcolorbox}[width=\textwidth]
+		\begin{itemize}
+		\item<1-> Resultados num\'ericos
+		\end{itemize}
+		\end{tcolorbox}	
+	};
 	
-% 	\node<1>[anchor=north west,text width=0.7\textwidth](e2) at (txt.south west){
-% 		\begin{equation}
-% 			V(z),m^{*}(z)=\begin{cases}
-% 				\text{\algaasx{0.2}}\quad &0<z<20\text{ nm}\\
-% 				\text{GaAs}\quad    &20<z<26\text{ nm}\\
-% 				\text{\algaasx{0.2}}\quad &26<z<32\text{ nm}\\
-% 				\text{GaAs}\quad    &32<z<38\text{ nm}\\
-% 				\text{\algaasx{0.2}}\quad &38<z<58\text{ nm},
-% 			\end{cases}
-% 		\end{equation}
-% };
+	\node<1>[anchor=north west,text width=0.7\textwidth](e2) at (txt.south west){
+		\begin{equation}
+			V(z),m^{*}(z)=\begin{cases}
+				\text{\algaasx{0.2}}\quad &0<z<20\text{ nm}\\
+				\text{GaAs}\quad    &20<z<26\text{ nm}\\
+				\text{\algaasx{0.2}}\quad &26<z<32\text{ nm}\\
+				\text{GaAs}\quad    &32<z<38\text{ nm}\\
+				\text{\algaasx{0.2}}\quad &38<z<58\text{ nm},
+			\end{cases}
+		\end{equation}
+};
 
-% \node<1>[anchor=south west,inner sep=0mm,yshift=5mm](i3) at (current page.south west){\includegraphics[width=\textwidth]{../../figures/chapter-2/numerical-calculations/out/harrison-wells}};
-% \node<2->[anchor=south west,inner sep=0mm,xshift=10mm](i3) at (current page.south west){\includegraphics[width=0.8\textwidth]{../../figures/chapter-2/numerical-calculations/build-ruco/numerical-results}};
-% 	\end{tikzpicture}
+\node<1>[anchor=south west,inner sep=0mm,yshift=5mm](i3) at (current page.south west){\includegraphics[width=\textwidth]{../../figures/chapter-2/numerical-calculations/out/harrison-wells}};
+	\end{tikzpicture}
 	
-% 	\end{frame}
+	\end{frame}

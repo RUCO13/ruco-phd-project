@@ -298,3 +298,9 @@ scripts/structures/AlGaAs-back-1.eps
 scripts/structures/AlGaAs.eps
 scripts/structures/AlGaAs-back.eps
 scripts/structures/GaAs.eps
+scripts/TB.ipynb
+scripts/tb/*
+scripts/structures/*
+scripts/data/*
+scripts/symmetry/*
+scripts/atom-structures/*
